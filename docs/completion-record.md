@@ -20,7 +20,7 @@ Generated runtime artifacts are under `.orchestrator/bootstrap/` and include Cod
 
 ## Work performed
 
-Implemented deterministic discovery, structured diagnostics, classification, content-hash cataloging, skill normalization, dependency-cycle detection, style-contract resolution, runtime adapters, bootstrap generation, distribution routing, transaction staging/approval/apply/rollback, project contract validation, release hygiene, documentation, CI configuration, and smoke tests. Existing Phase 1 work and the untracked `inputs/` file were preserved.
+Implemented deterministic discovery, structured diagnostics, classification, content-hash cataloging, skill normalization, dependency-cycle detection, style-contract resolution, review-only coordinator/index proposal generation, runtime adapters, bootstrap generation, distribution routing, transaction staging/approval/apply/rollback, project contract validation, release hygiene, documentation, CI configuration, and smoke tests. Existing Phase 1 work and the untracked `inputs/` file were preserved.
 
 ## Validation
 

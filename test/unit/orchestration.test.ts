@@ -1,4 +1,4 @@
-import { mkdtempSync, readFileSync, writeFileSync } from "node:fs";
+import { mkdirSync, mkdtempSync, readFileSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { buildCatalog } from "../../src/discovery/catalog";
@@ -6,6 +6,9 @@ import { analyzeDependencies } from "../../src/normalization/dependency-graph";
 import { sha256, writeJson } from "../../src/utils/files";
 import { applyTransaction, approveTransaction, rollbackTransaction, stageTransaction, verifyTransaction } from "../../src/transactions/engine";
 import type { OrchestratorConfig } from "../../src/config/types";
+import { COMPATIBILITY_PROFILE } from "../../src/normalization/skill-normalizer";
+import type { StandardizationResult } from "../../src/normalization/skill-normalizer";
+import { writeProposalOutputs } from "../../src/proposals/generate";
 
 function config(outputDirectory = ".orchestrator"): OrchestratorConfig {
   return { schemaVersion: "1.0", targetRoot: ".", auditIgnore: [], allowedWriteRoots: ["."], enabledRuntimes: ["codex"], securityMode: "approved-transactions", outputDirectory, distributionMode: "skills-sh-editable", requiredEnvironment: [] };
@@ -46,5 +49,22 @@ describe("orchestration stages", () => {
     expect(readFileSync(target, "utf8")).toBe(replacement);
     expect(rollbackTransaction(root, config(), "TX-001").status).toBe("ROLLED_BACK");
     expect(readFileSync(target, "utf8")).toBe(original);
+  });
+
+  it("creates review-only coordinator and index proposals from observed components", () => {
+    const root = mkdtempSync(join(tmpdir(), "orchestrator-proposal-"));
+    writeFileSync(join(root, "README.md"), "# Example\n", "utf8");
+    writeFileSync(join(root, "package.json"), "{}\n", "utf8");
+    writeFileSync(join(root, ".github-workflow.yml"), "name: test\n", "utf8");
+    const skills = join(root, "skills", "engineering", "example");
+    mkdirSync(skills, { recursive: true });
+    writeFileSync(join(skills, "SKILL.md"), "---\nname: example\ndescription: Use when testing an example.\ndisable-model-invocation: false\n---\n# Example\n", "utf8");
+    const catalog = buildCatalog(root, config());
+    const plan: StandardizationResult = { schemaVersion: "1.0", profile: COMPATIBILITY_PROFILE, status: "WARNING", candidates: [], graph: { edges: [], missing: [], cycles: [], userToUser: [] }, styleContract: { status: "UNKNOWN", contracts: [] }, digest: "a".repeat(64) };
+    const proposal = writeProposalOutputs(root, config(), catalog, plan);
+    expect(proposal.status).toBe("PROPOSED");
+    expect(proposal.components.some((component) => component.kind === "skill" && component.name === "example")).toBe(true);
+    expect(proposal.files.some((file) => file.path === "skills/production-orchestrator/SKILL.md")).toBe(true);
+    expect(readFileSync(join(root, ".orchestrator", "proposals", "files", "AGENTS.md"), "utf8")).toContain("reviewable proposal");
   });
 });

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://production-orchestration-kit.local/contracts/proposal-bundle.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "status", "targetPath", "sourceDigest", "components", "coordinator", "indexes", "files", "limitations", "digest"],
+  "properties": {
+    "schemaVersion": { "const": "1.0" },
+    "status": { "enum": ["PROPOSED", "BLOCKED"] },
+    "targetPath": { "const": "." },
+    "sourceDigest": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "components": { "type": "array", "items": { "$ref": "#/$defs/component" } },
+    "coordinator": { "type": "object", "additionalProperties": false, "required": ["paths", "files"], "properties": { "paths": { "type": "array", "items": { "type": "string" } }, "files": { "type": "array", "items": { "type": "string" } } } },
+    "indexes": { "type": "array", "items": { "type": "string" } },
+    "files": { "type": "array", "items": { "$ref": "#/$defs/file" } },
+    "limitations": { "type": "array", "items": { "type": "string" } },
+    "digest": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+  },
+  "$defs": {
+    "component": { "type": "object", "additionalProperties": false, "required": ["kind", "name", "path", "purpose", "confidence", "evidence"], "properties": { "kind": { "enum": ["skill", "plugin", "workflow", "agent", "script", "documentation", "configuration", "other"] }, "name": { "type": "string" }, "path": { "type": "string" }, "purpose": { "type": "string" }, "invocationMode": { "enum": ["user", "model", "unknown"] }, "confidence": { "enum": ["high", "medium", "low"] }, "evidence": { "type": "array", "items": { "type": "string" } } } },
+    "file": { "type": "object", "additionalProperties": false, "required": ["path", "kind", "content", "evidence"], "properties": { "path": { "type": "string" }, "kind": { "enum": ["coordinator", "index", "metadata", "manifest"] }, "content": { "type": "string" }, "evidence": { "type": "array", "items": { "type": "string" } } } }
+  }
+}

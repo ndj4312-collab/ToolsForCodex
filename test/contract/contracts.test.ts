@@ -18,6 +18,7 @@ const samples: Record<string, object> = {
   "runtime-adapter.schema.json": { schemaVersion: "1.0", id: "adapter-one", generatedAt: "2026-01-01T00:00:00.000Z", runtime: "codex", source, sourceHash: hash, status: "generated", evidence }
   ,"standardization-plan.schema.json": { schemaVersion: "1.0", profile: { name: "test", upstreamRepository: "https://example.com/profile", retrievedAt: "2026-01-01T00:00:00.000Z", sourceRevision: "test" }, status: "VERIFIED", candidates: [], graph: { edges: [], missing: [], cycles: [], userToUser: [] }, styleContract: { status: "UNKNOWN", contracts: [] }, digest: hash }
   ,"runtime-equivalence.schema.json": { schemaVersion: "1.0", status: "VERIFIED", adapters: [], differences: [], skills: [] }
+  ,"proposal-bundle.schema.json": { schemaVersion: "1.0", status: "PROPOSED", targetPath: ".", sourceDigest: hash, components: [], coordinator: { paths: ["AGENTS.md"], files: ["AGENTS.md"] }, indexes: ["INDEX.md"], files: [{ path: "AGENTS.md", kind: "coordinator", content: "proposal", evidence: ["README.md"] }], limitations: ["review"], digest: hash }
 };
 
 describe("canonical contracts", () => {

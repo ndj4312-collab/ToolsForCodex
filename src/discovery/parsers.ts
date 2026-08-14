@@ -18,7 +18,11 @@ export function parseRecord(record: DiscoveredRecord): { parsed?: ParsedAsset; d
   }
   if ([".ts", ".tsx", ".js", ".jsx", ".mjs", ".cjs"].includes(extension)) {
     const source = ts.createSourceFile(record.path, text, ts.ScriptTarget.Latest, true);
-    const syntaxErrors = ts.transpileModule(text, { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.CommonJS }, fileName: record.path, reportDiagnostics: true }).diagnostics ?? [];
+    // TypeScript's transpiler intentionally rejects declaration files because
+    // they do not emit JavaScript. They are still valid audit inputs, so use
+    // the source-file parser as the syntax gate without attempting emission.
+    const isDeclarationFile = record.path.toLowerCase().endsWith(".d.ts");
+    const syntaxErrors = isDeclarationFile ? [] : ts.transpileModule(text, { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.CommonJS }, fileName: record.path, reportDiagnostics: true }).diagnostics ?? [];
     const firstError = syntaxErrors[0];
     if (firstError) {
       const position = source.getLineAndCharacterOfPosition(firstError.start ?? 0);

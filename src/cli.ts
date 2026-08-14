@@ -7,9 +7,10 @@ import { writeStandardizationOutputs } from "./normalization/skill-normalizer";
 import { generateBootstrap } from "./bootstrap/generate";
 import { approveTransaction, applyTransaction, rollbackTransaction, stageTransaction, verifyTransaction } from "./transactions/engine";
 import { validateProject } from "./validation/project";
+import { writeProposalOutputs } from "./proposals/generate";
 
 function usage(): string {
-  return "Usage: orchestrator <preflight|audit|catalog|plan|bootstrap|verify-adapters|doctor|stage|verify|approve|apply|rollback> --config <path> [--transaction <id>] [--approval <path>]";
+  return "Usage: orchestrator <preflight|audit|catalog|plan|propose|bootstrap|verify-adapters|doctor|stage|verify|approve|apply|rollback> --config <path> [--transaction <id>] [--approval <path>]";
 }
 
 function parseArguments(argumentsList: readonly string[]): { command: string; configPath: string; transaction?: string; approval?: string } {
@@ -43,6 +44,11 @@ function main(): void {
       if (parsed.command === "audit") { const before = buildCatalog(targetRoot, config); const catalog = writeCatalogOutputs(targetRoot, config); const after = buildCatalog(targetRoot, config); if (before.overallDigest !== after.overallDigest) throw new PreflightError("Read-only audit changed the target tree"); result = { ...catalog, readOnlyCheck: "VERIFIED" }; }
       else if (parsed.command === "catalog") result = writeCatalogOutputs(targetRoot, config);
       else if (parsed.command === "plan") result = writeStandardizationOutputs(targetRoot, config.outputDirectory, config.distributionMode);
+      else if (parsed.command === "propose") {
+        const catalog = writeCatalogOutputs(targetRoot, config);
+        const plan = writeStandardizationOutputs(targetRoot, config.outputDirectory, config.distributionMode);
+        result = writeProposalOutputs(targetRoot, config, catalog, plan);
+      }
       else if (parsed.command === "bootstrap" || parsed.command === "verify-adapters") {
         const plan = writeStandardizationOutputs(targetRoot, config.outputDirectory, config.distributionMode);
         if (plan.status === "BLOCKED") throw new PreflightError("Bootstrap blocked by standardization findings");

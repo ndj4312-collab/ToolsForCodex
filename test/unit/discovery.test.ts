@@ -25,4 +25,13 @@ describe("read-only discovery", () => {
     expect(record).toBeDefined();
     expect(parseRecord(record!).parsed?.data.hasPromptInjectionMarkers).toBe(true);
   });
+
+  it("parses TypeScript declaration files without attempting JavaScript emission", () => {
+    const root = mkdtempSync(join(tmpdir(), "orchestrator-declarations-"));
+    writeFileSync(join(root, "types.d.ts"), "declare const ready: boolean;\n", "utf8");
+    const record = discover(root).records.find((item) => item.path === "types.d.ts");
+    expect(record).toBeDefined();
+    expect(parseRecord(record!).diagnostics).toHaveLength(0);
+    expect(parseRecord(record!).parsed?.kind).toBe("typescript");
+  });
 });
