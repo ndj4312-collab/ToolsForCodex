@@ -1,0 +1,5 @@
+interface:
+  display_name: Matt Skill Contract Audit
+  short_description: Audit a skill when validating Matt-style invocation, ownership, dependency, and metadata compatibility.
+policy:
+  allow_implicit_invocation: true

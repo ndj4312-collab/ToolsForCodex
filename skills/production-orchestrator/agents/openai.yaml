@@ -1,0 +1,5 @@
+interface:
+  display_name: Production Orchestrator
+  short_description: Run a reviewed repository orchestration transaction with explicit safety gates.
+policy:
+  allow_implicit_invocation: false

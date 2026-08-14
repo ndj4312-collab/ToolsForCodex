@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://production-orchestration-kit.local/contracts/execution-plan.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "id", "createdAt", "status", "source", "steps", "evidence"],
+  "properties": {
+    "schemaVersion": { "const": "1.0" },
+    "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]{2,63}$" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "status": { "enum": ["draft", "approved", "blocked", "completed"] },
+    "source": { "type": "object", "additionalProperties": false, "required": ["locator"], "properties": { "locator": { "type": "string" } } },
+    "steps": { "type": "array", "minItems": 1, "items": { "type": "object", "additionalProperties": false, "required": ["id", "path", "sha256", "status"], "properties": { "id": { "type": "string" }, "path": { "type": "string", "pattern": "^(?!/)(?![A-Za-z]:)(?!.*(?:^|/)\\.\\.(?:/|$))[A-Za-z0-9._/-]+$" }, "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }, "status": { "enum": ["pending", "approved", "blocked"] } } } },
+    "evidence": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["kind", "locator"], "properties": { "kind": { "type": "string" }, "locator": { "type": "string" } } } }
+  }
+}

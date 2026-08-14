@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "1.0",
+  "targetRoot": ".",
+  "auditIgnore": ["node_modules", "dist", ".git"],
+  "allowedWriteRoots": [],
+  "enabledRuntimes": ["claude", "codex", "gemini"],
+  "securityMode": "read-only",
+  "outputDirectory": ".orchestrator"
+}

@@ -1,0 +1,5 @@
+interface:
+  display_name: Standardize Skills to Matt Pocock
+  short_description: Prepare a reviewed patch that standardizes a skill to the Matt-style compatibility contract.
+policy:
+  allow_implicit_invocation: false
