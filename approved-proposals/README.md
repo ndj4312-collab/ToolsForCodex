@@ -11,3 +11,5 @@ Each bundle contains:
 - `files/` — the approved coordinator and index files, preserving the proposed repository paths.
 
 The bundles are organized by source repository name and are committed to the `tools` branch of `ToolsForCodex`.
+
+Before acceptance, each generated coordinator and index was normalized with the `matt-pocock-compatible-v1` patch: explicit skill frontmatter, user-only coordinator invocation, matching OpenAI metadata, and no proposal-only installation wording. The embedded proposal records were rehashed after normalization. Existing source-repository skill instructions were not rewritten or remotely pushed.

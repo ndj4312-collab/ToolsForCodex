@@ -1,8 +1,10 @@
 # Proposal report
 
-Status: **PROPOSED**
+Proposal source status: **PROPOSED**
 
-This report proposes a coordinator and file indexes from observed repository contents. Nothing was applied.
+Acceptance status: **APPROVED**
+
+This report records the approved coordinator and file indexes generated from observed repository contents.
 
 - Components: **3479**
 - Coordinator files: **2**
@@ -10,7 +12,7 @@ This report proposes a coordinator and file indexes from observed repository con
 - Source digest: `fccd8a3ce69072f7ed5e7d960aa19b817b3dac45d13f48ad9cd7332ab6ec43bd`
 - Proposal digest: `d0709204325c002334007022a0c0909aac5f85cae784119c4dc2588a19a54cac`
 
-## Proposed components
+## Observed components
 
 - **plugin** `marketplace.json` — `.agents/plugins/marketplace.json` — Plugin entry or plugin configuration (medium confidence)
 - **agent** `openai.yaml` — `.agents/skills/agent-introspection-debugging/agents/openai.yaml` — Agent instructions or agent metadata (medium confidence)
@@ -3496,5 +3498,5 @@ This report proposes a coordinator and file indexes from observed repository con
 
 - Generated from observed paths and readable frontmatter; inferred purposes require human review.
 - Existing skill metadata, dependencies, and instructions were not rewritten by this proposal.
-- The proposal is stored under .orchestrator/proposals and has not been copied into the repository.
+- The approved bundle is stored under approved-proposals and is ready for the user's repository.
 - The standardization plan is BLOCKED by 284 skill candidate(s) or dependency findings.

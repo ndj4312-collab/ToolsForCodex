@@ -1,6 +1,9 @@
 {
   "schemaVersion": "1.0",
   "status": "APPROVED",
+  "normalizationProfile": "matt-pocock-compatible-v1",
+  "sourceProposalStatus": "PROPOSED",
+  "remoteWritePolicy": "Only ToolsForCodex/tools is writable; source repositories were not pushed.",
   "destination": "https://github.com/ndj4312-collab/ToolsForCodex/tree/tools/approved-proposals",
   "sourceList": "inputs/github-skills-and-plugin-repos.txt",
   "repositories": [

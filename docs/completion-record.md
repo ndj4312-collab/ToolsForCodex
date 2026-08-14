@@ -27,7 +27,7 @@ Implemented deterministic discovery, structured diagnostics, classification, con
 - `npm.cmd ci` — completed.
 - `npm.cmd run build` — passed.
 - `npm.cmd run lint` — passed with zero warnings.
-- `npm.cmd test -- --runInBand` — passed: 5 suites, 12 tests.
+- `npm.cmd test -- --runInBand` — passed: 5 suites, 14 tests.
 - `npm.cmd run validate-release` — passed.
 - `npm.cmd run preflight -- --config orchestrator.config.example.json` — `VERIFIED`.
 - `npm.cmd run audit -- --config orchestrator.config.example.json` — `readOnlyCheck: VERIFIED`.
@@ -41,3 +41,10 @@ Implemented deterministic discovery, structured diagnostics, classification, con
 Provider synchronization, global installation, publication, remote push, and non-Windows CI execution were not performed. The local CI matrix is configured for Windows, macOS, and Linux; only the current Windows environment was directly executed here.
 
 See [`execution-audit.md`](execution-audit.md) for the artifact-by-artifact gap and evidence table.
+
+## Final accepted bundle pass
+
+- Complete local orchestrator run: preflight, audit, catalog, plan, propose, bootstrap, adapter equivalence, and doctor all returned `VERIFIED`.
+- Approved bundle normalization: `npm.cmd run normalize-approved` returned `VERIFIED`; 7 bundles and 438 files were normalized with `matt-pocock-compatible-v1`, and embedded proposal digests were recalculated.
+- Approved bundle validation: schema, path, digest, content, frontmatter, and OpenAI metadata checks passed.
+- Release validation after normalization passed; the detector now uses whole-word matching so legitimate `JTBD` text is accepted.

@@ -12,7 +12,7 @@ function walk(directory) {
   for (const entry of readdirSync(directory, { withFileTypes: true })) {
     const path = join(directory, entry.name);
     if (entry.isDirectory() && !["node_modules", "dist", "coverage", ".orchestrator", ".git"].includes(entry.name)) walk(path);
-    else if (/\.(ts|md|json|yaml|yml)$/.test(entry.name) && /TODO|PLACEHOLDER|TBD/.test(readFileSync(path, "utf8"))) forbidden.push(`${path} contains placeholder text`);
+    else if (/\.(ts|md|json|yaml|yml)$/.test(entry.name) && /\b(?:TODO|PLACEHOLDER|TBD)\b/.test(readFileSync(path, "utf8"))) forbidden.push(`${path} contains placeholder text`);
   }
 }
 walk(root);

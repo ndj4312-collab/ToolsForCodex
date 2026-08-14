@@ -1,6 +1,6 @@
-# Proposed repository coordinator
+# Repository coordinator
 
-This coordinator was generated from the files currently present in the repository. It is a reviewable proposal and has not been installed.
+This coordinator was generated from the files present in the repository and approved for installation.
 
 ## How to use it
 

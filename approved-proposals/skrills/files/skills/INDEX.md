@@ -1,6 +1,6 @@
-# Proposed skills index
+# Skills index
 
-Generated from observed SKILL.md files. Review names and descriptions before applying.
+Generated from observed SKILL.md files.
 
 Source digest: `efbf480a59b84d62b2a424b18f5c5486ed410a7afbed3d7cbba7cd2309c012a7`
 

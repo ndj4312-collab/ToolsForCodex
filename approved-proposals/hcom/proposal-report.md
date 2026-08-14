@@ -1,8 +1,10 @@
 # Proposal report
 
-Status: **PROPOSED**
+Proposal source status: **PROPOSED**
 
-This report proposes a coordinator and file indexes from observed repository contents. Nothing was applied.
+Acceptance status: **APPROVED**
+
+This report records the approved coordinator and file indexes generated from observed repository contents.
 
 - Components: **217**
 - Coordinator files: **2**
@@ -10,7 +12,7 @@ This report proposes a coordinator and file indexes from observed repository con
 - Source digest: `b78623dd5f0e5799e8c8ae7c73a857509acd7e84466d84f69c2bf5ea1ee4d740`
 - Proposal digest: `af07da119b50caee689c3461950e33cf2879e204264bed0955687dc34e4c67c3`
 
-## Proposed components
+## Observed components
 
 - **other** `audit.toml` — `.cargo/audit.toml` — Observed repository asset (low confidence)
 - **plugin** `marketplace.json` — `.claude-plugin/marketplace.json` — Plugin entry or plugin configuration (medium confidence)
@@ -234,5 +236,5 @@ This report proposes a coordinator and file indexes from observed repository con
 
 - Generated from observed paths and readable frontmatter; inferred purposes require human review.
 - Existing skill metadata, dependencies, and instructions were not rewritten by this proposal.
-- The proposal is stored under .orchestrator/proposals and has not been copied into the repository.
+- The approved bundle is stored under approved-proposals and is ready for the user's repository.
 - The standardization plan is BLOCKED by 1 skill candidate(s) or dependency findings.

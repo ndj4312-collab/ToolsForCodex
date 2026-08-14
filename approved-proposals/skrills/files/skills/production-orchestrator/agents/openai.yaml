@@ -1,5 +1,5 @@
 interface:
-  display_name: Proposed Repository Coordinator
+  display_name: Repository Coordinator
   short_description: Route repository work using reviewed local skills and workflows.
 policy:
   allow_implicit_invocation: false

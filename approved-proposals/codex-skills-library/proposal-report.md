@@ -1,8 +1,10 @@
 # Proposal report
 
-Status: **PROPOSED**
+Proposal source status: **PROPOSED**
 
-This report proposes a coordinator and file indexes from observed repository contents. Nothing was applied.
+Acceptance status: **APPROVED**
+
+This report records the approved coordinator and file indexes generated from observed repository contents.
 
 - Components: **66**
 - Coordinator files: **2**
@@ -10,7 +12,7 @@ This report proposes a coordinator and file indexes from observed repository con
 - Source digest: `bbd69f94de1ca6dc88751e29a9a8c0532302826641f5ecbf58e2bf1bab77bbd5`
 - Proposal digest: `1ee05bb08f760d5e3bc39aafeab44b831bccfb2ccdf7faf95cc566a16a0bf8ed`
 
-## Proposed components
+## Observed components
 
 - **skill** `prompt-optimization` — `.codex/skills/prompt-optimization/SKILL.md` — Improve and rewrite user prompts to reduce ambiguity and improve LLM output quality. Use when a user asks to optimize, refine, clarify, or rewrite a prompt for better results, or when the request is about prompt optimization or prompt rewriting. (high confidence)
 - **skill** `writing-assistant` — `.codex/skills/writing-assistant/SKILL.md` — Edits, rewrites, or improves text for clarity, tone, grammar, or style. (high confidence)
@@ -83,5 +85,5 @@ This report proposes a coordinator and file indexes from observed repository con
 
 - Generated from observed paths and readable frontmatter; inferred purposes require human review.
 - Existing skill metadata, dependencies, and instructions were not rewritten by this proposal.
-- The proposal is stored under .orchestrator/proposals and has not been copied into the repository.
+- The approved bundle is stored under approved-proposals and is ready for the user's repository.
 - The standardization plan is BLOCKED by 61 skill candidate(s) or dependency findings.

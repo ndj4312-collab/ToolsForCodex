@@ -24,7 +24,8 @@
     "approve": "tsx src/cli.ts approve",
     "apply": "tsx src/cli.ts apply",
     "rollback": "tsx src/cli.ts rollback",
-    "validate-release": "node scripts/validate-release.mjs"
+    "validate-release": "node scripts/validate-release.mjs",
+    "normalize-approved": "node scripts/normalize-approved-bundles.mjs"
   },
   "engines": {
     "node": ">=22"

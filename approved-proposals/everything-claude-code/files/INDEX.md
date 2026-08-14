@@ -1,6 +1,6 @@
-# Proposed file index
+# Repository file index
 
-This index was generated from observed repository contents. It is a proposal, not an applied change.
+This index was generated from observed repository contents.
 
 Source digest: `fccd8a3ce69072f7ed5e7d960aa19b817b3dac45d13f48ad9cd7332ab6ec43bd`
 
