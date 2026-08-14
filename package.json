@@ -15,6 +15,7 @@
     "audit": "tsx src/cli.ts audit",
     "catalog": "tsx src/cli.ts catalog",
     "plan": "tsx src/cli.ts plan",
+    "propose": "tsx src/cli.ts propose",
     "bootstrap": "tsx src/cli.ts bootstrap",
     "verify-adapters": "tsx src/cli.ts verify-adapters",
     "doctor": "tsx src/cli.ts doctor",
