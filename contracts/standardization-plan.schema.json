@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://production-orchestration-kit.local/contracts/standardization-plan.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "profile", "status", "candidates", "graph", "styleContract", "digest"],
+  "properties": {
+    "schemaVersion": { "const": "1.0" },
+    "profile": { "type": "object", "additionalProperties": false, "required": ["name", "upstreamRepository", "retrievedAt", "sourceRevision"], "properties": { "name": { "type": "string" }, "upstreamRepository": { "type": "string", "format": "uri" }, "retrievedAt": { "type": "string", "format": "date-time" }, "sourceRevision": { "type": "string" } } },
+    "status": { "enum": ["VERIFIED", "WARNING", "BLOCKED"] },
+    "candidates": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["skill", "path", "status", "failedRules", "reviewQuestions", "operations"], "properties": { "skill": { "$ref": "#/$defs/skill" }, "path": { "$ref": "#/$defs/path" }, "status": { "enum": ["VERIFIED", "WARNING", "BLOCKED"] }, "failedRules": { "type": "array", "items": { "type": "string" } }, "reviewQuestions": { "type": "array", "items": { "type": "string" } }, "operations": { "type": "array", "items": { "$ref": "#/$defs/operation" } } } } },
+    "graph": { "type": "object", "additionalProperties": false, "required": ["edges", "missing", "cycles", "userToUser"], "properties": { "edges": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["from", "to"], "properties": { "from": { "type": "string" }, "to": { "type": "string" } } } }, "missing": { "type": "array", "items": { "type": "string" } }, "cycles": { "type": "array", "items": { "type": "array", "items": { "type": "string" } } }, "userToUser": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["from", "to"], "properties": { "from": { "type": "string" }, "to": { "type": "string" } } } } } },
+    "styleContract": { "type": "object", "additionalProperties": false, "required": ["status", "contracts"], "properties": { "status": { "enum": ["VERIFIED", "BLOCKED", "UNKNOWN"] }, "contracts": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["name", "locator"], "properties": { "name": { "type": "string" }, "locator": { "type": "string" } } } }, "reason": { "type": "string" } } },
+    "digest": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+  },
+  "$defs": {
+    "path": { "type": "string", "pattern": "^(?!/)(?![A-Za-z]:)(?!.*(?:^|/)\\.\\.(?:/|$))[A-Za-z0-9._/-]+$" },
+    "skill": { "type": "object", "additionalProperties": false, "required": ["name", "invocationMode", "lifecycleBucket", "portableInstructions", "declaredInputs", "declaredOutputs", "dependencies", "ownedReferenceFiles", "runtimeCapabilityRequirements", "sourceHash", "reviewState", "distributionMode"], "properties": { "name": { "type": "string" }, "invocationMode": { "enum": ["user", "model"] }, "lifecycleBucket": { "type": "string" }, "portableInstructions": { "type": "string" }, "declaredInputs": { "type": "array", "items": { "type": "string" } }, "declaredOutputs": { "type": "array", "items": { "type": "string" } }, "dependencies": { "type": "array", "items": { "type": "string", "pattern": "^/[a-z0-9]+(?:-[a-z0-9]+)*$" } }, "ownedReferenceFiles": { "type": "array", "items": { "type": "string" } }, "runtimeCapabilityRequirements": { "type": "array", "items": { "type": "string" } }, "sourceHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" }, "reviewState": { "type": "string" }, "distributionMode": { "type": "string" } } },
+    "operation": { "type": "object", "additionalProperties": false, "required": ["path", "originalHash", "replacementHash", "ruleId", "sourceLocator", "confidence", "requiresHumanReview", "replacement"], "properties": { "path": { "$ref": "#/$defs/path" }, "originalHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" }, "replacementHash": { "type": "string", "pattern": "^[a-f0-9]{64}$" }, "ruleId": { "type": "string" }, "sourceLocator": { "type": "string" }, "confidence": { "enum": ["high", "medium", "low"] }, "requiresHumanReview": { "type": "boolean" }, "replacement": { "type": "string" } } }
+  }
+}

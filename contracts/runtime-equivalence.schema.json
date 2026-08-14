@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://production-orchestration-kit.local/contracts/runtime-equivalence.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "status", "adapters", "differences", "skills"],
+  "properties": {
+    "schemaVersion": { "const": "1.0" },
+    "status": { "enum": ["VERIFIED", "WARNING", "BLOCKED"] },
+    "adapters": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["runtime", "generatedPath", "supportedCapabilities", "unsupportedCapabilities", "status", "skillDigest"], "properties": { "runtime": { "enum": ["claude", "codex", "gemini", "generic-agents"] }, "generatedPath": { "type": "string" }, "supportedCapabilities": { "type": "array", "items": { "type": "string" } }, "unsupportedCapabilities": { "type": "array", "items": { "type": "string" } }, "status": { "enum": ["VERIFIED", "WARNING", "BLOCKED"] }, "skillDigest": { "type": "string", "pattern": "^[a-f0-9]{64}$" } } } },
+    "differences": { "type": "array", "items": { "type": "string" } },
+    "skills": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["name", "invocationMode", "dependencies", "instructionsDigest", "securityBoundary"], "properties": { "name": { "type": "string" }, "invocationMode": { "enum": ["user", "model"] }, "dependencies": { "type": "array", "items": { "type": "string" } }, "instructionsDigest": { "type": "string", "pattern": "^[a-f0-9]{64}$" }, "securityBoundary": { "type": "string" } } } }
+  }
+}

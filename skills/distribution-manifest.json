@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0",
+  "mode": "skills-sh-editable",
+  "skills": [
+    "matt-skill-contract-audit",
+    "standardize-skills-to-matt-pocock",
+    "production-orchestrator"
+  ],
+  "scope": "project-local",
+  "approvalRequired": true
+}

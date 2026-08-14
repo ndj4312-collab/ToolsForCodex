@@ -3,14 +3,17 @@
   "$id": "https://production-orchestration-kit.local/contracts/catalog.schema.json",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schemaVersion", "id", "generatedAt", "targetPath", "assets", "evidence"],
+  "required": ["schemaVersion", "id", "generatedAt", "targetPath", "exclusions", "assets", "overallDigest", "evidence"],
   "properties": {
     "schemaVersion": { "const": "1.0" },
     "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]{2,63}$" },
     "generatedAt": { "type": "string", "format": "date-time" },
     "targetPath": { "$ref": "#/$defs/path" },
-    "assets": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["id", "path", "sha256"], "properties": { "id": { "type": "string" }, "path": { "$ref": "#/$defs/path" }, "sha256": { "$ref": "#/$defs/sha256" } } } },
-    "evidence": { "$ref": "#/$defs/evidence" }
+    "exclusions": { "type": "array", "items": { "$ref": "#/$defs/path" }, "uniqueItems": true },
+    "assets": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["id", "path", "kind", "parseStatus", "classifications"], "properties": { "id": { "type": "string" }, "path": { "$ref": "#/$defs/path" }, "kind": { "enum": ["file", "directory", "symlink"] }, "sha256": { "$ref": "#/$defs/sha256" }, "size": { "type": "integer", "minimum": 0 }, "parseStatus": { "enum": ["PARSED", "EMPTY", "UNREADABLE", "BINARY", "UNSUPPORTED_ENCODING", "SYMLINK", "DIRECTORY"] }, "reason": { "type": "string" }, "classifications": { "type": "array", "items": { "type": "string" } }, "locations": { "type": "array", "items": { "$ref": "#/$defs/path" } } } } },
+    "overallDigest": { "$ref": "#/$defs/sha256" },
+    "evidence": { "$ref": "#/$defs/evidence" },
+    "diagnostics": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["schemaVersion", "id", "createdAt", "severity", "status", "source", "reason", "evidence"], "properties": { "schemaVersion": { "const": "1.0" }, "id": { "type": "string" }, "createdAt": { "type": "string", "format": "date-time" }, "severity": { "enum": ["info", "warning", "error", "critical"] }, "status": { "enum": ["VERIFIED", "WARNING", "UNKNOWN", "BLOCKED", "INVALID"] }, "source": { "type": "object", "additionalProperties": false, "required": ["locator"], "properties": { "locator": { "type": "string" } } }, "reason": { "type": "string" }, "line": { "type": "integer", "minimum": 1 }, "column": { "type": "integer", "minimum": 1 }, "evidence": { "$ref": "#/$defs/evidence" } } } }
   },
   "$defs": {
     "path": { "type": "string", "pattern": "^(?!/)(?![A-Za-z]:)(?!.*(?:^|/)\\.\\.(?:/|$))[A-Za-z0-9._/-]+$" },

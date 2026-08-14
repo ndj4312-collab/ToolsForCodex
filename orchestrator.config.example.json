@@ -5,5 +5,7 @@
   "allowedWriteRoots": [],
   "enabledRuntimes": ["claude", "codex", "gemini"],
   "securityMode": "read-only",
-  "outputDirectory": ".orchestrator"
+  "outputDirectory": ".orchestrator",
+  "distributionMode": "skills-sh-editable",
+  "requiredEnvironment": []
 }

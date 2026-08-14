@@ -38,7 +38,7 @@ describe("skill invocation policy", () => {
       runtimeCapabilityRequirements: ["file-read"],
       sourceHash: "a".repeat(64),
       reviewState: "reviewed",
-      distributionMode: "managed-claude-plugin"
+      distributionMode: "claude-plugin"
     };
     expect(validateSkillIr(skill)).toEqual([]);
     expect(validateSkillIr({ ...skill, portableInstructions: "```sh\nrm -rf x\n```" })).not.toEqual([]);

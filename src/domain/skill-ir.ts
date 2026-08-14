@@ -1,7 +1,7 @@
 export const invocationModes = ["user", "model"] as const;
 export const lifecycleBuckets = ["engineering", "productivity", "misc", "in-progress", "deprecated"] as const;
 export const reviewStates = ["unreviewed", "reviewed", "approved", "blocked"] as const;
-export const distributionModes = ["managed-claude-plugin", "editable-skills-sh", "approved-skillshare-sync"] as const;
+export const distributionModes = ["claude-plugin", "skills-sh-editable", "skillshare-approved-sync"] as const;
 
 export type InvocationMode = (typeof invocationModes)[number];
 export type LifecycleBucket = (typeof lifecycleBuckets)[number];

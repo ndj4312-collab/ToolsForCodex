@@ -9,11 +9,25 @@ This standalone TypeScript package audits repository assets, builds reviewed pat
 - Never execute audited-project code during an audit.
 - Do not install, delete, synchronize globally, or write without an approved transaction.
 
-## Phase 1 usage
+## Workflow
 
-Install dependencies, then validate an explicit configuration without touching its target:
+Install dependencies, then run the stages in order:
 
 ```powershell
 npm.cmd ci
 npm.cmd run preflight -- --config orchestrator.config.example.json
+npm.cmd run audit -- --config orchestrator.config.example.json
+npm.cmd run plan -- --config orchestrator.config.example.json
+npm.cmd run bootstrap -- --config orchestrator.config.example.json
+npm.cmd run doctor -- --config orchestrator.config.example.json
 ```
+
+`audit` and `catalog` are read-only with generated output isolated below `.orchestrator/`. `plan` preserves source files and emits reviewable candidates. `bootstrap` requires a non-blocked plan and exactly one distribution route. A target write requires `stage`, `verify`, a matching human approval file, and then `apply`; `rollback` is hash-guarded.
+
+## Canonical ownership
+
+- `src/` owns executable orchestration behavior.
+- `contracts/` owns JSON interchange schemas.
+- `skills/*/SKILL.md` owns portable instructions and `agents/openai.yaml` owns generated-facing metadata.
+- `docs/` explains architecture and compatibility without duplicating runtime canon.
+- `.orchestrator/` is generated and ignored.

@@ -1,5 +1,6 @@
-export type Runtime = "claude" | "codex" | "gemini";
+export type Runtime = "claude" | "codex" | "gemini" | "generic-agents";
 export type SecurityMode = "read-only" | "approved-transactions";
+export type DistributionMode = "claude-plugin" | "skills-sh-editable" | "skillshare-approved-sync";
 
 export interface OrchestratorConfig {
   readonly schemaVersion: "1.0";
@@ -9,6 +10,8 @@ export interface OrchestratorConfig {
   readonly enabledRuntimes: readonly Runtime[];
   readonly securityMode: SecurityMode;
   readonly outputDirectory: string;
+  readonly distributionMode?: DistributionMode;
+  readonly requiredEnvironment?: readonly string[];
 }
 
 export interface VerifiedPreflight {

@@ -42,6 +42,8 @@ export function preflight(configPathArgument: string): VerifiedPreflight {
     const resolvedWriteRoot = resolve(targetRoot, writeRoot);
     if (!isWithin(targetRoot, resolvedWriteRoot)) throw new PreflightError(`Write root escapes target root: ${writeRoot}`);
   }
+  const outputDirectory = resolve(targetRoot, config.outputDirectory);
+  if (!isWithin(targetRoot, outputDirectory)) throw new PreflightError(`Output directory escapes target root: ${config.outputDirectory}`);
   return {
     schemaVersion: "1.0",
     status: "VERIFIED",

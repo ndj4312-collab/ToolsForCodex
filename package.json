@@ -1,6 +1,6 @@
 {
   "name": "production-orchestration-kit",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "description": "Deterministic, read-only-first repository orchestration tooling.",
   "type": "commonjs",
@@ -11,7 +11,19 @@
     "build": "tsc -p tsconfig.json",
     "lint": "eslint . --max-warnings=0",
     "test": "jest",
-    "preflight": "tsx src/cli.ts preflight"
+    "preflight": "tsx src/cli.ts preflight",
+    "audit": "tsx src/cli.ts audit",
+    "catalog": "tsx src/cli.ts catalog",
+    "plan": "tsx src/cli.ts plan",
+    "bootstrap": "tsx src/cli.ts bootstrap",
+    "verify-adapters": "tsx src/cli.ts verify-adapters",
+    "doctor": "tsx src/cli.ts doctor",
+    "stage": "tsx src/cli.ts stage",
+    "verify": "tsx src/cli.ts verify",
+    "approve": "tsx src/cli.ts approve",
+    "apply": "tsx src/cli.ts apply",
+    "rollback": "tsx src/cli.ts rollback",
+    "validate-release": "node scripts/validate-release.mjs"
   },
   "engines": {
     "node": ">=22"

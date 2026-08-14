@@ -10,9 +10,11 @@
     "targetRoot": { "$ref": "#/$defs/relativePath" },
     "auditIgnore": { "type": "array", "items": { "$ref": "#/$defs/relativePath" }, "uniqueItems": true },
     "allowedWriteRoots": { "type": "array", "items": { "$ref": "#/$defs/relativePath" }, "uniqueItems": true },
-    "enabledRuntimes": { "type": "array", "items": { "enum": ["claude", "codex", "gemini"] }, "minItems": 1, "uniqueItems": true },
+    "enabledRuntimes": { "type": "array", "items": { "enum": ["claude", "codex", "gemini", "generic-agents"] }, "minItems": 1, "uniqueItems": true },
     "securityMode": { "enum": ["read-only", "approved-transactions"] },
-    "outputDirectory": { "$ref": "#/$defs/relativePath" }
+    "outputDirectory": { "$ref": "#/$defs/relativePath" },
+    "distributionMode": { "enum": ["claude-plugin", "skills-sh-editable", "skillshare-approved-sync"] },
+    "requiredEnvironment": { "type": "array", "items": { "type": "string", "pattern": "^[A-Z][A-Z0-9_]*$" }, "uniqueItems": true }
   },
   "$defs": {
     "relativePath": {

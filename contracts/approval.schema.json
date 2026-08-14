@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://production-orchestration-kit.local/contracts/approval.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "transactionId", "planDigest", "approvedAt", "allowedOperations"],
+  "properties": {
+    "schemaVersion": { "const": "1.0" },
+    "transactionId": { "type": "string", "pattern": "^[A-Za-z0-9_-]{1,80}$" },
+    "planDigest": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "approvedAt": { "type": "string", "format": "date-time" },
+    "allowedOperations": { "type": "array", "items": { "enum": ["create", "replace", "delete"] }, "uniqueItems": true }
+  }
+}
