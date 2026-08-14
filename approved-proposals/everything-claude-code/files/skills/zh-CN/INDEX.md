@@ -1,0 +1,189 @@
+# Proposed skills index
+
+Generated from observed SKILL.md files. Review names and descriptions before applying.
+
+Source digest: `fccd8a3ce69072f7ed5e7d960aa19b817b3dac45d13f48ad9cd7332ab6ec43bd`
+
+- `/accessibility` — `docs/zh-CN/skills/accessibility/SKILL.md` — 使用 WCAG 2.2 Level AA 标准设计、实施和审计包容性数字产品。运用此技能为 Web 生成语义 ARIA，并为 Web 和原生平台（iOS/Android）生成无障碍特性。
+- `/agent-eval` — `docs/zh-CN/skills/agent-eval/SKILL.md` — 编码代理（Claude Code、Aider、Codex等）在自定义任务上的直接比较，包含通过率、成本、时间和一致性指标
+- `/agent-harness-construction` — `docs/zh-CN/skills/agent-harness-construction/SKILL.md` — 设计和优化AI代理的动作空间、工具定义和观察格式，以提高完成率。
+- `/agent-introspection-debugging` — `docs/zh-CN/skills/agent-introspection-debugging/SKILL.md` — 针对AI代理故障的结构化自调试工作流程，包括捕获、诊断、受限恢复和内省报告。
+- `/agent-payment-x402` — `docs/zh-CN/skills/agent-payment-x402/SKILL.md` — 将 x402 支付执行添加到 AI 代理中——通过 MCP 工具实现每任务预算、支出控制和非托管钱包。当代理需要为 API、服务或其他代理付费时使用。
+- `/agent-sort` — `docs/zh-CN/skills/agent-sort/SKILL.md` — 通过将技能、命令、规则、钩子和额外内容并行进行仓库感知审查，为特定仓库构建基于证据的 ECC 安装计划，将其分为 DAILY 和 LIBRARY 两类。当 ECC 应精简为项目实际所需而非加载完整包时使用。
+- `/agentic-engineering` — `docs/zh-CN/skills/agentic-engineering/SKILL.md` — 作为代理工程师，采用评估优先执行、分解和成本感知模型路由进行操作。
+- `/ai-first-engineering` — `docs/zh-CN/skills/ai-first-engineering/SKILL.md` — 团队中人工智能代理生成大部分实施输出的工程运营模型。
+- `/ai-regression-testing` — `docs/zh-CN/skills/ai-regression-testing/SKILL.md` — AI辅助开发的回归测试策略。沙盒模式API测试，无需依赖数据库，自动化的缺陷检查工作流程，以及捕捉AI盲点的模式，其中同一模型编写和审查代码。
+- `/android-clean-architecture` — `docs/zh-CN/skills/android-clean-architecture/SKILL.md` — 适用于Android和Kotlin多平台项目的Clean Architecture模式——模块结构、依赖规则、用例、仓库以及数据层模式。
+- `/api-connector-builder` — `docs/zh-CN/skills/api-connector-builder/SKILL.md` — 通过匹配目标仓库现有的集成模式，构建一个新的API连接器或提供者。适用于在不发明第二种架构的情况下添加一个集成。
+- `/api-design` — `docs/zh-CN/skills/api-design/SKILL.md` — REST API设计模式，包括资源命名、状态码、分页、过滤、错误响应、版本控制和生产API的速率限制。
+- `/architecture-decision-records` — `docs/zh-CN/skills/architecture-decision-records/SKILL.md` — 在Claude Code会话期间，将做出的架构决策捕获为结构化的架构决策记录（ADR）。自动检测决策时刻，记录上下文、考虑的替代方案和理由。维护一个ADR日志，以便未来的开发人员理解代码库为何以当前方式构建。
+- `/article-writing` — `docs/zh-CN/skills/article-writing/SKILL.md` — 根据提供的示例或品牌指导，以独特的语气撰写文章、指南、博客帖子、教程、新闻简报等长篇内容。当用户需要超过一段的精致书面内容时使用，尤其是当语气一致性、结构和可信度至关重要时。
+- `/automation-audit-ops` — `docs/zh-CN/skills/automation-audit-ops/SKILL.md` — 面向ECC的以证据为先的自动化清单与重叠审计工作流。当用户希望在修复任何内容之前了解哪些作业、钩子、连接器、MCP服务器或包装器是活跃的、损坏的、冗余的或缺失时使用。
+- `/autonomous-agent-harness` — `docs/zh-CN/skills/autonomous-agent-harness/SKILL.md` — 将 Claude Code 转变为具有持久记忆、定时操作、计算机使用和任务队列的完全自主代理系统。通过利用 Claude Code 的原生定时任务、调度、MCP 工具和记忆，取代独立的代理框架（Hermes、AutoGPT）。当用户需要持续自主操作、定时任务或自我导向的代理循环时使用。
+- `/autonomous-loops` — `docs/zh-CN/skills/autonomous-loops/SKILL.md` — 自主Claude代码循环的模式与架构——从简单的顺序管道到基于RFC的多智能体有向无环图系统。
+- `/backend-patterns` — `docs/zh-CN/skills/backend-patterns/SKILL.md` — 后端架构模式、API设计、数据库优化以及适用于Node.js、Express和Next.js API路由的服务器端最佳实践。
+- `/benchmark` — `docs/zh-CN/skills/benchmark/SKILL.md` — 使用此技能测量性能基线，检测PR前后的回归，并比较堆栈替代方案。
+- `/blueprint` — `docs/zh-CN/skills/blueprint/SKILL.md` — 将单行目标转化为多会话、多代理工程项目的分步构建计划。每个步骤包含独立的上下文简介，以便新代理能直接执行。包括对抗性审查门、依赖图、并行步骤检测、反模式目录和计划突变协议。触发条件：当用户请求复杂多PR任务的计划、蓝图或路线图，或描述需要多个会话的工作时。不触发条件：任务可在单个PR或少于3个工具调用中完成，或用户说“直接执行”时。
+- `/brand-voice` — `docs/zh-CN/skills/brand-voice/SKILL.md` — 从真实的帖子、文章、发布说明、文档或网站文案中构建基于源材料的写作风格档案，然后在内容、外展和社交工作流中重复使用该档案。当用户希望保持声音一致性而不使用通用的AI写作套路时使用。
+- `/browser-qa` — `docs/zh-CN/skills/browser-qa/SKILL.md` — Automate visual testing and UI interaction verification using browser automation after deployment.
+- `/bun-runtime` — `docs/zh-CN/skills/bun-runtime/SKILL.md` — Bun 作为运行时、包管理器、打包器和测试运行器。何时选择 Bun 而非 Node、迁移注意事项以及 Vercel 支持。
+- `/canary-watch` — `docs/zh-CN/skills/canary-watch/SKILL.md` — 使用此技能在部署、合并或依赖升级后监控已部署的URL是否存在回归问题。
+- `/carrier-relationship-management` — `docs/zh-CN/skills/carrier-relationship-management/SKILL.md` — 用于管理承运商组合、协商运费、跟踪承运商绩效、分配货运以及维护战略承运商关系的编码专业知识。基于拥有15年以上经验的运输经理提供的信息。包括记分卡框架、RFP流程、市场情报和合规性审查。适用于管理承运商、协商费率、评估承运商绩效或制定货运策略时使用。
+- `/ck` — `docs/zh-CN/skills/ck/SKILL.md` — Claude Code 的每个项目持久化记忆。在会话启动时自动加载项目上下文，通过 git 活动追踪会话，并写入原生记忆。命令运行确定性的 Node.js 脚本——行为在不同模型版本间保持一致。
+- `/claude-devfleet` — `docs/zh-CN/skills/claude-devfleet/SKILL.md` — 通过Claude DevFleet协调多智能体编码任务——规划项目、在隔离的工作树中并行调度智能体、监控进度并读取结构化报告。
+- `/click-path-audit` — `docs/zh-CN/skills/click-path-audit/SKILL.md` — 追踪每个面向用户的按钮/触点的完整状态变化序列，以发现功能单独工作但相互抵消、产生错误最终状态或使UI处于不一致状态的错误。适用于：系统调试未发现错误但用户报告按钮失效，或在任何涉及共享状态存储的重大重构之后。
+- `/clickhouse-io` — `docs/zh-CN/skills/clickhouse-io/SKILL.md` — ClickHouse数据库模式、查询优化、分析以及高性能分析工作负载的数据工程最佳实践。
+- `/code-tour` — `docs/zh-CN/skills/code-tour/SKILL.md` — 创建 CodeTour `.tour` 文件——针对特定角色的、带有真实文件和行锚点的逐步演练。用于入职引导、架构演练、PR 演练、RCA 演练以及结构化的“解释其工作原理”请求。
+- `/codebase-onboarding` — `docs/zh-CN/skills/codebase-onboarding/SKILL.md` — 分析一个陌生的代码库，并生成一个结构化的入门指南，包括架构图、关键入口点、规范和一个起始的CLAUDE.md文件。适用于加入新项目或首次在代码仓库中设置Claude Code时。
+- `/coding-standards` — `docs/zh-CN/skills/coding-standards/SKILL.md` — 适用于TypeScript、JavaScript、React和Node.js开发的通用编码标准、最佳实践和模式。
+- `/compose-multiplatform-patterns` — `docs/zh-CN/skills/compose-multiplatform-patterns/SKILL.md` — KMP项目中的Compose Multiplatform和Jetpack Compose模式——状态管理、导航、主题化、性能优化和平台特定UI。
+- `/configure-ecc` — `docs/zh-CN/skills/configure-ecc/SKILL.md` — 在 Claude Code、Codex 或 Kimi 内引导 ECC 安装、更新或重新配置，同时严格遵守各家工具真实的插件、范围和 Hook 能力。
+- `/connections-optimizer` — `docs/zh-CN/skills/connections-optimizer/SKILL.md` — 重新组织用户的X和LinkedIn网络，采用审查优先的修剪策略，提供添加/关注建议，并以用户真实口吻起草针对不同渠道的温和外联。当用户希望清理关注列表、向当前优先事项发展或围绕更高信号的关系重新平衡社交图谱时使用。
+- `/content-engine` — `docs/zh-CN/skills/content-engine/SKILL.md` — 为X、LinkedIn、TikTok、YouTube、新闻通讯和跨平台重新利用的多平台活动创建平台原生内容系统。适用于当用户需要社交媒体帖子、帖子串、脚本、内容日历，或一个源资产在多个平台上清晰适配时。
+- `/content-hash-cache-pattern` — `docs/zh-CN/skills/content-hash-cache-pattern/SKILL.md` — 使用SHA-256内容哈希缓存昂贵的文件处理结果——路径无关、自动失效、服务层分离。
+- `/context-budget` — `docs/zh-CN/skills/context-budget/SKILL.md` — 审核Claude Code上下文窗口在代理、技能、MCP服务器和规则中的消耗情况。识别膨胀、冗余组件，并提供优先的令牌节省建议。
+- `/continuous-agent-loop` — `docs/zh-CN/skills/continuous-agent-loop/SKILL.md` — 具有质量门、评估和恢复控制的连续自主代理循环模式。
+- `/continuous-learning-v2` — `docs/zh-CN/skills/continuous-learning-v2/SKILL.md` — 基于本能的学习系统，通过钩子观察会话，创建带置信度评分的原子本能，并将其进化为技能/命令/代理。v2.1版本增加了项目范围的本能，以防止跨项目污染。
+- `/continuous-learning` — `docs/zh-CN/skills/continuous-learning/SKILL.md` — 自动从Claude Code会话中提取可重复使用的模式，并将其保存为学习到的技能以供将来使用。
+- `/cost-aware-llm-pipeline` — `docs/zh-CN/skills/cost-aware-llm-pipeline/SKILL.md` — LLM API 使用成本优化模式 —— 基于任务复杂度的模型路由、预算跟踪、重试逻辑和提示缓存。
+- `/council` — `docs/zh-CN/skills/council/SKILL.md` — 召集四方会议处理模糊决策、权衡取舍及继续/停止决策。当存在多个有效路径且需要在选择前进行结构化异议时使用。
+- `/cpp-coding-standards` — `docs/zh-CN/skills/cpp-coding-standards/SKILL.md` — 基于C++核心指南（isocpp.github.io）的C++编码标准。在编写、审查或重构C++代码时使用，以强制实施现代、安全和惯用的实践。
+- `/cpp-testing` — `docs/zh-CN/skills/cpp-testing/SKILL.md` — 仅用于编写/更新/修复C++测试、配置GoogleTest/CTest、诊断失败或不稳定的测试，或添加覆盖率/消毒器时使用。
+- `/crosspost` — `docs/zh-CN/skills/crosspost/SKILL.md` — 跨X、LinkedIn、Threads和Bluesky的多平台内容分发。使用内容引擎模式根据平台适配内容。从不跨平台发布相同内容。当用户希望跨社交平台分发内容时使用。
+- `/csharp-testing` — `docs/zh-CN/skills/csharp-testing/SKILL.md` — 使用 xUnit、FluentAssertions、模拟、集成测试和测试组织最佳实践的 C# 和 .NET 测试模式。
+- `/customer-billing-ops` — `docs/zh-CN/skills/customer-billing-ops/SKILL.md` — 使用 Stripe 等连接计费工具操作客户计费工作流，例如订阅、退款、流失分类、计费门户恢复和计划分析。当用户需要帮助客户、检查订阅状态或管理影响收入的计费操作时使用。
+- `/customs-trade-compliance` — `docs/zh-CN/skills/customs-trade-compliance/SKILL.md` — 海关文件、关税分类、关税优化、受限方筛查以及多司法管辖区法规合规的编码化专业知识。由拥有15年以上经验的贸易合规专家提供。包括HS分类逻辑、Incoterms应用、自贸协定利用以及罚款减免。适用于处理海关清关、关税分类、贸易合规、进出口文件或关税优化时使用。
+- `/dart-flutter-patterns` — `docs/zh-CN/skills/dart-flutter-patterns/SKILL.md` — 生产就绪的 Dart 和 Flutter 模式，涵盖空安全、不可变状态、异步组合、Widget 架构、流行的状态管理框架（BLoC、Riverpod、Provider）、GoRouter 导航、Dio 网络请求、Freezed 代码生成和整洁架构。
+- `/dashboard-builder` — `docs/zh-CN/skills/dashboard-builder/SKILL.md` — 为 Grafana、SigNoz 等平台构建能够回答实际运维人员问题的监控仪表板。适用于将指标转化为可用的仪表板，而非华而不实的展示板。
+- `/data-scraper-agent` — `docs/zh-CN/skills/data-scraper-agent/SKILL.md` — 构建一个全自动化的AI驱动数据收集代理，适用于任何公共来源——招聘网站、价格信息、新闻、GitHub、体育赛事等任何内容。按计划进行抓取，使用免费LLM（Gemini Flash）丰富数据，将结果存储在Notion/Sheets/Supabase中，并从用户反馈中学习。完全免费在GitHub Actions上运行。适用于用户希望自动监控、收集或跟踪任何公共数据的场景。
+- `/database-migrations` — `docs/zh-CN/skills/database-migrations/SKILL.md` — 数据库迁移最佳实践，涵盖模式变更、数据迁移、回滚以及零停机部署，适用于PostgreSQL、MySQL及常用ORM（Prisma、Drizzle、Django、TypeORM、golang-migrate）。
+- `/deep-research` — `docs/zh-CN/skills/deep-research/SKILL.md` — 使用firecrawl和exa MCPs进行多源深度研究。搜索网络、综合发现并交付带有来源引用的报告。适用于用户希望对任何主题进行有证据和引用的彻底研究时。
+- `/defi-amm-security` — `docs/zh-CN/skills/defi-amm-security/SKILL.md` — Solidity AMM 合约、流动性池和交换流程的安全检查清单。涵盖重入、CEI 排序、捐赠或通胀攻击、预言机操纵、滑点、管理员控制和整数数学。
+- `/deployment-patterns` — `docs/zh-CN/skills/deployment-patterns/SKILL.md` — 部署工作流、CI/CD流水线模式、Docker容器化、健康检查、回滚策略以及Web应用程序的生产就绪检查清单。
+- `/design-system` — `docs/zh-CN/skills/design-system/SKILL.md` — 使用此技能生成或审计设计系统，检查视觉一致性，并审查涉及样式的PR。
+- `/django-patterns` — `docs/zh-CN/skills/django-patterns/SKILL.md` — Django架构模式，使用DRF设计REST API，ORM最佳实践，缓存，信号，中间件，以及生产级Django应用程序。
+- `/django-security` — `docs/zh-CN/skills/django-security/SKILL.md` — Django 安全最佳实践、认证、授权、CSRF 防护、SQL 注入预防、XSS 预防和安全部署配置。
+- `/django-tdd` — `docs/zh-CN/skills/django-tdd/SKILL.md` — Django 测试策略，包括 pytest-django、TDD 方法、factory_boy、模拟、覆盖率以及测试 Django REST Framework API。
+- `/django-verification` — `docs/zh-CN/skills/django-verification/SKILL.md` — Django项目的验证循环：迁移、代码检查、带覆盖率的测试、安全扫描，以及在发布或PR前的部署就绪检查。
+- `/dmux-workflows` — `docs/zh-CN/skills/dmux-workflows/SKILL.md` — 使用dmux（AI代理的tmux窗格管理器）进行多代理编排。跨Claude Code、Codex、OpenCode及其他工具的并行代理工作流模式。适用于并行运行多个代理会话或协调多代理开发工作流时。
+- `/docker-patterns` — `docs/zh-CN/skills/docker-patterns/SKILL.md` — 用于本地开发的Docker和Docker Compose模式，包括容器安全、网络、卷策略和多服务编排。
+- `/documentation-lookup` — `docs/zh-CN/skills/documentation-lookup/SKILL.md` — 通过 Context7 MCP 使用最新的库和框架文档，而非训练数据。当用户提出设置问题、API参考、代码示例或命名框架（例如 React、Next.js、Prisma）时激活。
+- `/dotnet-patterns` — `docs/zh-CN/skills/dotnet-patterns/SKILL.md` — 惯用的C#和.NET模式、约定、依赖注入、async/await以及构建健壮、可维护的.NET应用程序的最佳实践。
+- `/e2e-testing` — `docs/zh-CN/skills/e2e-testing/SKILL.md` — Playwright E2E 测试模式、页面对象模型、配置、CI/CD 集成、工件管理和不稳定测试策略。
+- `/ecc-guide` — `docs/zh-CN/skills/ecc-guide/SKILL.md` — 在回答之前先读取仓库的实时状态，引导用户了解 ECC 当前的 agents、skills、命令、hooks、规则、安装配置档案以及项目接入流程。
+- `/ecc-tools-cost-audit` — `docs/zh-CN/skills/ecc-tools-cost-audit/SKILL.md` — 证据优先的ECC工具燃烧和计费审计工作流。用于调查ECC工具仓库中的失控PR创建、配额绕过、高级模型泄漏、重复作业或GitHub App成本激增。
+- `/email-ops` — `docs/zh-CN/skills/email-ops/SKILL.md` — 以证据为先的邮箱分类、草稿、发送验证及已发送邮件安全跟进工作流，适用于ECC。当用户希望整理邮件、通过真实邮件界面起草或发送、或证明已发送邮件内容时使用。
+- `/energy-procurement` — `docs/zh-CN/skills/energy-procurement/SKILL.md` — 电力与燃气采购、电价优化、需量电费管理、可再生能源购电协议评估及多设施能源成本管理的编码化专业知识。基于能源采购经理在大型工商业用户中超过15年的经验。包括市场结构分析、对冲策略、负荷分析和可持续性报告框架。适用于采购能源、优化电价、管理需量电费、评估购电协议或制定能源策略时使用。
+- `/enterprise-agent-ops` — `docs/zh-CN/skills/enterprise-agent-ops/SKILL.md` — 通过可观测性、安全边界和生命周期管理来操作长期运行的代理工作负载。
+- `/eval-harness` — `docs/zh-CN/skills/eval-harness/SKILL.md` — 克劳德代码会话的正式评估框架，实施评估驱动开发（EDD）原则
+- `/evm-token-decimals` — `docs/zh-CN/skills/evm-token-decimals/SKILL.md` — 防止跨EVM链的静默小数不匹配错误。涵盖运行时小数查找、链感知缓存、桥接代币精度漂移以及面向机器人、仪表盘和DeFi工具的安全归一化。
+- `/exa-search` — `docs/zh-CN/skills/exa-search/SKILL.md` — 通过Exa MCP进行神经搜索，适用于网络、代码和公司研究。当用户需要网络搜索、代码示例、公司情报、人员查找，或使用Exa神经搜索引擎进行AI驱动的深度研究时使用。
+- `/fal-ai-media` — `docs/zh-CN/skills/fal-ai-media/SKILL.md` — 通过 fal.ai MCP 实现统一的媒体生成——图像、视频和音频。涵盖文本到图像（Nano Banana）、文本/图像到视频（Seedance、Kling、Veo 3）、文本到语音（CSM-1B），以及视频到音频（ThinkSound）。当用户想要使用 AI 生成图像、视频或音频时使用。
+- `/finance-billing-ops` — `docs/zh-CN/skills/finance-billing-ops/SKILL.md` — 面向ECC的以证据为先的收入、定价、退款、团队计费和计费模型真相工作流。当用户需要销售快照、定价比较、重复收费诊断或基于代码的计费现实而非通用支付建议时使用。
+- `/flutter-dart-code-review` — `docs/zh-CN/skills/flutter-dart-code-review/SKILL.md` — 库无关的Flutter/Dart代码审查清单，涵盖Widget最佳实践、状态管理模式（BLoC、Riverpod、Provider、GetX、MobX、Signals）、Dart惯用法、性能、可访问性、安全性和整洁架构。
+- `/foundation-models-on-device` — `docs/zh-CN/skills/foundation-models-on-device/SKILL.md` — 苹果FoundationModels框架用于设备上的LLM——文本生成、使用@Generable进行引导生成、工具调用，以及在iOS 26+中的快照流。
+- `/frontend-patterns` — `docs/zh-CN/skills/frontend-patterns/SKILL.md` — React、Next.js、状态管理、性能优化和UI最佳实践的前端开发模式。
+- `/frontend-slides` — `docs/zh-CN/skills/frontend-slides/SKILL.md` — 从零开始或通过转换PowerPoint文件创建令人惊艳、动画丰富的HTML演示文稿。当用户想要构建演示文稿、将PPT/PPTX转换为网页格式，或为演讲/推介创建幻灯片时使用。帮助非设计师通过视觉探索而非抽象选择发现他们的美学。
+- `/gan-style-harness` — `docs/zh-CN/skills/gan-style-harness/SKILL.md` — 受GAN启发的生成器-评估器代理框架，用于自主构建高质量应用。基于Anthropic 2026年3月的框架设计论文。
+- `/gateguard` — `docs/zh-CN/skills/gateguard/SKILL.md` — 强制事实的门控，阻止编辑/写入/Bash（包括MultiEdit），并要求在允许操作之前进行具体调查（导入器、数据模式、用户指令）。与无门控代理相比，可测量地将输出质量提高2.25分。
+- `/git-workflow` — `docs/zh-CN/skills/git-workflow/SKILL.md` — Git工作流模式，包括分支策略、提交约定、合并与变基、冲突解决以及适用于各种规模团队的协作开发最佳实践。
+- `/github-ops` — `docs/zh-CN/skills/github-ops/SKILL.md` — GitHub 仓库操作、自动化与管理。使用 gh CLI 进行问题分类、PR 管理、CI/CD 操作、发布管理和安全监控。当用户想要管理 GitHub 问题、PR、CI 状态、发布、贡献者、过期项目或任何超出简单 git 命令的 GitHub 操作任务时使用。
+- `/golang-patterns` — `docs/zh-CN/skills/golang-patterns/SKILL.md` — 用于构建健壮、高效且可维护的Go应用程序的惯用Go模式、最佳实践和约定。
+- `/golang-testing` — `docs/zh-CN/skills/golang-testing/SKILL.md` — Go测试模式包括表格驱动测试、子测试、基准测试、模糊测试和测试覆盖率。遵循TDD方法论，采用地道的Go实践。
+- `/google-workspace-ops` — `docs/zh-CN/skills/google-workspace-ops/SKILL.md` — 将 Google 云端硬盘、文档、表格和幻灯片作为一个工作流界面来操作，用于处理计划、追踪器、演示文稿和共享文档。当用户需要查找、总结、编辑、迁移或清理 Google Workspace 资产，而无需使用原始工具调用时使用。
+- `/healthcare-cdss-patterns` — `docs/zh-CN/skills/healthcare-cdss-patterns/SKILL.md` — 临床决策支持系统（CDSS）开发模式。药物相互作用检查、剂量验证、临床评分（NEWS2、qSOFA）、警报严重性分类以及集成到电子病历工作流程中。
+- `/healthcare-emr-patterns` — `docs/zh-CN/skills/healthcare-emr-patterns/SKILL.md` — 医疗应用中EMR/EHR的开发模式。临床安全、就诊工作流程、处方生成、临床决策支持集成以及以可访问性为先的医疗数据录入用户界面。
+- `/healthcare-eval-harness` — `docs/zh-CN/skills/healthcare-eval-harness/SKILL.md` — 用于医疗应用部署的患者安全评估工具。针对CDSS准确性、PHI暴露、临床工作流完整性和集成合规性的自动化测试套件。在安全故障时阻止部署。
+- `/healthcare-phi-compliance` — `docs/zh-CN/skills/healthcare-phi-compliance/SKILL.md` — 医疗应用中受保护健康信息（PHI）和个人身份信息（PII）的合规模式。涵盖数据分类、访问控制、审计追踪、加密及常见泄露途径。
+- `/hermes-imports` — `docs/zh-CN/skills/hermes-imports/SKILL.md` — 将本地 Hermes 操作员工作流转换为经过清理的 ECC 技能和发布包工件。在准备将 Hermes 工作流用于公共 ECC 重用而不泄露私有工作区状态、凭据或仅本地路径时使用。
+- `/hexagonal-architecture` — `docs/zh-CN/skills/hexagonal-architecture/SKILL.md` — 设计、实现并重构端口与适配器系统，具有清晰的领域边界、依赖反转以及跨 TypeScript、Java、Kotlin 和 Go 服务的可测试用例编排。
+- `/hipaa-compliance` — `docs/zh-CN/skills/hipaa-compliance/SKILL.md` — 针对医疗隐私和安全工作的HIPAA特定入口点。当任务明确围绕HIPAA、PHI处理、受保实体、BAA、违规态势或美国医疗合规要求时使用。
+- `/hookify-rules` — `docs/zh-CN/skills/hookify-rules/SKILL.md` — 当用户要求创建hookify规则、编写hook规则、配置hookify、添加hookify规则或需要关于hookify规则语法和模式的指导时，应使用此技能。
+- `/inventory-demand-planning` — `docs/zh-CN/skills/inventory-demand-planning/SKILL.md` — 为多地点零售商提供需求预测、安全库存优化、补货规划及促销提升估算的编码化专业知识。基于拥有15年以上管理数百个SKU经验的需求规划师的专业知识。包括预测方法选择、ABC/XYZ分析、季节性过渡管理及供应商谈判框架。适用于预测需求、设定安全库存、规划补货、管理促销或优化库存水平时使用。
+- `/investor-materials` — `docs/zh-CN/skills/investor-materials/SKILL.md` — 创建和更新宣传文稿、一页简介、投资者备忘录、加速器申请、财务模型和融资材料。当用户需要面向投资者的文件、预测、资金用途表、里程碑计划或必须在多个融资资产中保持内部一致性的材料时使用。
+- `/investor-outreach` — `docs/zh-CN/skills/investor-outreach/SKILL.md` — 草拟冷邮件、热情介绍简介、跟进邮件、更新邮件和投资者沟通以筹集资金。当用户需要向天使投资人、风险投资公司、战略投资者或加速器进行推广，并需要简洁、个性化的面向投资者的消息时使用。
+- `/iterative-retrieval` — `docs/zh-CN/skills/iterative-retrieval/SKILL.md` — 逐步优化上下文检索以解决子代理上下文问题的模式
+- `/java-coding-standards` — `docs/zh-CN/skills/java-coding-standards/SKILL.md` — Spring Boot服务的Java编码标准：命名、不可变性、Optional用法、流、异常、泛型和项目布局。
+- `/jira-integration` — `docs/zh-CN/skills/jira-integration/SKILL.md` — 在检索Jira工单、分析需求、更新工单状态、添加评论或转换问题时使用此技能。通过MCP或直接REST调用提供Jira API模式。
+- `/jpa-patterns` — `docs/zh-CN/skills/jpa-patterns/SKILL.md` — Spring Boot中的JPA/Hibernate模式，用于实体设计、关系处理、查询优化、事务管理、审计、索引、分页和连接池。
+- `/knowledge-ops` — `docs/zh-CN/skills/knowledge-ops/SKILL.md` — 知识库管理、摄取、同步和跨多个存储层（本地文件、MCP内存、向量存储、Git仓库）的检索。当用户想要保存、组织、同步、去重或搜索其知识系统时使用。
+- `/kotlin-coroutines-flows` — `docs/zh-CN/skills/kotlin-coroutines-flows/SKILL.md` — Kotlin协程与Flow在Android和KMP中的模式——结构化并发、Flow操作符、StateFlow、错误处理和测试。
+- `/kotlin-exposed-patterns` — `docs/zh-CN/skills/kotlin-exposed-patterns/SKILL.md` — JetBrains Exposed ORM 模式，包括 DSL 查询、DAO 模式、事务、HikariCP 连接池、Flyway 迁移和仓库模式。
+- `/kotlin-ktor-patterns` — `docs/zh-CN/skills/kotlin-ktor-patterns/SKILL.md` — Ktor 服务器模式，包括路由 DSL、插件、身份验证、Koin DI、kotlinx.serialization、WebSockets 和 testApplication 测试。
+- `/kotlin-patterns` — `docs/zh-CN/skills/kotlin-patterns/SKILL.md` — 惯用的Kotlin模式、最佳实践和约定，用于构建健壮、高效且可维护的Kotlin应用程序，包括协程、空安全和DSL构建器。
+- `/kotlin-testing` — `docs/zh-CN/skills/kotlin-testing/SKILL.md` — 使用Kotest、MockK、协程测试、基于属性的测试和Kover覆盖率的Kotlin测试模式。遵循TDD方法论和地道的Kotlin实践。
+- `/laravel-patterns` — `docs/zh-CN/skills/laravel-patterns/SKILL.md` — Laravel架构模式、路由/控制器、Eloquent ORM、服务层、队列、事件、缓存以及用于生产应用的API资源。
+- `/laravel-plugin-discovery` — `docs/zh-CN/skills/laravel-plugin-discovery/SKILL.md` — 通过LaraPlugins.io MCP发现和评估Laravel包。当用户想要查找插件、检查包的健康状况或评估Laravel/PHP兼容性时使用。
+- `/laravel-security` — `docs/zh-CN/skills/laravel-security/SKILL.md` — Laravel 安全最佳实践，涵盖认证/授权、验证、CSRF、批量赋值、文件上传、密钥管理、速率限制和安全部署。
+- `/laravel-tdd` — `docs/zh-CN/skills/laravel-tdd/SKILL.md` — 使用 PHPUnit 和 Pest、工厂、数据库测试、模拟以及覆盖率目标进行 Laravel 的测试驱动开发。
+- `/laravel-verification` — `docs/zh-CN/skills/laravel-verification/SKILL.md` — Verification loop for Laravel projects: env checks, linting, static analysis, tests with coverage, security scans, and deployment readiness.
+- `/lead-intelligence` — `docs/zh-CN/skills/lead-intelligence/SKILL.md` — AI原生的潜在客户情报与外联管道。取代Apollo、Clay和ZoomInfo，提供基于代理的信号评分、相互排名、温暖路径发现、来源驱动的语音建模以及跨电子邮件、LinkedIn和X的渠道特定外联。当用户想要查找、筛选并联系高价值联系人时使用。
+- `/liquid-glass-design` — `docs/zh-CN/skills/liquid-glass-design/SKILL.md` — iOS 26 液态玻璃设计系统 — 适用于 SwiftUI、UIKit 和 WidgetKit 的动态玻璃材质，具有模糊、反射和交互式变形效果。
+- `/llm-trading-agent-security` — `docs/zh-CN/skills/llm-trading-agent-security/SKILL.md` — 具有钱包或交易权限的自主交易代理的安全模式。涵盖提示注入、支出限制、发送前模拟、断路器、MEV保护和密钥处理。
+- `/logistics-exception-management` — `docs/zh-CN/skills/logistics-exception-management/SKILL.md` — 针对货运异常、货物延误、损坏、丢失和承运商纠纷的编码化专业知识，由拥有15年以上运营经验的物流专业人士提供。包括升级协议、承运商特定行为、索赔程序和判断框架。在处理运输异常、货运索赔、交付问题或承运商纠纷时使用。
+- `/manim-video` — `docs/zh-CN/skills/manim-video/SKILL.md` — 构建可复用的Manim解释器，用于技术概念、图表、系统图和产品演示，并在需要时移交给更广泛的ECC视频栈。当用户希望获得清晰的动画解释而非通用的人物讲解脚本时使用。
+- `/market-research` — `docs/zh-CN/skills/market-research/SKILL.md` — 进行市场研究、竞争分析、投资者尽职调查和行业情报，附带来源归属和决策导向的摘要。适用于用户需要市场规模、竞争对手比较、基金研究、技术扫描或为商业决策提供信息的研究时。
+- `/mcp-server-patterns` — `docs/zh-CN/skills/mcp-server-patterns/SKILL.md` — 使用Node/TypeScript SDK构建MCP服务器——工具、资源、提示、Zod验证、stdio与可流式HTTP对比。使用Context7或官方MCP文档获取最新API信息。
+- `/messages-ops` — `docs/zh-CN/skills/messages-ops/SKILL.md` — 面向ECC的以证据为先的实时消息工作流。当用户想要阅读短信或私信、恢复最近的一次性验证码、在回复前检查对话线程，或证明实际检查了哪个消息来源时使用。
+- `/nanoclaw-repl` — `docs/zh-CN/skills/nanoclaw-repl/SKILL.md` — 操作并扩展NanoClaw v2，这是ECC基于claude -p构建的零依赖会话感知REPL。
+- `/nestjs-patterns` — `docs/zh-CN/skills/nestjs-patterns/SKILL.md` — NestJS 架构模式，涵盖模块、控制器、提供者、DTO 验证、守卫、拦截器、配置以及生产级 TypeScript 后端。
+- `/nextjs-turbopack` — `docs/zh-CN/skills/nextjs-turbopack/SKILL.md` — Next.js 16+ 和 Turbopack — 增量打包、文件系统缓存、开发速度，以及何时使用 Turbopack 与 webpack。
+- `/nodejs-keccak256` — `docs/zh-CN/skills/nodejs-keccak256/SKILL.md` — 防止 JavaScript 和 TypeScript 中的以太坊哈希错误。Node 的 sha3-256 是 NIST SHA3，而非以太坊 Keccak-256，会静默破坏选择器、签名、存储槽和地址推导。
+- `/nutrient-document-processing` — `docs/zh-CN/skills/nutrient-document-processing/SKILL.md` — 使用Nutrient DWS API处理、转换、OCR识别、提取、编辑、签名和填写文档。支持PDF、DOCX、XLSX、PPTX、HTML和图像格式。
+- `/nuxt4-patterns` — `docs/zh-CN/skills/nuxt4-patterns/SKILL.md` — Nuxt 4 应用模式，涵盖水合安全、性能优化、路由规则、懒加载，以及使用 useFetch 和 useAsyncData 进行 SSR 安全的数据获取。
+- `/opensource-pipeline` — `docs/zh-CN/skills/opensource-pipeline/SKILL.md` — 开源流水线：fork、清理并打包私有项目以安全公开发布。串联3个代理（fork代理、清理代理、打包代理）。触发词：'/opensource'、'open source this'、'make this public'、'prepare for open source'。
+- `/parallel-execution-optimizer` — `docs/zh-CN/skills/parallel-execution-optimizer/SKILL.md` — 当用户希望通过并行工作、并发 agents、批量工具调用、隔离 worktree 或多条独立验证通道来大幅加速任务、同时不损失正确性时使用。
+- `/perl-patterns` — `docs/zh-CN/skills/perl-patterns/SKILL.md` — 现代 Perl 5.36+ 的惯用法、最佳实践和约定，用于构建稳健、可维护的 Perl 应用程序。
+- `/perl-security` — `docs/zh-CN/skills/perl-security/SKILL.md` — 全面的Perl安全指南，涵盖污染模式、输入验证、安全进程执行、DBI参数化查询、Web安全（XSS/SQLi/CSRF）以及perlcritic安全策略。
+- `/perl-testing` — `docs/zh-CN/skills/perl-testing/SKILL.md` — 使用Test2::V0、Test::More、prove runner、模拟、Devel::Cover覆盖率和TDD方法的Perl测试模式。
+- `/plankton-code-quality` — `docs/zh-CN/skills/plankton-code-quality/SKILL.md` — 使用Plankton进行编写时代码质量强制执行——通过钩子在每次文件编辑时自动格式化、代码检查和Claude驱动的修复。
+- `/postgres-patterns` — `docs/zh-CN/skills/postgres-patterns/SKILL.md` — 用于查询优化、模式设计、索引和安全性的PostgreSQL数据库模式。基于Supabase最佳实践。
+- `/product-capability` — `docs/zh-CN/skills/product-capability/SKILL.md` — 将PRD意图、路线图需求或产品讨论转化为可实施的方案计划，在开始多服务工作之前暴露约束、不变性、接口和未解决的决策。当用户需要ECC原生的PRD到SRS通道，而不是模糊的规划文本时使用。
+- `/product-lens` — `docs/zh-CN/skills/product-lens/SKILL.md` — 使用此技能在构建前验证“为什么”，运行产品诊断，并在请求成为实施合同之前对产品方向进行压力测试。
+- `/production-scheduling` — `docs/zh-CN/skills/production-scheduling/SKILL.md` — 为离散和批量制造中的生产调度、作业排序、产线平衡、换模优化和瓶颈解决提供编码化专业知识。基于拥有15年以上经验的生产调度师的知识。包括约束理论/鼓-缓冲-绳、快速换模、设备综合效率分析、中断响应框架以及企业资源计划/制造执行系统交互模式。适用于调度生产、解决瓶颈、优化换模、应对中断或平衡制造产线时。
+- `/project-flow-ops` — `docs/zh-CN/skills/project-flow-ops/SKILL.md` — 通过分类问题和拉取请求、关联活跃工作、保持GitHub对外可见而Linear作为内部执行层，来协调GitHub和Linear之间的执行流程。当用户需要待办事项控制、PR分类或GitHub与Linear协调时使用。
+- `/prompt-optimizer` — `docs/zh-CN/skills/prompt-optimizer/SKILL.md` — 分析原始提示，识别意图和差距，匹配ECC组件（技能/命令/代理/钩子），并输出一个可直接粘贴的优化提示。仅提供咨询角色——绝不自行执行任务。触发时机：当用户说“优化提示”、“改进我的提示”、“如何编写提示”、“帮我优化这个指令”或明确要求提高提示质量时。中文等效表达同样触发：“优化prompt”、“改进prompt”、“怎么写prompt”、“帮我优化这个指令”。不触发时机：当用户希望直接执行任务，或说“直接做”时。不触发时机：当用户说“优化代码”、“优化性能”、“optimize performance”、“optimize this code”时——这些是重构/性能优化任务，而非提示优化。
+- `/python-patterns` — `docs/zh-CN/skills/python-patterns/SKILL.md` — Pythonic 惯用法、PEP 8 标准、类型提示以及构建稳健、高效且可维护的 Python 应用程序的最佳实践。
+- `/python-testing` — `docs/zh-CN/skills/python-testing/SKILL.md` — 使用pytest的Python测试策略，包括TDD方法、夹具、模拟、参数化和覆盖率要求。
+- `/pytorch-patterns` — `docs/zh-CN/skills/pytorch-patterns/SKILL.md` — PyTorch深度学习模式与最佳实践，用于构建稳健、高效且可复现的训练流程、模型架构和数据加载。
+- `/quality-nonconformance` — `docs/zh-CN/skills/quality-nonconformance/SKILL.md` — 为受监管制造业中的质量控制、不合格调查、根本原因分析、纠正措施和供应商质量管理提供编码化专业知识。基于在FDA、IATF 16949和AS9100环境中拥有15年以上经验的质量工程师的见解。包括不合格报告生命周期管理、纠正与预防措施系统、统计过程控制解释和审核方法。适用于调查不合格、进行根本原因分析、管理纠正与预防措施、解释统计过程控制数据或处理供应商质量问题。
+- `/ralphinho-rfc-pipeline` — `docs/zh-CN/skills/ralphinho-rfc-pipeline/SKILL.md` — 基于RFC驱动的多智能体DAG执行模式，包含质量门、合并队列和工作单元编排。
+- `/regex-vs-llm-structured-text` — `docs/zh-CN/skills/regex-vs-llm-structured-text/SKILL.md` — 选择在解析结构化文本时使用正则表达式还是大型语言模型的决策框架——从正则表达式开始，仅在低置信度的边缘情况下添加大型语言模型。
+- `/remotion-video-creation` — `docs/zh-CN/skills/remotion-video-creation/SKILL.md` — Remotion 最佳实践 - 在 React 中创建视频。29 条领域特定规则，涵盖 3D、动画、音频、字幕、图表、过渡等。
+- `/repo-scan` — `docs/zh-CN/skills/repo-scan/SKILL.md` — 用于从固定且可审查的提交安装外部 repo-scan 技能的引导指针。在运行跨栈源代码资产审计前需要安装 repo-scan 时使用；此 ECC 指针本身不执行审计。
+- `/research-ops` — `docs/zh-CN/skills/research-ops/SKILL.md` — 以证据为先的ECC当前状态研究工作流程。当用户希望基于当前公开证据和提供的本地上下文获取最新事实、比较、丰富信息或建议时使用。
+- `/returns-reverse-logistics` — `docs/zh-CN/skills/returns-reverse-logistics/SKILL.md` — 用于退货授权、接收与检验、处置决策、退款处理、欺诈检测以及保修索赔管理的标准化专业知识。基于拥有15年以上经验的退货运营经理的见解。包括分级框架、处置经济学、欺诈模式识别和供应商回收流程。适用于处理产品退货、逆向物流、退款决策、退货欺诈检测或保修索赔时使用。
+- `/rules-distill` — `docs/zh-CN/skills/rules-distill/SKILL.md` — 扫描技能以提取跨领域原则并将其提炼为规则——追加、修订或创建新的规则文件
+- `/rust-patterns` — `docs/zh-CN/skills/rust-patterns/SKILL.md` — 地道的Rust模式、所有权、错误处理、特质、并发，以及构建安全、高性能应用程序的最佳实践。
+- `/rust-testing` — `docs/zh-CN/skills/rust-testing/SKILL.md` — Rust测试模式，包括单元测试、集成测试、异步测试、基于属性的测试、模拟和覆盖率。遵循TDD方法学。
+- `/safety-guard` — `docs/zh-CN/skills/safety-guard/SKILL.md` — 使用此技能可防止在生产系统上工作或自主运行代理时进行破坏性操作。
+- `/santa-method` — `docs/zh-CN/skills/santa-method/SKILL.md` — 具有收敛循环的多智能体对抗验证。两个独立的审查代理必须都通过，输出才能发送。
+- `/search-first` — `docs/zh-CN/skills/search-first/SKILL.md` — 研究优先于编码的工作流程。在编写自定义代码之前，搜索现有的工具、库和模式。调用研究员代理。
+- `/security-bounty-hunter` — `docs/zh-CN/skills/security-bounty-hunter/SKILL.md` — 在仓库中寻找可利用、值得赏金的安全问题。专注于远程可访问的漏洞，这些漏洞符合实际报告的条件，而不是嘈杂的仅本地发现。
+- `/security-review` — `docs/zh-CN/skills/security-review/SKILL.md` — 在添加身份验证、处理用户输入、处理机密信息、创建API端点或实现支付/敏感功能时使用此技能。提供全面的安全检查清单和模式。
+- `/security-scan` — `docs/zh-CN/skills/security-scan/SKILL.md` — 使用AgentShield扫描您的Claude代码配置（.claude/目录），以发现安全漏洞、配置错误和注入风险。检查CLAUDE.md、settings.json、MCP服务器、钩子和代理定义。
+- `/seo` — `docs/zh-CN/skills/seo/SKILL.md` — 审计、规划并实施SEO改进，涵盖技术SEO、页面优化、结构化数据、核心网页指标和内容策略。当用户希望提升搜索可见性、进行SEO修复、使用架构标记、处理站点地图/robots文件或进行关键词映射时使用。
+- `/skill-comply` — `docs/zh-CN/skills/skill-comply/SKILL.md` — 可视化技能、规则和代理定义是否被实际遵循——自动生成3种提示严格级别的场景，运行代理，分类行为序列，并报告完整工具调用时间线的合规率
+- `/skill-stocktake` — `docs/zh-CN/skills/skill-stocktake/SKILL.md` — 用于审计Claude技能和命令的质量。支持快速扫描（仅变更技能）和全面盘点模式，采用顺序子代理批量评估。
+- `/social-graph-ranker` — `docs/zh-CN/skills/social-graph-ranker/SKILL.md` — 加权社交图谱排名，用于在X和LinkedIn上发现温暖介绍、桥梁评分和网络差距分析。当用户想要可重用的图谱排名引擎本身，而不是其上层更广泛的推广或网络维护工作流时使用。
+- `/springboot-patterns` — `docs/zh-CN/skills/springboot-patterns/SKILL.md` — Spring Boot架构模式、REST API设计、分层服务、数据访问、缓存、异步处理和日志记录。用于Java Spring Boot后端工作。
+- `/springboot-security` — `docs/zh-CN/skills/springboot-security/SKILL.md` — Java Spring Boot 服务中认证/授权、验证、CSRF、密钥、标头、速率限制和依赖安全性的 Spring Security 最佳实践。
+- `/springboot-tdd` — `docs/zh-CN/skills/springboot-tdd/SKILL.md` — 使用JUnit 5、Mockito、MockMvc、Testcontainers和JaCoCo进行Spring Boot的测试驱动开发。适用于添加功能、修复错误或重构时。
+- `/springboot-verification` — `docs/zh-CN/skills/springboot-verification/SKILL.md` — Spring Boot项目验证循环：构建、静态分析、测试覆盖、安全扫描，以及发布或PR前的差异审查。
+- `/strategic-compact` — `docs/zh-CN/skills/strategic-compact/SKILL.md` — 建议在逻辑间隔处手动压缩上下文，以在任务阶段中保留上下文，而非任意的自动压缩。
+- `/swift-actor-persistence` — `docs/zh-CN/skills/swift-actor-persistence/SKILL.md` — 在 Swift 中使用 actor 实现线程安全的数据持久化——基于内存缓存与文件支持的存储，通过设计消除数据竞争。
+- `/swift-concurrency-6-2` — `docs/zh-CN/skills/swift-concurrency-6-2/SKILL.md` — Swift 6.2 可接近的并发性 — 默认单线程，@concurrent 用于显式后台卸载，隔离一致性用于主 actor 类型。
+- `/swift-protocol-di-testing` — `docs/zh-CN/skills/swift-protocol-di-testing/SKILL.md` — 基于协议的依赖注入，用于可测试的Swift代码——使用聚焦协议和Swift Testing模拟文件系统、网络和外部API。
+- `/swiftui-patterns` — `docs/zh-CN/skills/swiftui-patterns/SKILL.md` — SwiftUI 架构模式，使用 @Observable 进行状态管理，视图组合，导航，性能优化，以及现代 iOS/macOS UI 最佳实践。
+- `/tdd-workflow` — `docs/zh-CN/skills/tdd-workflow/SKILL.md` — 在编写新功能、修复错误或重构代码时使用此技能。强制执行测试驱动开发，确保单元测试、集成测试和端到端测试的覆盖率超过80%。
+- `/team-builder` — `docs/zh-CN/skills/team-builder/SKILL.md` — 用于组合和派遣并行团队的交互式代理选择器
+- `/terminal-ops` — `docs/zh-CN/skills/terminal-ops/SKILL.md` — 基于证据优先的仓库执行工作流，适用于ECC。当用户需要运行命令、检查仓库、调试CI失败或推送带有精确执行和验证证明的窄修复时使用。
+- `/token-budget-advisor` — `docs/zh-CN/skills/token-budget-advisor/SKILL.md` — 在回答前，为用户提供关于消耗多少响应深度的知情选择。当用户明确希望控制响应长度、深度或令牌预算时使用此技能。触发条件："token budget", "token count", "token usage", "token limit", "response length", "answer depth", "short version", "brief answer", "detailed answer", "exhaustive answer", "respuesta corta vs larga", "cuántos tokens", "ahorrar tokens", "responde al 50%", "dame la versión corta", "quiero controlar cuánto usas"，或用户明确要求控制答案大小或深度的清晰变体。不触发条件：用户已在当前会话中指定了级别（保持该级别），请求明显是单字答案，或"token"指代认证/会话/支付令牌而非响应大小。
+- `/ui-demo` — `docs/zh-CN/skills/ui-demo/SKILL.md` — 使用 Playwright 录制精美的 UI 演示视频。当用户要求创建 Web 应用的演示、导览、屏幕录制或教程视频时使用。生成带有可见光标、自然节奏和专业感的 WebM 视频。
+- `/unified-notifications-ops` — `docs/zh-CN/skills/unified-notifications-ops/SKILL.md` — 将通知作为统一的 ECC 原生工作流进行操作，涵盖 GitHub、Linear、桌面提醒、钩子以及连接的通信界面。当真正的问题是告警路由、去重、升级或收件箱崩溃时使用。
+- `/verification-loop` — `docs/zh-CN/skills/verification-loop/SKILL.md` — Claude Code 会话的全面验证系统。
+- `/video-editing` — `docs/zh-CN/skills/video-editing/SKILL.md` — AI辅助的视频编辑工作流程，用于剪辑、构建和增强实拍素材。涵盖从原始拍摄到FFmpeg、Remotion、ElevenLabs、fal.ai，再到Descript或CapCut最终润色的完整流程。适用于用户想要编辑视频、剪辑素材、制作vlog或构建视频内容的情况。
+- `/videodb` — `docs/zh-CN/skills/videodb/SKILL.md` — 视频与音频的查看、理解与行动。查看：从本地文件、URL、RTSP/直播源或实时录制桌面获取内容；返回实时上下文和可播放流链接。理解：提取帧，构建视觉/语义/时间索引，并通过时间戳和自动剪辑搜索片段。行动：转码和标准化（编解码器、帧率、分辨率、宽高比），执行时间线编辑（字幕、文本/图像叠加、品牌化、音频叠加、配音、翻译），生成媒体资源（图像、音频、视频），并为直播流或桌面捕获的事件创建实时警报。
+- `/visa-doc-translate` — `docs/zh-CN/skills/visa-doc-translate/SKILL.md` — 将签证申请文件（图片）翻译成英文，并创建包含原文和译文的双语PDF
+- `/workspace-surface-audit` — `docs/zh-CN/skills/workspace-surface-audit/SKILL.md` — 审计活跃仓库、MCP服务器、插件、连接器、环境表面和工具设置，然后推荐最高价值的ECC原生技能、钩子、代理和操作员工作流。当用户希望帮助设置Claude Code或了解其环境中实际可用的功能时使用。
+- `/x-api` — `docs/zh-CN/skills/x-api/SKILL.md` — X/Twitter API集成，用于发布推文、线程、读取时间线、搜索和分析。涵盖OAuth认证模式、速率限制和平台原生内容发布。当用户希望以编程方式与X交互时使用。

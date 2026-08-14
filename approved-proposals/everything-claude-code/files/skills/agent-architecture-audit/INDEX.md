@@ -1,0 +1,7 @@
+# Proposed skills index
+
+Generated from observed SKILL.md files. Review names and descriptions before applying.
+
+Source digest: `fccd8a3ce69072f7ed5e7d960aa19b817b3dac45d13f48ad9cd7332ab6ec43bd`
+
+- `/agent-architecture-audit` — `skills/agent-architecture-audit/SKILL.md` — Full-stack diagnostic for agent and LLM applications. Audits the 12-layer agent stack for wrapper regression, memory pollution, tool discipline failures, hidden repair loops, and rendering corruption. Produces severity-ranked findings with code-first fixes. Essential for developers building agent applications, autonomous loops, or any LLM-powered feature. Use when an agent or LLM feature misbehaves and the failing layer is unknown, or before shipping an agent stack.

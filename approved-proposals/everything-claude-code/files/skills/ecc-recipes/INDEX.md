@@ -1,0 +1,7 @@
+# Proposed skills index
+
+Generated from observed SKILL.md files. Review names and descriptions before applying.
+
+Source digest: `fccd8a3ce69072f7ed5e7d960aa19b817b3dac45d13f48ad9cd7332ab6ec43bd`
+
+- `/ecc-recipes` — `skills/ecc-recipes/SKILL.md` — Map a described workflow to the right ECC command-GROUP with run-order and stop condition, and browse all command-group recipe families. Adds a family-grouping + run-order + when-to-stop layer on top of the flat command catalog. Advisory only. TRIGGER when the user says which commands for X, what command group runs X, show ECC recipes, list ECC pipelines, or how do I run a workflow with ECC. DO NOT TRIGGER when the user wants the task executed directly, wants a single-command deep doc (use ecc-guide), or wants a draft prompt rewritten (use prompt-optimizer).

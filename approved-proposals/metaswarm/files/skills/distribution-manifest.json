@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "1.0",
+  "mode": "skills-sh-editable",
+  "skills": [
+    "brainstorming-extension",
+    "create-issue",
+    "design-review-gate",
+    "external-tools",
+    "handling-pr-comments",
+    "handoff",
+    "migrate",
+    "orchestrated-execution",
+    "plan-review-gate",
+    "pr-shepherd",
+    "production-orchestrator",
+    "setup",
+    "start",
+    "status",
+    "visual-review"
+  ],
+  "scope": "project-local",
+  "approvalRequired": true,
+  "status": "PROPOSED"
+}

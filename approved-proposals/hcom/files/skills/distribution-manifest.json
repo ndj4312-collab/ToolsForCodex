@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0",
+  "mode": "skills-sh-editable",
+  "skills": [
+    "hcom-agent-messaging",
+    "production-orchestrator"
+  ],
+  "scope": "project-local",
+  "approvalRequired": true,
+  "status": "PROPOSED"
+}

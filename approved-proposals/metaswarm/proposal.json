@@ -1,0 +1,2927 @@
+{
+  "schemaVersion": "1.0",
+  "status": "PROPOSED",
+  "targetPath": ".",
+  "sourceDigest": "123c0d9f4d9fb413460497aa8517523e21e6f9dd4984471686369fd23e9ebc90",
+  "components": [
+    {
+      "kind": "plugin",
+      "name": "marketplace.json",
+      "path": ".agents/plugins/marketplace.json",
+      "purpose": "Plugin entry or plugin configuration",
+      "confidence": "medium",
+      "evidence": [
+        ".agents/plugins/marketplace.json"
+      ]
+    },
+    {
+      "kind": "plugin",
+      "name": "plugin.json",
+      "path": ".claude-plugin/plugin.json",
+      "purpose": "Plugin entry or plugin configuration",
+      "confidence": "medium",
+      "evidence": [
+        ".claude-plugin/plugin.json"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "create-issue.md",
+      "path": ".claude/commands/create-issue.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        ".claude/commands/create-issue.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "external-tools-health.md",
+      "path": ".claude/commands/external-tools-health.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        ".claude/commands/external-tools-health.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "handle-pr-comments.md",
+      "path": ".claude/commands/handle-pr-comments.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        ".claude/commands/handle-pr-comments.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "handoff.md",
+      "path": ".claude/commands/handoff.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        ".claude/commands/handoff.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "pr-shepherd.md",
+      "path": ".claude/commands/pr-shepherd.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        ".claude/commands/pr-shepherd.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "prime.md",
+      "path": ".claude/commands/prime.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        ".claude/commands/prime.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "review-design.md",
+      "path": ".claude/commands/review-design.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        ".claude/commands/review-design.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "self-reflect.md",
+      "path": ".claude/commands/self-reflect.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        ".claude/commands/self-reflect.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "start-task.md",
+      "path": ".claude/commands/start-task.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        ".claude/commands/start-task.md"
+      ]
+    },
+    {
+      "kind": "plugin",
+      "name": "plugin.json",
+      "path": ".codex-plugin/plugin.json",
+      "purpose": "Plugin entry or plugin configuration",
+      "confidence": "medium",
+      "evidence": [
+        ".codex-plugin/plugin.json"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "install.sh",
+      "path": ".codex/install.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        ".codex/install.sh"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "README.md",
+      "path": ".codex/README.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        ".codex/README.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": ".coverage-thresholds.json",
+      "path": ".coverage-thresholds.json",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        ".coverage-thresholds.json"
+      ]
+    },
+    {
+      "kind": "plugin",
+      "name": "README.md",
+      "path": ".cursor-plugin/README.md",
+      "purpose": "Plugin entry or plugin configuration",
+      "confidence": "medium",
+      "evidence": [
+        ".cursor-plugin/README.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": ".gitattributes",
+      "path": ".gitattributes",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        ".gitattributes"
+      ]
+    },
+    {
+      "kind": "workflow",
+      "name": "ci.yml",
+      "path": ".github/workflows/ci.yml",
+      "purpose": "Automated workflow or repository action",
+      "confidence": "medium",
+      "evidence": [
+        ".github/workflows/ci.yml"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": ".gitignore",
+      "path": ".gitignore",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        ".gitignore"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "README.md",
+      "path": ".opencode/README.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        ".opencode/README.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "AGENTS.md",
+      "path": "AGENTS.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "AGENTS.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "architect-agent.md",
+      "path": "agents/architect-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "agents/architect-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "code-review-agent.md",
+      "path": "agents/code-review-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "agents/code-review-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "coder-agent.md",
+      "path": "agents/coder-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "agents/coder-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "cto-agent.md",
+      "path": "agents/cto-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "agents/cto-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "customer-service-agent.md",
+      "path": "agents/customer-service-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "agents/customer-service-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "designer-agent.md",
+      "path": "agents/designer-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "agents/designer-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "issue-orchestrator.md",
+      "path": "agents/issue-orchestrator.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "agents/issue-orchestrator.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "knowledge-curator-agent.md",
+      "path": "agents/knowledge-curator-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "agents/knowledge-curator-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "metrics-agent.md",
+      "path": "agents/metrics-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "agents/metrics-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "pr-shepherd-agent.md",
+      "path": "agents/pr-shepherd-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "agents/pr-shepherd-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "product-manager-agent.md",
+      "path": "agents/product-manager-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "agents/product-manager-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "release-engineer-agent.md",
+      "path": "agents/release-engineer-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "agents/release-engineer-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "researcher-agent.md",
+      "path": "agents/researcher-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "agents/researcher-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "security-auditor-agent.md",
+      "path": "agents/security-auditor-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "agents/security-auditor-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "security-design-agent.md",
+      "path": "agents/security-design-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "agents/security-design-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "slack-coordinator-agent.md",
+      "path": "agents/slack-coordinator-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "agents/slack-coordinator-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "sre-agent.md",
+      "path": "agents/sre-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "agents/sre-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "swarm-coordinator-agent.md",
+      "path": "agents/swarm-coordinator-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "agents/swarm-coordinator-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "test-automator-agent.md",
+      "path": "agents/test-automator-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "agents/test-automator-agent.md"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "estimate-cost.sh",
+      "path": "bin/estimate-cost.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "bin/estimate-cost.sh"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "external-tools-verify.sh",
+      "path": "bin/external-tools-verify.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "bin/external-tools-verify.sh"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "pr-comments-check.sh",
+      "path": "bin/pr-comments-check.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "bin/pr-comments-check.sh"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "pr-comments-filter.sh",
+      "path": "bin/pr-comments-filter.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "bin/pr-comments-filter.sh"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "CHANGELOG.md",
+      "path": "CHANGELOG.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "CHANGELOG.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "CLAUDE.md",
+      "path": "CLAUDE.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "CLAUDE.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "metaswarm.js",
+      "path": "cli/metaswarm.js",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "cli/metaswarm.js"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "brainstorm.md",
+      "path": "commands/brainstorm.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "commands/brainstorm.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "create-issue.md",
+      "path": "commands/create-issue.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "commands/create-issue.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "external-tools-health.md",
+      "path": "commands/external-tools-health.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "commands/external-tools-health.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "handle-pr-comments.md",
+      "path": "commands/handle-pr-comments.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "commands/handle-pr-comments.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "handoff.md",
+      "path": "commands/handoff.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "commands/handoff.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "metaswarm-setup.md",
+      "path": "commands/metaswarm-setup.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "commands/metaswarm-setup.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "metaswarm-update-version.md",
+      "path": "commands/metaswarm-update-version.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "commands/metaswarm-update-version.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "brainstorm.toml",
+      "path": "commands/metaswarm/brainstorm.toml",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "commands/metaswarm/brainstorm.toml"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "create-issue.toml",
+      "path": "commands/metaswarm/create-issue.toml",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "commands/metaswarm/create-issue.toml"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "external-tools-health.toml",
+      "path": "commands/metaswarm/external-tools-health.toml",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "commands/metaswarm/external-tools-health.toml"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "handle-pr-comments.toml",
+      "path": "commands/metaswarm/handle-pr-comments.toml",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "commands/metaswarm/handle-pr-comments.toml"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "handoff.toml",
+      "path": "commands/metaswarm/handoff.toml",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "commands/metaswarm/handoff.toml"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "pr-shepherd.toml",
+      "path": "commands/metaswarm/pr-shepherd.toml",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "commands/metaswarm/pr-shepherd.toml"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "prime.toml",
+      "path": "commands/metaswarm/prime.toml",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "commands/metaswarm/prime.toml"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "review-design.toml",
+      "path": "commands/metaswarm/review-design.toml",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "commands/metaswarm/review-design.toml"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "self-reflect.toml",
+      "path": "commands/metaswarm/self-reflect.toml",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "commands/metaswarm/self-reflect.toml"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "setup.toml",
+      "path": "commands/metaswarm/setup.toml",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "commands/metaswarm/setup.toml"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "start-task.toml",
+      "path": "commands/metaswarm/start-task.toml",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "commands/metaswarm/start-task.toml"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "status.toml",
+      "path": "commands/metaswarm/status.toml",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "commands/metaswarm/status.toml"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "update.toml",
+      "path": "commands/metaswarm/update.toml",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "commands/metaswarm/update.toml"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "pr-shepherd.md",
+      "path": "commands/pr-shepherd.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "commands/pr-shepherd.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "prime.md",
+      "path": "commands/prime.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "commands/prime.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "review-design.md",
+      "path": "commands/review-design.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "commands/review-design.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "self-reflect.md",
+      "path": "commands/self-reflect.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "commands/self-reflect.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "setup.md",
+      "path": "commands/setup.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "commands/setup.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "start-task.md",
+      "path": "commands/start-task.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "commands/start-task.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "start.md",
+      "path": "commands/start.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "commands/start.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "status.md",
+      "path": "commands/status.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "commands/status.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "update.md",
+      "path": "commands/update.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "commands/update.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "CONTRIBUTING.md",
+      "path": "CONTRIBUTING.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "CONTRIBUTING.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "coverage-enforcement.md",
+      "path": "docs/coverage-enforcement.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/coverage-enforcement.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "index.html",
+      "path": "docs/index.html",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/index.html"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "2026-02-14-external-tools-design.md",
+      "path": "docs/plans/2026-02-14-external-tools-design.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/plans/2026-02-14-external-tools-design.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "2026-02-14-external-tools-plan.md",
+      "path": "docs/plans/2026-02-14-external-tools-plan.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/plans/2026-02-14-external-tools-plan.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "2026-02-14-guided-setup-design.md",
+      "path": "docs/plans/2026-02-14-guided-setup-design.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/plans/2026-02-14-guided-setup-design.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "2026-02-14-guided-setup-plan.md",
+      "path": "docs/plans/2026-02-14-guided-setup-plan.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/plans/2026-02-14-guided-setup-plan.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "2026-02-26-plugin-migration-design.md",
+      "path": "docs/plans/2026-02-26-plugin-migration-design.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/plans/2026-02-26-plugin-migration-design.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "2026-02-26-plugin-migration-plan.md",
+      "path": "docs/plans/2026-02-26-plugin-migration-plan.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/plans/2026-02-26-plugin-migration-plan.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "README.codex.md",
+      "path": "docs/README.codex.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/README.codex.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "README.opencode.md",
+      "path": "docs/README.opencode.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/README.opencode.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "gemini-extension.json",
+      "path": "gemini-extension.json",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "gemini-extension.json"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "GEMINI.md",
+      "path": "GEMINI.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "GEMINI.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "GETTING_STARTED.md",
+      "path": "GETTING_STARTED.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "GETTING_STARTED.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "agent-coordination.md",
+      "path": "guides/agent-coordination.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "guides/agent-coordination.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "build-validation.md",
+      "path": "guides/build-validation.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "guides/build-validation.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "coding-standards.md",
+      "path": "guides/coding-standards.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "guides/coding-standards.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "git-workflow.md",
+      "path": "guides/git-workflow.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "guides/git-workflow.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "testing-patterns.md",
+      "path": "guides/testing-patterns.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "guides/testing-patterns.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "worktree-development.md",
+      "path": "guides/worktree-development.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "guides/worktree-development.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "hooks.json",
+      "path": "hooks/hooks.json",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "hooks/hooks.json"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "session-start.sh",
+      "path": "hooks/session-start.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "hooks/session-start.sh"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "INSTALL.md",
+      "path": "INSTALL.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "INSTALL.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "anti-patterns.jsonl",
+      "path": "knowledge/anti-patterns.jsonl",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "knowledge/anti-patterns.jsonl"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "api-behaviors.jsonl",
+      "path": "knowledge/api-behaviors.jsonl",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "knowledge/api-behaviors.jsonl"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "codebase-facts.jsonl",
+      "path": "knowledge/codebase-facts.jsonl",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "knowledge/codebase-facts.jsonl"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "decisions.jsonl",
+      "path": "knowledge/decisions.jsonl",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "knowledge/decisions.jsonl"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "facts.jsonl",
+      "path": "knowledge/facts.jsonl",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "knowledge/facts.jsonl"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "gotchas.jsonl",
+      "path": "knowledge/gotchas.jsonl",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "knowledge/gotchas.jsonl"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "patterns.jsonl",
+      "path": "knowledge/patterns.jsonl",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "knowledge/patterns.jsonl"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "README.md",
+      "path": "knowledge/README.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "knowledge/README.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "platform-detect.js",
+      "path": "lib/platform-detect.js",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "lib/platform-detect.js"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "setup-mandatory-files.sh",
+      "path": "lib/setup-mandatory-files.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "lib/setup-mandatory-files.sh"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "sync-resources.js",
+      "path": "lib/sync-resources.js",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "lib/sync-resources.js"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "LICENSE",
+      "path": "LICENSE",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "LICENSE"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "ORCHESTRATION.md",
+      "path": "ORCHESTRATION.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "ORCHESTRATION.md"
+      ]
+    },
+    {
+      "kind": "configuration",
+      "name": "package.json",
+      "path": "package.json",
+      "purpose": "Repository configuration",
+      "confidence": "medium",
+      "evidence": [
+        "package.json"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "README.md",
+      "path": "README.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "README.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "adversarial-review-rubric.md",
+      "path": "rubrics/adversarial-review-rubric.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "rubrics/adversarial-review-rubric.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "architecture-rubric.md",
+      "path": "rubrics/architecture-rubric.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "rubrics/architecture-rubric.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "code-review-rubric.md",
+      "path": "rubrics/code-review-rubric.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "rubrics/code-review-rubric.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "external-tool-review-rubric.md",
+      "path": "rubrics/external-tool-review-rubric.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "rubrics/external-tool-review-rubric.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "plan-review-rubric-adversarial.md",
+      "path": "rubrics/plan-review-rubric-adversarial.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "rubrics/plan-review-rubric-adversarial.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "plan-review-rubric.md",
+      "path": "rubrics/plan-review-rubric.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "rubrics/plan-review-rubric.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "release-engineering-rubric.md",
+      "path": "rubrics/release-engineering-rubric.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "rubrics/release-engineering-rubric.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "security-review-rubric.md",
+      "path": "rubrics/security-review-rubric.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "rubrics/security-review-rubric.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "test-coverage-rubric.md",
+      "path": "rubrics/test-coverage-rubric.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "rubrics/test-coverage-rubric.md"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "beads-fetch-conversation-history.ts",
+      "path": "scripts/beads-fetch-conversation-history.ts",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "scripts/beads-fetch-conversation-history.ts"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "beads-fetch-pr-comments.ts",
+      "path": "scripts/beads-fetch-pr-comments.ts",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "scripts/beads-fetch-pr-comments.ts"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "brainstorming-extension",
+      "path": "skills/brainstorming-extension/SKILL.md",
+      "purpose": "Enforces design review gate after brainstorming — bridges superpowers:brainstorming into the metaswarm quality pipeline",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/brainstorming-extension/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "create-issue",
+      "path": "skills/create-issue/SKILL.md",
+      "purpose": "Create comprehensive GitHub issues with TDD plans, acceptance criteria, and agent instructions for autonomous PR lifecycle management",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/create-issue/SKILL.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "agent-coordination.md",
+      "path": "skills/design-review-gate/guides/agent-coordination.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "skills/design-review-gate/guides/agent-coordination.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "design-review-gate",
+      "path": "skills/design-review-gate/SKILL.md",
+      "purpose": "Automatic review gate that runs after brainstorming completes - spawns PM, Architect, Designer, Security, and CTO agents in parallel, iterates until all approve",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/design-review-gate/SKILL.md"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "_common.sh",
+      "path": "skills/external-tools/adapters/_common.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "skills/external-tools/adapters/_common.sh"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": ".gitkeep",
+      "path": "skills/external-tools/adapters/.gitkeep",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "skills/external-tools/adapters/.gitkeep"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "codex.sh",
+      "path": "skills/external-tools/adapters/codex.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "skills/external-tools/adapters/codex.sh"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "gemini.sh",
+      "path": "skills/external-tools/adapters/gemini.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "skills/external-tools/adapters/gemini.sh"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "external-tool-review-rubric.md",
+      "path": "skills/external-tools/rubrics/external-tool-review-rubric.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "skills/external-tools/rubrics/external-tool-review-rubric.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "external-tools",
+      "path": "skills/external-tools/SKILL.md",
+      "purpose": "Delegate implementation and review tasks to external AI CLI tools (Codex, Gemini) with cross-model adversarial review",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/external-tools/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "handling-pr-comments",
+      "path": "skills/handling-pr-comments/SKILL.md",
+      "purpose": "Address PR review feedback systematically — fetch inline comments, review bodies, handle outside-diff-range comments, resolve threads with proper attribution",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/handling-pr-comments/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "handoff",
+      "path": "skills/handoff/SKILL.md",
+      "purpose": "Analyze the current session and write a self-contained handoff document so a fresh agent can resume the work with full context — outputs a single \"Read XXX.md and do YYY.\" sentence",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/handoff/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "migrate",
+      "path": "skills/migrate/SKILL.md",
+      "purpose": "Migrate from npm-installed metaswarm to the marketplace plugin — removes redundant files with safety checks",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/migrate/SKILL.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "agent-coordination.md",
+      "path": "skills/orchestrated-execution/guides/agent-coordination.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "skills/orchestrated-execution/guides/agent-coordination.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "adversarial-review-rubric.md",
+      "path": "skills/orchestrated-execution/rubrics/adversarial-review-rubric.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "skills/orchestrated-execution/rubrics/adversarial-review-rubric.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "orchestrated-execution",
+      "path": "skills/orchestrated-execution/SKILL.md",
+      "purpose": "4-phase execution loop for work units - IMPLEMENT, VALIDATE, ADVERSARIAL REVIEW, COMMIT",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/orchestrated-execution/SKILL.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "plan-review-rubric-adversarial.md",
+      "path": "skills/plan-review-gate/rubrics/plan-review-rubric-adversarial.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "skills/plan-review-gate/rubrics/plan-review-rubric-adversarial.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "plan-review-gate",
+      "path": "skills/plan-review-gate/SKILL.md",
+      "purpose": "Automatic adversarial review gate that spawns 3 independent reviewers in parallel after any plan is drafted - all must PASS before presenting to user",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/plan-review-gate/SKILL.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "agent-coordination.md",
+      "path": "skills/pr-shepherd/guides/agent-coordination.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "skills/pr-shepherd/guides/agent-coordination.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "pr-shepherd",
+      "path": "skills/pr-shepherd/SKILL.md",
+      "purpose": "Monitor a PR through to merge — handle CI failures, review comments, and thread resolution automatically until all checks pass",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/pr-shepherd/SKILL.md"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "estimate-cost.sh",
+      "path": "skills/setup/bin/estimate-cost.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "skills/setup/bin/estimate-cost.sh"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "external-tools-verify.sh",
+      "path": "skills/setup/bin/external-tools-verify.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "skills/setup/bin/external-tools-verify.sh"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "pr-comments-check.sh",
+      "path": "skills/setup/bin/pr-comments-check.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "skills/setup/bin/pr-comments-check.sh"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "pr-comments-filter.sh",
+      "path": "skills/setup/bin/pr-comments-filter.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "skills/setup/bin/pr-comments-filter.sh"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "anti-patterns.jsonl",
+      "path": "skills/setup/knowledge/anti-patterns.jsonl",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "skills/setup/knowledge/anti-patterns.jsonl"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "api-behaviors.jsonl",
+      "path": "skills/setup/knowledge/api-behaviors.jsonl",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "skills/setup/knowledge/api-behaviors.jsonl"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "codebase-facts.jsonl",
+      "path": "skills/setup/knowledge/codebase-facts.jsonl",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "skills/setup/knowledge/codebase-facts.jsonl"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "decisions.jsonl",
+      "path": "skills/setup/knowledge/decisions.jsonl",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "skills/setup/knowledge/decisions.jsonl"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "facts.jsonl",
+      "path": "skills/setup/knowledge/facts.jsonl",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "skills/setup/knowledge/facts.jsonl"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "gotchas.jsonl",
+      "path": "skills/setup/knowledge/gotchas.jsonl",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "skills/setup/knowledge/gotchas.jsonl"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "patterns.jsonl",
+      "path": "skills/setup/knowledge/patterns.jsonl",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "skills/setup/knowledge/patterns.jsonl"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "README.md",
+      "path": "skills/setup/knowledge/README.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "skills/setup/knowledge/README.md"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "beads-fetch-conversation-history.ts",
+      "path": "skills/setup/scripts/beads-fetch-conversation-history.ts",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "skills/setup/scripts/beads-fetch-conversation-history.ts"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "beads-fetch-pr-comments.ts",
+      "path": "skills/setup/scripts/beads-fetch-pr-comments.ts",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "skills/setup/scripts/beads-fetch-pr-comments.ts"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "setup",
+      "path": "skills/setup/SKILL.md",
+      "purpose": "Interactive project setup — detects your project, configures metaswarm, writes project-local files",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/setup/SKILL.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": ".env.example",
+      "path": "skills/setup/templates/.env.example",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "skills/setup/templates/.env.example"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "AGENTS-append.md",
+      "path": "skills/setup/templates/AGENTS-append.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "skills/setup/templates/AGENTS-append.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "AGENTS.md",
+      "path": "skills/setup/templates/AGENTS.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "skills/setup/templates/AGENTS.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "beads-developer-setup.md",
+      "path": "skills/setup/templates/beads-developer-setup.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "skills/setup/templates/beads-developer-setup.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "beads-readme.md",
+      "path": "skills/setup/templates/beads-readme.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "skills/setup/templates/beads-readme.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "ci-coverage-job.yml",
+      "path": "skills/setup/templates/ci-coverage-job.yml",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "skills/setup/templates/ci-coverage-job.yml"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "ci.yml",
+      "path": "skills/setup/templates/ci.yml",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "skills/setup/templates/ci.yml"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "CLAUDE-append.md",
+      "path": "skills/setup/templates/CLAUDE-append.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "skills/setup/templates/CLAUDE-append.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "CLAUDE.md",
+      "path": "skills/setup/templates/CLAUDE.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "skills/setup/templates/CLAUDE.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "coverage-thresholds.json",
+      "path": "skills/setup/templates/coverage-thresholds.json",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "skills/setup/templates/coverage-thresholds.json"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "external-tools-setup.md",
+      "path": "skills/setup/templates/external-tools-setup.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "skills/setup/templates/external-tools-setup.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "external-tools.yaml",
+      "path": "skills/setup/templates/external-tools.yaml",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "skills/setup/templates/external-tools.yaml"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "GEMINI-append.md",
+      "path": "skills/setup/templates/GEMINI-append.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "skills/setup/templates/GEMINI-append.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "GEMINI.md",
+      "path": "skills/setup/templates/GEMINI.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "skills/setup/templates/GEMINI.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "gitignore",
+      "path": "skills/setup/templates/gitignore",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "skills/setup/templates/gitignore"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "gtg-workflow.yml",
+      "path": "skills/setup/templates/gtg-workflow.yml",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "skills/setup/templates/gtg-workflow.yml"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "pre-push",
+      "path": "skills/setup/templates/pre-push",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "skills/setup/templates/pre-push"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "SERVICE-INVENTORY.md",
+      "path": "skills/setup/templates/SERVICE-INVENTORY.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "skills/setup/templates/SERVICE-INVENTORY.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "task-completion-checklist.md",
+      "path": "skills/setup/templates/task-completion-checklist.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "skills/setup/templates/task-completion-checklist.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "todo-management.md",
+      "path": "skills/setup/templates/todo-management.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "skills/setup/templates/todo-management.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "UI-FLOWS.md",
+      "path": "skills/setup/templates/UI-FLOWS.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "skills/setup/templates/UI-FLOWS.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "architect-agent.md",
+      "path": "skills/start/agents/architect-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "skills/start/agents/architect-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "code-review-agent.md",
+      "path": "skills/start/agents/code-review-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "skills/start/agents/code-review-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "coder-agent.md",
+      "path": "skills/start/agents/coder-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "skills/start/agents/coder-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "cto-agent.md",
+      "path": "skills/start/agents/cto-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "skills/start/agents/cto-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "customer-service-agent.md",
+      "path": "skills/start/agents/customer-service-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "skills/start/agents/customer-service-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "designer-agent.md",
+      "path": "skills/start/agents/designer-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "skills/start/agents/designer-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "issue-orchestrator.md",
+      "path": "skills/start/agents/issue-orchestrator.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "skills/start/agents/issue-orchestrator.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "knowledge-curator-agent.md",
+      "path": "skills/start/agents/knowledge-curator-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "skills/start/agents/knowledge-curator-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "metrics-agent.md",
+      "path": "skills/start/agents/metrics-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "skills/start/agents/metrics-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "pr-shepherd-agent.md",
+      "path": "skills/start/agents/pr-shepherd-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "skills/start/agents/pr-shepherd-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "product-manager-agent.md",
+      "path": "skills/start/agents/product-manager-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "skills/start/agents/product-manager-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "release-engineer-agent.md",
+      "path": "skills/start/agents/release-engineer-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "skills/start/agents/release-engineer-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "researcher-agent.md",
+      "path": "skills/start/agents/researcher-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "skills/start/agents/researcher-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "security-auditor-agent.md",
+      "path": "skills/start/agents/security-auditor-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "skills/start/agents/security-auditor-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "security-design-agent.md",
+      "path": "skills/start/agents/security-design-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "skills/start/agents/security-design-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "slack-coordinator-agent.md",
+      "path": "skills/start/agents/slack-coordinator-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "skills/start/agents/slack-coordinator-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "sre-agent.md",
+      "path": "skills/start/agents/sre-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "skills/start/agents/sre-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "swarm-coordinator-agent.md",
+      "path": "skills/start/agents/swarm-coordinator-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "skills/start/agents/swarm-coordinator-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "test-automator-agent.md",
+      "path": "skills/start/agents/test-automator-agent.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "skills/start/agents/test-automator-agent.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "agent-coordination.md",
+      "path": "skills/start/guides/agent-coordination.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "skills/start/guides/agent-coordination.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "codex-tools.md",
+      "path": "skills/start/references/codex-tools.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "skills/start/references/codex-tools.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "cursor-tools.md",
+      "path": "skills/start/references/cursor-tools.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "skills/start/references/cursor-tools.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "opencode-tools.md",
+      "path": "skills/start/references/opencode-tools.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "skills/start/references/opencode-tools.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "platform-adaptation.md",
+      "path": "skills/start/references/platform-adaptation.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "skills/start/references/platform-adaptation.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "adversarial-review-rubric.md",
+      "path": "skills/start/rubrics/adversarial-review-rubric.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "skills/start/rubrics/adversarial-review-rubric.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "code-review-rubric.md",
+      "path": "skills/start/rubrics/code-review-rubric.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "skills/start/rubrics/code-review-rubric.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "plan-review-rubric.md",
+      "path": "skills/start/rubrics/plan-review-rubric.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "skills/start/rubrics/plan-review-rubric.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "release-engineering-rubric.md",
+      "path": "skills/start/rubrics/release-engineering-rubric.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "skills/start/rubrics/release-engineering-rubric.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "security-review-rubric.md",
+      "path": "skills/start/rubrics/security-review-rubric.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "skills/start/rubrics/security-review-rubric.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "start",
+      "path": "skills/start/SKILL.md",
+      "purpose": "Use when starting work on any task, when the user mentions metaswarm, or when the user wants to begin tracked development work",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/start/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "status",
+      "path": "skills/status/SKILL.md",
+      "purpose": "Diagnostic status report — shows metaswarm installation state, project setup, and potential issues",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/status/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "visual-review",
+      "path": "skills/visual-review/SKILL.md",
+      "purpose": "Take screenshots of web pages and UI using Playwright for visual review and iteration",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/visual-review/SKILL.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": ".env.example",
+      "path": "templates/.env.example",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "templates/.env.example"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "AGENTS-append.md",
+      "path": "templates/AGENTS-append.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "templates/AGENTS-append.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "AGENTS.md",
+      "path": "templates/AGENTS.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "templates/AGENTS.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "beads-developer-setup.md",
+      "path": "templates/beads-developer-setup.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "templates/beads-developer-setup.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "beads-readme.md",
+      "path": "templates/beads-readme.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "templates/beads-readme.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "ci-coverage-job.yml",
+      "path": "templates/ci-coverage-job.yml",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "templates/ci-coverage-job.yml"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "ci.yml",
+      "path": "templates/ci.yml",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "templates/ci.yml"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "CLAUDE-append.md",
+      "path": "templates/CLAUDE-append.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "templates/CLAUDE-append.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "CLAUDE.md",
+      "path": "templates/CLAUDE.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "templates/CLAUDE.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "coverage-thresholds.json",
+      "path": "templates/coverage-thresholds.json",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "templates/coverage-thresholds.json"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "external-tools-setup.md",
+      "path": "templates/external-tools-setup.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "templates/external-tools-setup.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "external-tools.yaml",
+      "path": "templates/external-tools.yaml",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "templates/external-tools.yaml"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "GEMINI-append.md",
+      "path": "templates/GEMINI-append.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "templates/GEMINI-append.md"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "GEMINI.md",
+      "path": "templates/GEMINI.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "templates/GEMINI.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "gitignore",
+      "path": "templates/gitignore",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "templates/gitignore"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "gtg-workflow.yml",
+      "path": "templates/gtg-workflow.yml",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "templates/gtg-workflow.yml"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "pre-push",
+      "path": "templates/pre-push",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "templates/pre-push"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "SERVICE-INVENTORY.md",
+      "path": "templates/SERVICE-INVENTORY.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "templates/SERVICE-INVENTORY.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "task-completion-checklist.md",
+      "path": "templates/task-completion-checklist.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "templates/task-completion-checklist.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "todo-management.md",
+      "path": "templates/todo-management.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "templates/todo-management.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "UI-FLOWS.md",
+      "path": "templates/UI-FLOWS.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "templates/UI-FLOWS.md"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "test-installer.sh",
+      "path": "tests/cli/test-installer.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "tests/cli/test-installer.sh"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "test-codex-skills.sh",
+      "path": "tests/codex/test-codex-skills.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "tests/codex/test-codex-skills.sh"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "test-gemini-extension.sh",
+      "path": "tests/gemini/test-gemini-extension.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "tests/gemini/test-gemini-extension.sh"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "test-session-start.sh",
+      "path": "tests/hooks/test-session-start.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "tests/hooks/test-session-start.sh"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "test-sync-resources.sh",
+      "path": "tests/lib/test-sync-resources.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "tests/lib/test-sync-resources.sh"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "test-beads-cleanup.sh",
+      "path": "tests/templates/test-beads-cleanup.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "tests/templates/test-beads-cleanup.sh"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "test-ci-template.sh",
+      "path": "tests/templates/test-ci-template.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "tests/templates/test-ci-template.sh"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "USAGE.md",
+      "path": "USAGE.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "USAGE.md"
+      ]
+    }
+  ],
+  "coordinator": {
+    "paths": [
+      "AGENTS.md",
+      "skills/production-orchestrator/SKILL.md"
+    ],
+    "files": [
+      "AGENTS.md",
+      "skills/production-orchestrator/SKILL.md"
+    ]
+  },
+  "indexes": [
+    "INDEX.md",
+    "skills/INDEX.md",
+    "skills/distribution-manifest.json",
+    "skills/brainstorming-extension/INDEX.md",
+    "skills/create-issue/INDEX.md",
+    "skills/design-review-gate/INDEX.md",
+    "skills/external-tools/INDEX.md",
+    "skills/handling-pr-comments/INDEX.md",
+    "skills/handoff/INDEX.md",
+    "skills/migrate/INDEX.md",
+    "skills/orchestrated-execution/INDEX.md",
+    "skills/plan-review-gate/INDEX.md",
+    "skills/pr-shepherd/INDEX.md",
+    "skills/setup/INDEX.md",
+    "skills/start/INDEX.md",
+    "skills/status/INDEX.md",
+    "skills/visual-review/INDEX.md"
+  ],
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "kind": "coordinator",
+      "content": "# Proposed repository coordinator\n\nThis coordinator was generated from the files currently present in the repository. It is a reviewable proposal and has not been installed.\n\n## How to use it\n\n1. Read `INDEX.md` and `skills/INDEX.md` before selecting a component.\n2. Choose the smallest skill whose observed description matches the user's request.\n3. Follow that skill's own instructions and use the observed scripts and workflows only when they are relevant.\n4. Pass the skill's output to the next step only when the output is present and validated.\n5. Stop and ask for review when a needed file, dependency, permission, or expected output is missing.\n\n## Observed skills\n\n- /brainstorming-extension — Enforces design review gate after brainstorming — bridges superpowers:brainstorming into the metaswarm quality pipeline (unknown-invoked)\n- /create-issue — Create comprehensive GitHub issues with TDD plans, acceptance criteria, and agent instructions for autonomous PR lifecycle management (unknown-invoked)\n- /design-review-gate — Automatic review gate that runs after brainstorming completes - spawns PM, Architect, Designer, Security, and CTO agents in parallel, iterates until all approve (unknown-invoked)\n- /external-tools — Delegate implementation and review tasks to external AI CLI tools (Codex, Gemini) with cross-model adversarial review (unknown-invoked)\n- /handling-pr-comments — Address PR review feedback systematically — fetch inline comments, review bodies, handle outside-diff-range comments, resolve threads with proper attribution (unknown-invoked)\n- /handoff — Analyze the current session and write a self-contained handoff document so a fresh agent can resume the work with full context — outputs a single \"Read XXX.md and do YYY.\" sentence (unknown-invoked)\n- /migrate — Migrate from npm-installed metaswarm to the marketplace plugin — removes redundant files with safety checks (unknown-invoked)\n- /orchestrated-execution — 4-phase execution loop for work units - IMPLEMENT, VALIDATE, ADVERSARIAL REVIEW, COMMIT (unknown-invoked)\n- /plan-review-gate — Automatic adversarial review gate that spawns 3 independent reviewers in parallel after any plan is drafted - all must PASS before presenting to user (unknown-invoked)\n- /pr-shepherd — Monitor a PR through to merge — handle CI failures, review comments, and thread resolution automatically until all checks pass (unknown-invoked)\n- /setup — Interactive project setup — detects your project, configures metaswarm, writes project-local files (unknown-invoked)\n- /start — Use when starting work on any task, when the user mentions metaswarm, or when the user wants to begin tracked development work (unknown-invoked)\n- /status — Diagnostic status report — shows metaswarm installation state, project setup, and potential issues (unknown-invoked)\n- /visual-review — Take screenshots of web pages and UI using Playwright for visual review and iteration (unknown-invoked)\n\n## Observed plugins\n\n- .agents/plugins/marketplace.json\n- .claude-plugin/plugin.json\n- .codex-plugin/plugin.json\n- .cursor-plugin/README.md\n\n## Observed workflows\n\n- .github/workflows/ci.yml\n\n## Safety and limits\n\n- Do not claim an inferred purpose is confirmed behavior.\n- Do not run an observed script merely because it exists; confirm that it is needed and safe first.\n- Do not install plugins, change global settings, or modify source files without explicit approval.\n- Record missing metadata and unresolved connections as review items.\n\nEvidence digest: `123c0d9f4d9fb413460497aa8517523e21e6f9dd4984471686369fd23e9ebc90`\n",
+      "evidence": [
+        ".agents/plugins/marketplace.json",
+        ".claude-plugin/plugin.json",
+        ".claude/commands/create-issue.md",
+        ".claude/commands/external-tools-health.md",
+        ".claude/commands/handle-pr-comments.md",
+        ".claude/commands/handoff.md",
+        ".claude/commands/pr-shepherd.md",
+        ".claude/commands/prime.md",
+        ".claude/commands/review-design.md",
+        ".claude/commands/self-reflect.md",
+        ".claude/commands/start-task.md",
+        ".codex-plugin/plugin.json",
+        ".codex/install.sh",
+        ".codex/README.md",
+        ".coverage-thresholds.json",
+        ".cursor-plugin/README.md",
+        ".gitattributes",
+        ".github/workflows/ci.yml",
+        ".gitignore",
+        ".opencode/README.md"
+      ]
+    },
+    {
+      "path": "INDEX.md",
+      "kind": "index",
+      "content": "# Proposed file index\n\nThis index was generated from observed repository contents. It is a proposal, not an applied change.\n\nSource digest: `123c0d9f4d9fb413460497aa8517523e21e6f9dd4984471686369fd23e9ebc90`\n\n## Skills\n\n- `skills/brainstorming-extension/SKILL.md` — Enforces design review gate after brainstorming — bridges superpowers:brainstorming into the metaswarm quality pipeline [high confidence]\n- `skills/create-issue/SKILL.md` — Create comprehensive GitHub issues with TDD plans, acceptance criteria, and agent instructions for autonomous PR lifecycle management [high confidence]\n- `skills/design-review-gate/SKILL.md` — Automatic review gate that runs after brainstorming completes - spawns PM, Architect, Designer, Security, and CTO agents in parallel, iterates until all approve [high confidence]\n- `skills/external-tools/SKILL.md` — Delegate implementation and review tasks to external AI CLI tools (Codex, Gemini) with cross-model adversarial review [high confidence]\n- `skills/handling-pr-comments/SKILL.md` — Address PR review feedback systematically — fetch inline comments, review bodies, handle outside-diff-range comments, resolve threads with proper attribution [high confidence]\n- `skills/handoff/SKILL.md` — Analyze the current session and write a self-contained handoff document so a fresh agent can resume the work with full context — outputs a single \"Read XXX.md and do YYY.\" sentence [high confidence]\n- `skills/migrate/SKILL.md` — Migrate from npm-installed metaswarm to the marketplace plugin — removes redundant files with safety checks [high confidence]\n- `skills/orchestrated-execution/SKILL.md` — 4-phase execution loop for work units - IMPLEMENT, VALIDATE, ADVERSARIAL REVIEW, COMMIT [high confidence]\n- `skills/plan-review-gate/SKILL.md` — Automatic adversarial review gate that spawns 3 independent reviewers in parallel after any plan is drafted - all must PASS before presenting to user [high confidence]\n- `skills/pr-shepherd/SKILL.md` — Monitor a PR through to merge — handle CI failures, review comments, and thread resolution automatically until all checks pass [high confidence]\n- `skills/setup/SKILL.md` — Interactive project setup — detects your project, configures metaswarm, writes project-local files [high confidence]\n- `skills/start/SKILL.md` — Use when starting work on any task, when the user mentions metaswarm, or when the user wants to begin tracked development work [high confidence]\n- `skills/status/SKILL.md` — Diagnostic status report — shows metaswarm installation state, project setup, and potential issues [high confidence]\n- `skills/visual-review/SKILL.md` — Take screenshots of web pages and UI using Playwright for visual review and iteration [high confidence]\n\n## Plugins\n\n- `.agents/plugins/marketplace.json` — Plugin entry or plugin configuration [medium confidence]\n- `.claude-plugin/plugin.json` — Plugin entry or plugin configuration [medium confidence]\n- `.codex-plugin/plugin.json` — Plugin entry or plugin configuration [medium confidence]\n- `.cursor-plugin/README.md` — Plugin entry or plugin configuration [medium confidence]\n\n## Workflows\n\n- `.github/workflows/ci.yml` — Automated workflow or repository action [medium confidence]\n\n## Agents\n\n- `AGENTS.md` — Agent instructions or agent metadata [medium confidence]\n- `agents/architect-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `agents/code-review-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `agents/coder-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `agents/cto-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `agents/customer-service-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `agents/designer-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `agents/issue-orchestrator.md` — Agent instructions or agent metadata [medium confidence]\n- `agents/knowledge-curator-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `agents/metrics-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `agents/pr-shepherd-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `agents/product-manager-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `agents/release-engineer-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `agents/researcher-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `agents/security-auditor-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `agents/security-design-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `agents/slack-coordinator-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `agents/sre-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `agents/swarm-coordinator-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `agents/test-automator-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `CLAUDE.md` — Agent instructions or agent metadata [medium confidence]\n- `GEMINI.md` — Agent instructions or agent metadata [medium confidence]\n- `guides/agent-coordination.md` — Agent instructions or agent metadata [medium confidence]\n- `skills/design-review-gate/guides/agent-coordination.md` — Agent instructions or agent metadata [medium confidence]\n- `skills/orchestrated-execution/guides/agent-coordination.md` — Agent instructions or agent metadata [medium confidence]\n- `skills/pr-shepherd/guides/agent-coordination.md` — Agent instructions or agent metadata [medium confidence]\n- `skills/setup/templates/AGENTS-append.md` — Agent instructions or agent metadata [medium confidence]\n- `skills/setup/templates/AGENTS.md` — Agent instructions or agent metadata [medium confidence]\n- `skills/setup/templates/CLAUDE.md` — Agent instructions or agent metadata [medium confidence]\n- `skills/setup/templates/GEMINI.md` — Agent instructions or agent metadata [medium confidence]\n- `skills/start/agents/architect-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `skills/start/agents/code-review-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `skills/start/agents/coder-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `skills/start/agents/cto-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `skills/start/agents/customer-service-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `skills/start/agents/designer-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `skills/start/agents/issue-orchestrator.md` — Agent instructions or agent metadata [medium confidence]\n- `skills/start/agents/knowledge-curator-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `skills/start/agents/metrics-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `skills/start/agents/pr-shepherd-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `skills/start/agents/product-manager-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `skills/start/agents/release-engineer-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `skills/start/agents/researcher-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `skills/start/agents/security-auditor-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `skills/start/agents/security-design-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `skills/start/agents/slack-coordinator-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `skills/start/agents/sre-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `skills/start/agents/swarm-coordinator-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `skills/start/agents/test-automator-agent.md` — Agent instructions or agent metadata [medium confidence]\n- `skills/start/guides/agent-coordination.md` — Agent instructions or agent metadata [medium confidence]\n- `templates/AGENTS-append.md` — Agent instructions or agent metadata [medium confidence]\n- `templates/AGENTS.md` — Agent instructions or agent metadata [medium confidence]\n- `templates/CLAUDE.md` — Agent instructions or agent metadata [medium confidence]\n- `templates/GEMINI.md` — Agent instructions or agent metadata [medium confidence]\n\n## Scripts\n\n- `.codex/install.sh` — Supporting executable or automation script [medium confidence]\n- `bin/estimate-cost.sh` — Supporting executable or automation script [medium confidence]\n- `bin/external-tools-verify.sh` — Supporting executable or automation script [medium confidence]\n- `bin/pr-comments-check.sh` — Supporting executable or automation script [medium confidence]\n- `bin/pr-comments-filter.sh` — Supporting executable or automation script [medium confidence]\n- `hooks/session-start.sh` — Supporting executable or automation script [medium confidence]\n- `lib/setup-mandatory-files.sh` — Supporting executable or automation script [medium confidence]\n- `scripts/beads-fetch-conversation-history.ts` — Supporting executable or automation script [medium confidence]\n- `scripts/beads-fetch-pr-comments.ts` — Supporting executable or automation script [medium confidence]\n- `skills/external-tools/adapters/_common.sh` — Supporting executable or automation script [medium confidence]\n- `skills/external-tools/adapters/codex.sh` — Supporting executable or automation script [medium confidence]\n- `skills/external-tools/adapters/gemini.sh` — Supporting executable or automation script [medium confidence]\n- `skills/setup/bin/estimate-cost.sh` — Supporting executable or automation script [medium confidence]\n- `skills/setup/bin/external-tools-verify.sh` — Supporting executable or automation script [medium confidence]\n- `skills/setup/bin/pr-comments-check.sh` — Supporting executable or automation script [medium confidence]\n- `skills/setup/bin/pr-comments-filter.sh` — Supporting executable or automation script [medium confidence]\n- `skills/setup/scripts/beads-fetch-conversation-history.ts` — Supporting executable or automation script [medium confidence]\n- `skills/setup/scripts/beads-fetch-pr-comments.ts` — Supporting executable or automation script [medium confidence]\n- `tests/cli/test-installer.sh` — Supporting executable or automation script [medium confidence]\n- `tests/codex/test-codex-skills.sh` — Supporting executable or automation script [medium confidence]\n- `tests/gemini/test-gemini-extension.sh` — Supporting executable or automation script [medium confidence]\n- `tests/hooks/test-session-start.sh` — Supporting executable or automation script [medium confidence]\n- `tests/lib/test-sync-resources.sh` — Supporting executable or automation script [medium confidence]\n- `tests/templates/test-beads-cleanup.sh` — Supporting executable or automation script [medium confidence]\n- `tests/templates/test-ci-template.sh` — Supporting executable or automation script [medium confidence]\n\n## Documentations\n\n- `.claude/commands/create-issue.md` — Repository documentation [medium confidence]\n- `.claude/commands/external-tools-health.md` — Repository documentation [medium confidence]\n- `.claude/commands/handle-pr-comments.md` — Repository documentation [medium confidence]\n- `.claude/commands/handoff.md` — Repository documentation [medium confidence]\n- `.claude/commands/pr-shepherd.md` — Repository documentation [medium confidence]\n- `.claude/commands/prime.md` — Repository documentation [medium confidence]\n- `.claude/commands/review-design.md` — Repository documentation [medium confidence]\n- `.claude/commands/self-reflect.md` — Repository documentation [medium confidence]\n- `.claude/commands/start-task.md` — Repository documentation [medium confidence]\n- `.codex/README.md` — Repository documentation [medium confidence]\n- `.opencode/README.md` — Repository documentation [medium confidence]\n- `CHANGELOG.md` — Repository documentation [medium confidence]\n- `commands/brainstorm.md` — Repository documentation [medium confidence]\n- `commands/create-issue.md` — Repository documentation [medium confidence]\n- `commands/external-tools-health.md` — Repository documentation [medium confidence]\n- `commands/handle-pr-comments.md` — Repository documentation [medium confidence]\n- `commands/handoff.md` — Repository documentation [medium confidence]\n- `commands/metaswarm-setup.md` — Repository documentation [medium confidence]\n- `commands/metaswarm-update-version.md` — Repository documentation [medium confidence]\n- `commands/pr-shepherd.md` — Repository documentation [medium confidence]\n- `commands/prime.md` — Repository documentation [medium confidence]\n- `commands/review-design.md` — Repository documentation [medium confidence]\n- `commands/self-reflect.md` — Repository documentation [medium confidence]\n- `commands/setup.md` — Repository documentation [medium confidence]\n- `commands/start-task.md` — Repository documentation [medium confidence]\n- `commands/start.md` — Repository documentation [medium confidence]\n- `commands/status.md` — Repository documentation [medium confidence]\n- `commands/update.md` — Repository documentation [medium confidence]\n- `CONTRIBUTING.md` — Repository documentation [medium confidence]\n- `docs/coverage-enforcement.md` — Repository documentation [medium confidence]\n- `docs/index.html` — Repository documentation [medium confidence]\n- `docs/plans/2026-02-14-external-tools-design.md` — Repository documentation [medium confidence]\n- `docs/plans/2026-02-14-external-tools-plan.md` — Repository documentation [medium confidence]\n- `docs/plans/2026-02-14-guided-setup-design.md` — Repository documentation [medium confidence]\n- `docs/plans/2026-02-14-guided-setup-plan.md` — Repository documentation [medium confidence]\n- `docs/plans/2026-02-26-plugin-migration-design.md` — Repository documentation [medium confidence]\n- `docs/plans/2026-02-26-plugin-migration-plan.md` — Repository documentation [medium confidence]\n- `docs/README.codex.md` — Repository documentation [medium confidence]\n- `docs/README.opencode.md` — Repository documentation [medium confidence]\n- `GETTING_STARTED.md` — Repository documentation [medium confidence]\n- `guides/build-validation.md` — Repository documentation [medium confidence]\n- `guides/coding-standards.md` — Repository documentation [medium confidence]\n- `guides/git-workflow.md` — Repository documentation [medium confidence]\n- `guides/testing-patterns.md` — Repository documentation [medium confidence]\n- `guides/worktree-development.md` — Repository documentation [medium confidence]\n- `INSTALL.md` — Repository documentation [medium confidence]\n- `knowledge/README.md` — Repository documentation [medium confidence]\n- `ORCHESTRATION.md` — Repository documentation [medium confidence]\n- `README.md` — Repository documentation [medium confidence]\n- `rubrics/adversarial-review-rubric.md` — Repository documentation [medium confidence]\n- `rubrics/architecture-rubric.md` — Repository documentation [medium confidence]\n- `rubrics/code-review-rubric.md` — Repository documentation [medium confidence]\n- `rubrics/external-tool-review-rubric.md` — Repository documentation [medium confidence]\n- `rubrics/plan-review-rubric-adversarial.md` — Repository documentation [medium confidence]\n- `rubrics/plan-review-rubric.md` — Repository documentation [medium confidence]\n- `rubrics/release-engineering-rubric.md` — Repository documentation [medium confidence]\n- `rubrics/security-review-rubric.md` — Repository documentation [medium confidence]\n- `rubrics/test-coverage-rubric.md` — Repository documentation [medium confidence]\n- `skills/external-tools/rubrics/external-tool-review-rubric.md` — Repository documentation [medium confidence]\n- `skills/orchestrated-execution/rubrics/adversarial-review-rubric.md` — Repository documentation [medium confidence]\n- `skills/plan-review-gate/rubrics/plan-review-rubric-adversarial.md` — Repository documentation [medium confidence]\n- `skills/setup/knowledge/README.md` — Repository documentation [medium confidence]\n- `skills/setup/templates/beads-developer-setup.md` — Repository documentation [medium confidence]\n- `skills/setup/templates/beads-readme.md` — Repository documentation [medium confidence]\n- `skills/setup/templates/CLAUDE-append.md` — Repository documentation [medium confidence]\n- `skills/setup/templates/external-tools-setup.md` — Repository documentation [medium confidence]\n- `skills/setup/templates/GEMINI-append.md` — Repository documentation [medium confidence]\n- `skills/setup/templates/SERVICE-INVENTORY.md` — Repository documentation [medium confidence]\n- `skills/setup/templates/task-completion-checklist.md` — Repository documentation [medium confidence]\n- `skills/setup/templates/todo-management.md` — Repository documentation [medium confidence]\n- `skills/setup/templates/UI-FLOWS.md` — Repository documentation [medium confidence]\n- `skills/start/references/codex-tools.md` — Repository documentation [medium confidence]\n- `skills/start/references/cursor-tools.md` — Repository documentation [medium confidence]\n- `skills/start/references/opencode-tools.md` — Repository documentation [medium confidence]\n- `skills/start/references/platform-adaptation.md` — Repository documentation [medium confidence]\n- `skills/start/rubrics/adversarial-review-rubric.md` — Repository documentation [medium confidence]\n- `skills/start/rubrics/code-review-rubric.md` — Repository documentation [medium confidence]\n- `skills/start/rubrics/plan-review-rubric.md` — Repository documentation [medium confidence]\n- `skills/start/rubrics/release-engineering-rubric.md` — Repository documentation [medium confidence]\n- `skills/start/rubrics/security-review-rubric.md` — Repository documentation [medium confidence]\n- `templates/beads-developer-setup.md` — Repository documentation [medium confidence]\n- `templates/beads-readme.md` — Repository documentation [medium confidence]\n- `templates/CLAUDE-append.md` — Repository documentation [medium confidence]\n- `templates/external-tools-setup.md` — Repository documentation [medium confidence]\n- `templates/GEMINI-append.md` — Repository documentation [medium confidence]\n- `templates/SERVICE-INVENTORY.md` — Repository documentation [medium confidence]\n- `templates/task-completion-checklist.md` — Repository documentation [medium confidence]\n- `templates/todo-management.md` — Repository documentation [medium confidence]\n- `templates/UI-FLOWS.md` — Repository documentation [medium confidence]\n- `USAGE.md` — Repository documentation [medium confidence]\n\n## Configurations\n\n- `package.json` — Repository configuration [medium confidence]\n\n## Others\n\n- `.coverage-thresholds.json` — Observed repository asset [low confidence]\n- `.gitattributes` — Observed repository asset [low confidence]\n- `.gitignore` — Observed repository asset [low confidence]\n- `cli/metaswarm.js` — Observed repository asset [low confidence]\n- `commands/metaswarm/brainstorm.toml` — Observed repository asset [low confidence]\n- `commands/metaswarm/create-issue.toml` — Observed repository asset [low confidence]\n- `commands/metaswarm/external-tools-health.toml` — Observed repository asset [low confidence]\n- `commands/metaswarm/handle-pr-comments.toml` — Observed repository asset [low confidence]\n- `commands/metaswarm/handoff.toml` — Observed repository asset [low confidence]\n- `commands/metaswarm/pr-shepherd.toml` — Observed repository asset [low confidence]\n- `commands/metaswarm/prime.toml` — Observed repository asset [low confidence]\n- `commands/metaswarm/review-design.toml` — Observed repository asset [low confidence]\n- `commands/metaswarm/self-reflect.toml` — Observed repository asset [low confidence]\n- `commands/metaswarm/setup.toml` — Observed repository asset [low confidence]\n- `commands/metaswarm/start-task.toml` — Observed repository asset [low confidence]\n- `commands/metaswarm/status.toml` — Observed repository asset [low confidence]\n- `commands/metaswarm/update.toml` — Observed repository asset [low confidence]\n- `gemini-extension.json` — Observed repository asset [low confidence]\n- `hooks/hooks.json` — Observed repository asset [low confidence]\n- `knowledge/anti-patterns.jsonl` — Observed repository asset [low confidence]\n- `knowledge/api-behaviors.jsonl` — Observed repository asset [low confidence]\n- `knowledge/codebase-facts.jsonl` — Observed repository asset [low confidence]\n- `knowledge/decisions.jsonl` — Observed repository asset [low confidence]\n- `knowledge/facts.jsonl` — Observed repository asset [low confidence]\n- `knowledge/gotchas.jsonl` — Observed repository asset [low confidence]\n- `knowledge/patterns.jsonl` — Observed repository asset [low confidence]\n- `lib/platform-detect.js` — Observed repository asset [low confidence]\n- `lib/sync-resources.js` — Observed repository asset [low confidence]\n- `LICENSE` — Observed repository asset [low confidence]\n- `skills/external-tools/adapters/.gitkeep` — Observed repository asset [low confidence]\n- `skills/setup/knowledge/anti-patterns.jsonl` — Observed repository asset [low confidence]\n- `skills/setup/knowledge/api-behaviors.jsonl` — Observed repository asset [low confidence]\n- `skills/setup/knowledge/codebase-facts.jsonl` — Observed repository asset [low confidence]\n- `skills/setup/knowledge/decisions.jsonl` — Observed repository asset [low confidence]\n- `skills/setup/knowledge/facts.jsonl` — Observed repository asset [low confidence]\n- `skills/setup/knowledge/gotchas.jsonl` — Observed repository asset [low confidence]\n- `skills/setup/knowledge/patterns.jsonl` — Observed repository asset [low confidence]\n- `skills/setup/templates/.env.example` — Observed repository asset [low confidence]\n- `skills/setup/templates/ci-coverage-job.yml` — Observed repository asset [low confidence]\n- `skills/setup/templates/ci.yml` — Observed repository asset [low confidence]\n- `skills/setup/templates/coverage-thresholds.json` — Observed repository asset [low confidence]\n- `skills/setup/templates/external-tools.yaml` — Observed repository asset [low confidence]\n- `skills/setup/templates/gitignore` — Observed repository asset [low confidence]\n- `skills/setup/templates/gtg-workflow.yml` — Observed repository asset [low confidence]\n- `skills/setup/templates/pre-push` — Observed repository asset [low confidence]\n- `templates/.env.example` — Observed repository asset [low confidence]\n- `templates/ci-coverage-job.yml` — Observed repository asset [low confidence]\n- `templates/ci.yml` — Observed repository asset [low confidence]\n- `templates/coverage-thresholds.json` — Observed repository asset [low confidence]\n- `templates/external-tools.yaml` — Observed repository asset [low confidence]\n- `templates/gitignore` — Observed repository asset [low confidence]\n- `templates/gtg-workflow.yml` — Observed repository asset [low confidence]\n- `templates/pre-push` — Observed repository asset [low confidence]\n\n",
+      "evidence": [
+        ".agents/plugins/marketplace.json",
+        ".claude-plugin/plugin.json",
+        ".claude/commands/create-issue.md",
+        ".claude/commands/external-tools-health.md",
+        ".claude/commands/handle-pr-comments.md",
+        ".claude/commands/handoff.md",
+        ".claude/commands/pr-shepherd.md",
+        ".claude/commands/prime.md",
+        ".claude/commands/review-design.md",
+        ".claude/commands/self-reflect.md",
+        ".claude/commands/start-task.md",
+        ".codex-plugin/plugin.json",
+        ".codex/install.sh",
+        ".codex/README.md",
+        ".coverage-thresholds.json",
+        ".cursor-plugin/README.md",
+        ".gitattributes",
+        ".github/workflows/ci.yml",
+        ".gitignore",
+        ".opencode/README.md",
+        "AGENTS.md",
+        "agents/architect-agent.md",
+        "agents/code-review-agent.md",
+        "agents/coder-agent.md",
+        "agents/cto-agent.md",
+        "agents/customer-service-agent.md",
+        "agents/designer-agent.md",
+        "agents/issue-orchestrator.md",
+        "agents/knowledge-curator-agent.md",
+        "agents/metrics-agent.md",
+        "agents/pr-shepherd-agent.md",
+        "agents/product-manager-agent.md",
+        "agents/release-engineer-agent.md",
+        "agents/researcher-agent.md",
+        "agents/security-auditor-agent.md",
+        "agents/security-design-agent.md",
+        "agents/slack-coordinator-agent.md",
+        "agents/sre-agent.md",
+        "agents/swarm-coordinator-agent.md",
+        "agents/test-automator-agent.md",
+        "bin/estimate-cost.sh",
+        "bin/external-tools-verify.sh",
+        "bin/pr-comments-check.sh",
+        "bin/pr-comments-filter.sh",
+        "CHANGELOG.md",
+        "CLAUDE.md",
+        "cli/metaswarm.js",
+        "commands/brainstorm.md",
+        "commands/create-issue.md",
+        "commands/external-tools-health.md",
+        "commands/handle-pr-comments.md",
+        "commands/handoff.md",
+        "commands/metaswarm-setup.md",
+        "commands/metaswarm-update-version.md",
+        "commands/metaswarm/brainstorm.toml",
+        "commands/metaswarm/create-issue.toml",
+        "commands/metaswarm/external-tools-health.toml",
+        "commands/metaswarm/handle-pr-comments.toml",
+        "commands/metaswarm/handoff.toml",
+        "commands/metaswarm/pr-shepherd.toml",
+        "commands/metaswarm/prime.toml",
+        "commands/metaswarm/review-design.toml",
+        "commands/metaswarm/self-reflect.toml",
+        "commands/metaswarm/setup.toml",
+        "commands/metaswarm/start-task.toml",
+        "commands/metaswarm/status.toml",
+        "commands/metaswarm/update.toml",
+        "commands/pr-shepherd.md",
+        "commands/prime.md",
+        "commands/review-design.md",
+        "commands/self-reflect.md",
+        "commands/setup.md",
+        "commands/start-task.md",
+        "commands/start.md",
+        "commands/status.md",
+        "commands/update.md",
+        "CONTRIBUTING.md",
+        "docs/coverage-enforcement.md",
+        "docs/index.html",
+        "docs/plans/2026-02-14-external-tools-design.md",
+        "docs/plans/2026-02-14-external-tools-plan.md",
+        "docs/plans/2026-02-14-guided-setup-design.md",
+        "docs/plans/2026-02-14-guided-setup-plan.md",
+        "docs/plans/2026-02-26-plugin-migration-design.md",
+        "docs/plans/2026-02-26-plugin-migration-plan.md",
+        "docs/README.codex.md",
+        "docs/README.opencode.md",
+        "gemini-extension.json",
+        "GEMINI.md",
+        "GETTING_STARTED.md",
+        "guides/agent-coordination.md",
+        "guides/build-validation.md",
+        "guides/coding-standards.md",
+        "guides/git-workflow.md",
+        "guides/testing-patterns.md",
+        "guides/worktree-development.md",
+        "hooks/hooks.json",
+        "hooks/session-start.sh",
+        "INSTALL.md",
+        "knowledge/anti-patterns.jsonl",
+        "knowledge/api-behaviors.jsonl",
+        "knowledge/codebase-facts.jsonl",
+        "knowledge/decisions.jsonl",
+        "knowledge/facts.jsonl",
+        "knowledge/gotchas.jsonl",
+        "knowledge/patterns.jsonl",
+        "knowledge/README.md",
+        "lib/platform-detect.js",
+        "lib/setup-mandatory-files.sh",
+        "lib/sync-resources.js",
+        "LICENSE",
+        "ORCHESTRATION.md",
+        "package.json",
+        "README.md",
+        "rubrics/adversarial-review-rubric.md",
+        "rubrics/architecture-rubric.md",
+        "rubrics/code-review-rubric.md",
+        "rubrics/external-tool-review-rubric.md",
+        "rubrics/plan-review-rubric-adversarial.md",
+        "rubrics/plan-review-rubric.md",
+        "rubrics/release-engineering-rubric.md",
+        "rubrics/security-review-rubric.md",
+        "rubrics/test-coverage-rubric.md",
+        "scripts/beads-fetch-conversation-history.ts",
+        "scripts/beads-fetch-pr-comments.ts",
+        "skills/brainstorming-extension/SKILL.md",
+        "skills/create-issue/SKILL.md",
+        "skills/design-review-gate/guides/agent-coordination.md",
+        "skills/design-review-gate/SKILL.md",
+        "skills/external-tools/adapters/_common.sh",
+        "skills/external-tools/adapters/.gitkeep",
+        "skills/external-tools/adapters/codex.sh",
+        "skills/external-tools/adapters/gemini.sh",
+        "skills/external-tools/rubrics/external-tool-review-rubric.md",
+        "skills/external-tools/SKILL.md",
+        "skills/handling-pr-comments/SKILL.md",
+        "skills/handoff/SKILL.md",
+        "skills/migrate/SKILL.md",
+        "skills/orchestrated-execution/guides/agent-coordination.md",
+        "skills/orchestrated-execution/rubrics/adversarial-review-rubric.md",
+        "skills/orchestrated-execution/SKILL.md",
+        "skills/plan-review-gate/rubrics/plan-review-rubric-adversarial.md",
+        "skills/plan-review-gate/SKILL.md",
+        "skills/pr-shepherd/guides/agent-coordination.md",
+        "skills/pr-shepherd/SKILL.md",
+        "skills/setup/bin/estimate-cost.sh",
+        "skills/setup/bin/external-tools-verify.sh",
+        "skills/setup/bin/pr-comments-check.sh",
+        "skills/setup/bin/pr-comments-filter.sh",
+        "skills/setup/knowledge/anti-patterns.jsonl",
+        "skills/setup/knowledge/api-behaviors.jsonl",
+        "skills/setup/knowledge/codebase-facts.jsonl",
+        "skills/setup/knowledge/decisions.jsonl",
+        "skills/setup/knowledge/facts.jsonl",
+        "skills/setup/knowledge/gotchas.jsonl",
+        "skills/setup/knowledge/patterns.jsonl",
+        "skills/setup/knowledge/README.md",
+        "skills/setup/scripts/beads-fetch-conversation-history.ts",
+        "skills/setup/scripts/beads-fetch-pr-comments.ts",
+        "skills/setup/SKILL.md",
+        "skills/setup/templates/.env.example",
+        "skills/setup/templates/AGENTS-append.md",
+        "skills/setup/templates/AGENTS.md",
+        "skills/setup/templates/beads-developer-setup.md",
+        "skills/setup/templates/beads-readme.md",
+        "skills/setup/templates/ci-coverage-job.yml",
+        "skills/setup/templates/ci.yml",
+        "skills/setup/templates/CLAUDE-append.md",
+        "skills/setup/templates/CLAUDE.md",
+        "skills/setup/templates/coverage-thresholds.json",
+        "skills/setup/templates/external-tools-setup.md",
+        "skills/setup/templates/external-tools.yaml",
+        "skills/setup/templates/GEMINI-append.md",
+        "skills/setup/templates/GEMINI.md",
+        "skills/setup/templates/gitignore",
+        "skills/setup/templates/gtg-workflow.yml",
+        "skills/setup/templates/pre-push",
+        "skills/setup/templates/SERVICE-INVENTORY.md",
+        "skills/setup/templates/task-completion-checklist.md",
+        "skills/setup/templates/todo-management.md",
+        "skills/setup/templates/UI-FLOWS.md",
+        "skills/start/agents/architect-agent.md",
+        "skills/start/agents/code-review-agent.md",
+        "skills/start/agents/coder-agent.md",
+        "skills/start/agents/cto-agent.md",
+        "skills/start/agents/customer-service-agent.md",
+        "skills/start/agents/designer-agent.md",
+        "skills/start/agents/issue-orchestrator.md",
+        "skills/start/agents/knowledge-curator-agent.md",
+        "skills/start/agents/metrics-agent.md",
+        "skills/start/agents/pr-shepherd-agent.md",
+        "skills/start/agents/product-manager-agent.md",
+        "skills/start/agents/release-engineer-agent.md",
+        "skills/start/agents/researcher-agent.md",
+        "skills/start/agents/security-auditor-agent.md",
+        "skills/start/agents/security-design-agent.md",
+        "skills/start/agents/slack-coordinator-agent.md",
+        "skills/start/agents/sre-agent.md",
+        "skills/start/agents/swarm-coordinator-agent.md",
+        "skills/start/agents/test-automator-agent.md",
+        "skills/start/guides/agent-coordination.md",
+        "skills/start/references/codex-tools.md",
+        "skills/start/references/cursor-tools.md",
+        "skills/start/references/opencode-tools.md",
+        "skills/start/references/platform-adaptation.md",
+        "skills/start/rubrics/adversarial-review-rubric.md",
+        "skills/start/rubrics/code-review-rubric.md",
+        "skills/start/rubrics/plan-review-rubric.md",
+        "skills/start/rubrics/release-engineering-rubric.md",
+        "skills/start/rubrics/security-review-rubric.md",
+        "skills/start/SKILL.md",
+        "skills/status/SKILL.md",
+        "skills/visual-review/SKILL.md",
+        "templates/.env.example",
+        "templates/AGENTS-append.md",
+        "templates/AGENTS.md",
+        "templates/beads-developer-setup.md",
+        "templates/beads-readme.md",
+        "templates/ci-coverage-job.yml",
+        "templates/ci.yml",
+        "templates/CLAUDE-append.md",
+        "templates/CLAUDE.md",
+        "templates/coverage-thresholds.json",
+        "templates/external-tools-setup.md",
+        "templates/external-tools.yaml",
+        "templates/GEMINI-append.md",
+        "templates/GEMINI.md",
+        "templates/gitignore",
+        "templates/gtg-workflow.yml",
+        "templates/pre-push",
+        "templates/SERVICE-INVENTORY.md",
+        "templates/task-completion-checklist.md",
+        "templates/todo-management.md",
+        "templates/UI-FLOWS.md",
+        "tests/cli/test-installer.sh",
+        "tests/codex/test-codex-skills.sh",
+        "tests/gemini/test-gemini-extension.sh",
+        "tests/hooks/test-session-start.sh",
+        "tests/lib/test-sync-resources.sh",
+        "tests/templates/test-beads-cleanup.sh",
+        "tests/templates/test-ci-template.sh",
+        "USAGE.md"
+      ]
+    },
+    {
+      "path": "skills/INDEX.md",
+      "kind": "index",
+      "content": "# Proposed skills index\n\nGenerated from observed SKILL.md files. Review names and descriptions before applying.\n\nSource digest: `123c0d9f4d9fb413460497aa8517523e21e6f9dd4984471686369fd23e9ebc90`\n\n- `/brainstorming-extension` — `skills/brainstorming-extension/SKILL.md` — Enforces design review gate after brainstorming — bridges superpowers:brainstorming into the metaswarm quality pipeline\n- `/create-issue` — `skills/create-issue/SKILL.md` — Create comprehensive GitHub issues with TDD plans, acceptance criteria, and agent instructions for autonomous PR lifecycle management\n- `/design-review-gate` — `skills/design-review-gate/SKILL.md` — Automatic review gate that runs after brainstorming completes - spawns PM, Architect, Designer, Security, and CTO agents in parallel, iterates until all approve\n- `/external-tools` — `skills/external-tools/SKILL.md` — Delegate implementation and review tasks to external AI CLI tools (Codex, Gemini) with cross-model adversarial review\n- `/handling-pr-comments` — `skills/handling-pr-comments/SKILL.md` — Address PR review feedback systematically — fetch inline comments, review bodies, handle outside-diff-range comments, resolve threads with proper attribution\n- `/handoff` — `skills/handoff/SKILL.md` — Analyze the current session and write a self-contained handoff document so a fresh agent can resume the work with full context — outputs a single \"Read XXX.md and do YYY.\" sentence\n- `/migrate` — `skills/migrate/SKILL.md` — Migrate from npm-installed metaswarm to the marketplace plugin — removes redundant files with safety checks\n- `/orchestrated-execution` — `skills/orchestrated-execution/SKILL.md` — 4-phase execution loop for work units - IMPLEMENT, VALIDATE, ADVERSARIAL REVIEW, COMMIT\n- `/plan-review-gate` — `skills/plan-review-gate/SKILL.md` — Automatic adversarial review gate that spawns 3 independent reviewers in parallel after any plan is drafted - all must PASS before presenting to user\n- `/pr-shepherd` — `skills/pr-shepherd/SKILL.md` — Monitor a PR through to merge — handle CI failures, review comments, and thread resolution automatically until all checks pass\n- `/setup` — `skills/setup/SKILL.md` — Interactive project setup — detects your project, configures metaswarm, writes project-local files\n- `/start` — `skills/start/SKILL.md` — Use when starting work on any task, when the user mentions metaswarm, or when the user wants to begin tracked development work\n- `/status` — `skills/status/SKILL.md` — Diagnostic status report — shows metaswarm installation state, project setup, and potential issues\n- `/visual-review` — `skills/visual-review/SKILL.md` — Take screenshots of web pages and UI using Playwright for visual review and iteration\n",
+      "evidence": [
+        "skills/brainstorming-extension/SKILL.md",
+        "skills/create-issue/SKILL.md",
+        "skills/design-review-gate/SKILL.md",
+        "skills/external-tools/SKILL.md",
+        "skills/handling-pr-comments/SKILL.md",
+        "skills/handoff/SKILL.md",
+        "skills/migrate/SKILL.md",
+        "skills/orchestrated-execution/SKILL.md",
+        "skills/plan-review-gate/SKILL.md",
+        "skills/pr-shepherd/SKILL.md",
+        "skills/setup/SKILL.md",
+        "skills/start/SKILL.md",
+        "skills/status/SKILL.md",
+        "skills/visual-review/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/distribution-manifest.json",
+      "kind": "manifest",
+      "content": "{\n  \"schemaVersion\": \"1.0\",\n  \"mode\": \"skills-sh-editable\",\n  \"skills\": [\n    \"brainstorming-extension\",\n    \"create-issue\",\n    \"design-review-gate\",\n    \"external-tools\",\n    \"handling-pr-comments\",\n    \"handoff\",\n    \"migrate\",\n    \"orchestrated-execution\",\n    \"plan-review-gate\",\n    \"pr-shepherd\",\n    \"production-orchestrator\",\n    \"setup\",\n    \"start\",\n    \"status\",\n    \"visual-review\"\n  ],\n  \"scope\": \"project-local\",\n  \"approvalRequired\": true,\n  \"status\": \"PROPOSED\"\n}\n",
+      "evidence": [
+        "skills/brainstorming-extension/SKILL.md",
+        "skills/create-issue/SKILL.md",
+        "skills/design-review-gate/SKILL.md",
+        "skills/external-tools/SKILL.md",
+        "skills/handling-pr-comments/SKILL.md",
+        "skills/handoff/SKILL.md",
+        "skills/migrate/SKILL.md",
+        "skills/orchestrated-execution/SKILL.md",
+        "skills/plan-review-gate/SKILL.md",
+        "skills/pr-shepherd/SKILL.md",
+        "skills/setup/SKILL.md",
+        "skills/start/SKILL.md",
+        "skills/status/SKILL.md",
+        "skills/visual-review/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/production-orchestrator/SKILL.md",
+      "kind": "coordinator",
+      "content": "---\nname: production-orchestrator\ndescription: Route repository work using the observed skills and workflows after review.\ndisable-model-invocation: true\n---\n\n# Proposed repository coordinator\n\nThis coordinator was generated from the files currently present in the repository. It is a reviewable proposal and has not been installed.\n\n## How to use it\n\n1. Read `INDEX.md` and `skills/INDEX.md` before selecting a component.\n2. Choose the smallest skill whose observed description matches the user's request.\n3. Follow that skill's own instructions and use the observed scripts and workflows only when they are relevant.\n4. Pass the skill's output to the next step only when the output is present and validated.\n5. Stop and ask for review when a needed file, dependency, permission, or expected output is missing.\n\n## Observed skills\n\n- /brainstorming-extension — Enforces design review gate after brainstorming — bridges superpowers:brainstorming into the metaswarm quality pipeline (unknown-invoked)\n- /create-issue — Create comprehensive GitHub issues with TDD plans, acceptance criteria, and agent instructions for autonomous PR lifecycle management (unknown-invoked)\n- /design-review-gate — Automatic review gate that runs after brainstorming completes - spawns PM, Architect, Designer, Security, and CTO agents in parallel, iterates until all approve (unknown-invoked)\n- /external-tools — Delegate implementation and review tasks to external AI CLI tools (Codex, Gemini) with cross-model adversarial review (unknown-invoked)\n- /handling-pr-comments — Address PR review feedback systematically — fetch inline comments, review bodies, handle outside-diff-range comments, resolve threads with proper attribution (unknown-invoked)\n- /handoff — Analyze the current session and write a self-contained handoff document so a fresh agent can resume the work with full context — outputs a single \"Read XXX.md and do YYY.\" sentence (unknown-invoked)\n- /migrate — Migrate from npm-installed metaswarm to the marketplace plugin — removes redundant files with safety checks (unknown-invoked)\n- /orchestrated-execution — 4-phase execution loop for work units - IMPLEMENT, VALIDATE, ADVERSARIAL REVIEW, COMMIT (unknown-invoked)\n- /plan-review-gate — Automatic adversarial review gate that spawns 3 independent reviewers in parallel after any plan is drafted - all must PASS before presenting to user (unknown-invoked)\n- /pr-shepherd — Monitor a PR through to merge — handle CI failures, review comments, and thread resolution automatically until all checks pass (unknown-invoked)\n- /setup — Interactive project setup — detects your project, configures metaswarm, writes project-local files (unknown-invoked)\n- /start — Use when starting work on any task, when the user mentions metaswarm, or when the user wants to begin tracked development work (unknown-invoked)\n- /status — Diagnostic status report — shows metaswarm installation state, project setup, and potential issues (unknown-invoked)\n- /visual-review — Take screenshots of web pages and UI using Playwright for visual review and iteration (unknown-invoked)\n\n## Observed plugins\n\n- .agents/plugins/marketplace.json\n- .claude-plugin/plugin.json\n- .codex-plugin/plugin.json\n- .cursor-plugin/README.md\n\n## Observed workflows\n\n- .github/workflows/ci.yml\n\n## Safety and limits\n\n- Do not claim an inferred purpose is confirmed behavior.\n- Do not run an observed script merely because it exists; confirm that it is needed and safe first.\n- Do not install plugins, change global settings, or modify source files without explicit approval.\n- Record missing metadata and unresolved connections as review items.\n\nEvidence digest: `123c0d9f4d9fb413460497aa8517523e21e6f9dd4984471686369fd23e9ebc90`\n",
+      "evidence": [
+        "AGENTS.md",
+        "skills/INDEX.md"
+      ]
+    },
+    {
+      "path": "skills/production-orchestrator/agents/openai.yaml",
+      "kind": "metadata",
+      "content": "interface:\n  display_name: Proposed Repository Coordinator\n  short_description: Route repository work using reviewed local skills and workflows.\npolicy:\n  allow_implicit_invocation: false\n",
+      "evidence": [
+        "skills/production-orchestrator/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/brainstorming-extension/INDEX.md",
+      "kind": "index",
+      "content": "# Proposed skills index\n\nGenerated from observed SKILL.md files. Review names and descriptions before applying.\n\nSource digest: `123c0d9f4d9fb413460497aa8517523e21e6f9dd4984471686369fd23e9ebc90`\n\n- `/brainstorming-extension` — `skills/brainstorming-extension/SKILL.md` — Enforces design review gate after brainstorming — bridges superpowers:brainstorming into the metaswarm quality pipeline\n",
+      "evidence": [
+        "skills/brainstorming-extension/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/create-issue/INDEX.md",
+      "kind": "index",
+      "content": "# Proposed skills index\n\nGenerated from observed SKILL.md files. Review names and descriptions before applying.\n\nSource digest: `123c0d9f4d9fb413460497aa8517523e21e6f9dd4984471686369fd23e9ebc90`\n\n- `/create-issue` — `skills/create-issue/SKILL.md` — Create comprehensive GitHub issues with TDD plans, acceptance criteria, and agent instructions for autonomous PR lifecycle management\n",
+      "evidence": [
+        "skills/create-issue/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/design-review-gate/INDEX.md",
+      "kind": "index",
+      "content": "# Proposed skills index\n\nGenerated from observed SKILL.md files. Review names and descriptions before applying.\n\nSource digest: `123c0d9f4d9fb413460497aa8517523e21e6f9dd4984471686369fd23e9ebc90`\n\n- `/design-review-gate` — `skills/design-review-gate/SKILL.md` — Automatic review gate that runs after brainstorming completes - spawns PM, Architect, Designer, Security, and CTO agents in parallel, iterates until all approve\n",
+      "evidence": [
+        "skills/design-review-gate/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/external-tools/INDEX.md",
+      "kind": "index",
+      "content": "# Proposed skills index\n\nGenerated from observed SKILL.md files. Review names and descriptions before applying.\n\nSource digest: `123c0d9f4d9fb413460497aa8517523e21e6f9dd4984471686369fd23e9ebc90`\n\n- `/external-tools` — `skills/external-tools/SKILL.md` — Delegate implementation and review tasks to external AI CLI tools (Codex, Gemini) with cross-model adversarial review\n",
+      "evidence": [
+        "skills/external-tools/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/handling-pr-comments/INDEX.md",
+      "kind": "index",
+      "content": "# Proposed skills index\n\nGenerated from observed SKILL.md files. Review names and descriptions before applying.\n\nSource digest: `123c0d9f4d9fb413460497aa8517523e21e6f9dd4984471686369fd23e9ebc90`\n\n- `/handling-pr-comments` — `skills/handling-pr-comments/SKILL.md` — Address PR review feedback systematically — fetch inline comments, review bodies, handle outside-diff-range comments, resolve threads with proper attribution\n",
+      "evidence": [
+        "skills/handling-pr-comments/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/handoff/INDEX.md",
+      "kind": "index",
+      "content": "# Proposed skills index\n\nGenerated from observed SKILL.md files. Review names and descriptions before applying.\n\nSource digest: `123c0d9f4d9fb413460497aa8517523e21e6f9dd4984471686369fd23e9ebc90`\n\n- `/handoff` — `skills/handoff/SKILL.md` — Analyze the current session and write a self-contained handoff document so a fresh agent can resume the work with full context — outputs a single \"Read XXX.md and do YYY.\" sentence\n",
+      "evidence": [
+        "skills/handoff/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/migrate/INDEX.md",
+      "kind": "index",
+      "content": "# Proposed skills index\n\nGenerated from observed SKILL.md files. Review names and descriptions before applying.\n\nSource digest: `123c0d9f4d9fb413460497aa8517523e21e6f9dd4984471686369fd23e9ebc90`\n\n- `/migrate` — `skills/migrate/SKILL.md` — Migrate from npm-installed metaswarm to the marketplace plugin — removes redundant files with safety checks\n",
+      "evidence": [
+        "skills/migrate/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/orchestrated-execution/INDEX.md",
+      "kind": "index",
+      "content": "# Proposed skills index\n\nGenerated from observed SKILL.md files. Review names and descriptions before applying.\n\nSource digest: `123c0d9f4d9fb413460497aa8517523e21e6f9dd4984471686369fd23e9ebc90`\n\n- `/orchestrated-execution` — `skills/orchestrated-execution/SKILL.md` — 4-phase execution loop for work units - IMPLEMENT, VALIDATE, ADVERSARIAL REVIEW, COMMIT\n",
+      "evidence": [
+        "skills/orchestrated-execution/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/plan-review-gate/INDEX.md",
+      "kind": "index",
+      "content": "# Proposed skills index\n\nGenerated from observed SKILL.md files. Review names and descriptions before applying.\n\nSource digest: `123c0d9f4d9fb413460497aa8517523e21e6f9dd4984471686369fd23e9ebc90`\n\n- `/plan-review-gate` — `skills/plan-review-gate/SKILL.md` — Automatic adversarial review gate that spawns 3 independent reviewers in parallel after any plan is drafted - all must PASS before presenting to user\n",
+      "evidence": [
+        "skills/plan-review-gate/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/pr-shepherd/INDEX.md",
+      "kind": "index",
+      "content": "# Proposed skills index\n\nGenerated from observed SKILL.md files. Review names and descriptions before applying.\n\nSource digest: `123c0d9f4d9fb413460497aa8517523e21e6f9dd4984471686369fd23e9ebc90`\n\n- `/pr-shepherd` — `skills/pr-shepherd/SKILL.md` — Monitor a PR through to merge — handle CI failures, review comments, and thread resolution automatically until all checks pass\n",
+      "evidence": [
+        "skills/pr-shepherd/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/setup/INDEX.md",
+      "kind": "index",
+      "content": "# Proposed skills index\n\nGenerated from observed SKILL.md files. Review names and descriptions before applying.\n\nSource digest: `123c0d9f4d9fb413460497aa8517523e21e6f9dd4984471686369fd23e9ebc90`\n\n- `/setup` — `skills/setup/SKILL.md` — Interactive project setup — detects your project, configures metaswarm, writes project-local files\n",
+      "evidence": [
+        "skills/setup/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/start/INDEX.md",
+      "kind": "index",
+      "content": "# Proposed skills index\n\nGenerated from observed SKILL.md files. Review names and descriptions before applying.\n\nSource digest: `123c0d9f4d9fb413460497aa8517523e21e6f9dd4984471686369fd23e9ebc90`\n\n- `/start` — `skills/start/SKILL.md` — Use when starting work on any task, when the user mentions metaswarm, or when the user wants to begin tracked development work\n",
+      "evidence": [
+        "skills/start/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/status/INDEX.md",
+      "kind": "index",
+      "content": "# Proposed skills index\n\nGenerated from observed SKILL.md files. Review names and descriptions before applying.\n\nSource digest: `123c0d9f4d9fb413460497aa8517523e21e6f9dd4984471686369fd23e9ebc90`\n\n- `/status` — `skills/status/SKILL.md` — Diagnostic status report — shows metaswarm installation state, project setup, and potential issues\n",
+      "evidence": [
+        "skills/status/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/visual-review/INDEX.md",
+      "kind": "index",
+      "content": "# Proposed skills index\n\nGenerated from observed SKILL.md files. Review names and descriptions before applying.\n\nSource digest: `123c0d9f4d9fb413460497aa8517523e21e6f9dd4984471686369fd23e9ebc90`\n\n- `/visual-review` — `skills/visual-review/SKILL.md` — Take screenshots of web pages and UI using Playwright for visual review and iteration\n",
+      "evidence": [
+        "skills/visual-review/SKILL.md"
+      ]
+    }
+  ],
+  "limitations": [
+    "Generated from observed paths and readable frontmatter; inferred purposes require human review.",
+    "Existing skill metadata, dependencies, and instructions were not rewritten by this proposal.",
+    "The proposal is stored under .orchestrator/proposals and has not been copied into the repository.",
+    "The standardization plan is BLOCKED by 14 skill candidate(s) or dependency findings."
+  ],
+  "digest": "e165931deb21317f08f122fc0d32a175b9d3648ae6bdab094bf11a8bb6662997"
+}

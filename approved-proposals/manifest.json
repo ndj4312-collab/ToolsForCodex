@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0",
+  "status": "APPROVED",
+  "destination": "https://github.com/ndj4312-collab/ToolsForCodex/tree/tools/approved-proposals",
+  "sourceList": "inputs/github-skills-and-plugin-repos.txt",
+  "repositories": [
+    { "name": "skrills", "source": "https://github.com/athola/skrills" },
+    { "name": "metaswarm", "source": "https://github.com/dsifry/metaswarm" },
+    { "name": "loophaus", "source": "https://github.com/vcz-Gray/loophaus" },
+    { "name": "Product-Manager-Skills", "source": "https://github.com/deanpeters/Product-Manager-Skills" },
+    { "name": "everything-claude-code", "source": "https://github.com/affaan-m/everything-claude-code" },
+    { "name": "codex-skills-library", "source": "https://github.com/proflead/codex-skills-library" },
+    { "name": "hcom", "source": "https://github.com/aannoo/hcom" }
+  ]
+}

@@ -1,0 +1,2496 @@
+{
+  "schemaVersion": "1.0",
+  "status": "PROPOSED",
+  "targetPath": ".",
+  "sourceDigest": "b78623dd5f0e5799e8c8ae7c73a857509acd7e84466d84f69c2bf5ea1ee4d740",
+  "components": [
+    {
+      "kind": "other",
+      "name": "audit.toml",
+      "path": ".cargo/audit.toml",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        ".cargo/audit.toml"
+      ]
+    },
+    {
+      "kind": "plugin",
+      "name": "marketplace.json",
+      "path": ".claude-plugin/marketplace.json",
+      "purpose": "Plugin entry or plugin configuration",
+      "confidence": "medium",
+      "evidence": [
+        ".claude-plugin/marketplace.json"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "build-setup.yml",
+      "path": ".github/build-setup.yml",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        ".github/build-setup.yml"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "FUNDING.yml",
+      "path": ".github/FUNDING.yml",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        ".github/FUNDING.yml"
+      ]
+    },
+    {
+      "kind": "workflow",
+      "name": "build-wheels.yml",
+      "path": ".github/workflows/build-wheels.yml",
+      "purpose": "Automated workflow or repository action",
+      "confidence": "medium",
+      "evidence": [
+        ".github/workflows/build-wheels.yml"
+      ]
+    },
+    {
+      "kind": "workflow",
+      "name": "ci.yml",
+      "path": ".github/workflows/ci.yml",
+      "purpose": "Automated workflow or repository action",
+      "confidence": "medium",
+      "evidence": [
+        ".github/workflows/ci.yml"
+      ]
+    },
+    {
+      "kind": "workflow",
+      "name": "lint-workflows.yml",
+      "path": ".github/workflows/lint-workflows.yml",
+      "purpose": "Automated workflow or repository action",
+      "confidence": "medium",
+      "evidence": [
+        ".github/workflows/lint-workflows.yml"
+      ]
+    },
+    {
+      "kind": "workflow",
+      "name": "post-announce-compare-link.yml",
+      "path": ".github/workflows/post-announce-compare-link.yml",
+      "purpose": "Automated workflow or repository action",
+      "confidence": "medium",
+      "evidence": [
+        ".github/workflows/post-announce-compare-link.yml"
+      ]
+    },
+    {
+      "kind": "workflow",
+      "name": "publish-pypi.yml",
+      "path": ".github/workflows/publish-pypi.yml",
+      "purpose": "Automated workflow or repository action",
+      "confidence": "medium",
+      "evidence": [
+        ".github/workflows/publish-pypi.yml"
+      ]
+    },
+    {
+      "kind": "workflow",
+      "name": "release.yml",
+      "path": ".github/workflows/release.yml",
+      "purpose": "Automated workflow or repository action",
+      "confidence": "medium",
+      "evidence": [
+        ".github/workflows/release.yml"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": ".gitignore",
+      "path": ".gitignore",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        ".gitignore"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": ".node-version",
+      "path": ".node-version",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        ".node-version"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "Cargo.lock",
+      "path": "Cargo.lock",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "Cargo.lock"
+      ]
+    },
+    {
+      "kind": "configuration",
+      "name": "Cargo.toml",
+      "path": "Cargo.toml",
+      "purpose": "Repository configuration",
+      "confidence": "medium",
+      "evidence": [
+        "Cargo.toml"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "dist-workspace.toml",
+      "path": "dist-workspace.toml",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "dist-workspace.toml"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "gemini-extension.json",
+      "path": "gemini-extension.json",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "gemini-extension.json"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "install.sh",
+      "path": "install.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "install.sh"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "Justfile",
+      "path": "Justfile",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "Justfile"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "LICENSE",
+      "path": "LICENSE",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "LICENSE"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "package-lock.json",
+      "path": "package-lock.json",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "package-lock.json"
+      ]
+    },
+    {
+      "kind": "configuration",
+      "name": "package.json",
+      "path": "package.json",
+      "purpose": "Repository configuration",
+      "confidence": "medium",
+      "evidence": [
+        "package.json"
+      ]
+    },
+    {
+      "kind": "plugin",
+      "name": "plugin.json",
+      "path": "plugin/hcom/.claude-plugin/plugin.json",
+      "purpose": "Plugin entry or plugin configuration",
+      "confidence": "medium",
+      "evidence": [
+        "plugin/hcom/.claude-plugin/plugin.json"
+      ]
+    },
+    {
+      "kind": "plugin",
+      "name": "skills",
+      "path": "plugin/hcom/skills",
+      "purpose": "Plugin entry or plugin configuration",
+      "confidence": "medium",
+      "evidence": [
+        "plugin/hcom/skills"
+      ]
+    },
+    {
+      "kind": "configuration",
+      "name": "pyproject.toml",
+      "path": "pyproject.toml",
+      "purpose": "Repository configuration",
+      "confidence": "medium",
+      "evidence": [
+        "pyproject.toml"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "README.md",
+      "path": "README.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "README.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "rust-toolchain.toml",
+      "path": "rust-toolchain.toml",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "rust-toolchain.toml"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "ci-windows.ps1",
+      "path": "scripts/ci-windows.ps1",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "scripts/ci-windows.ps1"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "install-mock-tools.ps1",
+      "path": "scripts/install-mock-tools.ps1",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "scripts/install-mock-tools.ps1"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "install-mock-tools.sh",
+      "path": "scripts/install-mock-tools.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "scripts/install-mock-tools.sh"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "msrv.sh",
+      "path": "scripts/msrv.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "scripts/msrv.sh"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "typecheck.sh",
+      "path": "scripts/typecheck.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "scripts/typecheck.sh"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "cross-tool.md",
+      "path": "skills/hcom-agent-messaging/references/cross-tool.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "skills/hcom-agent-messaging/references/cross-tool.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "gotchas.md",
+      "path": "skills/hcom-agent-messaging/references/gotchas.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "skills/hcom-agent-messaging/references/gotchas.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "patterns.md",
+      "path": "skills/hcom-agent-messaging/references/patterns.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "skills/hcom-agent-messaging/references/patterns.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "script-template.md",
+      "path": "skills/hcom-agent-messaging/references/script-template.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "skills/hcom-agent-messaging/references/script-template.md"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "basic-messaging.sh",
+      "path": "skills/hcom-agent-messaging/references/scripts/basic-messaging.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "skills/hcom-agent-messaging/references/scripts/basic-messaging.sh"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "cascade-pipeline.sh",
+      "path": "skills/hcom-agent-messaging/references/scripts/cascade-pipeline.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "skills/hcom-agent-messaging/references/scripts/cascade-pipeline.sh"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "codex-worker.sh",
+      "path": "skills/hcom-agent-messaging/references/scripts/codex-worker.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "skills/hcom-agent-messaging/references/scripts/codex-worker.sh"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "cross-tool-duo.sh",
+      "path": "skills/hcom-agent-messaging/references/scripts/cross-tool-duo.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "skills/hcom-agent-messaging/references/scripts/cross-tool-duo.sh"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "ensemble-consensus.sh",
+      "path": "skills/hcom-agent-messaging/references/scripts/ensemble-consensus.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "skills/hcom-agent-messaging/references/scripts/ensemble-consensus.sh"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "review-loop.sh",
+      "path": "skills/hcom-agent-messaging/references/scripts/review-loop.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "skills/hcom-agent-messaging/references/scripts/review-loop.sh"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "hcom-agent-messaging",
+      "path": "skills/hcom-agent-messaging/SKILL.md",
+      "purpose": ">",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/hcom-agent-messaging/SKILL.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "bootstrap.rs",
+      "path": "src/bootstrap.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/bootstrap.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "claude_actor.rs",
+      "path": "src/claude_actor.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/claude_actor.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "cli_context.rs",
+      "path": "src/cli_context.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/cli_context.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "archive.rs",
+      "path": "src/commands/archive.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/commands/archive.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "bundle.rs",
+      "path": "src/commands/bundle.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/commands/bundle.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "config.rs",
+      "path": "src/commands/config.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/commands/config.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "daemon.rs",
+      "path": "src/commands/daemon.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/commands/daemon.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "events.rs",
+      "path": "src/commands/events.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/commands/events.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "fork.rs",
+      "path": "src/commands/fork.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/commands/fork.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "help.rs",
+      "path": "src/commands/help.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/commands/help.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "hooks.rs",
+      "path": "src/commands/hooks.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/commands/hooks.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "kill.rs",
+      "path": "src/commands/kill.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/commands/kill.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "launch.rs",
+      "path": "src/commands/launch.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/commands/launch.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "list.rs",
+      "path": "src/commands/list.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/commands/list.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "listen.rs",
+      "path": "src/commands/listen.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/commands/listen.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "src/commands/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/commands/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "relay.rs",
+      "path": "src/commands/relay.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/commands/relay.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "reset_ops.rs",
+      "path": "src/commands/reset_ops.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/commands/reset_ops.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "reset_preview.rs",
+      "path": "src/commands/reset_preview.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/commands/reset_preview.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "reset.rs",
+      "path": "src/commands/reset.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/commands/reset.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "resume.rs",
+      "path": "src/commands/resume.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/commands/resume.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "run.rs",
+      "path": "src/commands/run.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/commands/run.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "send.rs",
+      "path": "src/commands/send.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/commands/send.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "start.rs",
+      "path": "src/commands/start.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/commands/start.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "status.rs",
+      "path": "src/commands/status.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/commands/status.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "stop.rs",
+      "path": "src/commands/stop.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/commands/stop.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "term.rs",
+      "path": "src/commands/term.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/commands/term.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "transcript.rs",
+      "path": "src/commands/transcript.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/commands/transcript.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "update.rs",
+      "path": "src/commands/update.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/commands/update.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "config.rs",
+      "path": "src/config.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/config.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "bundles.rs",
+      "path": "src/core/bundles.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/core/bundles.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "detail_levels.rs",
+      "path": "src/core/detail_levels.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/core/detail_levels.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "filters.rs",
+      "path": "src/core/filters.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/core/filters.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "helpers.rs",
+      "path": "src/core/helpers.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/core/helpers.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "launch_status.rs",
+      "path": "src/core/launch_status.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/core/launch_status.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "src/core/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/core/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "tips.rs",
+      "path": "src/core/tips.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/core/tips.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "claude_actors.rs",
+      "path": "src/db/claude_actors.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/db/claude_actors.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "events.rs",
+      "path": "src/db/events.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/db/events.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "instances.rs",
+      "path": "src/db/instances.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/db/instances.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "kv.rs",
+      "path": "src/db/kv.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/db/kv.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "src/db/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/db/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "notify.rs",
+      "path": "src/db/notify.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/db/notify.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "reqwatch_policy.rs",
+      "path": "src/db/reqwatch_policy.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/db/reqwatch_policy.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "sessions.rs",
+      "path": "src/db/sessions.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/db/sessions.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "subscriptions.rs",
+      "path": "src/db/subscriptions.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/db/subscriptions.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "delivery.rs",
+      "path": "src/delivery.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/delivery.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "antigravity.rs",
+      "path": "src/delivery/antigravity.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/delivery/antigravity.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "antigravity.rs",
+      "path": "src/hooks/antigravity.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/hooks/antigravity.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "claude.rs",
+      "path": "src/hooks/claude.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/hooks/claude.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "codex_file_edits.rs",
+      "path": "src/hooks/codex_file_edits.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/hooks/codex_file_edits.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "codex.rs",
+      "path": "src/hooks/codex.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/hooks/codex.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "common.rs",
+      "path": "src/hooks/common.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/hooks/common.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "copilot.rs",
+      "path": "src/hooks/copilot.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/hooks/copilot.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "cursor.rs",
+      "path": "src/hooks/cursor.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/hooks/cursor.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "family.rs",
+      "path": "src/hooks/family.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/hooks/family.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "gemini.rs",
+      "path": "src/hooks/gemini.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/hooks/gemini.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "kimi.rs",
+      "path": "src/hooks/kimi.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/hooks/kimi.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "src/hooks/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/hooks/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "handlers.rs",
+      "path": "src/hooks/omp/handlers.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/hooks/omp/handlers.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "src/hooks/omp/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/hooks/omp/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "plugin.rs",
+      "path": "src/hooks/omp/plugin.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/hooks/omp/plugin.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "tests.rs",
+      "path": "src/hooks/omp/tests.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/hooks/omp/tests.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "opencode.rs",
+      "path": "src/hooks/opencode.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/hooks/opencode.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "pi.rs",
+      "path": "src/hooks/pi.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/hooks/pi.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "utils.rs",
+      "path": "src/hooks/utils.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/hooks/utils.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "identity.rs",
+      "path": "src/identity.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/identity.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "instance_binding.rs",
+      "path": "src/instance_binding.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/instance_binding.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "instance_lifecycle.rs",
+      "path": "src/instance_lifecycle.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/instance_lifecycle.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "instance_names.rs",
+      "path": "src/instance_names.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/instance_names.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "instances.rs",
+      "path": "src/instances.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/instances.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "integration_spec.rs",
+      "path": "src/integration_spec.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/integration_spec.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "launcher.rs",
+      "path": "src/launcher.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/launcher.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "log.rs",
+      "path": "src/log.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/log.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "main.rs",
+      "path": "src/main.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/main.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "messages.rs",
+      "path": "src/messages.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/messages.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "src/notify/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/notify/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "server.rs",
+      "path": "src/notify/server.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/notify/server.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "wake.rs",
+      "path": "src/notify/wake.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/notify/wake.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "hcom.ts",
+      "path": "src/omp_plugin/hcom.ts",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/omp_plugin/hcom.ts"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "hcom.ts",
+      "path": "src/opencode_plugin/hcom.ts",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/opencode_plugin/hcom.ts"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "paths.rs",
+      "path": "src/paths.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/paths.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "hcom.ts",
+      "path": "src/pi_plugin/hcom.ts",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/pi_plugin/hcom.ts"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "pidtrack.rs",
+      "path": "src/pidtrack.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/pidtrack.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "inject.rs",
+      "path": "src/pty/inject.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/pty/inject.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "src/pty/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/pty/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "screen.rs",
+      "path": "src/pty/screen.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/pty/screen.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "shared.rs",
+      "path": "src/pty/shared.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/pty/shared.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "terminal.rs",
+      "path": "src/pty/terminal.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/pty/terminal.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "win.rs",
+      "path": "src/pty/win.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/pty/win.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "broker.rs",
+      "path": "src/relay/broker.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/relay/broker.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "client.rs",
+      "path": "src/relay/client.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/relay/client.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "control.rs",
+      "path": "src/relay/control.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/relay/control.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "crypto.rs",
+      "path": "src/relay/crypto.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/relay/crypto.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "src/relay/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/relay/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "pull.rs",
+      "path": "src/relay/pull.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/relay/pull.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "push.rs",
+      "path": "src/relay/push.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/relay/push.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "replay.rs",
+      "path": "src/relay/replay.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/relay/replay.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "token.rs",
+      "path": "src/relay/token.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/relay/token.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "worker.rs",
+      "path": "src/relay/worker.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/relay/worker.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "router.rs",
+      "path": "src/router.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/router.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "runtime_env.rs",
+      "path": "src/runtime_env.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/runtime_env.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "scripts.rs",
+      "path": "src/scripts.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/scripts.rs"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "confess.sh",
+      "path": "src/scripts/bundled/confess.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "src/scripts/bundled/confess.sh"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "debate.sh",
+      "path": "src/scripts/bundled/debate.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "src/scripts/bundled/debate.sh"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "fatcow.sh",
+      "path": "src/scripts/bundled/fatcow.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "src/scripts/bundled/fatcow.sh"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "ansi.rs",
+      "path": "src/shared/ansi.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/shared/ansi.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "constants.rs",
+      "path": "src/shared/constants.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/shared/constants.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "context.rs",
+      "path": "src/shared/context.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/shared/context.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "errors.rs",
+      "path": "src/shared/errors.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/shared/errors.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "identity.rs",
+      "path": "src/shared/identity.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/shared/identity.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "src/shared/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/shared/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "platform.rs",
+      "path": "src/shared/platform.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/shared/platform.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "terminal_presets.rs",
+      "path": "src/shared/terminal_presets.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/shared/terminal_presets.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "time.rs",
+      "path": "src/shared/time.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/shared/time.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "tool_detection.rs",
+      "path": "src/shared/tool_detection.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/shared/tool_detection.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "shell_env.rs",
+      "path": "src/shell_env.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/shell_env.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "fs.rs",
+      "path": "src/sys/fs.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/sys/fs.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "io.rs",
+      "path": "src/sys/io.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/sys/io.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "src/sys/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/sys/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "net.rs",
+      "path": "src/sys/net.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/sys/net.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "process.rs",
+      "path": "src/sys/process.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/sys/process.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "signal.rs",
+      "path": "src/sys/signal.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/sys/signal.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "terminal.rs",
+      "path": "src/terminal.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/terminal.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "tool.rs",
+      "path": "src/tool.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/tool.rs"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "args_common.rs",
+      "path": "src/tools/args_common.rs",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "src/tools/args_common.rs"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "codex_preprocessing.rs",
+      "path": "src/tools/codex_preprocessing.rs",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "src/tools/codex_preprocessing.rs"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "copilot_preprocessing.rs",
+      "path": "src/tools/copilot_preprocessing.rs",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "src/tools/copilot_preprocessing.rs"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "cursor_preprocessing.rs",
+      "path": "src/tools/cursor_preprocessing.rs",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "src/tools/cursor_preprocessing.rs"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "launch_arg_validation.rs",
+      "path": "src/tools/launch_arg_validation.rs",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "src/tools/launch_arg_validation.rs"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "mod.rs",
+      "path": "src/tools/mod.rs",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "src/tools/mod.rs"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "opencode_preprocessing.rs",
+      "path": "src/tools/opencode_preprocessing.rs",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "src/tools/opencode_preprocessing.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "claude.rs",
+      "path": "src/transcript/claude.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/transcript/claude.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "codex.rs",
+      "path": "src/transcript/codex.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/transcript/codex.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "copilot.rs",
+      "path": "src/transcript/copilot.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/transcript/copilot.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "cursor.rs",
+      "path": "src/transcript/cursor.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/transcript/cursor.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "gemini.rs",
+      "path": "src/transcript/gemini.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/transcript/gemini.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "kimi.rs",
+      "path": "src/transcript/kimi.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/transcript/kimi.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "src/transcript/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/transcript/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "opencode.rs",
+      "path": "src/transcript/opencode.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/transcript/opencode.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "pi.rs",
+      "path": "src/transcript/pi.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/transcript/pi.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "shared.rs",
+      "path": "src/transcript/shared.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/transcript/shared.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "actions.rs",
+      "path": "src/tui/actions.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/tui/actions.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "app.rs",
+      "path": "src/tui/app.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/tui/app.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "commands.rs",
+      "path": "src/tui/commands.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/tui/commands.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "data.rs",
+      "path": "src/tui/data.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/tui/data.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "db.rs",
+      "path": "src/tui/db.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/tui/db.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "eject.rs",
+      "path": "src/tui/inline/eject.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/tui/inline/eject.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "src/tui/inline/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/tui/inline/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "input.rs",
+      "path": "src/tui/input.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/tui/input.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "compose.rs",
+      "path": "src/tui/input/compose.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/tui/input/compose.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "src/tui/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/tui/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "model.rs",
+      "path": "src/tui/model.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/tui/model.rs"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "agents.rs",
+      "path": "src/tui/render/agents.rs",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "src/tui/render/agents.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "launch.rs",
+      "path": "src/tui/render/launch.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/tui/render/launch.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "messages.rs",
+      "path": "src/tui/render/messages.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/tui/render/messages.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "src/tui/render/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/tui/render/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "text.rs",
+      "path": "src/tui/render/text.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/tui/render/text.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "rpc_async.rs",
+      "path": "src/tui/rpc_async.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/tui/rpc_async.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "rpc.rs",
+      "path": "src/tui/rpc.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/tui/rpc.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "state.rs",
+      "path": "src/tui/state.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/tui/state.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "status.rs",
+      "path": "src/tui/status.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/tui/status.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "theme.rs",
+      "path": "src/tui/theme.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/tui/theme.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "update.rs",
+      "path": "src/update.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "src/update.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "cli_smoke.rs",
+      "path": "tests/cli_smoke.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "tests/cli_smoke.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "real_tool_claude.rs",
+      "path": "tests/real_tool_claude.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "tests/real_tool_claude.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "real_tool_codex.rs",
+      "path": "tests/real_tool_codex.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "tests/real_tool_codex.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "claude_mock.rs",
+      "path": "tests/support/claude_mock.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "tests/support/claude_mock.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "codex_mock.rs",
+      "path": "tests/support/codex_mock.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "tests/support/codex_mock.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mock_http.rs",
+      "path": "tests/support/mock_http.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "tests/support/mock_http.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "tests/support/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "tests/support/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "real_tool.rs",
+      "path": "tests/support/real_tool.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "tests/support/real_tool.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "test_pty_delivery.rs",
+      "path": "tests/test_pty_delivery.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "tests/test_pty_delivery.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "test_relay_roundtrip.rs",
+      "path": "tests/test_relay_roundtrip.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "tests/test_relay_roundtrip.rs"
+      ]
+    },
+    {
+      "kind": "configuration",
+      "name": "tsconfig.json",
+      "path": "tsconfig.json",
+      "purpose": "Repository configuration",
+      "confidence": "medium",
+      "evidence": [
+        "tsconfig.json"
+      ]
+    }
+  ],
+  "coordinator": {
+    "paths": [
+      "AGENTS.md",
+      "skills/production-orchestrator/SKILL.md"
+    ],
+    "files": [
+      "AGENTS.md",
+      "skills/production-orchestrator/SKILL.md"
+    ]
+  },
+  "indexes": [
+    "INDEX.md",
+    "skills/INDEX.md",
+    "skills/distribution-manifest.json",
+    "skills/hcom-agent-messaging/INDEX.md"
+  ],
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "kind": "coordinator",
+      "content": "# Proposed repository coordinator\n\nThis coordinator was generated from the files currently present in the repository. It is a reviewable proposal and has not been installed.\n\n## How to use it\n\n1. Read `INDEX.md` and `skills/INDEX.md` before selecting a component.\n2. Choose the smallest skill whose observed description matches the user's request.\n3. Follow that skill's own instructions and use the observed scripts and workflows only when they are relevant.\n4. Pass the skill's output to the next step only when the output is present and validated.\n5. Stop and ask for review when a needed file, dependency, permission, or expected output is missing.\n\n## Observed skills\n\n- /hcom-agent-messaging — > (unknown-invoked)\n\n## Observed plugins\n\n- .claude-plugin/marketplace.json\n- plugin/hcom/.claude-plugin/plugin.json\n- plugin/hcom/skills\n\n## Observed workflows\n\n- .github/workflows/build-wheels.yml\n- .github/workflows/ci.yml\n- .github/workflows/lint-workflows.yml\n- .github/workflows/post-announce-compare-link.yml\n- .github/workflows/publish-pypi.yml\n- .github/workflows/release.yml\n\n## Safety and limits\n\n- Do not claim an inferred purpose is confirmed behavior.\n- Do not run an observed script merely because it exists; confirm that it is needed and safe first.\n- Do not install plugins, change global settings, or modify source files without explicit approval.\n- Record missing metadata and unresolved connections as review items.\n\nEvidence digest: `b78623dd5f0e5799e8c8ae7c73a857509acd7e84466d84f69c2bf5ea1ee4d740`\n",
+      "evidence": [
+        ".cargo/audit.toml",
+        ".claude-plugin/marketplace.json",
+        ".github/build-setup.yml",
+        ".github/FUNDING.yml",
+        ".github/workflows/build-wheels.yml",
+        ".github/workflows/ci.yml",
+        ".github/workflows/lint-workflows.yml",
+        ".github/workflows/post-announce-compare-link.yml",
+        ".github/workflows/publish-pypi.yml",
+        ".github/workflows/release.yml",
+        ".gitignore",
+        ".node-version",
+        "Cargo.lock",
+        "Cargo.toml",
+        "dist-workspace.toml",
+        "gemini-extension.json",
+        "install.sh",
+        "Justfile",
+        "LICENSE",
+        "package-lock.json"
+      ]
+    },
+    {
+      "path": "INDEX.md",
+      "kind": "index",
+      "content": "# Proposed file index\n\nThis index was generated from observed repository contents. It is a proposal, not an applied change.\n\nSource digest: `b78623dd5f0e5799e8c8ae7c73a857509acd7e84466d84f69c2bf5ea1ee4d740`\n\n## Skills\n\n- `skills/hcom-agent-messaging/SKILL.md` — > [high confidence]\n\n## Plugins\n\n- `.claude-plugin/marketplace.json` — Plugin entry or plugin configuration [medium confidence]\n- `plugin/hcom/.claude-plugin/plugin.json` — Plugin entry or plugin configuration [medium confidence]\n- `plugin/hcom/skills` — Plugin entry or plugin configuration [medium confidence]\n\n## Workflows\n\n- `.github/workflows/build-wheels.yml` — Automated workflow or repository action [medium confidence]\n- `.github/workflows/ci.yml` — Automated workflow or repository action [medium confidence]\n- `.github/workflows/lint-workflows.yml` — Automated workflow or repository action [medium confidence]\n- `.github/workflows/post-announce-compare-link.yml` — Automated workflow or repository action [medium confidence]\n- `.github/workflows/publish-pypi.yml` — Automated workflow or repository action [medium confidence]\n- `.github/workflows/release.yml` — Automated workflow or repository action [medium confidence]\n\n## Agents\n\n- `src/tui/render/agents.rs` — Agent instructions or agent metadata [medium confidence]\n\n## Scripts\n\n- `install.sh` — Supporting executable or automation script [medium confidence]\n- `scripts/ci-windows.ps1` — Supporting executable or automation script [medium confidence]\n- `scripts/install-mock-tools.ps1` — Supporting executable or automation script [medium confidence]\n- `scripts/install-mock-tools.sh` — Supporting executable or automation script [medium confidence]\n- `scripts/msrv.sh` — Supporting executable or automation script [medium confidence]\n- `scripts/typecheck.sh` — Supporting executable or automation script [medium confidence]\n- `skills/hcom-agent-messaging/references/scripts/basic-messaging.sh` — Supporting executable or automation script [medium confidence]\n- `skills/hcom-agent-messaging/references/scripts/cascade-pipeline.sh` — Supporting executable or automation script [medium confidence]\n- `skills/hcom-agent-messaging/references/scripts/codex-worker.sh` — Supporting executable or automation script [medium confidence]\n- `skills/hcom-agent-messaging/references/scripts/cross-tool-duo.sh` — Supporting executable or automation script [medium confidence]\n- `skills/hcom-agent-messaging/references/scripts/ensemble-consensus.sh` — Supporting executable or automation script [medium confidence]\n- `skills/hcom-agent-messaging/references/scripts/review-loop.sh` — Supporting executable or automation script [medium confidence]\n- `src/scripts/bundled/confess.sh` — Supporting executable or automation script [medium confidence]\n- `src/scripts/bundled/debate.sh` — Supporting executable or automation script [medium confidence]\n- `src/scripts/bundled/fatcow.sh` — Supporting executable or automation script [medium confidence]\n- `src/tools/args_common.rs` — Supporting executable or automation script [medium confidence]\n- `src/tools/codex_preprocessing.rs` — Supporting executable or automation script [medium confidence]\n- `src/tools/copilot_preprocessing.rs` — Supporting executable or automation script [medium confidence]\n- `src/tools/cursor_preprocessing.rs` — Supporting executable or automation script [medium confidence]\n- `src/tools/launch_arg_validation.rs` — Supporting executable or automation script [medium confidence]\n- `src/tools/mod.rs` — Supporting executable or automation script [medium confidence]\n- `src/tools/opencode_preprocessing.rs` — Supporting executable or automation script [medium confidence]\n\n## Documentations\n\n- `README.md` — Repository documentation [medium confidence]\n- `skills/hcom-agent-messaging/references/cross-tool.md` — Repository documentation [medium confidence]\n- `skills/hcom-agent-messaging/references/gotchas.md` — Repository documentation [medium confidence]\n- `skills/hcom-agent-messaging/references/patterns.md` — Repository documentation [medium confidence]\n- `skills/hcom-agent-messaging/references/script-template.md` — Repository documentation [medium confidence]\n\n## Configurations\n\n- `Cargo.toml` — Repository configuration [medium confidence]\n- `package.json` — Repository configuration [medium confidence]\n- `pyproject.toml` — Repository configuration [medium confidence]\n- `tsconfig.json` — Repository configuration [medium confidence]\n\n## Others\n\n- `.cargo/audit.toml` — Observed repository asset [low confidence]\n- `.github/build-setup.yml` — Observed repository asset [low confidence]\n- `.github/FUNDING.yml` — Observed repository asset [low confidence]\n- `.gitignore` — Observed repository asset [low confidence]\n- `.node-version` — Observed repository asset [low confidence]\n- `Cargo.lock` — Observed repository asset [low confidence]\n- `dist-workspace.toml` — Observed repository asset [low confidence]\n- `gemini-extension.json` — Observed repository asset [low confidence]\n- `Justfile` — Observed repository asset [low confidence]\n- `LICENSE` — Observed repository asset [low confidence]\n- `package-lock.json` — Observed repository asset [low confidence]\n- `rust-toolchain.toml` — Observed repository asset [low confidence]\n- `src/bootstrap.rs` — Observed repository asset [low confidence]\n- `src/claude_actor.rs` — Observed repository asset [low confidence]\n- `src/cli_context.rs` — Observed repository asset [low confidence]\n- `src/commands/archive.rs` — Observed repository asset [low confidence]\n- `src/commands/bundle.rs` — Observed repository asset [low confidence]\n- `src/commands/config.rs` — Observed repository asset [low confidence]\n- `src/commands/daemon.rs` — Observed repository asset [low confidence]\n- `src/commands/events.rs` — Observed repository asset [low confidence]\n- `src/commands/fork.rs` — Observed repository asset [low confidence]\n- `src/commands/help.rs` — Observed repository asset [low confidence]\n- `src/commands/hooks.rs` — Observed repository asset [low confidence]\n- `src/commands/kill.rs` — Observed repository asset [low confidence]\n- `src/commands/launch.rs` — Observed repository asset [low confidence]\n- `src/commands/list.rs` — Observed repository asset [low confidence]\n- `src/commands/listen.rs` — Observed repository asset [low confidence]\n- `src/commands/mod.rs` — Observed repository asset [low confidence]\n- `src/commands/relay.rs` — Observed repository asset [low confidence]\n- `src/commands/reset_ops.rs` — Observed repository asset [low confidence]\n- `src/commands/reset_preview.rs` — Observed repository asset [low confidence]\n- `src/commands/reset.rs` — Observed repository asset [low confidence]\n- `src/commands/resume.rs` — Observed repository asset [low confidence]\n- `src/commands/run.rs` — Observed repository asset [low confidence]\n- `src/commands/send.rs` — Observed repository asset [low confidence]\n- `src/commands/start.rs` — Observed repository asset [low confidence]\n- `src/commands/status.rs` — Observed repository asset [low confidence]\n- `src/commands/stop.rs` — Observed repository asset [low confidence]\n- `src/commands/term.rs` — Observed repository asset [low confidence]\n- `src/commands/transcript.rs` — Observed repository asset [low confidence]\n- `src/commands/update.rs` — Observed repository asset [low confidence]\n- `src/config.rs` — Observed repository asset [low confidence]\n- `src/core/bundles.rs` — Observed repository asset [low confidence]\n- `src/core/detail_levels.rs` — Observed repository asset [low confidence]\n- `src/core/filters.rs` — Observed repository asset [low confidence]\n- `src/core/helpers.rs` — Observed repository asset [low confidence]\n- `src/core/launch_status.rs` — Observed repository asset [low confidence]\n- `src/core/mod.rs` — Observed repository asset [low confidence]\n- `src/core/tips.rs` — Observed repository asset [low confidence]\n- `src/db/claude_actors.rs` — Observed repository asset [low confidence]\n- `src/db/events.rs` — Observed repository asset [low confidence]\n- `src/db/instances.rs` — Observed repository asset [low confidence]\n- `src/db/kv.rs` — Observed repository asset [low confidence]\n- `src/db/mod.rs` — Observed repository asset [low confidence]\n- `src/db/notify.rs` — Observed repository asset [low confidence]\n- `src/db/reqwatch_policy.rs` — Observed repository asset [low confidence]\n- `src/db/sessions.rs` — Observed repository asset [low confidence]\n- `src/db/subscriptions.rs` — Observed repository asset [low confidence]\n- `src/delivery.rs` — Observed repository asset [low confidence]\n- `src/delivery/antigravity.rs` — Observed repository asset [low confidence]\n- `src/hooks/antigravity.rs` — Observed repository asset [low confidence]\n- `src/hooks/claude.rs` — Observed repository asset [low confidence]\n- `src/hooks/codex_file_edits.rs` — Observed repository asset [low confidence]\n- `src/hooks/codex.rs` — Observed repository asset [low confidence]\n- `src/hooks/common.rs` — Observed repository asset [low confidence]\n- `src/hooks/copilot.rs` — Observed repository asset [low confidence]\n- `src/hooks/cursor.rs` — Observed repository asset [low confidence]\n- `src/hooks/family.rs` — Observed repository asset [low confidence]\n- `src/hooks/gemini.rs` — Observed repository asset [low confidence]\n- `src/hooks/kimi.rs` — Observed repository asset [low confidence]\n- `src/hooks/mod.rs` — Observed repository asset [low confidence]\n- `src/hooks/omp/handlers.rs` — Observed repository asset [low confidence]\n- `src/hooks/omp/mod.rs` — Observed repository asset [low confidence]\n- `src/hooks/omp/plugin.rs` — Observed repository asset [low confidence]\n- `src/hooks/omp/tests.rs` — Observed repository asset [low confidence]\n- `src/hooks/opencode.rs` — Observed repository asset [low confidence]\n- `src/hooks/pi.rs` — Observed repository asset [low confidence]\n- `src/hooks/utils.rs` — Observed repository asset [low confidence]\n- `src/identity.rs` — Observed repository asset [low confidence]\n- `src/instance_binding.rs` — Observed repository asset [low confidence]\n- `src/instance_lifecycle.rs` — Observed repository asset [low confidence]\n- `src/instance_names.rs` — Observed repository asset [low confidence]\n- `src/instances.rs` — Observed repository asset [low confidence]\n- `src/integration_spec.rs` — Observed repository asset [low confidence]\n- `src/launcher.rs` — Observed repository asset [low confidence]\n- `src/log.rs` — Observed repository asset [low confidence]\n- `src/main.rs` — Observed repository asset [low confidence]\n- `src/messages.rs` — Observed repository asset [low confidence]\n- `src/notify/mod.rs` — Observed repository asset [low confidence]\n- `src/notify/server.rs` — Observed repository asset [low confidence]\n- `src/notify/wake.rs` — Observed repository asset [low confidence]\n- `src/omp_plugin/hcom.ts` — Observed repository asset [low confidence]\n- `src/opencode_plugin/hcom.ts` — Observed repository asset [low confidence]\n- `src/paths.rs` — Observed repository asset [low confidence]\n- `src/pi_plugin/hcom.ts` — Observed repository asset [low confidence]\n- `src/pidtrack.rs` — Observed repository asset [low confidence]\n- `src/pty/inject.rs` — Observed repository asset [low confidence]\n- `src/pty/mod.rs` — Observed repository asset [low confidence]\n- `src/pty/screen.rs` — Observed repository asset [low confidence]\n- `src/pty/shared.rs` — Observed repository asset [low confidence]\n- `src/pty/terminal.rs` — Observed repository asset [low confidence]\n- `src/pty/win.rs` — Observed repository asset [low confidence]\n- `src/relay/broker.rs` — Observed repository asset [low confidence]\n- `src/relay/client.rs` — Observed repository asset [low confidence]\n- `src/relay/control.rs` — Observed repository asset [low confidence]\n- `src/relay/crypto.rs` — Observed repository asset [low confidence]\n- `src/relay/mod.rs` — Observed repository asset [low confidence]\n- `src/relay/pull.rs` — Observed repository asset [low confidence]\n- `src/relay/push.rs` — Observed repository asset [low confidence]\n- `src/relay/replay.rs` — Observed repository asset [low confidence]\n- `src/relay/token.rs` — Observed repository asset [low confidence]\n- `src/relay/worker.rs` — Observed repository asset [low confidence]\n- `src/router.rs` — Observed repository asset [low confidence]\n- `src/runtime_env.rs` — Observed repository asset [low confidence]\n- `src/scripts.rs` — Observed repository asset [low confidence]\n- `src/shared/ansi.rs` — Observed repository asset [low confidence]\n- `src/shared/constants.rs` — Observed repository asset [low confidence]\n- `src/shared/context.rs` — Observed repository asset [low confidence]\n- `src/shared/errors.rs` — Observed repository asset [low confidence]\n- `src/shared/identity.rs` — Observed repository asset [low confidence]\n- `src/shared/mod.rs` — Observed repository asset [low confidence]\n- `src/shared/platform.rs` — Observed repository asset [low confidence]\n- `src/shared/terminal_presets.rs` — Observed repository asset [low confidence]\n- `src/shared/time.rs` — Observed repository asset [low confidence]\n- `src/shared/tool_detection.rs` — Observed repository asset [low confidence]\n- `src/shell_env.rs` — Observed repository asset [low confidence]\n- `src/sys/fs.rs` — Observed repository asset [low confidence]\n- `src/sys/io.rs` — Observed repository asset [low confidence]\n- `src/sys/mod.rs` — Observed repository asset [low confidence]\n- `src/sys/net.rs` — Observed repository asset [low confidence]\n- `src/sys/process.rs` — Observed repository asset [low confidence]\n- `src/sys/signal.rs` — Observed repository asset [low confidence]\n- `src/terminal.rs` — Observed repository asset [low confidence]\n- `src/tool.rs` — Observed repository asset [low confidence]\n- `src/transcript/claude.rs` — Observed repository asset [low confidence]\n- `src/transcript/codex.rs` — Observed repository asset [low confidence]\n- `src/transcript/copilot.rs` — Observed repository asset [low confidence]\n- `src/transcript/cursor.rs` — Observed repository asset [low confidence]\n- `src/transcript/gemini.rs` — Observed repository asset [low confidence]\n- `src/transcript/kimi.rs` — Observed repository asset [low confidence]\n- `src/transcript/mod.rs` — Observed repository asset [low confidence]\n- `src/transcript/opencode.rs` — Observed repository asset [low confidence]\n- `src/transcript/pi.rs` — Observed repository asset [low confidence]\n- `src/transcript/shared.rs` — Observed repository asset [low confidence]\n- `src/tui/actions.rs` — Observed repository asset [low confidence]\n- `src/tui/app.rs` — Observed repository asset [low confidence]\n- `src/tui/commands.rs` — Observed repository asset [low confidence]\n- `src/tui/data.rs` — Observed repository asset [low confidence]\n- `src/tui/db.rs` — Observed repository asset [low confidence]\n- `src/tui/inline/eject.rs` — Observed repository asset [low confidence]\n- `src/tui/inline/mod.rs` — Observed repository asset [low confidence]\n- `src/tui/input.rs` — Observed repository asset [low confidence]\n- `src/tui/input/compose.rs` — Observed repository asset [low confidence]\n- `src/tui/mod.rs` — Observed repository asset [low confidence]\n- `src/tui/model.rs` — Observed repository asset [low confidence]\n- `src/tui/render/launch.rs` — Observed repository asset [low confidence]\n- `src/tui/render/messages.rs` — Observed repository asset [low confidence]\n- `src/tui/render/mod.rs` — Observed repository asset [low confidence]\n- `src/tui/render/text.rs` — Observed repository asset [low confidence]\n- `src/tui/rpc_async.rs` — Observed repository asset [low confidence]\n- `src/tui/rpc.rs` — Observed repository asset [low confidence]\n- `src/tui/state.rs` — Observed repository asset [low confidence]\n- `src/tui/status.rs` — Observed repository asset [low confidence]\n- `src/tui/theme.rs` — Observed repository asset [low confidence]\n- `src/update.rs` — Observed repository asset [low confidence]\n- `tests/cli_smoke.rs` — Observed repository asset [low confidence]\n- `tests/real_tool_claude.rs` — Observed repository asset [low confidence]\n- `tests/real_tool_codex.rs` — Observed repository asset [low confidence]\n- `tests/support/claude_mock.rs` — Observed repository asset [low confidence]\n- `tests/support/codex_mock.rs` — Observed repository asset [low confidence]\n- `tests/support/mock_http.rs` — Observed repository asset [low confidence]\n- `tests/support/mod.rs` — Observed repository asset [low confidence]\n- `tests/support/real_tool.rs` — Observed repository asset [low confidence]\n- `tests/test_pty_delivery.rs` — Observed repository asset [low confidence]\n- `tests/test_relay_roundtrip.rs` — Observed repository asset [low confidence]\n\n",
+      "evidence": [
+        ".cargo/audit.toml",
+        ".claude-plugin/marketplace.json",
+        ".github/build-setup.yml",
+        ".github/FUNDING.yml",
+        ".github/workflows/build-wheels.yml",
+        ".github/workflows/ci.yml",
+        ".github/workflows/lint-workflows.yml",
+        ".github/workflows/post-announce-compare-link.yml",
+        ".github/workflows/publish-pypi.yml",
+        ".github/workflows/release.yml",
+        ".gitignore",
+        ".node-version",
+        "Cargo.lock",
+        "Cargo.toml",
+        "dist-workspace.toml",
+        "gemini-extension.json",
+        "install.sh",
+        "Justfile",
+        "LICENSE",
+        "package-lock.json",
+        "package.json",
+        "plugin/hcom/.claude-plugin/plugin.json",
+        "plugin/hcom/skills",
+        "pyproject.toml",
+        "README.md",
+        "rust-toolchain.toml",
+        "scripts/ci-windows.ps1",
+        "scripts/install-mock-tools.ps1",
+        "scripts/install-mock-tools.sh",
+        "scripts/msrv.sh",
+        "scripts/typecheck.sh",
+        "skills/hcom-agent-messaging/references/cross-tool.md",
+        "skills/hcom-agent-messaging/references/gotchas.md",
+        "skills/hcom-agent-messaging/references/patterns.md",
+        "skills/hcom-agent-messaging/references/script-template.md",
+        "skills/hcom-agent-messaging/references/scripts/basic-messaging.sh",
+        "skills/hcom-agent-messaging/references/scripts/cascade-pipeline.sh",
+        "skills/hcom-agent-messaging/references/scripts/codex-worker.sh",
+        "skills/hcom-agent-messaging/references/scripts/cross-tool-duo.sh",
+        "skills/hcom-agent-messaging/references/scripts/ensemble-consensus.sh",
+        "skills/hcom-agent-messaging/references/scripts/review-loop.sh",
+        "skills/hcom-agent-messaging/SKILL.md",
+        "src/bootstrap.rs",
+        "src/claude_actor.rs",
+        "src/cli_context.rs",
+        "src/commands/archive.rs",
+        "src/commands/bundle.rs",
+        "src/commands/config.rs",
+        "src/commands/daemon.rs",
+        "src/commands/events.rs",
+        "src/commands/fork.rs",
+        "src/commands/help.rs",
+        "src/commands/hooks.rs",
+        "src/commands/kill.rs",
+        "src/commands/launch.rs",
+        "src/commands/list.rs",
+        "src/commands/listen.rs",
+        "src/commands/mod.rs",
+        "src/commands/relay.rs",
+        "src/commands/reset_ops.rs",
+        "src/commands/reset_preview.rs",
+        "src/commands/reset.rs",
+        "src/commands/resume.rs",
+        "src/commands/run.rs",
+        "src/commands/send.rs",
+        "src/commands/start.rs",
+        "src/commands/status.rs",
+        "src/commands/stop.rs",
+        "src/commands/term.rs",
+        "src/commands/transcript.rs",
+        "src/commands/update.rs",
+        "src/config.rs",
+        "src/core/bundles.rs",
+        "src/core/detail_levels.rs",
+        "src/core/filters.rs",
+        "src/core/helpers.rs",
+        "src/core/launch_status.rs",
+        "src/core/mod.rs",
+        "src/core/tips.rs",
+        "src/db/claude_actors.rs",
+        "src/db/events.rs",
+        "src/db/instances.rs",
+        "src/db/kv.rs",
+        "src/db/mod.rs",
+        "src/db/notify.rs",
+        "src/db/reqwatch_policy.rs",
+        "src/db/sessions.rs",
+        "src/db/subscriptions.rs",
+        "src/delivery.rs",
+        "src/delivery/antigravity.rs",
+        "src/hooks/antigravity.rs",
+        "src/hooks/claude.rs",
+        "src/hooks/codex_file_edits.rs",
+        "src/hooks/codex.rs",
+        "src/hooks/common.rs",
+        "src/hooks/copilot.rs",
+        "src/hooks/cursor.rs",
+        "src/hooks/family.rs",
+        "src/hooks/gemini.rs",
+        "src/hooks/kimi.rs",
+        "src/hooks/mod.rs",
+        "src/hooks/omp/handlers.rs",
+        "src/hooks/omp/mod.rs",
+        "src/hooks/omp/plugin.rs",
+        "src/hooks/omp/tests.rs",
+        "src/hooks/opencode.rs",
+        "src/hooks/pi.rs",
+        "src/hooks/utils.rs",
+        "src/identity.rs",
+        "src/instance_binding.rs",
+        "src/instance_lifecycle.rs",
+        "src/instance_names.rs",
+        "src/instances.rs",
+        "src/integration_spec.rs",
+        "src/launcher.rs",
+        "src/log.rs",
+        "src/main.rs",
+        "src/messages.rs",
+        "src/notify/mod.rs",
+        "src/notify/server.rs",
+        "src/notify/wake.rs",
+        "src/omp_plugin/hcom.ts",
+        "src/opencode_plugin/hcom.ts",
+        "src/paths.rs",
+        "src/pi_plugin/hcom.ts",
+        "src/pidtrack.rs",
+        "src/pty/inject.rs",
+        "src/pty/mod.rs",
+        "src/pty/screen.rs",
+        "src/pty/shared.rs",
+        "src/pty/terminal.rs",
+        "src/pty/win.rs",
+        "src/relay/broker.rs",
+        "src/relay/client.rs",
+        "src/relay/control.rs",
+        "src/relay/crypto.rs",
+        "src/relay/mod.rs",
+        "src/relay/pull.rs",
+        "src/relay/push.rs",
+        "src/relay/replay.rs",
+        "src/relay/token.rs",
+        "src/relay/worker.rs",
+        "src/router.rs",
+        "src/runtime_env.rs",
+        "src/scripts.rs",
+        "src/scripts/bundled/confess.sh",
+        "src/scripts/bundled/debate.sh",
+        "src/scripts/bundled/fatcow.sh",
+        "src/shared/ansi.rs",
+        "src/shared/constants.rs",
+        "src/shared/context.rs",
+        "src/shared/errors.rs",
+        "src/shared/identity.rs",
+        "src/shared/mod.rs",
+        "src/shared/platform.rs",
+        "src/shared/terminal_presets.rs",
+        "src/shared/time.rs",
+        "src/shared/tool_detection.rs",
+        "src/shell_env.rs",
+        "src/sys/fs.rs",
+        "src/sys/io.rs",
+        "src/sys/mod.rs",
+        "src/sys/net.rs",
+        "src/sys/process.rs",
+        "src/sys/signal.rs",
+        "src/terminal.rs",
+        "src/tool.rs",
+        "src/tools/args_common.rs",
+        "src/tools/codex_preprocessing.rs",
+        "src/tools/copilot_preprocessing.rs",
+        "src/tools/cursor_preprocessing.rs",
+        "src/tools/launch_arg_validation.rs",
+        "src/tools/mod.rs",
+        "src/tools/opencode_preprocessing.rs",
+        "src/transcript/claude.rs",
+        "src/transcript/codex.rs",
+        "src/transcript/copilot.rs",
+        "src/transcript/cursor.rs",
+        "src/transcript/gemini.rs",
+        "src/transcript/kimi.rs",
+        "src/transcript/mod.rs",
+        "src/transcript/opencode.rs",
+        "src/transcript/pi.rs",
+        "src/transcript/shared.rs",
+        "src/tui/actions.rs",
+        "src/tui/app.rs",
+        "src/tui/commands.rs",
+        "src/tui/data.rs",
+        "src/tui/db.rs",
+        "src/tui/inline/eject.rs",
+        "src/tui/inline/mod.rs",
+        "src/tui/input.rs",
+        "src/tui/input/compose.rs",
+        "src/tui/mod.rs",
+        "src/tui/model.rs",
+        "src/tui/render/agents.rs",
+        "src/tui/render/launch.rs",
+        "src/tui/render/messages.rs",
+        "src/tui/render/mod.rs",
+        "src/tui/render/text.rs",
+        "src/tui/rpc_async.rs",
+        "src/tui/rpc.rs",
+        "src/tui/state.rs",
+        "src/tui/status.rs",
+        "src/tui/theme.rs",
+        "src/update.rs",
+        "tests/cli_smoke.rs",
+        "tests/real_tool_claude.rs",
+        "tests/real_tool_codex.rs",
+        "tests/support/claude_mock.rs",
+        "tests/support/codex_mock.rs",
+        "tests/support/mock_http.rs",
+        "tests/support/mod.rs",
+        "tests/support/real_tool.rs",
+        "tests/test_pty_delivery.rs",
+        "tests/test_relay_roundtrip.rs",
+        "tsconfig.json"
+      ]
+    },
+    {
+      "path": "skills/INDEX.md",
+      "kind": "index",
+      "content": "# Proposed skills index\n\nGenerated from observed SKILL.md files. Review names and descriptions before applying.\n\nSource digest: `b78623dd5f0e5799e8c8ae7c73a857509acd7e84466d84f69c2bf5ea1ee4d740`\n\n- `/hcom-agent-messaging` — `skills/hcom-agent-messaging/SKILL.md` — >\n",
+      "evidence": [
+        "skills/hcom-agent-messaging/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/distribution-manifest.json",
+      "kind": "manifest",
+      "content": "{\n  \"schemaVersion\": \"1.0\",\n  \"mode\": \"skills-sh-editable\",\n  \"skills\": [\n    \"hcom-agent-messaging\",\n    \"production-orchestrator\"\n  ],\n  \"scope\": \"project-local\",\n  \"approvalRequired\": true,\n  \"status\": \"PROPOSED\"\n}\n",
+      "evidence": [
+        "skills/hcom-agent-messaging/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/production-orchestrator/SKILL.md",
+      "kind": "coordinator",
+      "content": "---\nname: production-orchestrator\ndescription: Route repository work using the observed skills and workflows after review.\ndisable-model-invocation: true\n---\n\n# Proposed repository coordinator\n\nThis coordinator was generated from the files currently present in the repository. It is a reviewable proposal and has not been installed.\n\n## How to use it\n\n1. Read `INDEX.md` and `skills/INDEX.md` before selecting a component.\n2. Choose the smallest skill whose observed description matches the user's request.\n3. Follow that skill's own instructions and use the observed scripts and workflows only when they are relevant.\n4. Pass the skill's output to the next step only when the output is present and validated.\n5. Stop and ask for review when a needed file, dependency, permission, or expected output is missing.\n\n## Observed skills\n\n- /hcom-agent-messaging — > (unknown-invoked)\n\n## Observed plugins\n\n- .claude-plugin/marketplace.json\n- plugin/hcom/.claude-plugin/plugin.json\n- plugin/hcom/skills\n\n## Observed workflows\n\n- .github/workflows/build-wheels.yml\n- .github/workflows/ci.yml\n- .github/workflows/lint-workflows.yml\n- .github/workflows/post-announce-compare-link.yml\n- .github/workflows/publish-pypi.yml\n- .github/workflows/release.yml\n\n## Safety and limits\n\n- Do not claim an inferred purpose is confirmed behavior.\n- Do not run an observed script merely because it exists; confirm that it is needed and safe first.\n- Do not install plugins, change global settings, or modify source files without explicit approval.\n- Record missing metadata and unresolved connections as review items.\n\nEvidence digest: `b78623dd5f0e5799e8c8ae7c73a857509acd7e84466d84f69c2bf5ea1ee4d740`\n",
+      "evidence": [
+        "AGENTS.md",
+        "skills/INDEX.md"
+      ]
+    },
+    {
+      "path": "skills/production-orchestrator/agents/openai.yaml",
+      "kind": "metadata",
+      "content": "interface:\n  display_name: Proposed Repository Coordinator\n  short_description: Route repository work using reviewed local skills and workflows.\npolicy:\n  allow_implicit_invocation: false\n",
+      "evidence": [
+        "skills/production-orchestrator/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/hcom-agent-messaging/INDEX.md",
+      "kind": "index",
+      "content": "# Proposed skills index\n\nGenerated from observed SKILL.md files. Review names and descriptions before applying.\n\nSource digest: `b78623dd5f0e5799e8c8ae7c73a857509acd7e84466d84f69c2bf5ea1ee4d740`\n\n- `/hcom-agent-messaging` — `skills/hcom-agent-messaging/SKILL.md` — >\n",
+      "evidence": [
+        "skills/hcom-agent-messaging/SKILL.md"
+      ]
+    }
+  ],
+  "limitations": [
+    "Generated from observed paths and readable frontmatter; inferred purposes require human review.",
+    "Existing skill metadata, dependencies, and instructions were not rewritten by this proposal.",
+    "The proposal is stored under .orchestrator/proposals and has not been copied into the repository.",
+    "The standardization plan is BLOCKED by 1 skill candidate(s) or dependency findings."
+  ],
+  "digest": "af07da119b50caee689c3461950e33cf2879e204264bed0955687dc34e4c67c3"
+}

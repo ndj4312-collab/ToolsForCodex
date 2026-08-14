@@ -1,0 +1,1177 @@
+{
+  "schemaVersion": "1.0",
+  "status": "PROPOSED",
+  "targetPath": ".",
+  "sourceDigest": "bbd69f94de1ca6dc88751e29a9a8c0532302826641f5ecbf58e2bf1bab77bbd5",
+  "components": [
+    {
+      "kind": "skill",
+      "name": "prompt-optimization",
+      "path": ".codex/skills/prompt-optimization/SKILL.md",
+      "purpose": "Improve and rewrite user prompts to reduce ambiguity and improve LLM output quality. Use when a user asks to optimize, refine, clarify, or rewrite a prompt for better results, or when the request is about prompt optimization or prompt rewriting.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        ".codex/skills/prompt-optimization/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "writing-assistant",
+      "path": ".codex/skills/writing-assistant/SKILL.md",
+      "purpose": "Edits, rewrites, or improves text for clarity, tone, grammar, or style.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        ".codex/skills/writing-assistant/SKILL.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": ".gitignore",
+      "path": ".gitignore",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        ".gitignore"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "CHANGELOG.md",
+      "path": "docs/CHANGELOG.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/CHANGELOG.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "README.md",
+      "path": "README.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "README.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "api-contract-checker",
+      "path": "skills/api/api-contract-checker/SKILL.md",
+      "purpose": "Validate API changes against an expected contract. Use when a mid-level developer needs to detect breaking changes.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/api/api-contract-checker/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "api-error-taxonomy",
+      "path": "skills/api/api-error-taxonomy/SKILL.md",
+      "purpose": "Define consistent API error codes and responses. Use when a mid-level developer needs error standardization.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/api/api-error-taxonomy/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "api-request-builder",
+      "path": "skills/api/api-request-builder/SKILL.md",
+      "purpose": "Build a basic HTTP request (curl or fetch) for an API. Use when a junior developer needs a quick request example.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/api/api-request-builder/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "buffer-api",
+      "path": "skills/api/buffer-api/SKILL.md",
+      "purpose": "Manage Buffer content via the GraphQL API. Use when creating, scheduling, editing, or deleting posts, saving ideas, reading scheduled queues, or pulling post analytics. Not for general API debugging.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/api/buffer-api/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "graphql-query-optimizer",
+      "path": "skills/api/graphql-query-optimizer/SKILL.md",
+      "purpose": "Optimize GraphQL queries and resolvers for performance. Use when a mid-level developer needs to reduce N+1 or payload size.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/api/graphql-query-optimizer/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "architecture-review",
+      "path": "skills/architecture/architecture-review/SKILL.md",
+      "purpose": "Review a system architecture for scalability, reliability, and maintainability. Use when a senior developer needs to critique a design.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/architecture/architecture-review/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "domain-modeling",
+      "path": "skills/architecture/domain-modeling/SKILL.md",
+      "purpose": "Model domains and bounded contexts for complex systems. Use when a senior developer needs domain-driven design guidance.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/architecture/domain-modeling/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "caching-strategy-helper",
+      "path": "skills/backend/caching-strategy-helper/SKILL.md",
+      "purpose": "Recommend caching strategies and invalidation patterns. Use when a mid-level developer needs performance guidance.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/backend/caching-strategy-helper/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "feature-flag-playbook",
+      "path": "skills/backend/feature-flag-playbook/SKILL.md",
+      "purpose": "Plan feature flag rollout and cleanup. Use when a mid-level developer needs controlled release guidance.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/backend/feature-flag-playbook/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "queue-processing-patterns",
+      "path": "skills/backend/queue-processing-patterns/SKILL.md",
+      "purpose": "Design safe queue consumers and retries. Use when a mid-level developer needs reliable background processing.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/backend/queue-processing-patterns/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "system-design-draft",
+      "path": "skills/backend/system-design-draft/SKILL.md",
+      "purpose": "Draft a practical system design for a feature. Use when a mid-level developer needs a starting architecture.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/backend/system-design-draft/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "data-governance-check",
+      "path": "skills/data/data-governance-check/SKILL.md",
+      "purpose": "Review data handling for privacy and retention. Use when a senior developer needs governance validation.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/data/data-governance-check/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "db-migration-reviewer",
+      "path": "skills/data/db-migration-reviewer/SKILL.md",
+      "purpose": "Review database migrations for safety and rollback. Use when a mid-level developer needs validation of schema changes.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/data/db-migration-reviewer/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "sql-query-starter",
+      "path": "skills/data/sql-query-starter/SKILL.md",
+      "purpose": "Draft a basic SQL query from a simple requirement. Use when a junior developer needs help forming SELECT queries.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/data/sql-query-starter/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "function-docstrings",
+      "path": "skills/docs/function-docstrings/SKILL.md",
+      "purpose": "Write concise docstrings for functions. Use when a junior developer needs help describing inputs, outputs, and errors.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/docs/function-docstrings/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "readme-polish",
+      "path": "skills/docs/readme-polish/SKILL.md",
+      "purpose": "Improve a README for clarity and completeness. Use when a junior developer needs guidance on documenting setup and usage.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/docs/readme-polish/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "release-notes-drafter",
+      "path": "skills/docs/release-notes-drafter/SKILL.md",
+      "purpose": "Draft release notes from changes and PRs. Use when a mid-level developer needs a structured changelog.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/docs/release-notes-drafter/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "team-onboarding-guide",
+      "path": "skills/docs/team-onboarding-guide/SKILL.md",
+      "purpose": "Create an onboarding guide for new engineers. Use when a senior developer needs structured onboarding materials.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/docs/team-onboarding-guide/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "codebase-orientation",
+      "path": "skills/foundation/codebase-orientation/SKILL.md",
+      "purpose": "Guide quick orientation of an unfamiliar codebase with module mapping, entry points, and local run steps. Use when a junior developer needs to get situated fast.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/foundation/codebase-orientation/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "config-file-explainer",
+      "path": "skills/foundation/config-file-explainer/SKILL.md",
+      "purpose": "Explain a configuration file and its key options. Use when a junior developer is confused by a config file.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/foundation/config-file-explainer/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "data-structure-chooser",
+      "path": "skills/foundation/data-structure-chooser/SKILL.md",
+      "purpose": "Recommend basic data structures for a task. Use when a junior developer needs help choosing lists, maps, or sets.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/foundation/data-structure-chooser/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "debugging-checklist",
+      "path": "skills/foundation/debugging-checklist/SKILL.md",
+      "purpose": "Provide a systematic debugging checklist. Use when a junior developer is stuck and needs a structured approach.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/foundation/debugging-checklist/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "dependency-install-helper",
+      "path": "skills/foundation/dependency-install-helper/SKILL.md",
+      "purpose": "Guide installation of project dependencies and toolchains. Use when a junior developer is stuck setting up the environment.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/foundation/dependency-install-helper/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "error-message-explainer",
+      "path": "skills/foundation/error-message-explainer/SKILL.md",
+      "purpose": "Explain compiler/runtime errors in plain language. Use when a junior developer needs help understanding an error message.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/foundation/error-message-explainer/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "git-basic-helper",
+      "path": "skills/foundation/git-basic-helper/SKILL.md",
+      "purpose": "Provide safe git commands for common tasks. Use when a junior developer needs help with branching, commits, or resolving simple conflicts.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/foundation/git-basic-helper/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "linter-fix-guide",
+      "path": "skills/foundation/linter-fix-guide/SKILL.md",
+      "purpose": "Explain lint errors and propose fixes. Use when a junior developer needs help resolving common lint or format warnings.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/foundation/linter-fix-guide/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "log-summarizer",
+      "path": "skills/foundation/log-summarizer/SKILL.md",
+      "purpose": "Summarize noisy logs into likely causes and next steps. Use when a junior developer needs help interpreting logs.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/foundation/log-summarizer/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "small-script-generator",
+      "path": "skills/foundation/small-script-generator/SKILL.md",
+      "purpose": "Generate a small helper script for repetitive tasks. Use when a junior developer needs a quick automation snippet.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/foundation/small-script-generator/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "ticket-breakdown",
+      "path": "skills/foundation/ticket-breakdown/SKILL.md",
+      "purpose": "Break a task or ticket into small steps. Use when a junior developer needs guidance on how to start.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/foundation/ticket-breakdown/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "accessibility-basic-check",
+      "path": "skills/frontend/accessibility-basic-check/SKILL.md",
+      "purpose": "Run a basic accessibility checklist for UI changes. Use when a junior developer needs quick a11y guidance.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/frontend/accessibility-basic-check/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "cli-ux-improver",
+      "path": "skills/frontend/cli-ux-improver/SKILL.md",
+      "purpose": "Improve CLI help, errors, and output. Use when a mid-level developer needs to make a CLI friendlier.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/frontend/cli-ux-improver/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "css-layout-helper",
+      "path": "skills/frontend/css-layout-helper/SKILL.md",
+      "purpose": "Explain CSS layout issues and propose fixes. Use when a junior developer is struggling with alignment or spacing.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/frontend/css-layout-helper/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "ci-failure-triage",
+      "path": "skills/infra/ci-failure-triage/SKILL.md",
+      "purpose": "Diagnose CI failures and stabilize pipelines. Use when a mid-level developer needs to resolve flaky or failing builds.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/infra/ci-failure-triage/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "cross-service-debugger",
+      "path": "skills/infra/cross-service-debugger/SKILL.md",
+      "purpose": "Coordinate debugging across multiple services. Use when a senior developer needs to trace a distributed issue.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/infra/cross-service-debugger/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "iac-reviewer",
+      "path": "skills/infra/iac-reviewer/SKILL.md",
+      "purpose": "Review infrastructure-as-code changes for safety and correctness. Use when a mid-level developer needs a second look on IaC.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/infra/iac-reviewer/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "multi-region-strategy",
+      "path": "skills/infra/multi-region-strategy/SKILL.md",
+      "purpose": "Design a multi-region architecture strategy. Use when a senior developer needs geo-redundant planning.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/infra/multi-region-strategy/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "observability-setup",
+      "path": "skills/infra/observability-setup/SKILL.md",
+      "purpose": "Set up metrics, logs, and traces for a service. Use when a mid-level developer needs basic observability coverage.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/infra/observability-setup/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "platform-migration-plan",
+      "path": "skills/infra/platform-migration-plan/SKILL.md",
+      "purpose": "Create a plan to migrate platforms or runtimes. Use when a senior developer needs a phased migration approach.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/infra/platform-migration-plan/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "zero-downtime-migration",
+      "path": "skills/infra/zero-downtime-migration/SKILL.md",
+      "purpose": "Plan a zero-downtime migration for data or infrastructure. Use when a senior developer needs a safe migration strategy.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/infra/zero-downtime-migration/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "cost-optimization-review",
+      "path": "skills/performance/cost-optimization-review/SKILL.md",
+      "purpose": "Review system costs and propose reductions. Use when a senior developer needs cost-saving recommendations.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/performance/cost-optimization-review/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "performance-budgeting",
+      "path": "skills/performance/performance-budgeting/SKILL.md",
+      "purpose": "Define performance budgets and guardrails. Use when a senior developer needs performance targets and enforcement.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/performance/performance-budgeting/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "performance-trace-guide",
+      "path": "skills/performance/performance-trace-guide/SKILL.md",
+      "purpose": "Guide collection and analysis of performance traces. Use when a mid-level developer needs to diagnose slowness.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/performance/performance-trace-guide/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "scalability-assessment",
+      "path": "skills/performance/scalability-assessment/SKILL.md",
+      "purpose": "Assess a system for growth bottlenecks. Use when a senior developer needs to evaluate scaling limits.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/performance/scalability-assessment/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "dependency-upgrade-plan",
+      "path": "skills/planning/dependency-upgrade-plan/SKILL.md",
+      "purpose": "Plan safe dependency upgrades with risk notes. Use when a mid-level developer is tasked with upgrading libraries.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/planning/dependency-upgrade-plan/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "org-standardization",
+      "path": "skills/planning/org-standardization/SKILL.md",
+      "purpose": "Define engineering standards across teams. Use when a senior developer needs to align practices.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/planning/org-standardization/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "pr-reviewer",
+      "path": "skills/planning/pr-reviewer/SKILL.md",
+      "purpose": "Review a pull request for correctness, regressions, and missing tests. Use when a mid-level developer needs structured review guidance.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/planning/pr-reviewer/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "refactor-roadmap",
+      "path": "skills/planning/refactor-roadmap/SKILL.md",
+      "purpose": "Create a staged refactor plan for a module. Use when a mid-level developer needs a safe refactor path.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/planning/refactor-roadmap/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "roadmap-prioritization",
+      "path": "skills/planning/roadmap-prioritization/SKILL.md",
+      "purpose": "Prioritize roadmap initiatives with tradeoffs. Use when a senior developer needs help ranking projects.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/planning/roadmap-prioritization/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "simple-refactor",
+      "path": "skills/planning/simple-refactor/SKILL.md",
+      "purpose": "Suggest small refactors that improve readability without changing behavior. Use when a junior developer asks to clean up code.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/planning/simple-refactor/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "tech-debt-portfolio",
+      "path": "skills/planning/tech-debt-portfolio/SKILL.md",
+      "purpose": "Assess and prioritize tech debt items. Use when a senior developer needs an investment plan for debt reduction.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/planning/tech-debt-portfolio/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "vendor-evaluation",
+      "path": "skills/planning/vendor-evaluation/SKILL.md",
+      "purpose": "Evaluate third-party vendors for engineering fit. Use when a senior developer needs a structured vendor assessment.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/planning/vendor-evaluation/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "incident-postmortem",
+      "path": "skills/reliability/incident-postmortem/SKILL.md",
+      "purpose": "Draft an incident postmortem with timeline, RCA, and action items. Use when a senior developer needs a structured post-incident report.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/reliability/incident-postmortem/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "reliability-slo-sla",
+      "path": "skills/reliability/reliability-slo-sla/SKILL.md",
+      "purpose": "Define or review SLOs and SLAs for a service. Use when a senior developer needs reliability targets.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/reliability/reliability-slo-sla/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "compliance-readiness",
+      "path": "skills/security/compliance-readiness/SKILL.md",
+      "purpose": "Assess readiness for compliance audits. Use when a senior developer needs a gap analysis for standards.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/security/compliance-readiness/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "config-hardening",
+      "path": "skills/security/config-hardening/SKILL.md",
+      "purpose": "Harden configuration and defaults for safer deployment. Use when a mid-level developer needs to reduce misconfig risks.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/security/config-hardening/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "dependency-risk-audit",
+      "path": "skills/security/dependency-risk-audit/SKILL.md",
+      "purpose": "Audit dependencies for licensing, security, and maintenance risk. Use when a senior developer needs risk assessment.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/security/dependency-risk-audit/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "security-quick-scan",
+      "path": "skills/security/security-quick-scan/SKILL.md",
+      "purpose": "Scan code or configuration for common security issues. Use when a mid-level developer needs a quick security pass.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/security/security-quick-scan/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "threat-modeling",
+      "path": "skills/security/threat-modeling/SKILL.md",
+      "purpose": "Perform threat modeling for a system or feature. Use when a senior developer needs security risk assessment.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/security/threat-modeling/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "bug-repro-plan",
+      "path": "skills/testing/bug-repro-plan/SKILL.md",
+      "purpose": "Create a minimal, repeatable reproduction plan for a bug. Use when a junior developer needs clear steps to reproduce and capture evidence.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/testing/bug-repro-plan/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "integration-test-planner",
+      "path": "skills/testing/integration-test-planner/SKILL.md",
+      "purpose": "Plan integration tests across modules or services. Use when a mid-level developer needs to verify system interactions.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/testing/integration-test-planner/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "unit-test-starter",
+      "path": "skills/testing/unit-test-starter/SKILL.md",
+      "purpose": "Generate starter unit tests for a small function or module. Use when a junior developer needs test scaffolding and edge cases.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/testing/unit-test-starter/SKILL.md"
+      ]
+    }
+  ],
+  "coordinator": {
+    "paths": [
+      "AGENTS.md",
+      "skills/production-orchestrator/SKILL.md"
+    ],
+    "files": [
+      "AGENTS.md",
+      "skills/production-orchestrator/SKILL.md"
+    ]
+  },
+  "indexes": [
+    "INDEX.md",
+    "skills/INDEX.md",
+    "skills/distribution-manifest.json",
+    "skills/api/INDEX.md",
+    "skills/architecture/INDEX.md",
+    "skills/backend/INDEX.md",
+    "skills/data/INDEX.md",
+    "skills/docs/INDEX.md",
+    "skills/foundation/INDEX.md",
+    "skills/frontend/INDEX.md",
+    "skills/infra/INDEX.md",
+    "skills/performance/INDEX.md",
+    "skills/planning/INDEX.md",
+    "skills/reliability/INDEX.md",
+    "skills/security/INDEX.md",
+    "skills/testing/INDEX.md"
+  ],
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "kind": "coordinator",
+      "content": "# Proposed repository coordinator\n\nThis coordinator was generated from the files currently present in the repository. It is a reviewable proposal and has not been installed.\n\n## How to use it\n\n1. Read `INDEX.md` and `skills/INDEX.md` before selecting a component.\n2. Choose the smallest skill whose observed description matches the user's request.\n3. Follow that skill's own instructions and use the observed scripts and workflows only when they are relevant.\n4. Pass the skill's output to the next step only when the output is present and validated.\n5. Stop and ask for review when a needed file, dependency, permission, or expected output is missing.\n\n## Observed skills\n\n- /prompt-optimization — Improve and rewrite user prompts to reduce ambiguity and improve LLM output quality. Use when a user asks to optimize, refine, clarify, or rewrite a prompt for better results, or when the request is about prompt optimization or prompt rewriting. (unknown-invoked)\n- /writing-assistant — Edits, rewrites, or improves text for clarity, tone, grammar, or style. (unknown-invoked)\n- /api-contract-checker — Validate API changes against an expected contract. Use when a mid-level developer needs to detect breaking changes. (unknown-invoked)\n- /api-error-taxonomy — Define consistent API error codes and responses. Use when a mid-level developer needs error standardization. (unknown-invoked)\n- /api-request-builder — Build a basic HTTP request (curl or fetch) for an API. Use when a junior developer needs a quick request example. (unknown-invoked)\n- /buffer-api — Manage Buffer content via the GraphQL API. Use when creating, scheduling, editing, or deleting posts, saving ideas, reading scheduled queues, or pulling post analytics. Not for general API debugging. (unknown-invoked)\n- /graphql-query-optimizer — Optimize GraphQL queries and resolvers for performance. Use when a mid-level developer needs to reduce N+1 or payload size. (unknown-invoked)\n- /architecture-review — Review a system architecture for scalability, reliability, and maintainability. Use when a senior developer needs to critique a design. (unknown-invoked)\n- /domain-modeling — Model domains and bounded contexts for complex systems. Use when a senior developer needs domain-driven design guidance. (unknown-invoked)\n- /caching-strategy-helper — Recommend caching strategies and invalidation patterns. Use when a mid-level developer needs performance guidance. (unknown-invoked)\n- /feature-flag-playbook — Plan feature flag rollout and cleanup. Use when a mid-level developer needs controlled release guidance. (unknown-invoked)\n- /queue-processing-patterns — Design safe queue consumers and retries. Use when a mid-level developer needs reliable background processing. (unknown-invoked)\n- /system-design-draft — Draft a practical system design for a feature. Use when a mid-level developer needs a starting architecture. (unknown-invoked)\n- /data-governance-check — Review data handling for privacy and retention. Use when a senior developer needs governance validation. (unknown-invoked)\n- /db-migration-reviewer — Review database migrations for safety and rollback. Use when a mid-level developer needs validation of schema changes. (unknown-invoked)\n- /sql-query-starter — Draft a basic SQL query from a simple requirement. Use when a junior developer needs help forming SELECT queries. (unknown-invoked)\n- /function-docstrings — Write concise docstrings for functions. Use when a junior developer needs help describing inputs, outputs, and errors. (unknown-invoked)\n- /readme-polish — Improve a README for clarity and completeness. Use when a junior developer needs guidance on documenting setup and usage. (unknown-invoked)\n- /release-notes-drafter — Draft release notes from changes and PRs. Use when a mid-level developer needs a structured changelog. (unknown-invoked)\n- /team-onboarding-guide — Create an onboarding guide for new engineers. Use when a senior developer needs structured onboarding materials. (unknown-invoked)\n- /codebase-orientation — Guide quick orientation of an unfamiliar codebase with module mapping, entry points, and local run steps. Use when a junior developer needs to get situated fast. (unknown-invoked)\n- /config-file-explainer — Explain a configuration file and its key options. Use when a junior developer is confused by a config file. (unknown-invoked)\n- /data-structure-chooser — Recommend basic data structures for a task. Use when a junior developer needs help choosing lists, maps, or sets. (unknown-invoked)\n- /debugging-checklist — Provide a systematic debugging checklist. Use when a junior developer is stuck and needs a structured approach. (unknown-invoked)\n- /dependency-install-helper — Guide installation of project dependencies and toolchains. Use when a junior developer is stuck setting up the environment. (unknown-invoked)\n- /error-message-explainer — Explain compiler/runtime errors in plain language. Use when a junior developer needs help understanding an error message. (unknown-invoked)\n- /git-basic-helper — Provide safe git commands for common tasks. Use when a junior developer needs help with branching, commits, or resolving simple conflicts. (unknown-invoked)\n- /linter-fix-guide — Explain lint errors and propose fixes. Use when a junior developer needs help resolving common lint or format warnings. (unknown-invoked)\n- /log-summarizer — Summarize noisy logs into likely causes and next steps. Use when a junior developer needs help interpreting logs. (unknown-invoked)\n- /small-script-generator — Generate a small helper script for repetitive tasks. Use when a junior developer needs a quick automation snippet. (unknown-invoked)\n- /ticket-breakdown — Break a task or ticket into small steps. Use when a junior developer needs guidance on how to start. (unknown-invoked)\n- /accessibility-basic-check — Run a basic accessibility checklist for UI changes. Use when a junior developer needs quick a11y guidance. (unknown-invoked)\n- /cli-ux-improver — Improve CLI help, errors, and output. Use when a mid-level developer needs to make a CLI friendlier. (unknown-invoked)\n- /css-layout-helper — Explain CSS layout issues and propose fixes. Use when a junior developer is struggling with alignment or spacing. (unknown-invoked)\n- /ci-failure-triage — Diagnose CI failures and stabilize pipelines. Use when a mid-level developer needs to resolve flaky or failing builds. (unknown-invoked)\n- /cross-service-debugger — Coordinate debugging across multiple services. Use when a senior developer needs to trace a distributed issue. (unknown-invoked)\n- /iac-reviewer — Review infrastructure-as-code changes for safety and correctness. Use when a mid-level developer needs a second look on IaC. (unknown-invoked)\n- /multi-region-strategy — Design a multi-region architecture strategy. Use when a senior developer needs geo-redundant planning. (unknown-invoked)\n- /observability-setup — Set up metrics, logs, and traces for a service. Use when a mid-level developer needs basic observability coverage. (unknown-invoked)\n- /platform-migration-plan — Create a plan to migrate platforms or runtimes. Use when a senior developer needs a phased migration approach. (unknown-invoked)\n- /zero-downtime-migration — Plan a zero-downtime migration for data or infrastructure. Use when a senior developer needs a safe migration strategy. (unknown-invoked)\n- /cost-optimization-review — Review system costs and propose reductions. Use when a senior developer needs cost-saving recommendations. (unknown-invoked)\n- /performance-budgeting — Define performance budgets and guardrails. Use when a senior developer needs performance targets and enforcement. (unknown-invoked)\n- /performance-trace-guide — Guide collection and analysis of performance traces. Use when a mid-level developer needs to diagnose slowness. (unknown-invoked)\n- /scalability-assessment — Assess a system for growth bottlenecks. Use when a senior developer needs to evaluate scaling limits. (unknown-invoked)\n- /dependency-upgrade-plan — Plan safe dependency upgrades with risk notes. Use when a mid-level developer is tasked with upgrading libraries. (unknown-invoked)\n- /org-standardization — Define engineering standards across teams. Use when a senior developer needs to align practices. (unknown-invoked)\n- /pr-reviewer — Review a pull request for correctness, regressions, and missing tests. Use when a mid-level developer needs structured review guidance. (unknown-invoked)\n- /refactor-roadmap — Create a staged refactor plan for a module. Use when a mid-level developer needs a safe refactor path. (unknown-invoked)\n- /roadmap-prioritization — Prioritize roadmap initiatives with tradeoffs. Use when a senior developer needs help ranking projects. (unknown-invoked)\n- /simple-refactor — Suggest small refactors that improve readability without changing behavior. Use when a junior developer asks to clean up code. (unknown-invoked)\n- /tech-debt-portfolio — Assess and prioritize tech debt items. Use when a senior developer needs an investment plan for debt reduction. (unknown-invoked)\n- /vendor-evaluation — Evaluate third-party vendors for engineering fit. Use when a senior developer needs a structured vendor assessment. (unknown-invoked)\n- /incident-postmortem — Draft an incident postmortem with timeline, RCA, and action items. Use when a senior developer needs a structured post-incident report. (unknown-invoked)\n- /reliability-slo-sla — Define or review SLOs and SLAs for a service. Use when a senior developer needs reliability targets. (unknown-invoked)\n- /compliance-readiness — Assess readiness for compliance audits. Use when a senior developer needs a gap analysis for standards. (unknown-invoked)\n- /config-hardening — Harden configuration and defaults for safer deployment. Use when a mid-level developer needs to reduce misconfig risks. (unknown-invoked)\n- /dependency-risk-audit — Audit dependencies for licensing, security, and maintenance risk. Use when a senior developer needs risk assessment. (unknown-invoked)\n- /security-quick-scan — Scan code or configuration for common security issues. Use when a mid-level developer needs a quick security pass. (unknown-invoked)\n- /threat-modeling — Perform threat modeling for a system or feature. Use when a senior developer needs security risk assessment. (unknown-invoked)\n- /bug-repro-plan — Create a minimal, repeatable reproduction plan for a bug. Use when a junior developer needs clear steps to reproduce and capture evidence. (unknown-invoked)\n- /integration-test-planner — Plan integration tests across modules or services. Use when a mid-level developer needs to verify system interactions. (unknown-invoked)\n- /unit-test-starter — Generate starter unit tests for a small function or module. Use when a junior developer needs test scaffolding and edge cases. (unknown-invoked)\n\n## Observed plugins\n\n- None observed.\n\n## Observed workflows\n\n- None observed.\n\n## Safety and limits\n\n- Do not claim an inferred purpose is confirmed behavior.\n- Do not run an observed script merely because it exists; confirm that it is needed and safe first.\n- Do not install plugins, change global settings, or modify source files without explicit approval.\n- Record missing metadata and unresolved connections as review items.\n\nEvidence digest: `bbd69f94de1ca6dc88751e29a9a8c0532302826641f5ecbf58e2bf1bab77bbd5`\n",
+      "evidence": [
+        ".codex/skills/prompt-optimization/SKILL.md",
+        ".codex/skills/writing-assistant/SKILL.md",
+        ".gitignore",
+        "docs/CHANGELOG.md",
+        "README.md",
+        "skills/api/api-contract-checker/SKILL.md",
+        "skills/api/api-error-taxonomy/SKILL.md",
+        "skills/api/api-request-builder/SKILL.md",
+        "skills/api/buffer-api/SKILL.md",
+        "skills/api/graphql-query-optimizer/SKILL.md",
+        "skills/architecture/architecture-review/SKILL.md",
+        "skills/architecture/domain-modeling/SKILL.md",
+        "skills/backend/caching-strategy-helper/SKILL.md",
+        "skills/backend/feature-flag-playbook/SKILL.md",
+        "skills/backend/queue-processing-patterns/SKILL.md",
+        "skills/backend/system-design-draft/SKILL.md",
+        "skills/data/data-governance-check/SKILL.md",
+        "skills/data/db-migration-reviewer/SKILL.md",
+        "skills/data/sql-query-starter/SKILL.md",
+        "skills/docs/function-docstrings/SKILL.md"
+      ]
+    },
+    {
+      "path": "INDEX.md",
+      "kind": "index",
+      "content": "# Proposed file index\n\nThis index was generated from observed repository contents. It is a proposal, not an applied change.\n\nSource digest: `bbd69f94de1ca6dc88751e29a9a8c0532302826641f5ecbf58e2bf1bab77bbd5`\n\n## Skills\n\n- `.codex/skills/prompt-optimization/SKILL.md` — Improve and rewrite user prompts to reduce ambiguity and improve LLM output quality. Use when a user asks to optimize, refine, clarify, or rewrite a prompt for better results, or when the request is about prompt optimization or prompt rewriting. [high confidence]\n- `.codex/skills/writing-assistant/SKILL.md` — Edits, rewrites, or improves text for clarity, tone, grammar, or style. [high confidence]\n- `skills/api/api-contract-checker/SKILL.md` — Validate API changes against an expected contract. Use when a mid-level developer needs to detect breaking changes. [high confidence]\n- `skills/api/api-error-taxonomy/SKILL.md` — Define consistent API error codes and responses. Use when a mid-level developer needs error standardization. [high confidence]\n- `skills/api/api-request-builder/SKILL.md` — Build a basic HTTP request (curl or fetch) for an API. Use when a junior developer needs a quick request example. [high confidence]\n- `skills/api/buffer-api/SKILL.md` — Manage Buffer content via the GraphQL API. Use when creating, scheduling, editing, or deleting posts, saving ideas, reading scheduled queues, or pulling post analytics. Not for general API debugging. [high confidence]\n- `skills/api/graphql-query-optimizer/SKILL.md` — Optimize GraphQL queries and resolvers for performance. Use when a mid-level developer needs to reduce N+1 or payload size. [high confidence]\n- `skills/architecture/architecture-review/SKILL.md` — Review a system architecture for scalability, reliability, and maintainability. Use when a senior developer needs to critique a design. [high confidence]\n- `skills/architecture/domain-modeling/SKILL.md` — Model domains and bounded contexts for complex systems. Use when a senior developer needs domain-driven design guidance. [high confidence]\n- `skills/backend/caching-strategy-helper/SKILL.md` — Recommend caching strategies and invalidation patterns. Use when a mid-level developer needs performance guidance. [high confidence]\n- `skills/backend/feature-flag-playbook/SKILL.md` — Plan feature flag rollout and cleanup. Use when a mid-level developer needs controlled release guidance. [high confidence]\n- `skills/backend/queue-processing-patterns/SKILL.md` — Design safe queue consumers and retries. Use when a mid-level developer needs reliable background processing. [high confidence]\n- `skills/backend/system-design-draft/SKILL.md` — Draft a practical system design for a feature. Use when a mid-level developer needs a starting architecture. [high confidence]\n- `skills/data/data-governance-check/SKILL.md` — Review data handling for privacy and retention. Use when a senior developer needs governance validation. [high confidence]\n- `skills/data/db-migration-reviewer/SKILL.md` — Review database migrations for safety and rollback. Use when a mid-level developer needs validation of schema changes. [high confidence]\n- `skills/data/sql-query-starter/SKILL.md` — Draft a basic SQL query from a simple requirement. Use when a junior developer needs help forming SELECT queries. [high confidence]\n- `skills/docs/function-docstrings/SKILL.md` — Write concise docstrings for functions. Use when a junior developer needs help describing inputs, outputs, and errors. [high confidence]\n- `skills/docs/readme-polish/SKILL.md` — Improve a README for clarity and completeness. Use when a junior developer needs guidance on documenting setup and usage. [high confidence]\n- `skills/docs/release-notes-drafter/SKILL.md` — Draft release notes from changes and PRs. Use when a mid-level developer needs a structured changelog. [high confidence]\n- `skills/docs/team-onboarding-guide/SKILL.md` — Create an onboarding guide for new engineers. Use when a senior developer needs structured onboarding materials. [high confidence]\n- `skills/foundation/codebase-orientation/SKILL.md` — Guide quick orientation of an unfamiliar codebase with module mapping, entry points, and local run steps. Use when a junior developer needs to get situated fast. [high confidence]\n- `skills/foundation/config-file-explainer/SKILL.md` — Explain a configuration file and its key options. Use when a junior developer is confused by a config file. [high confidence]\n- `skills/foundation/data-structure-chooser/SKILL.md` — Recommend basic data structures for a task. Use when a junior developer needs help choosing lists, maps, or sets. [high confidence]\n- `skills/foundation/debugging-checklist/SKILL.md` — Provide a systematic debugging checklist. Use when a junior developer is stuck and needs a structured approach. [high confidence]\n- `skills/foundation/dependency-install-helper/SKILL.md` — Guide installation of project dependencies and toolchains. Use when a junior developer is stuck setting up the environment. [high confidence]\n- `skills/foundation/error-message-explainer/SKILL.md` — Explain compiler/runtime errors in plain language. Use when a junior developer needs help understanding an error message. [high confidence]\n- `skills/foundation/git-basic-helper/SKILL.md` — Provide safe git commands for common tasks. Use when a junior developer needs help with branching, commits, or resolving simple conflicts. [high confidence]\n- `skills/foundation/linter-fix-guide/SKILL.md` — Explain lint errors and propose fixes. Use when a junior developer needs help resolving common lint or format warnings. [high confidence]\n- `skills/foundation/log-summarizer/SKILL.md` — Summarize noisy logs into likely causes and next steps. Use when a junior developer needs help interpreting logs. [high confidence]\n- `skills/foundation/small-script-generator/SKILL.md` — Generate a small helper script for repetitive tasks. Use when a junior developer needs a quick automation snippet. [high confidence]\n- `skills/foundation/ticket-breakdown/SKILL.md` — Break a task or ticket into small steps. Use when a junior developer needs guidance on how to start. [high confidence]\n- `skills/frontend/accessibility-basic-check/SKILL.md` — Run a basic accessibility checklist for UI changes. Use when a junior developer needs quick a11y guidance. [high confidence]\n- `skills/frontend/cli-ux-improver/SKILL.md` — Improve CLI help, errors, and output. Use when a mid-level developer needs to make a CLI friendlier. [high confidence]\n- `skills/frontend/css-layout-helper/SKILL.md` — Explain CSS layout issues and propose fixes. Use when a junior developer is struggling with alignment or spacing. [high confidence]\n- `skills/infra/ci-failure-triage/SKILL.md` — Diagnose CI failures and stabilize pipelines. Use when a mid-level developer needs to resolve flaky or failing builds. [high confidence]\n- `skills/infra/cross-service-debugger/SKILL.md` — Coordinate debugging across multiple services. Use when a senior developer needs to trace a distributed issue. [high confidence]\n- `skills/infra/iac-reviewer/SKILL.md` — Review infrastructure-as-code changes for safety and correctness. Use when a mid-level developer needs a second look on IaC. [high confidence]\n- `skills/infra/multi-region-strategy/SKILL.md` — Design a multi-region architecture strategy. Use when a senior developer needs geo-redundant planning. [high confidence]\n- `skills/infra/observability-setup/SKILL.md` — Set up metrics, logs, and traces for a service. Use when a mid-level developer needs basic observability coverage. [high confidence]\n- `skills/infra/platform-migration-plan/SKILL.md` — Create a plan to migrate platforms or runtimes. Use when a senior developer needs a phased migration approach. [high confidence]\n- `skills/infra/zero-downtime-migration/SKILL.md` — Plan a zero-downtime migration for data or infrastructure. Use when a senior developer needs a safe migration strategy. [high confidence]\n- `skills/performance/cost-optimization-review/SKILL.md` — Review system costs and propose reductions. Use when a senior developer needs cost-saving recommendations. [high confidence]\n- `skills/performance/performance-budgeting/SKILL.md` — Define performance budgets and guardrails. Use when a senior developer needs performance targets and enforcement. [high confidence]\n- `skills/performance/performance-trace-guide/SKILL.md` — Guide collection and analysis of performance traces. Use when a mid-level developer needs to diagnose slowness. [high confidence]\n- `skills/performance/scalability-assessment/SKILL.md` — Assess a system for growth bottlenecks. Use when a senior developer needs to evaluate scaling limits. [high confidence]\n- `skills/planning/dependency-upgrade-plan/SKILL.md` — Plan safe dependency upgrades with risk notes. Use when a mid-level developer is tasked with upgrading libraries. [high confidence]\n- `skills/planning/org-standardization/SKILL.md` — Define engineering standards across teams. Use when a senior developer needs to align practices. [high confidence]\n- `skills/planning/pr-reviewer/SKILL.md` — Review a pull request for correctness, regressions, and missing tests. Use when a mid-level developer needs structured review guidance. [high confidence]\n- `skills/planning/refactor-roadmap/SKILL.md` — Create a staged refactor plan for a module. Use when a mid-level developer needs a safe refactor path. [high confidence]\n- `skills/planning/roadmap-prioritization/SKILL.md` — Prioritize roadmap initiatives with tradeoffs. Use when a senior developer needs help ranking projects. [high confidence]\n- `skills/planning/simple-refactor/SKILL.md` — Suggest small refactors that improve readability without changing behavior. Use when a junior developer asks to clean up code. [high confidence]\n- `skills/planning/tech-debt-portfolio/SKILL.md` — Assess and prioritize tech debt items. Use when a senior developer needs an investment plan for debt reduction. [high confidence]\n- `skills/planning/vendor-evaluation/SKILL.md` — Evaluate third-party vendors for engineering fit. Use when a senior developer needs a structured vendor assessment. [high confidence]\n- `skills/reliability/incident-postmortem/SKILL.md` — Draft an incident postmortem with timeline, RCA, and action items. Use when a senior developer needs a structured post-incident report. [high confidence]\n- `skills/reliability/reliability-slo-sla/SKILL.md` — Define or review SLOs and SLAs for a service. Use when a senior developer needs reliability targets. [high confidence]\n- `skills/security/compliance-readiness/SKILL.md` — Assess readiness for compliance audits. Use when a senior developer needs a gap analysis for standards. [high confidence]\n- `skills/security/config-hardening/SKILL.md` — Harden configuration and defaults for safer deployment. Use when a mid-level developer needs to reduce misconfig risks. [high confidence]\n- `skills/security/dependency-risk-audit/SKILL.md` — Audit dependencies for licensing, security, and maintenance risk. Use when a senior developer needs risk assessment. [high confidence]\n- `skills/security/security-quick-scan/SKILL.md` — Scan code or configuration for common security issues. Use when a mid-level developer needs a quick security pass. [high confidence]\n- `skills/security/threat-modeling/SKILL.md` — Perform threat modeling for a system or feature. Use when a senior developer needs security risk assessment. [high confidence]\n- `skills/testing/bug-repro-plan/SKILL.md` — Create a minimal, repeatable reproduction plan for a bug. Use when a junior developer needs clear steps to reproduce and capture evidence. [high confidence]\n- `skills/testing/integration-test-planner/SKILL.md` — Plan integration tests across modules or services. Use when a mid-level developer needs to verify system interactions. [high confidence]\n- `skills/testing/unit-test-starter/SKILL.md` — Generate starter unit tests for a small function or module. Use when a junior developer needs test scaffolding and edge cases. [high confidence]\n\n## Documentations\n\n- `docs/CHANGELOG.md` — Repository documentation [medium confidence]\n- `README.md` — Repository documentation [medium confidence]\n\n## Others\n\n- `.gitignore` — Observed repository asset [low confidence]\n\n",
+      "evidence": [
+        ".codex/skills/prompt-optimization/SKILL.md",
+        ".codex/skills/writing-assistant/SKILL.md",
+        ".gitignore",
+        "docs/CHANGELOG.md",
+        "README.md",
+        "skills/api/api-contract-checker/SKILL.md",
+        "skills/api/api-error-taxonomy/SKILL.md",
+        "skills/api/api-request-builder/SKILL.md",
+        "skills/api/buffer-api/SKILL.md",
+        "skills/api/graphql-query-optimizer/SKILL.md",
+        "skills/architecture/architecture-review/SKILL.md",
+        "skills/architecture/domain-modeling/SKILL.md",
+        "skills/backend/caching-strategy-helper/SKILL.md",
+        "skills/backend/feature-flag-playbook/SKILL.md",
+        "skills/backend/queue-processing-patterns/SKILL.md",
+        "skills/backend/system-design-draft/SKILL.md",
+        "skills/data/data-governance-check/SKILL.md",
+        "skills/data/db-migration-reviewer/SKILL.md",
+        "skills/data/sql-query-starter/SKILL.md",
+        "skills/docs/function-docstrings/SKILL.md",
+        "skills/docs/readme-polish/SKILL.md",
+        "skills/docs/release-notes-drafter/SKILL.md",
+        "skills/docs/team-onboarding-guide/SKILL.md",
+        "skills/foundation/codebase-orientation/SKILL.md",
+        "skills/foundation/config-file-explainer/SKILL.md",
+        "skills/foundation/data-structure-chooser/SKILL.md",
+        "skills/foundation/debugging-checklist/SKILL.md",
+        "skills/foundation/dependency-install-helper/SKILL.md",
+        "skills/foundation/error-message-explainer/SKILL.md",
+        "skills/foundation/git-basic-helper/SKILL.md",
+        "skills/foundation/linter-fix-guide/SKILL.md",
+        "skills/foundation/log-summarizer/SKILL.md",
+        "skills/foundation/small-script-generator/SKILL.md",
+        "skills/foundation/ticket-breakdown/SKILL.md",
+        "skills/frontend/accessibility-basic-check/SKILL.md",
+        "skills/frontend/cli-ux-improver/SKILL.md",
+        "skills/frontend/css-layout-helper/SKILL.md",
+        "skills/infra/ci-failure-triage/SKILL.md",
+        "skills/infra/cross-service-debugger/SKILL.md",
+        "skills/infra/iac-reviewer/SKILL.md",
+        "skills/infra/multi-region-strategy/SKILL.md",
+        "skills/infra/observability-setup/SKILL.md",
+        "skills/infra/platform-migration-plan/SKILL.md",
+        "skills/infra/zero-downtime-migration/SKILL.md",
+        "skills/performance/cost-optimization-review/SKILL.md",
+        "skills/performance/performance-budgeting/SKILL.md",
+        "skills/performance/performance-trace-guide/SKILL.md",
+        "skills/performance/scalability-assessment/SKILL.md",
+        "skills/planning/dependency-upgrade-plan/SKILL.md",
+        "skills/planning/org-standardization/SKILL.md",
+        "skills/planning/pr-reviewer/SKILL.md",
+        "skills/planning/refactor-roadmap/SKILL.md",
+        "skills/planning/roadmap-prioritization/SKILL.md",
+        "skills/planning/simple-refactor/SKILL.md",
+        "skills/planning/tech-debt-portfolio/SKILL.md",
+        "skills/planning/vendor-evaluation/SKILL.md",
+        "skills/reliability/incident-postmortem/SKILL.md",
+        "skills/reliability/reliability-slo-sla/SKILL.md",
+        "skills/security/compliance-readiness/SKILL.md",
+        "skills/security/config-hardening/SKILL.md",
+        "skills/security/dependency-risk-audit/SKILL.md",
+        "skills/security/security-quick-scan/SKILL.md",
+        "skills/security/threat-modeling/SKILL.md",
+        "skills/testing/bug-repro-plan/SKILL.md",
+        "skills/testing/integration-test-planner/SKILL.md",
+        "skills/testing/unit-test-starter/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/INDEX.md",
+      "kind": "index",
+      "content": "# Proposed skills index\n\nGenerated from observed SKILL.md files. Review names and descriptions before applying.\n\nSource digest: `bbd69f94de1ca6dc88751e29a9a8c0532302826641f5ecbf58e2bf1bab77bbd5`\n\n- `/prompt-optimization` — `.codex/skills/prompt-optimization/SKILL.md` — Improve and rewrite user prompts to reduce ambiguity and improve LLM output quality. Use when a user asks to optimize, refine, clarify, or rewrite a prompt for better results, or when the request is about prompt optimization or prompt rewriting.\n- `/writing-assistant` — `.codex/skills/writing-assistant/SKILL.md` — Edits, rewrites, or improves text for clarity, tone, grammar, or style.\n- `/api-contract-checker` — `skills/api/api-contract-checker/SKILL.md` — Validate API changes against an expected contract. Use when a mid-level developer needs to detect breaking changes.\n- `/api-error-taxonomy` — `skills/api/api-error-taxonomy/SKILL.md` — Define consistent API error codes and responses. Use when a mid-level developer needs error standardization.\n- `/api-request-builder` — `skills/api/api-request-builder/SKILL.md` — Build a basic HTTP request (curl or fetch) for an API. Use when a junior developer needs a quick request example.\n- `/buffer-api` — `skills/api/buffer-api/SKILL.md` — Manage Buffer content via the GraphQL API. Use when creating, scheduling, editing, or deleting posts, saving ideas, reading scheduled queues, or pulling post analytics. Not for general API debugging.\n- `/graphql-query-optimizer` — `skills/api/graphql-query-optimizer/SKILL.md` — Optimize GraphQL queries and resolvers for performance. Use when a mid-level developer needs to reduce N+1 or payload size.\n- `/architecture-review` — `skills/architecture/architecture-review/SKILL.md` — Review a system architecture for scalability, reliability, and maintainability. Use when a senior developer needs to critique a design.\n- `/domain-modeling` — `skills/architecture/domain-modeling/SKILL.md` — Model domains and bounded contexts for complex systems. Use when a senior developer needs domain-driven design guidance.\n- `/caching-strategy-helper` — `skills/backend/caching-strategy-helper/SKILL.md` — Recommend caching strategies and invalidation patterns. Use when a mid-level developer needs performance guidance.\n- `/feature-flag-playbook` — `skills/backend/feature-flag-playbook/SKILL.md` — Plan feature flag rollout and cleanup. Use when a mid-level developer needs controlled release guidance.\n- `/queue-processing-patterns` — `skills/backend/queue-processing-patterns/SKILL.md` — Design safe queue consumers and retries. Use when a mid-level developer needs reliable background processing.\n- `/system-design-draft` — `skills/backend/system-design-draft/SKILL.md` — Draft a practical system design for a feature. Use when a mid-level developer needs a starting architecture.\n- `/data-governance-check` — `skills/data/data-governance-check/SKILL.md` — Review data handling for privacy and retention. Use when a senior developer needs governance validation.\n- `/db-migration-reviewer` — `skills/data/db-migration-reviewer/SKILL.md` — Review database migrations for safety and rollback. Use when a mid-level developer needs validation of schema changes.\n- `/sql-query-starter` — `skills/data/sql-query-starter/SKILL.md` — Draft a basic SQL query from a simple requirement. Use when a junior developer needs help forming SELECT queries.\n- `/function-docstrings` — `skills/docs/function-docstrings/SKILL.md` — Write concise docstrings for functions. Use when a junior developer needs help describing inputs, outputs, and errors.\n- `/readme-polish` — `skills/docs/readme-polish/SKILL.md` — Improve a README for clarity and completeness. Use when a junior developer needs guidance on documenting setup and usage.\n- `/release-notes-drafter` — `skills/docs/release-notes-drafter/SKILL.md` — Draft release notes from changes and PRs. Use when a mid-level developer needs a structured changelog.\n- `/team-onboarding-guide` — `skills/docs/team-onboarding-guide/SKILL.md` — Create an onboarding guide for new engineers. Use when a senior developer needs structured onboarding materials.\n- `/codebase-orientation` — `skills/foundation/codebase-orientation/SKILL.md` — Guide quick orientation of an unfamiliar codebase with module mapping, entry points, and local run steps. Use when a junior developer needs to get situated fast.\n- `/config-file-explainer` — `skills/foundation/config-file-explainer/SKILL.md` — Explain a configuration file and its key options. Use when a junior developer is confused by a config file.\n- `/data-structure-chooser` — `skills/foundation/data-structure-chooser/SKILL.md` — Recommend basic data structures for a task. Use when a junior developer needs help choosing lists, maps, or sets.\n- `/debugging-checklist` — `skills/foundation/debugging-checklist/SKILL.md` — Provide a systematic debugging checklist. Use when a junior developer is stuck and needs a structured approach.\n- `/dependency-install-helper` — `skills/foundation/dependency-install-helper/SKILL.md` — Guide installation of project dependencies and toolchains. Use when a junior developer is stuck setting up the environment.\n- `/error-message-explainer` — `skills/foundation/error-message-explainer/SKILL.md` — Explain compiler/runtime errors in plain language. Use when a junior developer needs help understanding an error message.\n- `/git-basic-helper` — `skills/foundation/git-basic-helper/SKILL.md` — Provide safe git commands for common tasks. Use when a junior developer needs help with branching, commits, or resolving simple conflicts.\n- `/linter-fix-guide` — `skills/foundation/linter-fix-guide/SKILL.md` — Explain lint errors and propose fixes. Use when a junior developer needs help resolving common lint or format warnings.\n- `/log-summarizer` — `skills/foundation/log-summarizer/SKILL.md` — Summarize noisy logs into likely causes and next steps. Use when a junior developer needs help interpreting logs.\n- `/small-script-generator` — `skills/foundation/small-script-generator/SKILL.md` — Generate a small helper script for repetitive tasks. Use when a junior developer needs a quick automation snippet.\n- `/ticket-breakdown` — `skills/foundation/ticket-breakdown/SKILL.md` — Break a task or ticket into small steps. Use when a junior developer needs guidance on how to start.\n- `/accessibility-basic-check` — `skills/frontend/accessibility-basic-check/SKILL.md` — Run a basic accessibility checklist for UI changes. Use when a junior developer needs quick a11y guidance.\n- `/cli-ux-improver` — `skills/frontend/cli-ux-improver/SKILL.md` — Improve CLI help, errors, and output. Use when a mid-level developer needs to make a CLI friendlier.\n- `/css-layout-helper` — `skills/frontend/css-layout-helper/SKILL.md` — Explain CSS layout issues and propose fixes. Use when a junior developer is struggling with alignment or spacing.\n- `/ci-failure-triage` — `skills/infra/ci-failure-triage/SKILL.md` — Diagnose CI failures and stabilize pipelines. Use when a mid-level developer needs to resolve flaky or failing builds.\n- `/cross-service-debugger` — `skills/infra/cross-service-debugger/SKILL.md` — Coordinate debugging across multiple services. Use when a senior developer needs to trace a distributed issue.\n- `/iac-reviewer` — `skills/infra/iac-reviewer/SKILL.md` — Review infrastructure-as-code changes for safety and correctness. Use when a mid-level developer needs a second look on IaC.\n- `/multi-region-strategy` — `skills/infra/multi-region-strategy/SKILL.md` — Design a multi-region architecture strategy. Use when a senior developer needs geo-redundant planning.\n- `/observability-setup` — `skills/infra/observability-setup/SKILL.md` — Set up metrics, logs, and traces for a service. Use when a mid-level developer needs basic observability coverage.\n- `/platform-migration-plan` — `skills/infra/platform-migration-plan/SKILL.md` — Create a plan to migrate platforms or runtimes. Use when a senior developer needs a phased migration approach.\n- `/zero-downtime-migration` — `skills/infra/zero-downtime-migration/SKILL.md` — Plan a zero-downtime migration for data or infrastructure. Use when a senior developer needs a safe migration strategy.\n- `/cost-optimization-review` — `skills/performance/cost-optimization-review/SKILL.md` — Review system costs and propose reductions. Use when a senior developer needs cost-saving recommendations.\n- `/performance-budgeting` — `skills/performance/performance-budgeting/SKILL.md` — Define performance budgets and guardrails. Use when a senior developer needs performance targets and enforcement.\n- `/performance-trace-guide` — `skills/performance/performance-trace-guide/SKILL.md` — Guide collection and analysis of performance traces. Use when a mid-level developer needs to diagnose slowness.\n- `/scalability-assessment` — `skills/performance/scalability-assessment/SKILL.md` — Assess a system for growth bottlenecks. Use when a senior developer needs to evaluate scaling limits.\n- `/dependency-upgrade-plan` — `skills/planning/dependency-upgrade-plan/SKILL.md` — Plan safe dependency upgrades with risk notes. Use when a mid-level developer is tasked with upgrading libraries.\n- `/org-standardization` — `skills/planning/org-standardization/SKILL.md` — Define engineering standards across teams. Use when a senior developer needs to align practices.\n- `/pr-reviewer` — `skills/planning/pr-reviewer/SKILL.md` — Review a pull request for correctness, regressions, and missing tests. Use when a mid-level developer needs structured review guidance.\n- `/refactor-roadmap` — `skills/planning/refactor-roadmap/SKILL.md` — Create a staged refactor plan for a module. Use when a mid-level developer needs a safe refactor path.\n- `/roadmap-prioritization` — `skills/planning/roadmap-prioritization/SKILL.md` — Prioritize roadmap initiatives with tradeoffs. Use when a senior developer needs help ranking projects.\n- `/simple-refactor` — `skills/planning/simple-refactor/SKILL.md` — Suggest small refactors that improve readability without changing behavior. Use when a junior developer asks to clean up code.\n- `/tech-debt-portfolio` — `skills/planning/tech-debt-portfolio/SKILL.md` — Assess and prioritize tech debt items. Use when a senior developer needs an investment plan for debt reduction.\n- `/vendor-evaluation` — `skills/planning/vendor-evaluation/SKILL.md` — Evaluate third-party vendors for engineering fit. Use when a senior developer needs a structured vendor assessment.\n- `/incident-postmortem` — `skills/reliability/incident-postmortem/SKILL.md` — Draft an incident postmortem with timeline, RCA, and action items. Use when a senior developer needs a structured post-incident report.\n- `/reliability-slo-sla` — `skills/reliability/reliability-slo-sla/SKILL.md` — Define or review SLOs and SLAs for a service. Use when a senior developer needs reliability targets.\n- `/compliance-readiness` — `skills/security/compliance-readiness/SKILL.md` — Assess readiness for compliance audits. Use when a senior developer needs a gap analysis for standards.\n- `/config-hardening` — `skills/security/config-hardening/SKILL.md` — Harden configuration and defaults for safer deployment. Use when a mid-level developer needs to reduce misconfig risks.\n- `/dependency-risk-audit` — `skills/security/dependency-risk-audit/SKILL.md` — Audit dependencies for licensing, security, and maintenance risk. Use when a senior developer needs risk assessment.\n- `/security-quick-scan` — `skills/security/security-quick-scan/SKILL.md` — Scan code or configuration for common security issues. Use when a mid-level developer needs a quick security pass.\n- `/threat-modeling` — `skills/security/threat-modeling/SKILL.md` — Perform threat modeling for a system or feature. Use when a senior developer needs security risk assessment.\n- `/bug-repro-plan` — `skills/testing/bug-repro-plan/SKILL.md` — Create a minimal, repeatable reproduction plan for a bug. Use when a junior developer needs clear steps to reproduce and capture evidence.\n- `/integration-test-planner` — `skills/testing/integration-test-planner/SKILL.md` — Plan integration tests across modules or services. Use when a mid-level developer needs to verify system interactions.\n- `/unit-test-starter` — `skills/testing/unit-test-starter/SKILL.md` — Generate starter unit tests for a small function or module. Use when a junior developer needs test scaffolding and edge cases.\n",
+      "evidence": [
+        ".codex/skills/prompt-optimization/SKILL.md",
+        ".codex/skills/writing-assistant/SKILL.md",
+        "skills/api/api-contract-checker/SKILL.md",
+        "skills/api/api-error-taxonomy/SKILL.md",
+        "skills/api/api-request-builder/SKILL.md",
+        "skills/api/buffer-api/SKILL.md",
+        "skills/api/graphql-query-optimizer/SKILL.md",
+        "skills/architecture/architecture-review/SKILL.md",
+        "skills/architecture/domain-modeling/SKILL.md",
+        "skills/backend/caching-strategy-helper/SKILL.md",
+        "skills/backend/feature-flag-playbook/SKILL.md",
+        "skills/backend/queue-processing-patterns/SKILL.md",
+        "skills/backend/system-design-draft/SKILL.md",
+        "skills/data/data-governance-check/SKILL.md",
+        "skills/data/db-migration-reviewer/SKILL.md",
+        "skills/data/sql-query-starter/SKILL.md",
+        "skills/docs/function-docstrings/SKILL.md",
+        "skills/docs/readme-polish/SKILL.md",
+        "skills/docs/release-notes-drafter/SKILL.md",
+        "skills/docs/team-onboarding-guide/SKILL.md",
+        "skills/foundation/codebase-orientation/SKILL.md",
+        "skills/foundation/config-file-explainer/SKILL.md",
+        "skills/foundation/data-structure-chooser/SKILL.md",
+        "skills/foundation/debugging-checklist/SKILL.md",
+        "skills/foundation/dependency-install-helper/SKILL.md",
+        "skills/foundation/error-message-explainer/SKILL.md",
+        "skills/foundation/git-basic-helper/SKILL.md",
+        "skills/foundation/linter-fix-guide/SKILL.md",
+        "skills/foundation/log-summarizer/SKILL.md",
+        "skills/foundation/small-script-generator/SKILL.md",
+        "skills/foundation/ticket-breakdown/SKILL.md",
+        "skills/frontend/accessibility-basic-check/SKILL.md",
+        "skills/frontend/cli-ux-improver/SKILL.md",
+        "skills/frontend/css-layout-helper/SKILL.md",
+        "skills/infra/ci-failure-triage/SKILL.md",
+        "skills/infra/cross-service-debugger/SKILL.md",
+        "skills/infra/iac-reviewer/SKILL.md",
+        "skills/infra/multi-region-strategy/SKILL.md",
+        "skills/infra/observability-setup/SKILL.md",
+        "skills/infra/platform-migration-plan/SKILL.md",
+        "skills/infra/zero-downtime-migration/SKILL.md",
+        "skills/performance/cost-optimization-review/SKILL.md",
+        "skills/performance/performance-budgeting/SKILL.md",
+        "skills/performance/performance-trace-guide/SKILL.md",
+        "skills/performance/scalability-assessment/SKILL.md",
+        "skills/planning/dependency-upgrade-plan/SKILL.md",
+        "skills/planning/org-standardization/SKILL.md",
+        "skills/planning/pr-reviewer/SKILL.md",
+        "skills/planning/refactor-roadmap/SKILL.md",
+        "skills/planning/roadmap-prioritization/SKILL.md",
+        "skills/planning/simple-refactor/SKILL.md",
+        "skills/planning/tech-debt-portfolio/SKILL.md",
+        "skills/planning/vendor-evaluation/SKILL.md",
+        "skills/reliability/incident-postmortem/SKILL.md",
+        "skills/reliability/reliability-slo-sla/SKILL.md",
+        "skills/security/compliance-readiness/SKILL.md",
+        "skills/security/config-hardening/SKILL.md",
+        "skills/security/dependency-risk-audit/SKILL.md",
+        "skills/security/security-quick-scan/SKILL.md",
+        "skills/security/threat-modeling/SKILL.md",
+        "skills/testing/bug-repro-plan/SKILL.md",
+        "skills/testing/integration-test-planner/SKILL.md",
+        "skills/testing/unit-test-starter/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/distribution-manifest.json",
+      "kind": "manifest",
+      "content": "{\n  \"schemaVersion\": \"1.0\",\n  \"mode\": \"skills-sh-editable\",\n  \"skills\": [\n    \"accessibility-basic-check\",\n    \"api-contract-checker\",\n    \"api-error-taxonomy\",\n    \"api-request-builder\",\n    \"architecture-review\",\n    \"buffer-api\",\n    \"bug-repro-plan\",\n    \"caching-strategy-helper\",\n    \"ci-failure-triage\",\n    \"cli-ux-improver\",\n    \"codebase-orientation\",\n    \"compliance-readiness\",\n    \"config-file-explainer\",\n    \"config-hardening\",\n    \"cost-optimization-review\",\n    \"cross-service-debugger\",\n    \"css-layout-helper\",\n    \"data-governance-check\",\n    \"data-structure-chooser\",\n    \"db-migration-reviewer\",\n    \"debugging-checklist\",\n    \"dependency-install-helper\",\n    \"dependency-risk-audit\",\n    \"dependency-upgrade-plan\",\n    \"domain-modeling\",\n    \"error-message-explainer\",\n    \"feature-flag-playbook\",\n    \"function-docstrings\",\n    \"git-basic-helper\",\n    \"graphql-query-optimizer\",\n    \"iac-reviewer\",\n    \"incident-postmortem\",\n    \"integration-test-planner\",\n    \"linter-fix-guide\",\n    \"log-summarizer\",\n    \"multi-region-strategy\",\n    \"observability-setup\",\n    \"org-standardization\",\n    \"performance-budgeting\",\n    \"performance-trace-guide\",\n    \"platform-migration-plan\",\n    \"pr-reviewer\",\n    \"production-orchestrator\",\n    \"prompt-optimization\",\n    \"queue-processing-patterns\",\n    \"readme-polish\",\n    \"refactor-roadmap\",\n    \"release-notes-drafter\",\n    \"reliability-slo-sla\",\n    \"roadmap-prioritization\",\n    \"scalability-assessment\",\n    \"security-quick-scan\",\n    \"simple-refactor\",\n    \"small-script-generator\",\n    \"sql-query-starter\",\n    \"system-design-draft\",\n    \"team-onboarding-guide\",\n    \"tech-debt-portfolio\",\n    \"threat-modeling\",\n    \"ticket-breakdown\",\n    \"unit-test-starter\",\n    \"vendor-evaluation\",\n    \"writing-assistant\",\n    \"zero-downtime-migration\"\n  ],\n  \"scope\": \"project-local\",\n  \"approvalRequired\": true,\n  \"status\": \"PROPOSED\"\n}\n",
+      "evidence": [
+        ".codex/skills/prompt-optimization/SKILL.md",
+        ".codex/skills/writing-assistant/SKILL.md",
+        "skills/api/api-contract-checker/SKILL.md",
+        "skills/api/api-error-taxonomy/SKILL.md",
+        "skills/api/api-request-builder/SKILL.md",
+        "skills/api/buffer-api/SKILL.md",
+        "skills/api/graphql-query-optimizer/SKILL.md",
+        "skills/architecture/architecture-review/SKILL.md",
+        "skills/architecture/domain-modeling/SKILL.md",
+        "skills/backend/caching-strategy-helper/SKILL.md",
+        "skills/backend/feature-flag-playbook/SKILL.md",
+        "skills/backend/queue-processing-patterns/SKILL.md",
+        "skills/backend/system-design-draft/SKILL.md",
+        "skills/data/data-governance-check/SKILL.md",
+        "skills/data/db-migration-reviewer/SKILL.md",
+        "skills/data/sql-query-starter/SKILL.md",
+        "skills/docs/function-docstrings/SKILL.md",
+        "skills/docs/readme-polish/SKILL.md",
+        "skills/docs/release-notes-drafter/SKILL.md",
+        "skills/docs/team-onboarding-guide/SKILL.md",
+        "skills/foundation/codebase-orientation/SKILL.md",
+        "skills/foundation/config-file-explainer/SKILL.md",
+        "skills/foundation/data-structure-chooser/SKILL.md",
+        "skills/foundation/debugging-checklist/SKILL.md",
+        "skills/foundation/dependency-install-helper/SKILL.md",
+        "skills/foundation/error-message-explainer/SKILL.md",
+        "skills/foundation/git-basic-helper/SKILL.md",
+        "skills/foundation/linter-fix-guide/SKILL.md",
+        "skills/foundation/log-summarizer/SKILL.md",
+        "skills/foundation/small-script-generator/SKILL.md",
+        "skills/foundation/ticket-breakdown/SKILL.md",
+        "skills/frontend/accessibility-basic-check/SKILL.md",
+        "skills/frontend/cli-ux-improver/SKILL.md",
+        "skills/frontend/css-layout-helper/SKILL.md",
+        "skills/infra/ci-failure-triage/SKILL.md",
+        "skills/infra/cross-service-debugger/SKILL.md",
+        "skills/infra/iac-reviewer/SKILL.md",
+        "skills/infra/multi-region-strategy/SKILL.md",
+        "skills/infra/observability-setup/SKILL.md",
+        "skills/infra/platform-migration-plan/SKILL.md",
+        "skills/infra/zero-downtime-migration/SKILL.md",
+        "skills/performance/cost-optimization-review/SKILL.md",
+        "skills/performance/performance-budgeting/SKILL.md",
+        "skills/performance/performance-trace-guide/SKILL.md",
+        "skills/performance/scalability-assessment/SKILL.md",
+        "skills/planning/dependency-upgrade-plan/SKILL.md",
+        "skills/planning/org-standardization/SKILL.md",
+        "skills/planning/pr-reviewer/SKILL.md",
+        "skills/planning/refactor-roadmap/SKILL.md",
+        "skills/planning/roadmap-prioritization/SKILL.md",
+        "skills/planning/simple-refactor/SKILL.md",
+        "skills/planning/tech-debt-portfolio/SKILL.md",
+        "skills/planning/vendor-evaluation/SKILL.md",
+        "skills/reliability/incident-postmortem/SKILL.md",
+        "skills/reliability/reliability-slo-sla/SKILL.md",
+        "skills/security/compliance-readiness/SKILL.md",
+        "skills/security/config-hardening/SKILL.md",
+        "skills/security/dependency-risk-audit/SKILL.md",
+        "skills/security/security-quick-scan/SKILL.md",
+        "skills/security/threat-modeling/SKILL.md",
+        "skills/testing/bug-repro-plan/SKILL.md",
+        "skills/testing/integration-test-planner/SKILL.md",
+        "skills/testing/unit-test-starter/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/production-orchestrator/SKILL.md",
+      "kind": "coordinator",
+      "content": "---\nname: production-orchestrator\ndescription: Route repository work using the observed skills and workflows after review.\ndisable-model-invocation: true\n---\n\n# Proposed repository coordinator\n\nThis coordinator was generated from the files currently present in the repository. It is a reviewable proposal and has not been installed.\n\n## How to use it\n\n1. Read `INDEX.md` and `skills/INDEX.md` before selecting a component.\n2. Choose the smallest skill whose observed description matches the user's request.\n3. Follow that skill's own instructions and use the observed scripts and workflows only when they are relevant.\n4. Pass the skill's output to the next step only when the output is present and validated.\n5. Stop and ask for review when a needed file, dependency, permission, or expected output is missing.\n\n## Observed skills\n\n- /prompt-optimization — Improve and rewrite user prompts to reduce ambiguity and improve LLM output quality. Use when a user asks to optimize, refine, clarify, or rewrite a prompt for better results, or when the request is about prompt optimization or prompt rewriting. (unknown-invoked)\n- /writing-assistant — Edits, rewrites, or improves text for clarity, tone, grammar, or style. (unknown-invoked)\n- /api-contract-checker — Validate API changes against an expected contract. Use when a mid-level developer needs to detect breaking changes. (unknown-invoked)\n- /api-error-taxonomy — Define consistent API error codes and responses. Use when a mid-level developer needs error standardization. (unknown-invoked)\n- /api-request-builder — Build a basic HTTP request (curl or fetch) for an API. Use when a junior developer needs a quick request example. (unknown-invoked)\n- /buffer-api — Manage Buffer content via the GraphQL API. Use when creating, scheduling, editing, or deleting posts, saving ideas, reading scheduled queues, or pulling post analytics. Not for general API debugging. (unknown-invoked)\n- /graphql-query-optimizer — Optimize GraphQL queries and resolvers for performance. Use when a mid-level developer needs to reduce N+1 or payload size. (unknown-invoked)\n- /architecture-review — Review a system architecture for scalability, reliability, and maintainability. Use when a senior developer needs to critique a design. (unknown-invoked)\n- /domain-modeling — Model domains and bounded contexts for complex systems. Use when a senior developer needs domain-driven design guidance. (unknown-invoked)\n- /caching-strategy-helper — Recommend caching strategies and invalidation patterns. Use when a mid-level developer needs performance guidance. (unknown-invoked)\n- /feature-flag-playbook — Plan feature flag rollout and cleanup. Use when a mid-level developer needs controlled release guidance. (unknown-invoked)\n- /queue-processing-patterns — Design safe queue consumers and retries. Use when a mid-level developer needs reliable background processing. (unknown-invoked)\n- /system-design-draft — Draft a practical system design for a feature. Use when a mid-level developer needs a starting architecture. (unknown-invoked)\n- /data-governance-check — Review data handling for privacy and retention. Use when a senior developer needs governance validation. (unknown-invoked)\n- /db-migration-reviewer — Review database migrations for safety and rollback. Use when a mid-level developer needs validation of schema changes. (unknown-invoked)\n- /sql-query-starter — Draft a basic SQL query from a simple requirement. Use when a junior developer needs help forming SELECT queries. (unknown-invoked)\n- /function-docstrings — Write concise docstrings for functions. Use when a junior developer needs help describing inputs, outputs, and errors. (unknown-invoked)\n- /readme-polish — Improve a README for clarity and completeness. Use when a junior developer needs guidance on documenting setup and usage. (unknown-invoked)\n- /release-notes-drafter — Draft release notes from changes and PRs. Use when a mid-level developer needs a structured changelog. (unknown-invoked)\n- /team-onboarding-guide — Create an onboarding guide for new engineers. Use when a senior developer needs structured onboarding materials. (unknown-invoked)\n- /codebase-orientation — Guide quick orientation of an unfamiliar codebase with module mapping, entry points, and local run steps. Use when a junior developer needs to get situated fast. (unknown-invoked)\n- /config-file-explainer — Explain a configuration file and its key options. Use when a junior developer is confused by a config file. (unknown-invoked)\n- /data-structure-chooser — Recommend basic data structures for a task. Use when a junior developer needs help choosing lists, maps, or sets. (unknown-invoked)\n- /debugging-checklist — Provide a systematic debugging checklist. Use when a junior developer is stuck and needs a structured approach. (unknown-invoked)\n- /dependency-install-helper — Guide installation of project dependencies and toolchains. Use when a junior developer is stuck setting up the environment. (unknown-invoked)\n- /error-message-explainer — Explain compiler/runtime errors in plain language. Use when a junior developer needs help understanding an error message. (unknown-invoked)\n- /git-basic-helper — Provide safe git commands for common tasks. Use when a junior developer needs help with branching, commits, or resolving simple conflicts. (unknown-invoked)\n- /linter-fix-guide — Explain lint errors and propose fixes. Use when a junior developer needs help resolving common lint or format warnings. (unknown-invoked)\n- /log-summarizer — Summarize noisy logs into likely causes and next steps. Use when a junior developer needs help interpreting logs. (unknown-invoked)\n- /small-script-generator — Generate a small helper script for repetitive tasks. Use when a junior developer needs a quick automation snippet. (unknown-invoked)\n- /ticket-breakdown — Break a task or ticket into small steps. Use when a junior developer needs guidance on how to start. (unknown-invoked)\n- /accessibility-basic-check — Run a basic accessibility checklist for UI changes. Use when a junior developer needs quick a11y guidance. (unknown-invoked)\n- /cli-ux-improver — Improve CLI help, errors, and output. Use when a mid-level developer needs to make a CLI friendlier. (unknown-invoked)\n- /css-layout-helper — Explain CSS layout issues and propose fixes. Use when a junior developer is struggling with alignment or spacing. (unknown-invoked)\n- /ci-failure-triage — Diagnose CI failures and stabilize pipelines. Use when a mid-level developer needs to resolve flaky or failing builds. (unknown-invoked)\n- /cross-service-debugger — Coordinate debugging across multiple services. Use when a senior developer needs to trace a distributed issue. (unknown-invoked)\n- /iac-reviewer — Review infrastructure-as-code changes for safety and correctness. Use when a mid-level developer needs a second look on IaC. (unknown-invoked)\n- /multi-region-strategy — Design a multi-region architecture strategy. Use when a senior developer needs geo-redundant planning. (unknown-invoked)\n- /observability-setup — Set up metrics, logs, and traces for a service. Use when a mid-level developer needs basic observability coverage. (unknown-invoked)\n- /platform-migration-plan — Create a plan to migrate platforms or runtimes. Use when a senior developer needs a phased migration approach. (unknown-invoked)\n- /zero-downtime-migration — Plan a zero-downtime migration for data or infrastructure. Use when a senior developer needs a safe migration strategy. (unknown-invoked)\n- /cost-optimization-review — Review system costs and propose reductions. Use when a senior developer needs cost-saving recommendations. (unknown-invoked)\n- /performance-budgeting — Define performance budgets and guardrails. Use when a senior developer needs performance targets and enforcement. (unknown-invoked)\n- /performance-trace-guide — Guide collection and analysis of performance traces. Use when a mid-level developer needs to diagnose slowness. (unknown-invoked)\n- /scalability-assessment — Assess a system for growth bottlenecks. Use when a senior developer needs to evaluate scaling limits. (unknown-invoked)\n- /dependency-upgrade-plan — Plan safe dependency upgrades with risk notes. Use when a mid-level developer is tasked with upgrading libraries. (unknown-invoked)\n- /org-standardization — Define engineering standards across teams. Use when a senior developer needs to align practices. (unknown-invoked)\n- /pr-reviewer — Review a pull request for correctness, regressions, and missing tests. Use when a mid-level developer needs structured review guidance. (unknown-invoked)\n- /refactor-roadmap — Create a staged refactor plan for a module. Use when a mid-level developer needs a safe refactor path. (unknown-invoked)\n- /roadmap-prioritization — Prioritize roadmap initiatives with tradeoffs. Use when a senior developer needs help ranking projects. (unknown-invoked)\n- /simple-refactor — Suggest small refactors that improve readability without changing behavior. Use when a junior developer asks to clean up code. (unknown-invoked)\n- /tech-debt-portfolio — Assess and prioritize tech debt items. Use when a senior developer needs an investment plan for debt reduction. (unknown-invoked)\n- /vendor-evaluation — Evaluate third-party vendors for engineering fit. Use when a senior developer needs a structured vendor assessment. (unknown-invoked)\n- /incident-postmortem — Draft an incident postmortem with timeline, RCA, and action items. Use when a senior developer needs a structured post-incident report. (unknown-invoked)\n- /reliability-slo-sla — Define or review SLOs and SLAs for a service. Use when a senior developer needs reliability targets. (unknown-invoked)\n- /compliance-readiness — Assess readiness for compliance audits. Use when a senior developer needs a gap analysis for standards. (unknown-invoked)\n- /config-hardening — Harden configuration and defaults for safer deployment. Use when a mid-level developer needs to reduce misconfig risks. (unknown-invoked)\n- /dependency-risk-audit — Audit dependencies for licensing, security, and maintenance risk. Use when a senior developer needs risk assessment. (unknown-invoked)\n- /security-quick-scan — Scan code or configuration for common security issues. Use when a mid-level developer needs a quick security pass. (unknown-invoked)\n- /threat-modeling — Perform threat modeling for a system or feature. Use when a senior developer needs security risk assessment. (unknown-invoked)\n- /bug-repro-plan — Create a minimal, repeatable reproduction plan for a bug. Use when a junior developer needs clear steps to reproduce and capture evidence. (unknown-invoked)\n- /integration-test-planner — Plan integration tests across modules or services. Use when a mid-level developer needs to verify system interactions. (unknown-invoked)\n- /unit-test-starter — Generate starter unit tests for a small function or module. Use when a junior developer needs test scaffolding and edge cases. (unknown-invoked)\n\n## Observed plugins\n\n- None observed.\n\n## Observed workflows\n\n- None observed.\n\n## Safety and limits\n\n- Do not claim an inferred purpose is confirmed behavior.\n- Do not run an observed script merely because it exists; confirm that it is needed and safe first.\n- Do not install plugins, change global settings, or modify source files without explicit approval.\n- Record missing metadata and unresolved connections as review items.\n\nEvidence digest: `bbd69f94de1ca6dc88751e29a9a8c0532302826641f5ecbf58e2bf1bab77bbd5`\n",
+      "evidence": [
+        "AGENTS.md",
+        "skills/INDEX.md"
+      ]
+    },
+    {
+      "path": "skills/production-orchestrator/agents/openai.yaml",
+      "kind": "metadata",
+      "content": "interface:\n  display_name: Proposed Repository Coordinator\n  short_description: Route repository work using reviewed local skills and workflows.\npolicy:\n  allow_implicit_invocation: false\n",
+      "evidence": [
+        "skills/production-orchestrator/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/api/INDEX.md",
+      "kind": "index",
+      "content": "# Proposed skills index\n\nGenerated from observed SKILL.md files. Review names and descriptions before applying.\n\nSource digest: `bbd69f94de1ca6dc88751e29a9a8c0532302826641f5ecbf58e2bf1bab77bbd5`\n\n- `/api-contract-checker` — `skills/api/api-contract-checker/SKILL.md` — Validate API changes against an expected contract. Use when a mid-level developer needs to detect breaking changes.\n- `/api-error-taxonomy` — `skills/api/api-error-taxonomy/SKILL.md` — Define consistent API error codes and responses. Use when a mid-level developer needs error standardization.\n- `/api-request-builder` — `skills/api/api-request-builder/SKILL.md` — Build a basic HTTP request (curl or fetch) for an API. Use when a junior developer needs a quick request example.\n- `/buffer-api` — `skills/api/buffer-api/SKILL.md` — Manage Buffer content via the GraphQL API. Use when creating, scheduling, editing, or deleting posts, saving ideas, reading scheduled queues, or pulling post analytics. Not for general API debugging.\n- `/graphql-query-optimizer` — `skills/api/graphql-query-optimizer/SKILL.md` — Optimize GraphQL queries and resolvers for performance. Use when a mid-level developer needs to reduce N+1 or payload size.\n",
+      "evidence": [
+        "skills/api/api-contract-checker/SKILL.md",
+        "skills/api/api-error-taxonomy/SKILL.md",
+        "skills/api/api-request-builder/SKILL.md",
+        "skills/api/buffer-api/SKILL.md",
+        "skills/api/graphql-query-optimizer/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/architecture/INDEX.md",
+      "kind": "index",
+      "content": "# Proposed skills index\n\nGenerated from observed SKILL.md files. Review names and descriptions before applying.\n\nSource digest: `bbd69f94de1ca6dc88751e29a9a8c0532302826641f5ecbf58e2bf1bab77bbd5`\n\n- `/architecture-review` — `skills/architecture/architecture-review/SKILL.md` — Review a system architecture for scalability, reliability, and maintainability. Use when a senior developer needs to critique a design.\n- `/domain-modeling` — `skills/architecture/domain-modeling/SKILL.md` — Model domains and bounded contexts for complex systems. Use when a senior developer needs domain-driven design guidance.\n",
+      "evidence": [
+        "skills/architecture/architecture-review/SKILL.md",
+        "skills/architecture/domain-modeling/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/backend/INDEX.md",
+      "kind": "index",
+      "content": "# Proposed skills index\n\nGenerated from observed SKILL.md files. Review names and descriptions before applying.\n\nSource digest: `bbd69f94de1ca6dc88751e29a9a8c0532302826641f5ecbf58e2bf1bab77bbd5`\n\n- `/caching-strategy-helper` — `skills/backend/caching-strategy-helper/SKILL.md` — Recommend caching strategies and invalidation patterns. Use when a mid-level developer needs performance guidance.\n- `/feature-flag-playbook` — `skills/backend/feature-flag-playbook/SKILL.md` — Plan feature flag rollout and cleanup. Use when a mid-level developer needs controlled release guidance.\n- `/queue-processing-patterns` — `skills/backend/queue-processing-patterns/SKILL.md` — Design safe queue consumers and retries. Use when a mid-level developer needs reliable background processing.\n- `/system-design-draft` — `skills/backend/system-design-draft/SKILL.md` — Draft a practical system design for a feature. Use when a mid-level developer needs a starting architecture.\n",
+      "evidence": [
+        "skills/backend/caching-strategy-helper/SKILL.md",
+        "skills/backend/feature-flag-playbook/SKILL.md",
+        "skills/backend/queue-processing-patterns/SKILL.md",
+        "skills/backend/system-design-draft/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/data/INDEX.md",
+      "kind": "index",
+      "content": "# Proposed skills index\n\nGenerated from observed SKILL.md files. Review names and descriptions before applying.\n\nSource digest: `bbd69f94de1ca6dc88751e29a9a8c0532302826641f5ecbf58e2bf1bab77bbd5`\n\n- `/data-governance-check` — `skills/data/data-governance-check/SKILL.md` — Review data handling for privacy and retention. Use when a senior developer needs governance validation.\n- `/db-migration-reviewer` — `skills/data/db-migration-reviewer/SKILL.md` — Review database migrations for safety and rollback. Use when a mid-level developer needs validation of schema changes.\n- `/sql-query-starter` — `skills/data/sql-query-starter/SKILL.md` — Draft a basic SQL query from a simple requirement. Use when a junior developer needs help forming SELECT queries.\n",
+      "evidence": [
+        "skills/data/data-governance-check/SKILL.md",
+        "skills/data/db-migration-reviewer/SKILL.md",
+        "skills/data/sql-query-starter/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/docs/INDEX.md",
+      "kind": "index",
+      "content": "# Proposed skills index\n\nGenerated from observed SKILL.md files. Review names and descriptions before applying.\n\nSource digest: `bbd69f94de1ca6dc88751e29a9a8c0532302826641f5ecbf58e2bf1bab77bbd5`\n\n- `/function-docstrings` — `skills/docs/function-docstrings/SKILL.md` — Write concise docstrings for functions. Use when a junior developer needs help describing inputs, outputs, and errors.\n- `/readme-polish` — `skills/docs/readme-polish/SKILL.md` — Improve a README for clarity and completeness. Use when a junior developer needs guidance on documenting setup and usage.\n- `/release-notes-drafter` — `skills/docs/release-notes-drafter/SKILL.md` — Draft release notes from changes and PRs. Use when a mid-level developer needs a structured changelog.\n- `/team-onboarding-guide` — `skills/docs/team-onboarding-guide/SKILL.md` — Create an onboarding guide for new engineers. Use when a senior developer needs structured onboarding materials.\n",
+      "evidence": [
+        "skills/docs/function-docstrings/SKILL.md",
+        "skills/docs/readme-polish/SKILL.md",
+        "skills/docs/release-notes-drafter/SKILL.md",
+        "skills/docs/team-onboarding-guide/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/foundation/INDEX.md",
+      "kind": "index",
+      "content": "# Proposed skills index\n\nGenerated from observed SKILL.md files. Review names and descriptions before applying.\n\nSource digest: `bbd69f94de1ca6dc88751e29a9a8c0532302826641f5ecbf58e2bf1bab77bbd5`\n\n- `/codebase-orientation` — `skills/foundation/codebase-orientation/SKILL.md` — Guide quick orientation of an unfamiliar codebase with module mapping, entry points, and local run steps. Use when a junior developer needs to get situated fast.\n- `/config-file-explainer` — `skills/foundation/config-file-explainer/SKILL.md` — Explain a configuration file and its key options. Use when a junior developer is confused by a config file.\n- `/data-structure-chooser` — `skills/foundation/data-structure-chooser/SKILL.md` — Recommend basic data structures for a task. Use when a junior developer needs help choosing lists, maps, or sets.\n- `/debugging-checklist` — `skills/foundation/debugging-checklist/SKILL.md` — Provide a systematic debugging checklist. Use when a junior developer is stuck and needs a structured approach.\n- `/dependency-install-helper` — `skills/foundation/dependency-install-helper/SKILL.md` — Guide installation of project dependencies and toolchains. Use when a junior developer is stuck setting up the environment.\n- `/error-message-explainer` — `skills/foundation/error-message-explainer/SKILL.md` — Explain compiler/runtime errors in plain language. Use when a junior developer needs help understanding an error message.\n- `/git-basic-helper` — `skills/foundation/git-basic-helper/SKILL.md` — Provide safe git commands for common tasks. Use when a junior developer needs help with branching, commits, or resolving simple conflicts.\n- `/linter-fix-guide` — `skills/foundation/linter-fix-guide/SKILL.md` — Explain lint errors and propose fixes. Use when a junior developer needs help resolving common lint or format warnings.\n- `/log-summarizer` — `skills/foundation/log-summarizer/SKILL.md` — Summarize noisy logs into likely causes and next steps. Use when a junior developer needs help interpreting logs.\n- `/small-script-generator` — `skills/foundation/small-script-generator/SKILL.md` — Generate a small helper script for repetitive tasks. Use when a junior developer needs a quick automation snippet.\n- `/ticket-breakdown` — `skills/foundation/ticket-breakdown/SKILL.md` — Break a task or ticket into small steps. Use when a junior developer needs guidance on how to start.\n",
+      "evidence": [
+        "skills/foundation/codebase-orientation/SKILL.md",
+        "skills/foundation/config-file-explainer/SKILL.md",
+        "skills/foundation/data-structure-chooser/SKILL.md",
+        "skills/foundation/debugging-checklist/SKILL.md",
+        "skills/foundation/dependency-install-helper/SKILL.md",
+        "skills/foundation/error-message-explainer/SKILL.md",
+        "skills/foundation/git-basic-helper/SKILL.md",
+        "skills/foundation/linter-fix-guide/SKILL.md",
+        "skills/foundation/log-summarizer/SKILL.md",
+        "skills/foundation/small-script-generator/SKILL.md",
+        "skills/foundation/ticket-breakdown/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/frontend/INDEX.md",
+      "kind": "index",
+      "content": "# Proposed skills index\n\nGenerated from observed SKILL.md files. Review names and descriptions before applying.\n\nSource digest: `bbd69f94de1ca6dc88751e29a9a8c0532302826641f5ecbf58e2bf1bab77bbd5`\n\n- `/accessibility-basic-check` — `skills/frontend/accessibility-basic-check/SKILL.md` — Run a basic accessibility checklist for UI changes. Use when a junior developer needs quick a11y guidance.\n- `/cli-ux-improver` — `skills/frontend/cli-ux-improver/SKILL.md` — Improve CLI help, errors, and output. Use when a mid-level developer needs to make a CLI friendlier.\n- `/css-layout-helper` — `skills/frontend/css-layout-helper/SKILL.md` — Explain CSS layout issues and propose fixes. Use when a junior developer is struggling with alignment or spacing.\n",
+      "evidence": [
+        "skills/frontend/accessibility-basic-check/SKILL.md",
+        "skills/frontend/cli-ux-improver/SKILL.md",
+        "skills/frontend/css-layout-helper/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/infra/INDEX.md",
+      "kind": "index",
+      "content": "# Proposed skills index\n\nGenerated from observed SKILL.md files. Review names and descriptions before applying.\n\nSource digest: `bbd69f94de1ca6dc88751e29a9a8c0532302826641f5ecbf58e2bf1bab77bbd5`\n\n- `/ci-failure-triage` — `skills/infra/ci-failure-triage/SKILL.md` — Diagnose CI failures and stabilize pipelines. Use when a mid-level developer needs to resolve flaky or failing builds.\n- `/cross-service-debugger` — `skills/infra/cross-service-debugger/SKILL.md` — Coordinate debugging across multiple services. Use when a senior developer needs to trace a distributed issue.\n- `/iac-reviewer` — `skills/infra/iac-reviewer/SKILL.md` — Review infrastructure-as-code changes for safety and correctness. Use when a mid-level developer needs a second look on IaC.\n- `/multi-region-strategy` — `skills/infra/multi-region-strategy/SKILL.md` — Design a multi-region architecture strategy. Use when a senior developer needs geo-redundant planning.\n- `/observability-setup` — `skills/infra/observability-setup/SKILL.md` — Set up metrics, logs, and traces for a service. Use when a mid-level developer needs basic observability coverage.\n- `/platform-migration-plan` — `skills/infra/platform-migration-plan/SKILL.md` — Create a plan to migrate platforms or runtimes. Use when a senior developer needs a phased migration approach.\n- `/zero-downtime-migration` — `skills/infra/zero-downtime-migration/SKILL.md` — Plan a zero-downtime migration for data or infrastructure. Use when a senior developer needs a safe migration strategy.\n",
+      "evidence": [
+        "skills/infra/ci-failure-triage/SKILL.md",
+        "skills/infra/cross-service-debugger/SKILL.md",
+        "skills/infra/iac-reviewer/SKILL.md",
+        "skills/infra/multi-region-strategy/SKILL.md",
+        "skills/infra/observability-setup/SKILL.md",
+        "skills/infra/platform-migration-plan/SKILL.md",
+        "skills/infra/zero-downtime-migration/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/performance/INDEX.md",
+      "kind": "index",
+      "content": "# Proposed skills index\n\nGenerated from observed SKILL.md files. Review names and descriptions before applying.\n\nSource digest: `bbd69f94de1ca6dc88751e29a9a8c0532302826641f5ecbf58e2bf1bab77bbd5`\n\n- `/cost-optimization-review` — `skills/performance/cost-optimization-review/SKILL.md` — Review system costs and propose reductions. Use when a senior developer needs cost-saving recommendations.\n- `/performance-budgeting` — `skills/performance/performance-budgeting/SKILL.md` — Define performance budgets and guardrails. Use when a senior developer needs performance targets and enforcement.\n- `/performance-trace-guide` — `skills/performance/performance-trace-guide/SKILL.md` — Guide collection and analysis of performance traces. Use when a mid-level developer needs to diagnose slowness.\n- `/scalability-assessment` — `skills/performance/scalability-assessment/SKILL.md` — Assess a system for growth bottlenecks. Use when a senior developer needs to evaluate scaling limits.\n",
+      "evidence": [
+        "skills/performance/cost-optimization-review/SKILL.md",
+        "skills/performance/performance-budgeting/SKILL.md",
+        "skills/performance/performance-trace-guide/SKILL.md",
+        "skills/performance/scalability-assessment/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/planning/INDEX.md",
+      "kind": "index",
+      "content": "# Proposed skills index\n\nGenerated from observed SKILL.md files. Review names and descriptions before applying.\n\nSource digest: `bbd69f94de1ca6dc88751e29a9a8c0532302826641f5ecbf58e2bf1bab77bbd5`\n\n- `/dependency-upgrade-plan` — `skills/planning/dependency-upgrade-plan/SKILL.md` — Plan safe dependency upgrades with risk notes. Use when a mid-level developer is tasked with upgrading libraries.\n- `/org-standardization` — `skills/planning/org-standardization/SKILL.md` — Define engineering standards across teams. Use when a senior developer needs to align practices.\n- `/pr-reviewer` — `skills/planning/pr-reviewer/SKILL.md` — Review a pull request for correctness, regressions, and missing tests. Use when a mid-level developer needs structured review guidance.\n- `/refactor-roadmap` — `skills/planning/refactor-roadmap/SKILL.md` — Create a staged refactor plan for a module. Use when a mid-level developer needs a safe refactor path.\n- `/roadmap-prioritization` — `skills/planning/roadmap-prioritization/SKILL.md` — Prioritize roadmap initiatives with tradeoffs. Use when a senior developer needs help ranking projects.\n- `/simple-refactor` — `skills/planning/simple-refactor/SKILL.md` — Suggest small refactors that improve readability without changing behavior. Use when a junior developer asks to clean up code.\n- `/tech-debt-portfolio` — `skills/planning/tech-debt-portfolio/SKILL.md` — Assess and prioritize tech debt items. Use when a senior developer needs an investment plan for debt reduction.\n- `/vendor-evaluation` — `skills/planning/vendor-evaluation/SKILL.md` — Evaluate third-party vendors for engineering fit. Use when a senior developer needs a structured vendor assessment.\n",
+      "evidence": [
+        "skills/planning/dependency-upgrade-plan/SKILL.md",
+        "skills/planning/org-standardization/SKILL.md",
+        "skills/planning/pr-reviewer/SKILL.md",
+        "skills/planning/refactor-roadmap/SKILL.md",
+        "skills/planning/roadmap-prioritization/SKILL.md",
+        "skills/planning/simple-refactor/SKILL.md",
+        "skills/planning/tech-debt-portfolio/SKILL.md",
+        "skills/planning/vendor-evaluation/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/reliability/INDEX.md",
+      "kind": "index",
+      "content": "# Proposed skills index\n\nGenerated from observed SKILL.md files. Review names and descriptions before applying.\n\nSource digest: `bbd69f94de1ca6dc88751e29a9a8c0532302826641f5ecbf58e2bf1bab77bbd5`\n\n- `/incident-postmortem` — `skills/reliability/incident-postmortem/SKILL.md` — Draft an incident postmortem with timeline, RCA, and action items. Use when a senior developer needs a structured post-incident report.\n- `/reliability-slo-sla` — `skills/reliability/reliability-slo-sla/SKILL.md` — Define or review SLOs and SLAs for a service. Use when a senior developer needs reliability targets.\n",
+      "evidence": [
+        "skills/reliability/incident-postmortem/SKILL.md",
+        "skills/reliability/reliability-slo-sla/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/security/INDEX.md",
+      "kind": "index",
+      "content": "# Proposed skills index\n\nGenerated from observed SKILL.md files. Review names and descriptions before applying.\n\nSource digest: `bbd69f94de1ca6dc88751e29a9a8c0532302826641f5ecbf58e2bf1bab77bbd5`\n\n- `/compliance-readiness` — `skills/security/compliance-readiness/SKILL.md` — Assess readiness for compliance audits. Use when a senior developer needs a gap analysis for standards.\n- `/config-hardening` — `skills/security/config-hardening/SKILL.md` — Harden configuration and defaults for safer deployment. Use when a mid-level developer needs to reduce misconfig risks.\n- `/dependency-risk-audit` — `skills/security/dependency-risk-audit/SKILL.md` — Audit dependencies for licensing, security, and maintenance risk. Use when a senior developer needs risk assessment.\n- `/security-quick-scan` — `skills/security/security-quick-scan/SKILL.md` — Scan code or configuration for common security issues. Use when a mid-level developer needs a quick security pass.\n- `/threat-modeling` — `skills/security/threat-modeling/SKILL.md` — Perform threat modeling for a system or feature. Use when a senior developer needs security risk assessment.\n",
+      "evidence": [
+        "skills/security/compliance-readiness/SKILL.md",
+        "skills/security/config-hardening/SKILL.md",
+        "skills/security/dependency-risk-audit/SKILL.md",
+        "skills/security/security-quick-scan/SKILL.md",
+        "skills/security/threat-modeling/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/testing/INDEX.md",
+      "kind": "index",
+      "content": "# Proposed skills index\n\nGenerated from observed SKILL.md files. Review names and descriptions before applying.\n\nSource digest: `bbd69f94de1ca6dc88751e29a9a8c0532302826641f5ecbf58e2bf1bab77bbd5`\n\n- `/bug-repro-plan` — `skills/testing/bug-repro-plan/SKILL.md` — Create a minimal, repeatable reproduction plan for a bug. Use when a junior developer needs clear steps to reproduce and capture evidence.\n- `/integration-test-planner` — `skills/testing/integration-test-planner/SKILL.md` — Plan integration tests across modules or services. Use when a mid-level developer needs to verify system interactions.\n- `/unit-test-starter` — `skills/testing/unit-test-starter/SKILL.md` — Generate starter unit tests for a small function or module. Use when a junior developer needs test scaffolding and edge cases.\n",
+      "evidence": [
+        "skills/testing/bug-repro-plan/SKILL.md",
+        "skills/testing/integration-test-planner/SKILL.md",
+        "skills/testing/unit-test-starter/SKILL.md"
+      ]
+    }
+  ],
+  "limitations": [
+    "Generated from observed paths and readable frontmatter; inferred purposes require human review.",
+    "Existing skill metadata, dependencies, and instructions were not rewritten by this proposal.",
+    "The proposal is stored under .orchestrator/proposals and has not been copied into the repository.",
+    "The standardization plan is BLOCKED by 61 skill candidate(s) or dependency findings."
+  ],
+  "digest": "1ee05bb08f760d5e3bc39aafeab44b831bccfb2ccdf7faf95cc566a16a0bf8ed"
+}

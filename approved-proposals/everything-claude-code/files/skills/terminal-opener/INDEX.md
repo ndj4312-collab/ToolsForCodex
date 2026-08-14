@@ -1,0 +1,7 @@
+# Proposed skills index
+
+Generated from observed SKILL.md files. Review names and descriptions before applying.
+
+Source digest: `fccd8a3ce69072f7ed5e7d960aa19b817b3dac45d13f48ad9cd7332ab6ec43bd`
+
+- `/terminal-opener` — `skills/terminal-opener/SKILL.md` — Open an executable and its argument array in a visible terminal window through a reusable, shell-free launch plan with dry-run, JSON, capability detection, detached fallback, and standalone recovery modes. Use when Codex needs to open an interactive CLI, SSH session, local development process, sandbox, or other argv-based command in a new host terminal; diagnose whether a supported terminal is available; or provide an actionable plan when the requested terminal is unsupported.

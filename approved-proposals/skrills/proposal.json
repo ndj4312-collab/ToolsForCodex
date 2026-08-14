@@ -1,0 +1,4865 @@
+{
+  "schemaVersion": "1.0",
+  "status": "PROPOSED",
+  "targetPath": ".",
+  "sourceDigest": "efbf480a59b84d62b2a424b18f5c5486ed410a7afbed3d7cbba7cd2309c012a7",
+  "components": [
+    {
+      "kind": "plugin",
+      "name": "marketplace.json",
+      "path": ".claude-plugin/marketplace.json",
+      "purpose": "Plugin entry or plugin configuration",
+      "confidence": "medium",
+      "evidence": [
+        ".claude-plugin/marketplace.json"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "pre-commit",
+      "path": ".githooks/pre-commit",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        ".githooks/pre-commit"
+      ]
+    },
+    {
+      "kind": "workflow",
+      "name": "action.yml",
+      "path": ".github/actions/validate-skills/action.yml",
+      "purpose": "Automated workflow or repository action",
+      "confidence": "medium",
+      "evidence": [
+        ".github/actions/validate-skills/action.yml"
+      ]
+    },
+    {
+      "kind": "workflow",
+      "name": "entrypoint.sh",
+      "path": ".github/actions/validate-skills/entrypoint.sh",
+      "purpose": "Automated workflow or repository action",
+      "confidence": "medium",
+      "evidence": [
+        ".github/actions/validate-skills/entrypoint.sh"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "FUNDING.yml",
+      "path": ".github/FUNDING.yml",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        ".github/FUNDING.yml"
+      ]
+    },
+    {
+      "kind": "workflow",
+      "name": "audit.yml",
+      "path": ".github/workflows/audit.yml",
+      "purpose": "Automated workflow or repository action",
+      "confidence": "medium",
+      "evidence": [
+        ".github/workflows/audit.yml"
+      ]
+    },
+    {
+      "kind": "workflow",
+      "name": "book-pages.yml",
+      "path": ".github/workflows/book-pages.yml",
+      "purpose": "Automated workflow or repository action",
+      "confidence": "medium",
+      "evidence": [
+        ".github/workflows/book-pages.yml"
+      ]
+    },
+    {
+      "kind": "workflow",
+      "name": "ci.yml",
+      "path": ".github/workflows/ci.yml",
+      "purpose": "Automated workflow or repository action",
+      "confidence": "medium",
+      "evidence": [
+        ".github/workflows/ci.yml"
+      ]
+    },
+    {
+      "kind": "workflow",
+      "name": "coverage.yml",
+      "path": ".github/workflows/coverage.yml",
+      "purpose": "Automated workflow or repository action",
+      "confidence": "medium",
+      "evidence": [
+        ".github/workflows/coverage.yml"
+      ]
+    },
+    {
+      "kind": "workflow",
+      "name": "dependency-monitor.yml",
+      "path": ".github/workflows/dependency-monitor.yml",
+      "purpose": "Automated workflow or repository action",
+      "confidence": "medium",
+      "evidence": [
+        ".github/workflows/dependency-monitor.yml"
+      ]
+    },
+    {
+      "kind": "workflow",
+      "name": "integration-tests.yml",
+      "path": ".github/workflows/integration-tests.yml",
+      "purpose": "Automated workflow or repository action",
+      "confidence": "medium",
+      "evidence": [
+        ".github/workflows/integration-tests.yml"
+      ]
+    },
+    {
+      "kind": "workflow",
+      "name": "publish-dry-run.yml",
+      "path": ".github/workflows/publish-dry-run.yml",
+      "purpose": "Automated workflow or repository action",
+      "confidence": "medium",
+      "evidence": [
+        ".github/workflows/publish-dry-run.yml"
+      ]
+    },
+    {
+      "kind": "workflow",
+      "name": "release.yml",
+      "path": ".github/workflows/release.yml",
+      "purpose": "Automated workflow or repository action",
+      "confidence": "medium",
+      "evidence": [
+        ".github/workflows/release.yml"
+      ]
+    },
+    {
+      "kind": "workflow",
+      "name": "validate-skills-example.yml",
+      "path": ".github/workflows/validate-skills-example.yml",
+      "purpose": "Automated workflow or repository action",
+      "confidence": "medium",
+      "evidence": [
+        ".github/workflows/validate-skills-example.yml"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": ".gitignore",
+      "path": ".gitignore",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        ".gitignore"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": ".markdownlint.yaml",
+      "path": ".markdownlint.yaml",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        ".markdownlint.yaml"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "AGENTS.md",
+      "path": "AGENTS.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "AGENTS.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "api-designer",
+      "path": "assets/demo-skills/api-designer/SKILL.md",
+      "purpose": "Design RESTful APIs with best practices for consistency and usability",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "assets/demo-skills/api-designer/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "coding-assistant",
+      "path": "assets/demo-skills/coding-assistant/SKILL.md",
+      "purpose": "Provides coding assistance with best practices and code review",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "assets/demo-skills/coding-assistant/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "debug-helper",
+      "path": "assets/demo-skills/debug-helper/SKILL.md",
+      "purpose": "Systematic debugging approach for identifying and fixing issues",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "assets/demo-skills/debug-helper/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "git-workflow",
+      "path": "assets/demo-skills/git-workflow/SKILL.md",
+      "purpose": "Git best practices for version control and collaboration",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "assets/demo-skills/git-workflow/SKILL.md"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "test-writer",
+      "path": "assets/demo-skills/test-writer/SKILL.md",
+      "purpose": "Write thorough tests following TDD and BDD principles",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "assets/demo-skills/test-writer/SKILL.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "cold-window.gif",
+      "path": "assets/gifs/cold-window.gif",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "assets/gifs/cold-window.gif"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "dashboard.gif",
+      "path": "assets/gifs/dashboard.gif",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "assets/gifs/dashboard.gif"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mcp.gif",
+      "path": "assets/gifs/mcp.gif",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "assets/gifs/mcp.gif"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "quickstart.gif",
+      "path": "assets/gifs/quickstart.gif",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "assets/gifs/quickstart.gif"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "icon.png",
+      "path": "assets/icon.png",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "assets/icon.png"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "cold-window-overlay.sh",
+      "path": "assets/tapes/cold-window-overlay.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "assets/tapes/cold-window-overlay.sh"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "cold-window.tape",
+      "path": "assets/tapes/cold-window.tape",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "assets/tapes/cold-window.tape"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mcp.tape",
+      "path": "assets/tapes/mcp.tape",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "assets/tapes/mcp.tape"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "portal-demo.mjs",
+      "path": "assets/tapes/portal-demo.mjs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "assets/tapes/portal-demo.mjs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "quickstart.tape",
+      "path": "assets/tapes/quickstart.tape",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "assets/tapes/quickstart.tape"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "tui.tape",
+      "path": "assets/tapes/tui.tape",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "assets/tapes/tui.tape"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "audit.toml",
+      "path": "audit.toml",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "audit.toml"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "book.toml",
+      "path": "book/book.toml",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "book/book.toml"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "analysis.md",
+      "path": "book/src/analysis.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "book/src/analysis.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "changelog.md",
+      "path": "book/src/changelog.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "book/src/changelog.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "cli.md",
+      "path": "book/src/cli.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "book/src/cli.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "cold-window.md",
+      "path": "book/src/cold-window.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "book/src/cold-window.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "comparison.md",
+      "path": "book/src/comparison.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "book/src/comparison.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "development.md",
+      "path": "book/src/development.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "book/src/development.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "faq.md",
+      "path": "book/src/faq.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "book/src/faq.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "installation.md",
+      "path": "book/src/installation.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "book/src/installation.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "mcp-token-optimization.md",
+      "path": "book/src/mcp-token-optimization.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "book/src/mcp-token-optimization.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "observability.md",
+      "path": "book/src/observability.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "book/src/observability.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "overview.md",
+      "path": "book/src/overview.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "book/src/overview.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "performance.md",
+      "path": "book/src/performance.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "book/src/performance.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "persistence.md",
+      "path": "book/src/persistence.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "book/src/persistence.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "playbooks.md",
+      "path": "book/src/playbooks.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "book/src/playbooks.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "process.md",
+      "path": "book/src/process.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "book/src/process.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "release.md",
+      "path": "book/src/release.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "book/src/release.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "runtime-tuning.md",
+      "path": "book/src/runtime-tuning.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "book/src/runtime-tuning.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "security.md",
+      "path": "book/src/security.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "book/src/security.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "semver.md",
+      "path": "book/src/semver.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "book/src/semver.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "SUMMARY.md",
+      "path": "book/src/SUMMARY.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "book/src/SUMMARY.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "sync-guide.md",
+      "path": "book/src/sync-guide.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "book/src/sync-guide.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "testing.md",
+      "path": "book/src/testing.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "book/src/testing.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "validation.md",
+      "path": "book/src/validation.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "book/src/validation.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "Cargo.lock",
+      "path": "Cargo.lock",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "Cargo.lock"
+      ]
+    },
+    {
+      "kind": "configuration",
+      "name": "Cargo.toml",
+      "path": "Cargo.toml",
+      "purpose": "Repository configuration",
+      "confidence": "medium",
+      "evidence": [
+        "Cargo.toml"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "CONTRIBUTING.md",
+      "path": "CONTRIBUTING.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "CONTRIBUTING.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "tick_budget.rs",
+      "path": "crates/analyze/benches/tick_budget.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/analyze/benches/tick_budget.rs"
+      ]
+    },
+    {
+      "kind": "configuration",
+      "name": "Cargo.toml",
+      "path": "crates/analyze/Cargo.toml",
+      "purpose": "Repository configuration",
+      "confidence": "medium",
+      "evidence": [
+        "crates/analyze/Cargo.toml"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "alert.rs",
+      "path": "crates/analyze/src/cold_window/alert.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/analyze/src/cold_window/alert.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "cadence.rs",
+      "path": "crates/analyze/src/cold_window/cadence.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/analyze/src/cold_window/cadence.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "diff.rs",
+      "path": "crates/analyze/src/cold_window/diff.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/analyze/src/cold_window/diff.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "engine.rs",
+      "path": "crates/analyze/src/cold_window/engine.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/analyze/src/cold_window/engine.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "crates/analyze/src/cold_window/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/analyze/src/cold_window/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "plugin_health.rs",
+      "path": "crates/analyze/src/cold_window/plugin_health.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/analyze/src/cold_window/plugin_health.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "skill_collector.rs",
+      "path": "crates/analyze/src/cold_window/skill_collector.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/analyze/src/cold_window/skill_collector.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "traits.rs",
+      "path": "crates/analyze/src/cold_window/traits.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/analyze/src/cold_window/traits.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "deps.rs",
+      "path": "crates/analyze/src/deps.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/analyze/src/deps.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "graph.rs",
+      "path": "crates/analyze/src/graph.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/analyze/src/graph.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "lib.rs",
+      "path": "crates/analyze/src/lib.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/analyze/src/lib.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "optimize.rs",
+      "path": "crates/analyze/src/optimize.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/analyze/src/optimize.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "graph.rs",
+      "path": "crates/analyze/src/resolve/graph.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/analyze/src/resolve/graph.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "crates/analyze/src/resolve/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/analyze/src/resolve/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "resolver.rs",
+      "path": "crates/analyze/src/resolve/resolver.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/analyze/src/resolve/resolver.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "types.rs",
+      "path": "crates/analyze/src/resolve/types.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/analyze/src/resolve/types.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "tokens.rs",
+      "path": "crates/analyze/src/tokens.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/analyze/src/tokens.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "cadence.rs",
+      "path": "crates/analyze/tests/cadence.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/analyze/tests/cadence.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "chaos.rs",
+      "path": "crates/analyze/tests/chaos.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/analyze/tests/chaos.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "tick_budget_floor.rs",
+      "path": "crates/analyze/tests/tick_budget_floor.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/analyze/tests/tick_budget_floor.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "token_attribution.rs",
+      "path": "crates/analyze/tests/token_attribution.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/analyze/tests/token_attribution.rs"
+      ]
+    },
+    {
+      "kind": "configuration",
+      "name": "Cargo.toml",
+      "path": "crates/cli/Cargo.toml",
+      "purpose": "Repository configuration",
+      "confidence": "medium",
+      "evidence": [
+        "crates/cli/Cargo.toml"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "README.md",
+      "path": "crates/cli/README.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "crates/cli/README.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "main.rs",
+      "path": "crates/cli/src/main.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/cli/src/main.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "cli_dispatch_smoke.rs",
+      "path": "crates/cli/tests/cli_dispatch_smoke.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/cli/tests/cli_dispatch_smoke.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "sync_all.rs",
+      "path": "crates/cli/tests/sync_all.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/cli/tests/sync_all.rs"
+      ]
+    },
+    {
+      "kind": "configuration",
+      "name": "Cargo.toml",
+      "path": "crates/dashboard/Cargo.toml",
+      "purpose": "Repository configuration",
+      "confidence": "medium",
+      "evidence": [
+        "crates/dashboard/Cargo.toml"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "README.md",
+      "path": "crates/dashboard/README.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "crates/dashboard/README.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "app.rs",
+      "path": "crates/dashboard/src/app.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/dashboard/src/app.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "alert_pane.rs",
+      "path": "crates/dashboard/src/cold_window/alert_pane.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/dashboard/src/cold_window/alert_pane.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "focus.rs",
+      "path": "crates/dashboard/src/cold_window/focus.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/dashboard/src/cold_window/focus.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "hint_pane.rs",
+      "path": "crates/dashboard/src/cold_window/hint_pane.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/dashboard/src/cold_window/hint_pane.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "keymap.rs",
+      "path": "crates/dashboard/src/cold_window/keymap.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/dashboard/src/cold_window/keymap.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "crates/dashboard/src/cold_window/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/dashboard/src/cold_window/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "overlay.rs",
+      "path": "crates/dashboard/src/cold_window/overlay.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/dashboard/src/cold_window/overlay.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "research_pane.rs",
+      "path": "crates/dashboard/src/cold_window/research_pane.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/dashboard/src/cold_window/research_pane.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "state.rs",
+      "path": "crates/dashboard/src/cold_window/state.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/dashboard/src/cold_window/state.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "status_bar.rs",
+      "path": "crates/dashboard/src/cold_window/status_bar.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/dashboard/src/cold_window/status_bar.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "input.rs",
+      "path": "crates/dashboard/src/cold_window/tui/input.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/dashboard/src/cold_window/tui/input.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "layout.rs",
+      "path": "crates/dashboard/src/cold_window/tui/layout.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/dashboard/src/cold_window/tui/layout.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "crates/dashboard/src/cold_window/tui/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/dashboard/src/cold_window/tui/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "render.rs",
+      "path": "crates/dashboard/src/cold_window/tui/render.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/dashboard/src/cold_window/tui/render.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "runner.rs",
+      "path": "crates/dashboard/src/cold_window/tui/runner.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/dashboard/src/cold_window/tui/runner.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "tests.rs",
+      "path": "crates/dashboard/src/cold_window/tui/tests.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/dashboard/src/cold_window/tui/tests.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "events.rs",
+      "path": "crates/dashboard/src/events.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/dashboard/src/events.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "lib.rs",
+      "path": "crates/dashboard/src/lib.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/dashboard/src/lib.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "ui.rs",
+      "path": "crates/dashboard/src/ui.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/dashboard/src/ui.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "ui_rendering.rs",
+      "path": "crates/dashboard/tests/ui_rendering.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/dashboard/tests/ui_rendering.rs"
+      ]
+    },
+    {
+      "kind": "configuration",
+      "name": "Cargo.toml",
+      "path": "crates/discovery/Cargo.toml",
+      "purpose": "Repository configuration",
+      "confidence": "medium",
+      "evidence": [
+        "crates/discovery/Cargo.toml"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "README.md",
+      "path": "crates/discovery/README.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "crates/discovery/README.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "error.rs",
+      "path": "crates/discovery/src/error.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/discovery/src/error.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "lib.rs",
+      "path": "crates/discovery/src/lib.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/discovery/src/lib.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "scanner.rs",
+      "path": "crates/discovery/src/scanner.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/discovery/src/scanner.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "types.rs",
+      "path": "crates/discovery/src/types.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/discovery/src/types.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "discover_smoke.rs",
+      "path": "crates/discovery/tests/discover_smoke.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/discovery/tests/discover_smoke.rs"
+      ]
+    },
+    {
+      "kind": "configuration",
+      "name": "Cargo.toml",
+      "path": "crates/intelligence/Cargo.toml",
+      "purpose": "Repository configuration",
+      "confidence": "medium",
+      "evidence": [
+        "crates/intelligence/Cargo.toml"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "README.md",
+      "path": "crates/intelligence/README.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "crates/intelligence/README.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "cold_window_hints.rs",
+      "path": "crates/intelligence/src/cold_window_hints.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/intelligence/src/cold_window_hints.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "dependencies.rs",
+      "path": "crates/intelligence/src/context/dependencies.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/intelligence/src/context/dependencies.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "detector.rs",
+      "path": "crates/intelligence/src/context/detector.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/intelligence/src/context/detector.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "git_context.rs",
+      "path": "crates/intelligence/src/context/git_context.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/intelligence/src/context/git_context.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "crates/intelligence/src/context/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/intelligence/src/context/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "cli_detector.rs",
+      "path": "crates/intelligence/src/create/cli_detector.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/intelligence/src/create/cli_detector.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "empirical.rs",
+      "path": "crates/intelligence/src/create/empirical.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/intelligence/src/create/empirical.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "github_search.rs",
+      "path": "crates/intelligence/src/create/github_search.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/intelligence/src/create/github_search.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "llm_generator.rs",
+      "path": "crates/intelligence/src/create/llm_generator.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/intelligence/src/create/llm_generator.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "crates/intelligence/src/create/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/intelligence/src/create/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "error.rs",
+      "path": "crates/intelligence/src/error.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/intelligence/src/error.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "lib.rs",
+      "path": "crates/intelligence/src/lib.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/intelligence/src/lib.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "comparative.rs",
+      "path": "crates/intelligence/src/recommend/comparative.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/intelligence/src/recommend/comparative.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "explainer.rs",
+      "path": "crates/intelligence/src/recommend/explainer.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/intelligence/src/recommend/explainer.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "crates/intelligence/src/recommend/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/intelligence/src/recommend/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "scorer.rs",
+      "path": "crates/intelligence/src/recommend/scorer.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/intelligence/src/recommend/scorer.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "similarity.rs",
+      "path": "crates/intelligence/src/recommend/similarity.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/intelligence/src/recommend/similarity.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "scaffolding.rs",
+      "path": "crates/intelligence/src/scaffolding.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/intelligence/src/scaffolding.rs"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "code-review.md",
+      "path": "crates/intelligence/src/templates/code-review.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "crates/intelligence/src/templates/code-review.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "debugging.md",
+      "path": "crates/intelligence/src/templates/debugging.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "crates/intelligence/src/templates/debugging.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "documentation.md",
+      "path": "crates/intelligence/src/templates/documentation.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "crates/intelligence/src/templates/documentation.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "refactoring.md",
+      "path": "crates/intelligence/src/templates/refactoring.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "crates/intelligence/src/templates/refactoring.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "testing.md",
+      "path": "crates/intelligence/src/templates/testing.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "crates/intelligence/src/templates/testing.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "test_support.rs",
+      "path": "crates/intelligence/src/test_support.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/intelligence/src/test_support.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "types.rs",
+      "path": "crates/intelligence/src/types.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/intelligence/src/types.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "analytics.rs",
+      "path": "crates/intelligence/src/usage/analytics.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/intelligence/src/usage/analytics.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "behavioral.rs",
+      "path": "crates/intelligence/src/usage/behavioral.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/intelligence/src/usage/behavioral.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "claude_parser.rs",
+      "path": "crates/intelligence/src/usage/claude_parser.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/intelligence/src/usage/claude_parser.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "codex_parser.rs",
+      "path": "crates/intelligence/src/usage/codex_parser.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/intelligence/src/usage/codex_parser.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "crates/intelligence/src/usage/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/intelligence/src/usage/mod.rs"
+      ]
+    },
+    {
+      "kind": "configuration",
+      "name": "Cargo.toml",
+      "path": "crates/metrics/Cargo.toml",
+      "purpose": "Repository configuration",
+      "confidence": "medium",
+      "evidence": [
+        "crates/metrics/Cargo.toml"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "README.md",
+      "path": "crates/metrics/README.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "crates/metrics/README.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "baseline.rs",
+      "path": "crates/metrics/src/baseline.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/metrics/src/baseline.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "collector.rs",
+      "path": "crates/metrics/src/collector.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/metrics/src/collector.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "error.rs",
+      "path": "crates/metrics/src/error.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/metrics/src/error.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "lib.rs",
+      "path": "crates/metrics/src/lib.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/metrics/src/lib.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "schema.rs",
+      "path": "crates/metrics/src/schema.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/metrics/src/schema.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "types.rs",
+      "path": "crates/metrics/src/types.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/metrics/src/types.rs"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "AGENTS.md",
+      "path": "crates/server/AGENTS.md",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "crates/server/AGENTS.md"
+      ]
+    },
+    {
+      "kind": "configuration",
+      "name": "Cargo.toml",
+      "path": "crates/server/Cargo.toml",
+      "purpose": "Repository configuration",
+      "confidence": "medium",
+      "evidence": [
+        "crates/server/Cargo.toml"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "README.md",
+      "path": "crates/server/README.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "crates/server/README.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "cold_window.rs",
+      "path": "crates/server/src/api/cold_window.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/api/cold_window.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mcp_servers.rs",
+      "path": "crates/server/src/api/mcp_servers.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/api/mcp_servers.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "metrics.rs",
+      "path": "crates/server/src/api/metrics.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/api/metrics.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "crates/server/src/api/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/api/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "rules.rs",
+      "path": "crates/server/src/api/rules.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/api/rules.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "skills.rs",
+      "path": "crates/server/src/api/skills.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/api/skills.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "dispatcher.rs",
+      "path": "crates/server/src/app/dispatcher.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/app/dispatcher.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "intelligence.rs",
+      "path": "crates/server/src/app/intelligence.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/app/intelligence.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mcp_registry.rs",
+      "path": "crates/server/src/app/mcp_registry.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/app/mcp_registry.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "crates/server/src/app/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/app/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "research.rs",
+      "path": "crates/server/src/app/research.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/app/research.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "skill_recommendations.rs",
+      "path": "crates/server/src/app/skill_recommendations.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/app/skill_recommendations.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "config.rs",
+      "path": "crates/server/src/app/tests/config.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/app/tests/config.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "dependency.rs",
+      "path": "crates/server/src/app/tests/dependency.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/app/tests/dependency.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "intelligence.rs",
+      "path": "crates/server/src/app/tests/intelligence.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/app/tests/intelligence.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mcp.rs",
+      "path": "crates/server/src/app/tests/mcp.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/app/tests/mcp.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "crates/server/src/app/tests/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/app/tests/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "research.rs",
+      "path": "crates/server/src/app/tests/research.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/app/tests/research.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "resource.rs",
+      "path": "crates/server/src/app/tests/resource.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/app/tests/resource.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "search.rs",
+      "path": "crates/server/src/app/tests/search.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/app/tests/search.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "sync.rs",
+      "path": "crates/server/src/app/tests/sync.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/app/tests/sync.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "trace.rs",
+      "path": "crates/server/src/app/tests/trace.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/app/tests/trace.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "validation.rs",
+      "path": "crates/server/src/app/tests/validation.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/app/tests/validation.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "tools.rs",
+      "path": "crates/server/src/app/tools.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/app/tools.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "cache.rs",
+      "path": "crates/server/src/cache.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/cache.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "enums.rs",
+      "path": "crates/server/src/cli/enums.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/cli/enums.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "crates/server/src/cli/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/cli/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "cold_window_cli.rs",
+      "path": "crates/server/src/cold_window_cli.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/cold_window_cli.rs"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "agent.rs",
+      "path": "crates/server/src/commands/agent.rs",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "crates/server/src/commands/agent.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "analyze.rs",
+      "path": "crates/server/src/commands/analyze.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/commands/analyze.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "cert.rs",
+      "path": "crates/server/src/commands/cert.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/commands/cert.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "diff.rs",
+      "path": "crates/server/src/commands/diff.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/commands/diff.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "intelligence.rs",
+      "path": "crates/server/src/commands/intelligence.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/commands/intelligence.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "metrics.rs",
+      "path": "crates/server/src/commands/metrics.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/commands/metrics.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "crates/server/src/commands/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/commands/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "multi_cli_agent.rs",
+      "path": "crates/server/src/commands/multi_cli_agent.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/commands/multi_cli_agent.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "recommend.rs",
+      "path": "crates/server/src/commands/recommend.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/commands/recommend.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "resolve.rs",
+      "path": "crates/server/src/commands/resolve.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/commands/resolve.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "serve.rs",
+      "path": "crates/server/src/commands/serve.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/commands/serve.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "setup.rs",
+      "path": "crates/server/src/commands/setup.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/commands/setup.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "catalog.rs",
+      "path": "crates/server/src/commands/skill/catalog.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/commands/skill/catalog.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "deprecation.rs",
+      "path": "crates/server/src/commands/skill/deprecation.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/commands/skill/deprecation.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "import.rs",
+      "path": "crates/server/src/commands/skill/import.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/commands/skill/import.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "crates/server/src/commands/skill/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/commands/skill/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "pre_commit.rs",
+      "path": "crates/server/src/commands/skill/pre_commit.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/commands/skill/pre_commit.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "profiling.rs",
+      "path": "crates/server/src/commands/skill/profiling.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/commands/skill/profiling.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "rollback.rs",
+      "path": "crates/server/src/commands/skill/rollback.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/commands/skill/rollback.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "scoring.rs",
+      "path": "crates/server/src/commands/skill/scoring.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/commands/skill/scoring.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "sync_pull.rs",
+      "path": "crates/server/src/commands/skill/sync_pull.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/commands/skill/sync_pull.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "usage_report.rs",
+      "path": "crates/server/src/commands/skill/usage_report.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/commands/skill/usage_report.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "sync.rs",
+      "path": "crates/server/src/commands/sync.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/commands/sync.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "validate.rs",
+      "path": "crates/server/src/commands/validate.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/commands/validate.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "config.rs",
+      "path": "crates/server/src/config.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/config.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "discovery.rs",
+      "path": "crates/server/src/discovery.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/discovery.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "doctor.rs",
+      "path": "crates/server/src/doctor.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/doctor.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "handler.rs",
+      "path": "crates/server/src/handler.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/handler.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "http_transport.rs",
+      "path": "crates/server/src/http_transport.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/http_transport.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "lib.rs",
+      "path": "crates/server/src/lib.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/lib.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "manifest.rs",
+      "path": "crates/server/src/manifest.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/manifest.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "crates/server/src/mcp_gateway/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/mcp_gateway/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "registry.rs",
+      "path": "crates/server/src/mcp_gateway/registry.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/mcp_gateway/registry.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "stats.rs",
+      "path": "crates/server/src/mcp_gateway/stats.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/mcp_gateway/stats.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "tools.rs",
+      "path": "crates/server/src/mcp_gateway/tools.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/mcp_gateway/tools.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "metrics_types.rs",
+      "path": "crates/server/src/metrics_types.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/metrics_types.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "runtime.rs",
+      "path": "crates/server/src/runtime.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/runtime.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "setup.rs",
+      "path": "crates/server/src/setup.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/setup.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "tests.rs",
+      "path": "crates/server/src/setup/tests.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/setup/tests.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "signals.rs",
+      "path": "crates/server/src/signals.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/signals.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "skill_trace.rs",
+      "path": "crates/server/src/skill_trace.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/skill_trace.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "sync.rs",
+      "path": "crates/server/src/sync.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/sync.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "test_support.rs",
+      "path": "crates/server/src/test_support.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/test_support.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "tls_auto.rs",
+      "path": "crates/server/src/tls_auto.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/tls_auto.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "tool_schemas.rs",
+      "path": "crates/server/src/tool_schemas.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/tool_schemas.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "trace.rs",
+      "path": "crates/server/src/trace.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/trace.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "tui.rs",
+      "path": "crates/server/src/tui.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/tui.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "app.rs",
+      "path": "crates/server/src/ui/app.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/ui/app.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "dashboard.js",
+      "path": "crates/server/src/ui/dashboard.js",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/ui/dashboard.js"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "crates/server/src/ui/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/src/ui/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "style.css",
+      "path": "crates/server/static/style.css",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/static/style.css"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "analytics_persistence_integration.rs",
+      "path": "crates/server/tests/analytics_persistence_integration.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/tests/analytics_persistence_integration.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "cold_window_first_paint.rs",
+      "path": "crates/server/tests/cold_window_first_paint.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/tests/cold_window_first_paint.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "cold_window_parity.rs",
+      "path": "crates/server/tests/cold_window_parity.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/tests/cold_window_parity.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "dashboard_api_integration.rs",
+      "path": "crates/server/tests/dashboard_api_integration.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/tests/dashboard_api_integration.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "dashboard_browser_integration.rs",
+      "path": "crates/server/tests/dashboard_browser_integration.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/tests/dashboard_browser_integration.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "http_transport_integration.rs",
+      "path": "crates/server/tests/http_transport_integration.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/tests/http_transport_integration.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "subagents_end_to_end.rs",
+      "path": "crates/server/tests/subagents_end_to_end.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/server/tests/subagents_end_to_end.rs"
+      ]
+    },
+    {
+      "kind": "configuration",
+      "name": "Cargo.toml",
+      "path": "crates/snapshot/Cargo.toml",
+      "purpose": "Repository configuration",
+      "confidence": "medium",
+      "evidence": [
+        "crates/snapshot/Cargo.toml"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "kill_switch.rs",
+      "path": "crates/snapshot/src/kill_switch.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/snapshot/src/kill_switch.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "lib.rs",
+      "path": "crates/snapshot/src/lib.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/snapshot/src/lib.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "serde_impls.rs",
+      "path": "crates/snapshot/src/serde_impls.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/snapshot/src/serde_impls.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "types.rs",
+      "path": "crates/snapshot/src/types.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/snapshot/src/types.rs"
+      ]
+    },
+    {
+      "kind": "configuration",
+      "name": "Cargo.toml",
+      "path": "crates/state/Cargo.toml",
+      "purpose": "Repository configuration",
+      "confidence": "medium",
+      "evidence": [
+        "crates/state/Cargo.toml"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "README.md",
+      "path": "crates/state/README.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "crates/state/README.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "cache.rs",
+      "path": "crates/state/src/cache.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/state/src/cache.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "env.rs",
+      "path": "crates/state/src/env.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/state/src/env.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "lib.rs",
+      "path": "crates/state/src/lib.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/state/src/lib.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "network.rs",
+      "path": "crates/state/src/network.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/state/src/network.rs"
+      ]
+    },
+    {
+      "kind": "configuration",
+      "name": "Cargo.toml",
+      "path": "crates/subagents/Cargo.toml",
+      "purpose": "Repository configuration",
+      "confidence": "medium",
+      "evidence": [
+        "crates/subagents/Cargo.toml"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "README.md",
+      "path": "crates/subagents/README.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "crates/subagents/README.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "claude.rs",
+      "path": "crates/subagents/src/backend/claude.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/subagents/src/backend/claude.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "cli.rs",
+      "path": "crates/subagents/src/backend/cli.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/subagents/src/backend/cli.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "codex.rs",
+      "path": "crates/subagents/src/backend/codex.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/subagents/src/backend/codex.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "config.rs",
+      "path": "crates/subagents/src/backend/config.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/subagents/src/backend/config.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "crates/subagents/src/backend/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/subagents/src/backend/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "cli_detection.rs",
+      "path": "crates/subagents/src/cli_detection.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/subagents/src/cli_detection.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "lib.rs",
+      "path": "crates/subagents/src/lib.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/subagents/src/lib.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "registry.rs",
+      "path": "crates/subagents/src/registry.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/subagents/src/registry.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "service.rs",
+      "path": "crates/subagents/src/service.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/subagents/src/service.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "settings.rs",
+      "path": "crates/subagents/src/settings.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/subagents/src/settings.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "store.rs",
+      "path": "crates/subagents/src/store.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/subagents/src/store.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "tool_schemas.rs",
+      "path": "crates/subagents/src/tool_schemas.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/subagents/src/tool_schemas.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "integration_test.rs",
+      "path": "crates/subagents/tests/integration_test.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/subagents/tests/integration_test.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "store_reload.rs",
+      "path": "crates/subagents/tests/store_reload.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/subagents/tests/store_reload.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "subagent_basic_tests.rs",
+      "path": "crates/subagents/tests/subagent_basic_tests.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/subagents/tests/subagent_basic_tests.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "subagent_service_integration.rs",
+      "path": "crates/subagents/tests/subagent_service_integration.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/subagents/tests/subagent_service_integration.rs"
+      ]
+    },
+    {
+      "kind": "configuration",
+      "name": "Cargo.toml",
+      "path": "crates/sync/Cargo.toml",
+      "purpose": "Repository configuration",
+      "confidence": "medium",
+      "evidence": [
+        "crates/sync/Cargo.toml"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "agents.rs",
+      "path": "crates/sync/src/adapters/claude/agents.rs",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "crates/sync/src/adapters/claude/agents.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "commands.rs",
+      "path": "crates/sync/src/adapters/claude/commands.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/adapters/claude/commands.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "hooks.rs",
+      "path": "crates/sync/src/adapters/claude/hooks.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/adapters/claude/hooks.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "instructions.rs",
+      "path": "crates/sync/src/adapters/claude/instructions.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/adapters/claude/instructions.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "crates/sync/src/adapters/claude/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/adapters/claude/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "plugin_assets.rs",
+      "path": "crates/sync/src/adapters/claude/plugin_assets.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/adapters/claude/plugin_assets.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "settings.rs",
+      "path": "crates/sync/src/adapters/claude/settings.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/adapters/claude/settings.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "skills.rs",
+      "path": "crates/sync/src/adapters/claude/skills.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/adapters/claude/skills.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "codex.rs",
+      "path": "crates/sync/src/adapters/codex.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/adapters/codex.rs"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "agents.rs",
+      "path": "crates/sync/src/adapters/copilot/agents.rs",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "crates/sync/src/adapters/copilot/agents.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "commands.rs",
+      "path": "crates/sync/src/adapters/copilot/commands.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/adapters/copilot/commands.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mcp.rs",
+      "path": "crates/sync/src/adapters/copilot/mcp.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/adapters/copilot/mcp.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "crates/sync/src/adapters/copilot/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/adapters/copilot/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "paths.rs",
+      "path": "crates/sync/src/adapters/copilot/paths.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/adapters/copilot/paths.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "preferences.rs",
+      "path": "crates/sync/src/adapters/copilot/preferences.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/adapters/copilot/preferences.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "skills.rs",
+      "path": "crates/sync/src/adapters/copilot/skills.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/adapters/copilot/skills.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "tests.rs",
+      "path": "crates/sync/src/adapters/copilot/tests.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/adapters/copilot/tests.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "utils.rs",
+      "path": "crates/sync/src/adapters/copilot/utils.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/adapters/copilot/utils.rs"
+      ]
+    },
+    {
+      "kind": "agent",
+      "name": "agents.rs",
+      "path": "crates/sync/src/adapters/cursor/agents.rs",
+      "purpose": "Agent instructions or agent metadata",
+      "confidence": "medium",
+      "evidence": [
+        "crates/sync/src/adapters/cursor/agents.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "commands.rs",
+      "path": "crates/sync/src/adapters/cursor/commands.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/adapters/cursor/commands.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "hooks.rs",
+      "path": "crates/sync/src/adapters/cursor/hooks.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/adapters/cursor/hooks.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mcp.rs",
+      "path": "crates/sync/src/adapters/cursor/mcp.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/adapters/cursor/mcp.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "crates/sync/src/adapters/cursor/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/adapters/cursor/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "paths.rs",
+      "path": "crates/sync/src/adapters/cursor/paths.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/adapters/cursor/paths.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "rules.rs",
+      "path": "crates/sync/src/adapters/cursor/rules.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/adapters/cursor/rules.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "skills.rs",
+      "path": "crates/sync/src/adapters/cursor/skills.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/adapters/cursor/skills.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "tests.rs",
+      "path": "crates/sync/src/adapters/cursor/tests.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/adapters/cursor/tests.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "utils.rs",
+      "path": "crates/sync/src/adapters/cursor/utils.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/adapters/cursor/utils.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "external.rs",
+      "path": "crates/sync/src/adapters/external.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/adapters/external.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "crates/sync/src/adapters/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/adapters/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "tests_common.rs",
+      "path": "crates/sync/src/adapters/tests_common.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/adapters/tests_common.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "traits.rs",
+      "path": "crates/sync/src/adapters/traits.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/adapters/traits.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "utils.rs",
+      "path": "crates/sync/src/adapters/utils.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/adapters/utils.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "common.rs",
+      "path": "crates/sync/src/common.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/common.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "conflict.rs",
+      "path": "crates/sync/src/conflict.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/conflict.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "error.rs",
+      "path": "crates/sync/src/error.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/error.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "lib.rs",
+      "path": "crates/sync/src/lib.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/lib.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "models.rs",
+      "path": "crates/sync/src/models.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/models.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "orchestrator.rs",
+      "path": "crates/sync/src/orchestrator.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/orchestrator.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "platform_routing.rs",
+      "path": "crates/sync/src/platform_routing.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/platform_routing.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "preview.rs",
+      "path": "crates/sync/src/preview.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/preview.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "report.rs",
+      "path": "crates/sync/src/report.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/report.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "snapshot.rs",
+      "path": "crates/sync/src/snapshot.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/snapshot.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "validation.rs",
+      "path": "crates/sync/src/validation.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/src/validation.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "copilot_sync_integration.rs",
+      "path": "crates/sync/tests/copilot_sync_integration.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/tests/copilot_sync_integration.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "cursor_sync_integration.rs",
+      "path": "crates/sync/tests/cursor_sync_integration.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/tests/cursor_sync_integration.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "kill_switch_lock.rs",
+      "path": "crates/sync/tests/kill_switch_lock.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/tests/kill_switch_lock.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "skills_sync_comprehensive.rs",
+      "path": "crates/sync/tests/skills_sync_comprehensive.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/tests/skills_sync_comprehensive.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "sync_integration.rs",
+      "path": "crates/sync/tests/sync_integration.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/tests/sync_integration.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "sync_skip_existing_tests.rs",
+      "path": "crates/sync/tests/sync_skip_existing_tests.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/sync/tests/sync_skip_existing_tests.rs"
+      ]
+    },
+    {
+      "kind": "configuration",
+      "name": "Cargo.toml",
+      "path": "crates/test-utils/Cargo.toml",
+      "purpose": "Repository configuration",
+      "confidence": "medium",
+      "evidence": [
+        "crates/test-utils/Cargo.toml"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "cold_window_fixtures.rs",
+      "path": "crates/test-utils/src/cold_window_fixtures.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/test-utils/src/cold_window_fixtures.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "lib.rs",
+      "path": "crates/test-utils/src/lib.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/test-utils/src/lib.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "release_consistency.rs",
+      "path": "crates/test-utils/tests/release_consistency.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/test-utils/tests/release_consistency.rs"
+      ]
+    },
+    {
+      "kind": "configuration",
+      "name": "Cargo.toml",
+      "path": "crates/tome/Cargo.toml",
+      "purpose": "Repository configuration",
+      "confidence": "medium",
+      "evidence": [
+        "crates/tome/Cargo.toml"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "cache.rs",
+      "path": "crates/tome/src/cache.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/tome/src/cache.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "citations.rs",
+      "path": "crates/tome/src/citations.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/tome/src/citations.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "arxiv.rs",
+      "path": "crates/tome/src/clients/arxiv.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/tome/src/clients/arxiv.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "crossref.rs",
+      "path": "crates/tome/src/clients/crossref.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/tome/src/clients/crossref.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "hn_algolia.rs",
+      "path": "crates/tome/src/clients/hn_algolia.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/tome/src/clients/hn_algolia.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "mod.rs",
+      "path": "crates/tome/src/clients/mod.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/tome/src/clients/mod.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "openalex.rs",
+      "path": "crates/tome/src/clients/openalex.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/tome/src/clients/openalex.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "semantic_scholar.rs",
+      "path": "crates/tome/src/clients/semantic_scholar.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/tome/src/clients/semantic_scholar.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "unpaywall.rs",
+      "path": "crates/tome/src/clients/unpaywall.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/tome/src/clients/unpaywall.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "dispatcher.rs",
+      "path": "crates/tome/src/dispatcher.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/tome/src/dispatcher.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "error.rs",
+      "path": "crates/tome/src/error.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/tome/src/error.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "knowledge_graph.rs",
+      "path": "crates/tome/src/knowledge_graph.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/tome/src/knowledge_graph.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "lib.rs",
+      "path": "crates/tome/src/lib.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/tome/src/lib.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "models.rs",
+      "path": "crates/tome/src/models.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/tome/src/models.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "triz.rs",
+      "path": "crates/tome/src/triz.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/tome/src/triz.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "dispatcher_concurrency.rs",
+      "path": "crates/tome/tests/dispatcher_concurrency.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/tome/tests/dispatcher_concurrency.rs"
+      ]
+    },
+    {
+      "kind": "configuration",
+      "name": "Cargo.toml",
+      "path": "crates/validate/Cargo.toml",
+      "purpose": "Repository configuration",
+      "confidence": "medium",
+      "evidence": [
+        "crates/validate/Cargo.toml"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "autofix.rs",
+      "path": "crates/validate/src/autofix.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/validate/src/autofix.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "claude.rs",
+      "path": "crates/validate/src/claude.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/validate/src/claude.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "codex.rs",
+      "path": "crates/validate/src/codex.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/validate/src/codex.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "common.rs",
+      "path": "crates/validate/src/common.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/validate/src/common.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "copilot.rs",
+      "path": "crates/validate/src/copilot.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/validate/src/copilot.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "frontmatter.rs",
+      "path": "crates/validate/src/frontmatter.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/validate/src/frontmatter.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "lib.rs",
+      "path": "crates/validate/src/lib.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/validate/src/lib.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "watch.rs",
+      "path": "crates/validate/src/watch.rs",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "crates/validate/src/watch.rs"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "deny.toml",
+      "path": "deny.toml",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "deny.toml"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "0001-pivot-to-support-engine.md",
+      "path": "docs/adr/0001-pivot-to-support-engine.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/adr/0001-pivot-to-support-engine.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "0002-skill-dependency-resolution.md",
+      "path": "docs/adr/0002-skill-dependency-resolution.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/adr/0002-skill-dependency-resolution.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "0003-cli-parity-intelligence-tools.md",
+      "path": "docs/adr/0003-cli-parity-intelligence-tools.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/adr/0003-cli-parity-intelligence-tools.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "0004-intelligence-crate-versioning.md",
+      "path": "docs/adr/0004-intelligence-crate-versioning.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/adr/0004-intelligence-crate-versioning.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "0005-trigram-fuzzy-matching.md",
+      "path": "docs/adr/0005-trigram-fuzzy-matching.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/adr/0005-trigram-fuzzy-matching.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "0006-cursor-rules-mapping.md",
+      "path": "docs/adr/0006-cursor-rules-mapping.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/adr/0006-cursor-rules-mapping.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "0007-cold-window-architecture.md",
+      "path": "docs/adr/0007-cold-window-architecture.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/adr/0007-cold-window-architecture.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "architecture.md",
+      "path": "docs/architecture.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/architecture.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "audit-logging.md",
+      "path": "docs/audit-logging.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/audit-logging.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "CHANGELOG.md",
+      "path": "docs/CHANGELOG.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/CHANGELOG.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "codex-agents-template.md",
+      "path": "docs/codex-agents-template.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/codex-agents-template.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "subagents.example.toml",
+      "path": "docs/config/subagents.example.toml",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/config/subagents.example.toml"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "demo-claude-hooks.md",
+      "path": "docs/demo-claude-hooks.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/demo-claude-hooks.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "dependencies.md",
+      "path": "docs/dependencies.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/dependencies.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "dependency-resolution.md",
+      "path": "docs/dependency-resolution.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/dependency-resolution.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "FAQ.md",
+      "path": "docs/FAQ.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/FAQ.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "lessons-learned.md",
+      "path": "docs/lessons-learned.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/lessons-learned.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "mcp-token-optimization.md",
+      "path": "docs/mcp-token-optimization.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/mcp-token-optimization.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "persistence.md",
+      "path": "docs/persistence.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/persistence.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "process-guidelines.md",
+      "path": "docs/process-guidelines.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/process-guidelines.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "release-artifacts.md",
+      "path": "docs/release-artifacts.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/release-artifacts.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "security.md",
+      "path": "docs/security.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/security.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "semver-policy.md",
+      "path": "docs/semver-policy.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/semver-policy.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "threat-model.md",
+      "path": "docs/threat-model.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/threat-model.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "tradeoffs.md",
+      "path": "docs/tradeoffs.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/tradeoffs.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "mcp.md",
+      "path": "docs/tutorials/mcp.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/tutorials/mcp.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "quickstart.md",
+      "path": "docs/tutorials/quickstart.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/tutorials/quickstart.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "README.md",
+      "path": "docs/tutorials/README.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "docs/tutorials/README.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "pre-commit",
+      "path": "githooks/pre-commit",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "githooks/pre-commit"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "LICENSE",
+      "path": "LICENSE",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "LICENSE"
+      ]
+    },
+    {
+      "kind": "configuration",
+      "name": "Makefile",
+      "path": "Makefile",
+      "purpose": "Repository configuration",
+      "confidence": "medium",
+      "evidence": [
+        "Makefile"
+      ]
+    },
+    {
+      "kind": "plugin",
+      "name": "plugin.json",
+      "path": "plugins/skrills/.claude-plugin/plugin.json",
+      "purpose": "Plugin entry or plugin configuration",
+      "confidence": "medium",
+      "evidence": [
+        "plugins/skrills/.claude-plugin/plugin.json"
+      ]
+    },
+    {
+      "kind": "plugin",
+      "name": "analyze-skills.md",
+      "path": "plugins/skrills/commands/analyze-skills.md",
+      "purpose": "Plugin entry or plugin configuration",
+      "confidence": "medium",
+      "evidence": [
+        "plugins/skrills/commands/analyze-skills.md"
+      ]
+    },
+    {
+      "kind": "plugin",
+      "name": "create-skill.md",
+      "path": "plugins/skrills/commands/create-skill.md",
+      "purpose": "Plugin entry or plugin configuration",
+      "confidence": "medium",
+      "evidence": [
+        "plugins/skrills/commands/create-skill.md"
+      ]
+    },
+    {
+      "kind": "plugin",
+      "name": "search-skills.md",
+      "path": "plugins/skrills/commands/search-skills.md",
+      "purpose": "Plugin entry or plugin configuration",
+      "confidence": "medium",
+      "evidence": [
+        "plugins/skrills/commands/search-skills.md"
+      ]
+    },
+    {
+      "kind": "plugin",
+      "name": "skill-diff.md",
+      "path": "plugins/skrills/commands/skill-diff.md",
+      "purpose": "Plugin entry or plugin configuration",
+      "confidence": "medium",
+      "evidence": [
+        "plugins/skrills/commands/skill-diff.md"
+      ]
+    },
+    {
+      "kind": "plugin",
+      "name": "skill-metrics.md",
+      "path": "plugins/skrills/commands/skill-metrics.md",
+      "purpose": "Plugin entry or plugin configuration",
+      "confidence": "medium",
+      "evidence": [
+        "plugins/skrills/commands/skill-metrics.md"
+      ]
+    },
+    {
+      "kind": "plugin",
+      "name": "skill-trace-disable.md",
+      "path": "plugins/skrills/commands/skill-trace-disable.md",
+      "purpose": "Plugin entry or plugin configuration",
+      "confidence": "medium",
+      "evidence": [
+        "plugins/skrills/commands/skill-trace-disable.md"
+      ]
+    },
+    {
+      "kind": "plugin",
+      "name": "skill-trace-enable.md",
+      "path": "plugins/skrills/commands/skill-trace-enable.md",
+      "purpose": "Plugin entry or plugin configuration",
+      "confidence": "medium",
+      "evidence": [
+        "plugins/skrills/commands/skill-trace-enable.md"
+      ]
+    },
+    {
+      "kind": "plugin",
+      "name": "skill-trace-status.md",
+      "path": "plugins/skrills/commands/skill-trace-status.md",
+      "purpose": "Plugin entry or plugin configuration",
+      "confidence": "medium",
+      "evidence": [
+        "plugins/skrills/commands/skill-trace-status.md"
+      ]
+    },
+    {
+      "kind": "plugin",
+      "name": "suggest-skills.md",
+      "path": "plugins/skrills/commands/suggest-skills.md",
+      "purpose": "Plugin entry or plugin configuration",
+      "confidence": "medium",
+      "evidence": [
+        "plugins/skrills/commands/suggest-skills.md"
+      ]
+    },
+    {
+      "kind": "plugin",
+      "name": "sync-all.md",
+      "path": "plugins/skrills/commands/sync-all.md",
+      "purpose": "Plugin entry or plugin configuration",
+      "confidence": "medium",
+      "evidence": [
+        "plugins/skrills/commands/sync-all.md"
+      ]
+    },
+    {
+      "kind": "plugin",
+      "name": "sync-from-claude.md",
+      "path": "plugins/skrills/commands/sync-from-claude.md",
+      "purpose": "Plugin entry or plugin configuration",
+      "confidence": "medium",
+      "evidence": [
+        "plugins/skrills/commands/sync-from-claude.md"
+      ]
+    },
+    {
+      "kind": "plugin",
+      "name": "sync-from-copilot.md",
+      "path": "plugins/skrills/commands/sync-from-copilot.md",
+      "purpose": "Plugin entry or plugin configuration",
+      "confidence": "medium",
+      "evidence": [
+        "plugins/skrills/commands/sync-from-copilot.md"
+      ]
+    },
+    {
+      "kind": "plugin",
+      "name": "sync-from-cursor.md",
+      "path": "plugins/skrills/commands/sync-from-cursor.md",
+      "purpose": "Plugin entry or plugin configuration",
+      "confidence": "medium",
+      "evidence": [
+        "plugins/skrills/commands/sync-from-cursor.md"
+      ]
+    },
+    {
+      "kind": "plugin",
+      "name": "sync-status.md",
+      "path": "plugins/skrills/commands/sync-status.md",
+      "purpose": "Plugin entry or plugin configuration",
+      "confidence": "medium",
+      "evidence": [
+        "plugins/skrills/commands/sync-status.md"
+      ]
+    },
+    {
+      "kind": "plugin",
+      "name": "sync-to-copilot.md",
+      "path": "plugins/skrills/commands/sync-to-copilot.md",
+      "purpose": "Plugin entry or plugin configuration",
+      "confidence": "medium",
+      "evidence": [
+        "plugins/skrills/commands/sync-to-copilot.md"
+      ]
+    },
+    {
+      "kind": "plugin",
+      "name": "sync-to-cursor.md",
+      "path": "plugins/skrills/commands/sync-to-cursor.md",
+      "purpose": "Plugin entry or plugin configuration",
+      "confidence": "medium",
+      "evidence": [
+        "plugins/skrills/commands/sync-to-cursor.md"
+      ]
+    },
+    {
+      "kind": "plugin",
+      "name": "validate-skills.md",
+      "path": "plugins/skrills/commands/validate-skills.md",
+      "purpose": "Plugin entry or plugin configuration",
+      "confidence": "medium",
+      "evidence": [
+        "plugins/skrills/commands/validate-skills.md"
+      ]
+    },
+    {
+      "kind": "documentation",
+      "name": "README.md",
+      "path": "README.md",
+      "purpose": "Repository documentation",
+      "confidence": "medium",
+      "evidence": [
+        "README.md"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "audit-plugins.sh",
+      "path": "scripts/audit-plugins.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "scripts/audit-plugins.sh"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "check_hook_modernization.py",
+      "path": "scripts/check_hook_modernization.py",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "scripts/check_hook_modernization.py"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "dogfood-contracts.sh",
+      "path": "scripts/dogfood-contracts.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "scripts/dogfood-contracts.sh"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "dogfood-tui.sh",
+      "path": "scripts/dogfood-tui.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "scripts/dogfood-tui.sh"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "install-git-hooks.sh",
+      "path": "scripts/install-git-hooks.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "scripts/install-git-hooks.sh"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "install.ps1",
+      "path": "scripts/install.ps1",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "scripts/install.ps1"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "install.sh",
+      "path": "scripts/install.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "scripts/install.sh"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "lint-markdown.sh",
+      "path": "scripts/lint-markdown.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "scripts/lint-markdown.sh"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "lint-prose-slop.sh",
+      "path": "scripts/lint-prose-slop.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "scripts/lint-prose-slop.sh"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "lint-rust-decoration.sh",
+      "path": "scripts/lint-rust-decoration.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "scripts/lint-rust-decoration.sh"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "publish_crates.sh",
+      "path": "scripts/publish_crates.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "scripts/publish_crates.sh"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "test-install.sh",
+      "path": "scripts/test-install.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "scripts/test-install.sh"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "update_plugin_registrations.py",
+      "path": "scripts/update_plugin_registrations.py",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "scripts/update_plugin_registrations.py"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "validate_plugin.py",
+      "path": "scripts/validate_plugin.py",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "scripts/validate_plugin.py"
+      ]
+    },
+    {
+      "kind": "script",
+      "name": "verify_publish_order.sh",
+      "path": "scripts/verify_publish_order.sh",
+      "purpose": "Supporting executable or automation script",
+      "confidence": "medium",
+      "evidence": [
+        "scripts/verify_publish_order.sh"
+      ]
+    },
+    {
+      "kind": "skill",
+      "name": "html-portal-generator",
+      "path": "skills/html-portal-generator/SKILL.md",
+      "purpose": "Convert a codebase into a self-contained HTML portal app for ingestion into AI application systems. Produces a single deployable HTML file with embedded CSS, JS, and data.",
+      "invocationMode": "unknown",
+      "confidence": "high",
+      "evidence": [
+        "skills/html-portal-generator/SKILL.md"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "conftest.py",
+      "path": "tests/unit/conftest.py",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "tests/unit/conftest.py"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "test_audit_plugins.py",
+      "path": "tests/unit/test_audit_plugins.py",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "tests/unit/test_audit_plugins.py"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "test_check_hook_modernization.py",
+      "path": "tests/unit/test_check_hook_modernization.py",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "tests/unit/test_check_hook_modernization.py"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "test_lint_prose_slop.py",
+      "path": "tests/unit/test_lint_prose_slop.py",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "tests/unit/test_lint_prose_slop.py"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "test_lint_rust_decoration.py",
+      "path": "tests/unit/test_lint_rust_decoration.py",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "tests/unit/test_lint_rust_decoration.py"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "test_update_plugin_registrations.py",
+      "path": "tests/unit/test_update_plugin_registrations.py",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "tests/unit/test_update_plugin_registrations.py"
+      ]
+    },
+    {
+      "kind": "other",
+      "name": "test_validate_plugin.py",
+      "path": "tests/unit/test_validate_plugin.py",
+      "purpose": "Observed repository asset",
+      "confidence": "low",
+      "evidence": [
+        "tests/unit/test_validate_plugin.py"
+      ]
+    }
+  ],
+  "coordinator": {
+    "paths": [
+      "AGENTS.md",
+      "skills/production-orchestrator/SKILL.md"
+    ],
+    "files": [
+      "AGENTS.md",
+      "skills/production-orchestrator/SKILL.md"
+    ]
+  },
+  "indexes": [
+    "INDEX.md",
+    "skills/INDEX.md",
+    "skills/distribution-manifest.json",
+    "skills/html-portal-generator/INDEX.md"
+  ],
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "kind": "coordinator",
+      "content": "# Proposed repository coordinator\n\nThis coordinator was generated from the files currently present in the repository. It is a reviewable proposal and has not been installed.\n\n## How to use it\n\n1. Read `INDEX.md` and `skills/INDEX.md` before selecting a component.\n2. Choose the smallest skill whose observed description matches the user's request.\n3. Follow that skill's own instructions and use the observed scripts and workflows only when they are relevant.\n4. Pass the skill's output to the next step only when the output is present and validated.\n5. Stop and ask for review when a needed file, dependency, permission, or expected output is missing.\n\n## Observed skills\n\n- /api-designer — Design RESTful APIs with best practices for consistency and usability (unknown-invoked)\n- /coding-assistant — Provides coding assistance with best practices and code review (unknown-invoked)\n- /debug-helper — Systematic debugging approach for identifying and fixing issues (unknown-invoked)\n- /git-workflow — Git best practices for version control and collaboration (unknown-invoked)\n- /test-writer — Write thorough tests following TDD and BDD principles (unknown-invoked)\n- /html-portal-generator — Convert a codebase into a self-contained HTML portal app for ingestion into AI application systems. Produces a single deployable HTML file with embedded CSS, JS, and data. (unknown-invoked)\n\n## Observed plugins\n\n- .claude-plugin/marketplace.json\n- plugins/skrills/.claude-plugin/plugin.json\n- plugins/skrills/commands/analyze-skills.md\n- plugins/skrills/commands/create-skill.md\n- plugins/skrills/commands/search-skills.md\n- plugins/skrills/commands/skill-diff.md\n- plugins/skrills/commands/skill-metrics.md\n- plugins/skrills/commands/skill-trace-disable.md\n- plugins/skrills/commands/skill-trace-enable.md\n- plugins/skrills/commands/skill-trace-status.md\n- plugins/skrills/commands/suggest-skills.md\n- plugins/skrills/commands/sync-all.md\n- plugins/skrills/commands/sync-from-claude.md\n- plugins/skrills/commands/sync-from-copilot.md\n- plugins/skrills/commands/sync-from-cursor.md\n- plugins/skrills/commands/sync-status.md\n- plugins/skrills/commands/sync-to-copilot.md\n- plugins/skrills/commands/sync-to-cursor.md\n- plugins/skrills/commands/validate-skills.md\n\n## Observed workflows\n\n- .github/actions/validate-skills/action.yml\n- .github/actions/validate-skills/entrypoint.sh\n- .github/workflows/audit.yml\n- .github/workflows/book-pages.yml\n- .github/workflows/ci.yml\n- .github/workflows/coverage.yml\n- .github/workflows/dependency-monitor.yml\n- .github/workflows/integration-tests.yml\n- .github/workflows/publish-dry-run.yml\n- .github/workflows/release.yml\n- .github/workflows/validate-skills-example.yml\n\n## Safety and limits\n\n- Do not claim an inferred purpose is confirmed behavior.\n- Do not run an observed script merely because it exists; confirm that it is needed and safe first.\n- Do not install plugins, change global settings, or modify source files without explicit approval.\n- Record missing metadata and unresolved connections as review items.\n\nEvidence digest: `efbf480a59b84d62b2a424b18f5c5486ed410a7afbed3d7cbba7cd2309c012a7`\n",
+      "evidence": [
+        ".claude-plugin/marketplace.json",
+        ".githooks/pre-commit",
+        ".github/actions/validate-skills/action.yml",
+        ".github/actions/validate-skills/entrypoint.sh",
+        ".github/FUNDING.yml",
+        ".github/workflows/audit.yml",
+        ".github/workflows/book-pages.yml",
+        ".github/workflows/ci.yml",
+        ".github/workflows/coverage.yml",
+        ".github/workflows/dependency-monitor.yml",
+        ".github/workflows/integration-tests.yml",
+        ".github/workflows/publish-dry-run.yml",
+        ".github/workflows/release.yml",
+        ".github/workflows/validate-skills-example.yml",
+        ".gitignore",
+        ".markdownlint.yaml",
+        "AGENTS.md",
+        "assets/demo-skills/api-designer/SKILL.md",
+        "assets/demo-skills/coding-assistant/SKILL.md",
+        "assets/demo-skills/debug-helper/SKILL.md"
+      ]
+    },
+    {
+      "path": "INDEX.md",
+      "kind": "index",
+      "content": "# Proposed file index\n\nThis index was generated from observed repository contents. It is a proposal, not an applied change.\n\nSource digest: `efbf480a59b84d62b2a424b18f5c5486ed410a7afbed3d7cbba7cd2309c012a7`\n\n## Skills\n\n- `assets/demo-skills/api-designer/SKILL.md` — Design RESTful APIs with best practices for consistency and usability [high confidence]\n- `assets/demo-skills/coding-assistant/SKILL.md` — Provides coding assistance with best practices and code review [high confidence]\n- `assets/demo-skills/debug-helper/SKILL.md` — Systematic debugging approach for identifying and fixing issues [high confidence]\n- `assets/demo-skills/git-workflow/SKILL.md` — Git best practices for version control and collaboration [high confidence]\n- `assets/demo-skills/test-writer/SKILL.md` — Write thorough tests following TDD and BDD principles [high confidence]\n- `skills/html-portal-generator/SKILL.md` — Convert a codebase into a self-contained HTML portal app for ingestion into AI application systems. Produces a single deployable HTML file with embedded CSS, JS, and data. [high confidence]\n\n## Plugins\n\n- `.claude-plugin/marketplace.json` — Plugin entry or plugin configuration [medium confidence]\n- `plugins/skrills/.claude-plugin/plugin.json` — Plugin entry or plugin configuration [medium confidence]\n- `plugins/skrills/commands/analyze-skills.md` — Plugin entry or plugin configuration [medium confidence]\n- `plugins/skrills/commands/create-skill.md` — Plugin entry or plugin configuration [medium confidence]\n- `plugins/skrills/commands/search-skills.md` — Plugin entry or plugin configuration [medium confidence]\n- `plugins/skrills/commands/skill-diff.md` — Plugin entry or plugin configuration [medium confidence]\n- `plugins/skrills/commands/skill-metrics.md` — Plugin entry or plugin configuration [medium confidence]\n- `plugins/skrills/commands/skill-trace-disable.md` — Plugin entry or plugin configuration [medium confidence]\n- `plugins/skrills/commands/skill-trace-enable.md` — Plugin entry or plugin configuration [medium confidence]\n- `plugins/skrills/commands/skill-trace-status.md` — Plugin entry or plugin configuration [medium confidence]\n- `plugins/skrills/commands/suggest-skills.md` — Plugin entry or plugin configuration [medium confidence]\n- `plugins/skrills/commands/sync-all.md` — Plugin entry or plugin configuration [medium confidence]\n- `plugins/skrills/commands/sync-from-claude.md` — Plugin entry or plugin configuration [medium confidence]\n- `plugins/skrills/commands/sync-from-copilot.md` — Plugin entry or plugin configuration [medium confidence]\n- `plugins/skrills/commands/sync-from-cursor.md` — Plugin entry or plugin configuration [medium confidence]\n- `plugins/skrills/commands/sync-status.md` — Plugin entry or plugin configuration [medium confidence]\n- `plugins/skrills/commands/sync-to-copilot.md` — Plugin entry or plugin configuration [medium confidence]\n- `plugins/skrills/commands/sync-to-cursor.md` — Plugin entry or plugin configuration [medium confidence]\n- `plugins/skrills/commands/validate-skills.md` — Plugin entry or plugin configuration [medium confidence]\n\n## Workflows\n\n- `.github/actions/validate-skills/action.yml` — Automated workflow or repository action [medium confidence]\n- `.github/actions/validate-skills/entrypoint.sh` — Automated workflow or repository action [medium confidence]\n- `.github/workflows/audit.yml` — Automated workflow or repository action [medium confidence]\n- `.github/workflows/book-pages.yml` — Automated workflow or repository action [medium confidence]\n- `.github/workflows/ci.yml` — Automated workflow or repository action [medium confidence]\n- `.github/workflows/coverage.yml` — Automated workflow or repository action [medium confidence]\n- `.github/workflows/dependency-monitor.yml` — Automated workflow or repository action [medium confidence]\n- `.github/workflows/integration-tests.yml` — Automated workflow or repository action [medium confidence]\n- `.github/workflows/publish-dry-run.yml` — Automated workflow or repository action [medium confidence]\n- `.github/workflows/release.yml` — Automated workflow or repository action [medium confidence]\n- `.github/workflows/validate-skills-example.yml` — Automated workflow or repository action [medium confidence]\n\n## Agents\n\n- `AGENTS.md` — Agent instructions or agent metadata [medium confidence]\n- `crates/server/AGENTS.md` — Agent instructions or agent metadata [medium confidence]\n- `crates/server/src/commands/agent.rs` — Agent instructions or agent metadata [medium confidence]\n- `crates/sync/src/adapters/claude/agents.rs` — Agent instructions or agent metadata [medium confidence]\n- `crates/sync/src/adapters/copilot/agents.rs` — Agent instructions or agent metadata [medium confidence]\n- `crates/sync/src/adapters/cursor/agents.rs` — Agent instructions or agent metadata [medium confidence]\n\n## Scripts\n\n- `assets/tapes/cold-window-overlay.sh` — Supporting executable or automation script [medium confidence]\n- `scripts/audit-plugins.sh` — Supporting executable or automation script [medium confidence]\n- `scripts/check_hook_modernization.py` — Supporting executable or automation script [medium confidence]\n- `scripts/dogfood-contracts.sh` — Supporting executable or automation script [medium confidence]\n- `scripts/dogfood-tui.sh` — Supporting executable or automation script [medium confidence]\n- `scripts/install-git-hooks.sh` — Supporting executable or automation script [medium confidence]\n- `scripts/install.ps1` — Supporting executable or automation script [medium confidence]\n- `scripts/install.sh` — Supporting executable or automation script [medium confidence]\n- `scripts/lint-markdown.sh` — Supporting executable or automation script [medium confidence]\n- `scripts/lint-prose-slop.sh` — Supporting executable or automation script [medium confidence]\n- `scripts/lint-rust-decoration.sh` — Supporting executable or automation script [medium confidence]\n- `scripts/publish_crates.sh` — Supporting executable or automation script [medium confidence]\n- `scripts/test-install.sh` — Supporting executable or automation script [medium confidence]\n- `scripts/update_plugin_registrations.py` — Supporting executable or automation script [medium confidence]\n- `scripts/validate_plugin.py` — Supporting executable or automation script [medium confidence]\n- `scripts/verify_publish_order.sh` — Supporting executable or automation script [medium confidence]\n\n## Documentations\n\n- `book/src/analysis.md` — Repository documentation [medium confidence]\n- `book/src/changelog.md` — Repository documentation [medium confidence]\n- `book/src/cli.md` — Repository documentation [medium confidence]\n- `book/src/cold-window.md` — Repository documentation [medium confidence]\n- `book/src/comparison.md` — Repository documentation [medium confidence]\n- `book/src/development.md` — Repository documentation [medium confidence]\n- `book/src/faq.md` — Repository documentation [medium confidence]\n- `book/src/installation.md` — Repository documentation [medium confidence]\n- `book/src/mcp-token-optimization.md` — Repository documentation [medium confidence]\n- `book/src/observability.md` — Repository documentation [medium confidence]\n- `book/src/overview.md` — Repository documentation [medium confidence]\n- `book/src/performance.md` — Repository documentation [medium confidence]\n- `book/src/persistence.md` — Repository documentation [medium confidence]\n- `book/src/playbooks.md` — Repository documentation [medium confidence]\n- `book/src/process.md` — Repository documentation [medium confidence]\n- `book/src/release.md` — Repository documentation [medium confidence]\n- `book/src/runtime-tuning.md` — Repository documentation [medium confidence]\n- `book/src/security.md` — Repository documentation [medium confidence]\n- `book/src/semver.md` — Repository documentation [medium confidence]\n- `book/src/SUMMARY.md` — Repository documentation [medium confidence]\n- `book/src/sync-guide.md` — Repository documentation [medium confidence]\n- `book/src/testing.md` — Repository documentation [medium confidence]\n- `book/src/validation.md` — Repository documentation [medium confidence]\n- `CONTRIBUTING.md` — Repository documentation [medium confidence]\n- `crates/cli/README.md` — Repository documentation [medium confidence]\n- `crates/dashboard/README.md` — Repository documentation [medium confidence]\n- `crates/discovery/README.md` — Repository documentation [medium confidence]\n- `crates/intelligence/README.md` — Repository documentation [medium confidence]\n- `crates/intelligence/src/templates/code-review.md` — Repository documentation [medium confidence]\n- `crates/intelligence/src/templates/debugging.md` — Repository documentation [medium confidence]\n- `crates/intelligence/src/templates/documentation.md` — Repository documentation [medium confidence]\n- `crates/intelligence/src/templates/refactoring.md` — Repository documentation [medium confidence]\n- `crates/intelligence/src/templates/testing.md` — Repository documentation [medium confidence]\n- `crates/metrics/README.md` — Repository documentation [medium confidence]\n- `crates/server/README.md` — Repository documentation [medium confidence]\n- `crates/state/README.md` — Repository documentation [medium confidence]\n- `crates/subagents/README.md` — Repository documentation [medium confidence]\n- `docs/adr/0001-pivot-to-support-engine.md` — Repository documentation [medium confidence]\n- `docs/adr/0002-skill-dependency-resolution.md` — Repository documentation [medium confidence]\n- `docs/adr/0003-cli-parity-intelligence-tools.md` — Repository documentation [medium confidence]\n- `docs/adr/0004-intelligence-crate-versioning.md` — Repository documentation [medium confidence]\n- `docs/adr/0005-trigram-fuzzy-matching.md` — Repository documentation [medium confidence]\n- `docs/adr/0006-cursor-rules-mapping.md` — Repository documentation [medium confidence]\n- `docs/adr/0007-cold-window-architecture.md` — Repository documentation [medium confidence]\n- `docs/architecture.md` — Repository documentation [medium confidence]\n- `docs/audit-logging.md` — Repository documentation [medium confidence]\n- `docs/CHANGELOG.md` — Repository documentation [medium confidence]\n- `docs/codex-agents-template.md` — Repository documentation [medium confidence]\n- `docs/config/subagents.example.toml` — Repository documentation [medium confidence]\n- `docs/demo-claude-hooks.md` — Repository documentation [medium confidence]\n- `docs/dependencies.md` — Repository documentation [medium confidence]\n- `docs/dependency-resolution.md` — Repository documentation [medium confidence]\n- `docs/FAQ.md` — Repository documentation [medium confidence]\n- `docs/lessons-learned.md` — Repository documentation [medium confidence]\n- `docs/mcp-token-optimization.md` — Repository documentation [medium confidence]\n- `docs/persistence.md` — Repository documentation [medium confidence]\n- `docs/process-guidelines.md` — Repository documentation [medium confidence]\n- `docs/release-artifacts.md` — Repository documentation [medium confidence]\n- `docs/security.md` — Repository documentation [medium confidence]\n- `docs/semver-policy.md` — Repository documentation [medium confidence]\n- `docs/threat-model.md` — Repository documentation [medium confidence]\n- `docs/tradeoffs.md` — Repository documentation [medium confidence]\n- `docs/tutorials/mcp.md` — Repository documentation [medium confidence]\n- `docs/tutorials/quickstart.md` — Repository documentation [medium confidence]\n- `docs/tutorials/README.md` — Repository documentation [medium confidence]\n- `README.md` — Repository documentation [medium confidence]\n\n## Configurations\n\n- `Cargo.toml` — Repository configuration [medium confidence]\n- `crates/analyze/Cargo.toml` — Repository configuration [medium confidence]\n- `crates/cli/Cargo.toml` — Repository configuration [medium confidence]\n- `crates/dashboard/Cargo.toml` — Repository configuration [medium confidence]\n- `crates/discovery/Cargo.toml` — Repository configuration [medium confidence]\n- `crates/intelligence/Cargo.toml` — Repository configuration [medium confidence]\n- `crates/metrics/Cargo.toml` — Repository configuration [medium confidence]\n- `crates/server/Cargo.toml` — Repository configuration [medium confidence]\n- `crates/snapshot/Cargo.toml` — Repository configuration [medium confidence]\n- `crates/state/Cargo.toml` — Repository configuration [medium confidence]\n- `crates/subagents/Cargo.toml` — Repository configuration [medium confidence]\n- `crates/sync/Cargo.toml` — Repository configuration [medium confidence]\n- `crates/test-utils/Cargo.toml` — Repository configuration [medium confidence]\n- `crates/tome/Cargo.toml` — Repository configuration [medium confidence]\n- `crates/validate/Cargo.toml` — Repository configuration [medium confidence]\n- `Makefile` — Repository configuration [medium confidence]\n\n## Others\n\n- `.githooks/pre-commit` — Observed repository asset [low confidence]\n- `.github/FUNDING.yml` — Observed repository asset [low confidence]\n- `.gitignore` — Observed repository asset [low confidence]\n- `.markdownlint.yaml` — Observed repository asset [low confidence]\n- `assets/gifs/cold-window.gif` — Observed repository asset [low confidence]\n- `assets/gifs/dashboard.gif` — Observed repository asset [low confidence]\n- `assets/gifs/mcp.gif` — Observed repository asset [low confidence]\n- `assets/gifs/quickstart.gif` — Observed repository asset [low confidence]\n- `assets/icon.png` — Observed repository asset [low confidence]\n- `assets/tapes/cold-window.tape` — Observed repository asset [low confidence]\n- `assets/tapes/mcp.tape` — Observed repository asset [low confidence]\n- `assets/tapes/portal-demo.mjs` — Observed repository asset [low confidence]\n- `assets/tapes/quickstart.tape` — Observed repository asset [low confidence]\n- `assets/tapes/tui.tape` — Observed repository asset [low confidence]\n- `audit.toml` — Observed repository asset [low confidence]\n- `book/book.toml` — Observed repository asset [low confidence]\n- `Cargo.lock` — Observed repository asset [low confidence]\n- `crates/analyze/benches/tick_budget.rs` — Observed repository asset [low confidence]\n- `crates/analyze/src/cold_window/alert.rs` — Observed repository asset [low confidence]\n- `crates/analyze/src/cold_window/cadence.rs` — Observed repository asset [low confidence]\n- `crates/analyze/src/cold_window/diff.rs` — Observed repository asset [low confidence]\n- `crates/analyze/src/cold_window/engine.rs` — Observed repository asset [low confidence]\n- `crates/analyze/src/cold_window/mod.rs` — Observed repository asset [low confidence]\n- `crates/analyze/src/cold_window/plugin_health.rs` — Observed repository asset [low confidence]\n- `crates/analyze/src/cold_window/skill_collector.rs` — Observed repository asset [low confidence]\n- `crates/analyze/src/cold_window/traits.rs` — Observed repository asset [low confidence]\n- `crates/analyze/src/deps.rs` — Observed repository asset [low confidence]\n- `crates/analyze/src/graph.rs` — Observed repository asset [low confidence]\n- `crates/analyze/src/lib.rs` — Observed repository asset [low confidence]\n- `crates/analyze/src/optimize.rs` — Observed repository asset [low confidence]\n- `crates/analyze/src/resolve/graph.rs` — Observed repository asset [low confidence]\n- `crates/analyze/src/resolve/mod.rs` — Observed repository asset [low confidence]\n- `crates/analyze/src/resolve/resolver.rs` — Observed repository asset [low confidence]\n- `crates/analyze/src/resolve/types.rs` — Observed repository asset [low confidence]\n- `crates/analyze/src/tokens.rs` — Observed repository asset [low confidence]\n- `crates/analyze/tests/cadence.rs` — Observed repository asset [low confidence]\n- `crates/analyze/tests/chaos.rs` — Observed repository asset [low confidence]\n- `crates/analyze/tests/tick_budget_floor.rs` — Observed repository asset [low confidence]\n- `crates/analyze/tests/token_attribution.rs` — Observed repository asset [low confidence]\n- `crates/cli/src/main.rs` — Observed repository asset [low confidence]\n- `crates/cli/tests/cli_dispatch_smoke.rs` — Observed repository asset [low confidence]\n- `crates/cli/tests/sync_all.rs` — Observed repository asset [low confidence]\n- `crates/dashboard/src/app.rs` — Observed repository asset [low confidence]\n- `crates/dashboard/src/cold_window/alert_pane.rs` — Observed repository asset [low confidence]\n- `crates/dashboard/src/cold_window/focus.rs` — Observed repository asset [low confidence]\n- `crates/dashboard/src/cold_window/hint_pane.rs` — Observed repository asset [low confidence]\n- `crates/dashboard/src/cold_window/keymap.rs` — Observed repository asset [low confidence]\n- `crates/dashboard/src/cold_window/mod.rs` — Observed repository asset [low confidence]\n- `crates/dashboard/src/cold_window/overlay.rs` — Observed repository asset [low confidence]\n- `crates/dashboard/src/cold_window/research_pane.rs` — Observed repository asset [low confidence]\n- `crates/dashboard/src/cold_window/state.rs` — Observed repository asset [low confidence]\n- `crates/dashboard/src/cold_window/status_bar.rs` — Observed repository asset [low confidence]\n- `crates/dashboard/src/cold_window/tui/input.rs` — Observed repository asset [low confidence]\n- `crates/dashboard/src/cold_window/tui/layout.rs` — Observed repository asset [low confidence]\n- `crates/dashboard/src/cold_window/tui/mod.rs` — Observed repository asset [low confidence]\n- `crates/dashboard/src/cold_window/tui/render.rs` — Observed repository asset [low confidence]\n- `crates/dashboard/src/cold_window/tui/runner.rs` — Observed repository asset [low confidence]\n- `crates/dashboard/src/cold_window/tui/tests.rs` — Observed repository asset [low confidence]\n- `crates/dashboard/src/events.rs` — Observed repository asset [low confidence]\n- `crates/dashboard/src/lib.rs` — Observed repository asset [low confidence]\n- `crates/dashboard/src/ui.rs` — Observed repository asset [low confidence]\n- `crates/dashboard/tests/ui_rendering.rs` — Observed repository asset [low confidence]\n- `crates/discovery/src/error.rs` — Observed repository asset [low confidence]\n- `crates/discovery/src/lib.rs` — Observed repository asset [low confidence]\n- `crates/discovery/src/scanner.rs` — Observed repository asset [low confidence]\n- `crates/discovery/src/types.rs` — Observed repository asset [low confidence]\n- `crates/discovery/tests/discover_smoke.rs` — Observed repository asset [low confidence]\n- `crates/intelligence/src/cold_window_hints.rs` — Observed repository asset [low confidence]\n- `crates/intelligence/src/context/dependencies.rs` — Observed repository asset [low confidence]\n- `crates/intelligence/src/context/detector.rs` — Observed repository asset [low confidence]\n- `crates/intelligence/src/context/git_context.rs` — Observed repository asset [low confidence]\n- `crates/intelligence/src/context/mod.rs` — Observed repository asset [low confidence]\n- `crates/intelligence/src/create/cli_detector.rs` — Observed repository asset [low confidence]\n- `crates/intelligence/src/create/empirical.rs` — Observed repository asset [low confidence]\n- `crates/intelligence/src/create/github_search.rs` — Observed repository asset [low confidence]\n- `crates/intelligence/src/create/llm_generator.rs` — Observed repository asset [low confidence]\n- `crates/intelligence/src/create/mod.rs` — Observed repository asset [low confidence]\n- `crates/intelligence/src/error.rs` — Observed repository asset [low confidence]\n- `crates/intelligence/src/lib.rs` — Observed repository asset [low confidence]\n- `crates/intelligence/src/recommend/comparative.rs` — Observed repository asset [low confidence]\n- `crates/intelligence/src/recommend/explainer.rs` — Observed repository asset [low confidence]\n- `crates/intelligence/src/recommend/mod.rs` — Observed repository asset [low confidence]\n- `crates/intelligence/src/recommend/scorer.rs` — Observed repository asset [low confidence]\n- `crates/intelligence/src/recommend/similarity.rs` — Observed repository asset [low confidence]\n- `crates/intelligence/src/scaffolding.rs` — Observed repository asset [low confidence]\n- `crates/intelligence/src/test_support.rs` — Observed repository asset [low confidence]\n- `crates/intelligence/src/types.rs` — Observed repository asset [low confidence]\n- `crates/intelligence/src/usage/analytics.rs` — Observed repository asset [low confidence]\n- `crates/intelligence/src/usage/behavioral.rs` — Observed repository asset [low confidence]\n- `crates/intelligence/src/usage/claude_parser.rs` — Observed repository asset [low confidence]\n- `crates/intelligence/src/usage/codex_parser.rs` — Observed repository asset [low confidence]\n- `crates/intelligence/src/usage/mod.rs` — Observed repository asset [low confidence]\n- `crates/metrics/src/baseline.rs` — Observed repository asset [low confidence]\n- `crates/metrics/src/collector.rs` — Observed repository asset [low confidence]\n- `crates/metrics/src/error.rs` — Observed repository asset [low confidence]\n- `crates/metrics/src/lib.rs` — Observed repository asset [low confidence]\n- `crates/metrics/src/schema.rs` — Observed repository asset [low confidence]\n- `crates/metrics/src/types.rs` — Observed repository asset [low confidence]\n- `crates/server/src/api/cold_window.rs` — Observed repository asset [low confidence]\n- `crates/server/src/api/mcp_servers.rs` — Observed repository asset [low confidence]\n- `crates/server/src/api/metrics.rs` — Observed repository asset [low confidence]\n- `crates/server/src/api/mod.rs` — Observed repository asset [low confidence]\n- `crates/server/src/api/rules.rs` — Observed repository asset [low confidence]\n- `crates/server/src/api/skills.rs` — Observed repository asset [low confidence]\n- `crates/server/src/app/dispatcher.rs` — Observed repository asset [low confidence]\n- `crates/server/src/app/intelligence.rs` — Observed repository asset [low confidence]\n- `crates/server/src/app/mcp_registry.rs` — Observed repository asset [low confidence]\n- `crates/server/src/app/mod.rs` — Observed repository asset [low confidence]\n- `crates/server/src/app/research.rs` — Observed repository asset [low confidence]\n- `crates/server/src/app/skill_recommendations.rs` — Observed repository asset [low confidence]\n- `crates/server/src/app/tests/config.rs` — Observed repository asset [low confidence]\n- `crates/server/src/app/tests/dependency.rs` — Observed repository asset [low confidence]\n- `crates/server/src/app/tests/intelligence.rs` — Observed repository asset [low confidence]\n- `crates/server/src/app/tests/mcp.rs` — Observed repository asset [low confidence]\n- `crates/server/src/app/tests/mod.rs` — Observed repository asset [low confidence]\n- `crates/server/src/app/tests/research.rs` — Observed repository asset [low confidence]\n- `crates/server/src/app/tests/resource.rs` — Observed repository asset [low confidence]\n- `crates/server/src/app/tests/search.rs` — Observed repository asset [low confidence]\n- `crates/server/src/app/tests/sync.rs` — Observed repository asset [low confidence]\n- `crates/server/src/app/tests/trace.rs` — Observed repository asset [low confidence]\n- `crates/server/src/app/tests/validation.rs` — Observed repository asset [low confidence]\n- `crates/server/src/app/tools.rs` — Observed repository asset [low confidence]\n- `crates/server/src/cache.rs` — Observed repository asset [low confidence]\n- `crates/server/src/cli/enums.rs` — Observed repository asset [low confidence]\n- `crates/server/src/cli/mod.rs` — Observed repository asset [low confidence]\n- `crates/server/src/cold_window_cli.rs` — Observed repository asset [low confidence]\n- `crates/server/src/commands/analyze.rs` — Observed repository asset [low confidence]\n- `crates/server/src/commands/cert.rs` — Observed repository asset [low confidence]\n- `crates/server/src/commands/diff.rs` — Observed repository asset [low confidence]\n- `crates/server/src/commands/intelligence.rs` — Observed repository asset [low confidence]\n- `crates/server/src/commands/metrics.rs` — Observed repository asset [low confidence]\n- `crates/server/src/commands/mod.rs` — Observed repository asset [low confidence]\n- `crates/server/src/commands/multi_cli_agent.rs` — Observed repository asset [low confidence]\n- `crates/server/src/commands/recommend.rs` — Observed repository asset [low confidence]\n- `crates/server/src/commands/resolve.rs` — Observed repository asset [low confidence]\n- `crates/server/src/commands/serve.rs` — Observed repository asset [low confidence]\n- `crates/server/src/commands/setup.rs` — Observed repository asset [low confidence]\n- `crates/server/src/commands/skill/catalog.rs` — Observed repository asset [low confidence]\n- `crates/server/src/commands/skill/deprecation.rs` — Observed repository asset [low confidence]\n- `crates/server/src/commands/skill/import.rs` — Observed repository asset [low confidence]\n- `crates/server/src/commands/skill/mod.rs` — Observed repository asset [low confidence]\n- `crates/server/src/commands/skill/pre_commit.rs` — Observed repository asset [low confidence]\n- `crates/server/src/commands/skill/profiling.rs` — Observed repository asset [low confidence]\n- `crates/server/src/commands/skill/rollback.rs` — Observed repository asset [low confidence]\n- `crates/server/src/commands/skill/scoring.rs` — Observed repository asset [low confidence]\n- `crates/server/src/commands/skill/sync_pull.rs` — Observed repository asset [low confidence]\n- `crates/server/src/commands/skill/usage_report.rs` — Observed repository asset [low confidence]\n- `crates/server/src/commands/sync.rs` — Observed repository asset [low confidence]\n- `crates/server/src/commands/validate.rs` — Observed repository asset [low confidence]\n- `crates/server/src/config.rs` — Observed repository asset [low confidence]\n- `crates/server/src/discovery.rs` — Observed repository asset [low confidence]\n- `crates/server/src/doctor.rs` — Observed repository asset [low confidence]\n- `crates/server/src/handler.rs` — Observed repository asset [low confidence]\n- `crates/server/src/http_transport.rs` — Observed repository asset [low confidence]\n- `crates/server/src/lib.rs` — Observed repository asset [low confidence]\n- `crates/server/src/manifest.rs` — Observed repository asset [low confidence]\n- `crates/server/src/mcp_gateway/mod.rs` — Observed repository asset [low confidence]\n- `crates/server/src/mcp_gateway/registry.rs` — Observed repository asset [low confidence]\n- `crates/server/src/mcp_gateway/stats.rs` — Observed repository asset [low confidence]\n- `crates/server/src/mcp_gateway/tools.rs` — Observed repository asset [low confidence]\n- `crates/server/src/metrics_types.rs` — Observed repository asset [low confidence]\n- `crates/server/src/runtime.rs` — Observed repository asset [low confidence]\n- `crates/server/src/setup.rs` — Observed repository asset [low confidence]\n- `crates/server/src/setup/tests.rs` — Observed repository asset [low confidence]\n- `crates/server/src/signals.rs` — Observed repository asset [low confidence]\n- `crates/server/src/skill_trace.rs` — Observed repository asset [low confidence]\n- `crates/server/src/sync.rs` — Observed repository asset [low confidence]\n- `crates/server/src/test_support.rs` — Observed repository asset [low confidence]\n- `crates/server/src/tls_auto.rs` — Observed repository asset [low confidence]\n- `crates/server/src/tool_schemas.rs` — Observed repository asset [low confidence]\n- `crates/server/src/trace.rs` — Observed repository asset [low confidence]\n- `crates/server/src/tui.rs` — Observed repository asset [low confidence]\n- `crates/server/src/ui/app.rs` — Observed repository asset [low confidence]\n- `crates/server/src/ui/dashboard.js` — Observed repository asset [low confidence]\n- `crates/server/src/ui/mod.rs` — Observed repository asset [low confidence]\n- `crates/server/static/style.css` — Observed repository asset [low confidence]\n- `crates/server/tests/analytics_persistence_integration.rs` — Observed repository asset [low confidence]\n- `crates/server/tests/cold_window_first_paint.rs` — Observed repository asset [low confidence]\n- `crates/server/tests/cold_window_parity.rs` — Observed repository asset [low confidence]\n- `crates/server/tests/dashboard_api_integration.rs` — Observed repository asset [low confidence]\n- `crates/server/tests/dashboard_browser_integration.rs` — Observed repository asset [low confidence]\n- `crates/server/tests/http_transport_integration.rs` — Observed repository asset [low confidence]\n- `crates/server/tests/subagents_end_to_end.rs` — Observed repository asset [low confidence]\n- `crates/snapshot/src/kill_switch.rs` — Observed repository asset [low confidence]\n- `crates/snapshot/src/lib.rs` — Observed repository asset [low confidence]\n- `crates/snapshot/src/serde_impls.rs` — Observed repository asset [low confidence]\n- `crates/snapshot/src/types.rs` — Observed repository asset [low confidence]\n- `crates/state/src/cache.rs` — Observed repository asset [low confidence]\n- `crates/state/src/env.rs` — Observed repository asset [low confidence]\n- `crates/state/src/lib.rs` — Observed repository asset [low confidence]\n- `crates/state/src/network.rs` — Observed repository asset [low confidence]\n- `crates/subagents/src/backend/claude.rs` — Observed repository asset [low confidence]\n- `crates/subagents/src/backend/cli.rs` — Observed repository asset [low confidence]\n- `crates/subagents/src/backend/codex.rs` — Observed repository asset [low confidence]\n- `crates/subagents/src/backend/config.rs` — Observed repository asset [low confidence]\n- `crates/subagents/src/backend/mod.rs` — Observed repository asset [low confidence]\n- `crates/subagents/src/cli_detection.rs` — Observed repository asset [low confidence]\n- `crates/subagents/src/lib.rs` — Observed repository asset [low confidence]\n- `crates/subagents/src/registry.rs` — Observed repository asset [low confidence]\n- `crates/subagents/src/service.rs` — Observed repository asset [low confidence]\n- `crates/subagents/src/settings.rs` — Observed repository asset [low confidence]\n- `crates/subagents/src/store.rs` — Observed repository asset [low confidence]\n- `crates/subagents/src/tool_schemas.rs` — Observed repository asset [low confidence]\n- `crates/subagents/tests/integration_test.rs` — Observed repository asset [low confidence]\n- `crates/subagents/tests/store_reload.rs` — Observed repository asset [low confidence]\n- `crates/subagents/tests/subagent_basic_tests.rs` — Observed repository asset [low confidence]\n- `crates/subagents/tests/subagent_service_integration.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/adapters/claude/commands.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/adapters/claude/hooks.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/adapters/claude/instructions.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/adapters/claude/mod.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/adapters/claude/plugin_assets.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/adapters/claude/settings.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/adapters/claude/skills.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/adapters/codex.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/adapters/copilot/commands.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/adapters/copilot/mcp.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/adapters/copilot/mod.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/adapters/copilot/paths.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/adapters/copilot/preferences.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/adapters/copilot/skills.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/adapters/copilot/tests.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/adapters/copilot/utils.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/adapters/cursor/commands.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/adapters/cursor/hooks.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/adapters/cursor/mcp.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/adapters/cursor/mod.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/adapters/cursor/paths.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/adapters/cursor/rules.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/adapters/cursor/skills.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/adapters/cursor/tests.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/adapters/cursor/utils.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/adapters/external.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/adapters/mod.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/adapters/tests_common.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/adapters/traits.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/adapters/utils.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/common.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/conflict.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/error.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/lib.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/models.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/orchestrator.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/platform_routing.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/preview.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/report.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/snapshot.rs` — Observed repository asset [low confidence]\n- `crates/sync/src/validation.rs` — Observed repository asset [low confidence]\n- `crates/sync/tests/copilot_sync_integration.rs` — Observed repository asset [low confidence]\n- `crates/sync/tests/cursor_sync_integration.rs` — Observed repository asset [low confidence]\n- `crates/sync/tests/kill_switch_lock.rs` — Observed repository asset [low confidence]\n- `crates/sync/tests/skills_sync_comprehensive.rs` — Observed repository asset [low confidence]\n- `crates/sync/tests/sync_integration.rs` — Observed repository asset [low confidence]\n- `crates/sync/tests/sync_skip_existing_tests.rs` — Observed repository asset [low confidence]\n- `crates/test-utils/src/cold_window_fixtures.rs` — Observed repository asset [low confidence]\n- `crates/test-utils/src/lib.rs` — Observed repository asset [low confidence]\n- `crates/test-utils/tests/release_consistency.rs` — Observed repository asset [low confidence]\n- `crates/tome/src/cache.rs` — Observed repository asset [low confidence]\n- `crates/tome/src/citations.rs` — Observed repository asset [low confidence]\n- `crates/tome/src/clients/arxiv.rs` — Observed repository asset [low confidence]\n- `crates/tome/src/clients/crossref.rs` — Observed repository asset [low confidence]\n- `crates/tome/src/clients/hn_algolia.rs` — Observed repository asset [low confidence]\n- `crates/tome/src/clients/mod.rs` — Observed repository asset [low confidence]\n- `crates/tome/src/clients/openalex.rs` — Observed repository asset [low confidence]\n- `crates/tome/src/clients/semantic_scholar.rs` — Observed repository asset [low confidence]\n- `crates/tome/src/clients/unpaywall.rs` — Observed repository asset [low confidence]\n- `crates/tome/src/dispatcher.rs` — Observed repository asset [low confidence]\n- `crates/tome/src/error.rs` — Observed repository asset [low confidence]\n- `crates/tome/src/knowledge_graph.rs` — Observed repository asset [low confidence]\n- `crates/tome/src/lib.rs` — Observed repository asset [low confidence]\n- `crates/tome/src/models.rs` — Observed repository asset [low confidence]\n- `crates/tome/src/triz.rs` — Observed repository asset [low confidence]\n- `crates/tome/tests/dispatcher_concurrency.rs` — Observed repository asset [low confidence]\n- `crates/validate/src/autofix.rs` — Observed repository asset [low confidence]\n- `crates/validate/src/claude.rs` — Observed repository asset [low confidence]\n- `crates/validate/src/codex.rs` — Observed repository asset [low confidence]\n- `crates/validate/src/common.rs` — Observed repository asset [low confidence]\n- `crates/validate/src/copilot.rs` — Observed repository asset [low confidence]\n- `crates/validate/src/frontmatter.rs` — Observed repository asset [low confidence]\n- `crates/validate/src/lib.rs` — Observed repository asset [low confidence]\n- `crates/validate/src/watch.rs` — Observed repository asset [low confidence]\n- `deny.toml` — Observed repository asset [low confidence]\n- `githooks/pre-commit` — Observed repository asset [low confidence]\n- `LICENSE` — Observed repository asset [low confidence]\n- `tests/unit/conftest.py` — Observed repository asset [low confidence]\n- `tests/unit/test_audit_plugins.py` — Observed repository asset [low confidence]\n- `tests/unit/test_check_hook_modernization.py` — Observed repository asset [low confidence]\n- `tests/unit/test_lint_prose_slop.py` — Observed repository asset [low confidence]\n- `tests/unit/test_lint_rust_decoration.py` — Observed repository asset [low confidence]\n- `tests/unit/test_update_plugin_registrations.py` — Observed repository asset [low confidence]\n- `tests/unit/test_validate_plugin.py` — Observed repository asset [low confidence]\n\n",
+      "evidence": [
+        ".claude-plugin/marketplace.json",
+        ".githooks/pre-commit",
+        ".github/actions/validate-skills/action.yml",
+        ".github/actions/validate-skills/entrypoint.sh",
+        ".github/FUNDING.yml",
+        ".github/workflows/audit.yml",
+        ".github/workflows/book-pages.yml",
+        ".github/workflows/ci.yml",
+        ".github/workflows/coverage.yml",
+        ".github/workflows/dependency-monitor.yml",
+        ".github/workflows/integration-tests.yml",
+        ".github/workflows/publish-dry-run.yml",
+        ".github/workflows/release.yml",
+        ".github/workflows/validate-skills-example.yml",
+        ".gitignore",
+        ".markdownlint.yaml",
+        "AGENTS.md",
+        "assets/demo-skills/api-designer/SKILL.md",
+        "assets/demo-skills/coding-assistant/SKILL.md",
+        "assets/demo-skills/debug-helper/SKILL.md",
+        "assets/demo-skills/git-workflow/SKILL.md",
+        "assets/demo-skills/test-writer/SKILL.md",
+        "assets/gifs/cold-window.gif",
+        "assets/gifs/dashboard.gif",
+        "assets/gifs/mcp.gif",
+        "assets/gifs/quickstart.gif",
+        "assets/icon.png",
+        "assets/tapes/cold-window-overlay.sh",
+        "assets/tapes/cold-window.tape",
+        "assets/tapes/mcp.tape",
+        "assets/tapes/portal-demo.mjs",
+        "assets/tapes/quickstart.tape",
+        "assets/tapes/tui.tape",
+        "audit.toml",
+        "book/book.toml",
+        "book/src/analysis.md",
+        "book/src/changelog.md",
+        "book/src/cli.md",
+        "book/src/cold-window.md",
+        "book/src/comparison.md",
+        "book/src/development.md",
+        "book/src/faq.md",
+        "book/src/installation.md",
+        "book/src/mcp-token-optimization.md",
+        "book/src/observability.md",
+        "book/src/overview.md",
+        "book/src/performance.md",
+        "book/src/persistence.md",
+        "book/src/playbooks.md",
+        "book/src/process.md",
+        "book/src/release.md",
+        "book/src/runtime-tuning.md",
+        "book/src/security.md",
+        "book/src/semver.md",
+        "book/src/SUMMARY.md",
+        "book/src/sync-guide.md",
+        "book/src/testing.md",
+        "book/src/validation.md",
+        "Cargo.lock",
+        "Cargo.toml",
+        "CONTRIBUTING.md",
+        "crates/analyze/benches/tick_budget.rs",
+        "crates/analyze/Cargo.toml",
+        "crates/analyze/src/cold_window/alert.rs",
+        "crates/analyze/src/cold_window/cadence.rs",
+        "crates/analyze/src/cold_window/diff.rs",
+        "crates/analyze/src/cold_window/engine.rs",
+        "crates/analyze/src/cold_window/mod.rs",
+        "crates/analyze/src/cold_window/plugin_health.rs",
+        "crates/analyze/src/cold_window/skill_collector.rs",
+        "crates/analyze/src/cold_window/traits.rs",
+        "crates/analyze/src/deps.rs",
+        "crates/analyze/src/graph.rs",
+        "crates/analyze/src/lib.rs",
+        "crates/analyze/src/optimize.rs",
+        "crates/analyze/src/resolve/graph.rs",
+        "crates/analyze/src/resolve/mod.rs",
+        "crates/analyze/src/resolve/resolver.rs",
+        "crates/analyze/src/resolve/types.rs",
+        "crates/analyze/src/tokens.rs",
+        "crates/analyze/tests/cadence.rs",
+        "crates/analyze/tests/chaos.rs",
+        "crates/analyze/tests/tick_budget_floor.rs",
+        "crates/analyze/tests/token_attribution.rs",
+        "crates/cli/Cargo.toml",
+        "crates/cli/README.md",
+        "crates/cli/src/main.rs",
+        "crates/cli/tests/cli_dispatch_smoke.rs",
+        "crates/cli/tests/sync_all.rs",
+        "crates/dashboard/Cargo.toml",
+        "crates/dashboard/README.md",
+        "crates/dashboard/src/app.rs",
+        "crates/dashboard/src/cold_window/alert_pane.rs",
+        "crates/dashboard/src/cold_window/focus.rs",
+        "crates/dashboard/src/cold_window/hint_pane.rs",
+        "crates/dashboard/src/cold_window/keymap.rs",
+        "crates/dashboard/src/cold_window/mod.rs",
+        "crates/dashboard/src/cold_window/overlay.rs",
+        "crates/dashboard/src/cold_window/research_pane.rs",
+        "crates/dashboard/src/cold_window/state.rs",
+        "crates/dashboard/src/cold_window/status_bar.rs",
+        "crates/dashboard/src/cold_window/tui/input.rs",
+        "crates/dashboard/src/cold_window/tui/layout.rs",
+        "crates/dashboard/src/cold_window/tui/mod.rs",
+        "crates/dashboard/src/cold_window/tui/render.rs",
+        "crates/dashboard/src/cold_window/tui/runner.rs",
+        "crates/dashboard/src/cold_window/tui/tests.rs",
+        "crates/dashboard/src/events.rs",
+        "crates/dashboard/src/lib.rs",
+        "crates/dashboard/src/ui.rs",
+        "crates/dashboard/tests/ui_rendering.rs",
+        "crates/discovery/Cargo.toml",
+        "crates/discovery/README.md",
+        "crates/discovery/src/error.rs",
+        "crates/discovery/src/lib.rs",
+        "crates/discovery/src/scanner.rs",
+        "crates/discovery/src/types.rs",
+        "crates/discovery/tests/discover_smoke.rs",
+        "crates/intelligence/Cargo.toml",
+        "crates/intelligence/README.md",
+        "crates/intelligence/src/cold_window_hints.rs",
+        "crates/intelligence/src/context/dependencies.rs",
+        "crates/intelligence/src/context/detector.rs",
+        "crates/intelligence/src/context/git_context.rs",
+        "crates/intelligence/src/context/mod.rs",
+        "crates/intelligence/src/create/cli_detector.rs",
+        "crates/intelligence/src/create/empirical.rs",
+        "crates/intelligence/src/create/github_search.rs",
+        "crates/intelligence/src/create/llm_generator.rs",
+        "crates/intelligence/src/create/mod.rs",
+        "crates/intelligence/src/error.rs",
+        "crates/intelligence/src/lib.rs",
+        "crates/intelligence/src/recommend/comparative.rs",
+        "crates/intelligence/src/recommend/explainer.rs",
+        "crates/intelligence/src/recommend/mod.rs",
+        "crates/intelligence/src/recommend/scorer.rs",
+        "crates/intelligence/src/recommend/similarity.rs",
+        "crates/intelligence/src/scaffolding.rs",
+        "crates/intelligence/src/templates/code-review.md",
+        "crates/intelligence/src/templates/debugging.md",
+        "crates/intelligence/src/templates/documentation.md",
+        "crates/intelligence/src/templates/refactoring.md",
+        "crates/intelligence/src/templates/testing.md",
+        "crates/intelligence/src/test_support.rs",
+        "crates/intelligence/src/types.rs",
+        "crates/intelligence/src/usage/analytics.rs",
+        "crates/intelligence/src/usage/behavioral.rs",
+        "crates/intelligence/src/usage/claude_parser.rs",
+        "crates/intelligence/src/usage/codex_parser.rs",
+        "crates/intelligence/src/usage/mod.rs",
+        "crates/metrics/Cargo.toml",
+        "crates/metrics/README.md",
+        "crates/metrics/src/baseline.rs",
+        "crates/metrics/src/collector.rs",
+        "crates/metrics/src/error.rs",
+        "crates/metrics/src/lib.rs",
+        "crates/metrics/src/schema.rs",
+        "crates/metrics/src/types.rs",
+        "crates/server/AGENTS.md",
+        "crates/server/Cargo.toml",
+        "crates/server/README.md",
+        "crates/server/src/api/cold_window.rs",
+        "crates/server/src/api/mcp_servers.rs",
+        "crates/server/src/api/metrics.rs",
+        "crates/server/src/api/mod.rs",
+        "crates/server/src/api/rules.rs",
+        "crates/server/src/api/skills.rs",
+        "crates/server/src/app/dispatcher.rs",
+        "crates/server/src/app/intelligence.rs",
+        "crates/server/src/app/mcp_registry.rs",
+        "crates/server/src/app/mod.rs",
+        "crates/server/src/app/research.rs",
+        "crates/server/src/app/skill_recommendations.rs",
+        "crates/server/src/app/tests/config.rs",
+        "crates/server/src/app/tests/dependency.rs",
+        "crates/server/src/app/tests/intelligence.rs",
+        "crates/server/src/app/tests/mcp.rs",
+        "crates/server/src/app/tests/mod.rs",
+        "crates/server/src/app/tests/research.rs",
+        "crates/server/src/app/tests/resource.rs",
+        "crates/server/src/app/tests/search.rs",
+        "crates/server/src/app/tests/sync.rs",
+        "crates/server/src/app/tests/trace.rs",
+        "crates/server/src/app/tests/validation.rs",
+        "crates/server/src/app/tools.rs",
+        "crates/server/src/cache.rs",
+        "crates/server/src/cli/enums.rs",
+        "crates/server/src/cli/mod.rs",
+        "crates/server/src/cold_window_cli.rs",
+        "crates/server/src/commands/agent.rs",
+        "crates/server/src/commands/analyze.rs",
+        "crates/server/src/commands/cert.rs",
+        "crates/server/src/commands/diff.rs",
+        "crates/server/src/commands/intelligence.rs",
+        "crates/server/src/commands/metrics.rs",
+        "crates/server/src/commands/mod.rs",
+        "crates/server/src/commands/multi_cli_agent.rs",
+        "crates/server/src/commands/recommend.rs",
+        "crates/server/src/commands/resolve.rs",
+        "crates/server/src/commands/serve.rs",
+        "crates/server/src/commands/setup.rs",
+        "crates/server/src/commands/skill/catalog.rs",
+        "crates/server/src/commands/skill/deprecation.rs",
+        "crates/server/src/commands/skill/import.rs",
+        "crates/server/src/commands/skill/mod.rs",
+        "crates/server/src/commands/skill/pre_commit.rs",
+        "crates/server/src/commands/skill/profiling.rs",
+        "crates/server/src/commands/skill/rollback.rs",
+        "crates/server/src/commands/skill/scoring.rs",
+        "crates/server/src/commands/skill/sync_pull.rs",
+        "crates/server/src/commands/skill/usage_report.rs",
+        "crates/server/src/commands/sync.rs",
+        "crates/server/src/commands/validate.rs",
+        "crates/server/src/config.rs",
+        "crates/server/src/discovery.rs",
+        "crates/server/src/doctor.rs",
+        "crates/server/src/handler.rs",
+        "crates/server/src/http_transport.rs",
+        "crates/server/src/lib.rs",
+        "crates/server/src/manifest.rs",
+        "crates/server/src/mcp_gateway/mod.rs",
+        "crates/server/src/mcp_gateway/registry.rs",
+        "crates/server/src/mcp_gateway/stats.rs",
+        "crates/server/src/mcp_gateway/tools.rs",
+        "crates/server/src/metrics_types.rs",
+        "crates/server/src/runtime.rs",
+        "crates/server/src/setup.rs",
+        "crates/server/src/setup/tests.rs",
+        "crates/server/src/signals.rs",
+        "crates/server/src/skill_trace.rs",
+        "crates/server/src/sync.rs",
+        "crates/server/src/test_support.rs",
+        "crates/server/src/tls_auto.rs",
+        "crates/server/src/tool_schemas.rs",
+        "crates/server/src/trace.rs",
+        "crates/server/src/tui.rs",
+        "crates/server/src/ui/app.rs",
+        "crates/server/src/ui/dashboard.js",
+        "crates/server/src/ui/mod.rs",
+        "crates/server/static/style.css",
+        "crates/server/tests/analytics_persistence_integration.rs",
+        "crates/server/tests/cold_window_first_paint.rs",
+        "crates/server/tests/cold_window_parity.rs",
+        "crates/server/tests/dashboard_api_integration.rs",
+        "crates/server/tests/dashboard_browser_integration.rs",
+        "crates/server/tests/http_transport_integration.rs",
+        "crates/server/tests/subagents_end_to_end.rs",
+        "crates/snapshot/Cargo.toml",
+        "crates/snapshot/src/kill_switch.rs",
+        "crates/snapshot/src/lib.rs",
+        "crates/snapshot/src/serde_impls.rs",
+        "crates/snapshot/src/types.rs",
+        "crates/state/Cargo.toml",
+        "crates/state/README.md",
+        "crates/state/src/cache.rs",
+        "crates/state/src/env.rs",
+        "crates/state/src/lib.rs",
+        "crates/state/src/network.rs",
+        "crates/subagents/Cargo.toml",
+        "crates/subagents/README.md",
+        "crates/subagents/src/backend/claude.rs",
+        "crates/subagents/src/backend/cli.rs",
+        "crates/subagents/src/backend/codex.rs",
+        "crates/subagents/src/backend/config.rs",
+        "crates/subagents/src/backend/mod.rs",
+        "crates/subagents/src/cli_detection.rs",
+        "crates/subagents/src/lib.rs",
+        "crates/subagents/src/registry.rs",
+        "crates/subagents/src/service.rs",
+        "crates/subagents/src/settings.rs",
+        "crates/subagents/src/store.rs",
+        "crates/subagents/src/tool_schemas.rs",
+        "crates/subagents/tests/integration_test.rs",
+        "crates/subagents/tests/store_reload.rs",
+        "crates/subagents/tests/subagent_basic_tests.rs",
+        "crates/subagents/tests/subagent_service_integration.rs",
+        "crates/sync/Cargo.toml",
+        "crates/sync/src/adapters/claude/agents.rs",
+        "crates/sync/src/adapters/claude/commands.rs",
+        "crates/sync/src/adapters/claude/hooks.rs",
+        "crates/sync/src/adapters/claude/instructions.rs",
+        "crates/sync/src/adapters/claude/mod.rs",
+        "crates/sync/src/adapters/claude/plugin_assets.rs",
+        "crates/sync/src/adapters/claude/settings.rs",
+        "crates/sync/src/adapters/claude/skills.rs",
+        "crates/sync/src/adapters/codex.rs",
+        "crates/sync/src/adapters/copilot/agents.rs",
+        "crates/sync/src/adapters/copilot/commands.rs",
+        "crates/sync/src/adapters/copilot/mcp.rs",
+        "crates/sync/src/adapters/copilot/mod.rs",
+        "crates/sync/src/adapters/copilot/paths.rs",
+        "crates/sync/src/adapters/copilot/preferences.rs",
+        "crates/sync/src/adapters/copilot/skills.rs",
+        "crates/sync/src/adapters/copilot/tests.rs",
+        "crates/sync/src/adapters/copilot/utils.rs",
+        "crates/sync/src/adapters/cursor/agents.rs",
+        "crates/sync/src/adapters/cursor/commands.rs",
+        "crates/sync/src/adapters/cursor/hooks.rs",
+        "crates/sync/src/adapters/cursor/mcp.rs",
+        "crates/sync/src/adapters/cursor/mod.rs",
+        "crates/sync/src/adapters/cursor/paths.rs",
+        "crates/sync/src/adapters/cursor/rules.rs",
+        "crates/sync/src/adapters/cursor/skills.rs",
+        "crates/sync/src/adapters/cursor/tests.rs",
+        "crates/sync/src/adapters/cursor/utils.rs",
+        "crates/sync/src/adapters/external.rs",
+        "crates/sync/src/adapters/mod.rs",
+        "crates/sync/src/adapters/tests_common.rs",
+        "crates/sync/src/adapters/traits.rs",
+        "crates/sync/src/adapters/utils.rs",
+        "crates/sync/src/common.rs",
+        "crates/sync/src/conflict.rs",
+        "crates/sync/src/error.rs",
+        "crates/sync/src/lib.rs",
+        "crates/sync/src/models.rs",
+        "crates/sync/src/orchestrator.rs",
+        "crates/sync/src/platform_routing.rs",
+        "crates/sync/src/preview.rs",
+        "crates/sync/src/report.rs",
+        "crates/sync/src/snapshot.rs",
+        "crates/sync/src/validation.rs",
+        "crates/sync/tests/copilot_sync_integration.rs",
+        "crates/sync/tests/cursor_sync_integration.rs",
+        "crates/sync/tests/kill_switch_lock.rs",
+        "crates/sync/tests/skills_sync_comprehensive.rs",
+        "crates/sync/tests/sync_integration.rs",
+        "crates/sync/tests/sync_skip_existing_tests.rs",
+        "crates/test-utils/Cargo.toml",
+        "crates/test-utils/src/cold_window_fixtures.rs",
+        "crates/test-utils/src/lib.rs",
+        "crates/test-utils/tests/release_consistency.rs",
+        "crates/tome/Cargo.toml",
+        "crates/tome/src/cache.rs",
+        "crates/tome/src/citations.rs",
+        "crates/tome/src/clients/arxiv.rs",
+        "crates/tome/src/clients/crossref.rs",
+        "crates/tome/src/clients/hn_algolia.rs",
+        "crates/tome/src/clients/mod.rs",
+        "crates/tome/src/clients/openalex.rs",
+        "crates/tome/src/clients/semantic_scholar.rs",
+        "crates/tome/src/clients/unpaywall.rs",
+        "crates/tome/src/dispatcher.rs",
+        "crates/tome/src/error.rs",
+        "crates/tome/src/knowledge_graph.rs",
+        "crates/tome/src/lib.rs",
+        "crates/tome/src/models.rs",
+        "crates/tome/src/triz.rs",
+        "crates/tome/tests/dispatcher_concurrency.rs",
+        "crates/validate/Cargo.toml",
+        "crates/validate/src/autofix.rs",
+        "crates/validate/src/claude.rs",
+        "crates/validate/src/codex.rs",
+        "crates/validate/src/common.rs",
+        "crates/validate/src/copilot.rs",
+        "crates/validate/src/frontmatter.rs",
+        "crates/validate/src/lib.rs",
+        "crates/validate/src/watch.rs",
+        "deny.toml",
+        "docs/adr/0001-pivot-to-support-engine.md",
+        "docs/adr/0002-skill-dependency-resolution.md",
+        "docs/adr/0003-cli-parity-intelligence-tools.md",
+        "docs/adr/0004-intelligence-crate-versioning.md",
+        "docs/adr/0005-trigram-fuzzy-matching.md",
+        "docs/adr/0006-cursor-rules-mapping.md",
+        "docs/adr/0007-cold-window-architecture.md",
+        "docs/architecture.md",
+        "docs/audit-logging.md",
+        "docs/CHANGELOG.md",
+        "docs/codex-agents-template.md",
+        "docs/config/subagents.example.toml",
+        "docs/demo-claude-hooks.md",
+        "docs/dependencies.md",
+        "docs/dependency-resolution.md",
+        "docs/FAQ.md",
+        "docs/lessons-learned.md",
+        "docs/mcp-token-optimization.md",
+        "docs/persistence.md",
+        "docs/process-guidelines.md",
+        "docs/release-artifacts.md",
+        "docs/security.md",
+        "docs/semver-policy.md",
+        "docs/threat-model.md",
+        "docs/tradeoffs.md",
+        "docs/tutorials/mcp.md",
+        "docs/tutorials/quickstart.md",
+        "docs/tutorials/README.md",
+        "githooks/pre-commit",
+        "LICENSE",
+        "Makefile",
+        "plugins/skrills/.claude-plugin/plugin.json",
+        "plugins/skrills/commands/analyze-skills.md",
+        "plugins/skrills/commands/create-skill.md",
+        "plugins/skrills/commands/search-skills.md",
+        "plugins/skrills/commands/skill-diff.md",
+        "plugins/skrills/commands/skill-metrics.md",
+        "plugins/skrills/commands/skill-trace-disable.md",
+        "plugins/skrills/commands/skill-trace-enable.md",
+        "plugins/skrills/commands/skill-trace-status.md",
+        "plugins/skrills/commands/suggest-skills.md",
+        "plugins/skrills/commands/sync-all.md",
+        "plugins/skrills/commands/sync-from-claude.md",
+        "plugins/skrills/commands/sync-from-copilot.md",
+        "plugins/skrills/commands/sync-from-cursor.md",
+        "plugins/skrills/commands/sync-status.md",
+        "plugins/skrills/commands/sync-to-copilot.md",
+        "plugins/skrills/commands/sync-to-cursor.md",
+        "plugins/skrills/commands/validate-skills.md",
+        "README.md",
+        "scripts/audit-plugins.sh",
+        "scripts/check_hook_modernization.py",
+        "scripts/dogfood-contracts.sh",
+        "scripts/dogfood-tui.sh",
+        "scripts/install-git-hooks.sh",
+        "scripts/install.ps1",
+        "scripts/install.sh",
+        "scripts/lint-markdown.sh",
+        "scripts/lint-prose-slop.sh",
+        "scripts/lint-rust-decoration.sh",
+        "scripts/publish_crates.sh",
+        "scripts/test-install.sh",
+        "scripts/update_plugin_registrations.py",
+        "scripts/validate_plugin.py",
+        "scripts/verify_publish_order.sh",
+        "skills/html-portal-generator/SKILL.md",
+        "tests/unit/conftest.py",
+        "tests/unit/test_audit_plugins.py",
+        "tests/unit/test_check_hook_modernization.py",
+        "tests/unit/test_lint_prose_slop.py",
+        "tests/unit/test_lint_rust_decoration.py",
+        "tests/unit/test_update_plugin_registrations.py",
+        "tests/unit/test_validate_plugin.py"
+      ]
+    },
+    {
+      "path": "skills/INDEX.md",
+      "kind": "index",
+      "content": "# Proposed skills index\n\nGenerated from observed SKILL.md files. Review names and descriptions before applying.\n\nSource digest: `efbf480a59b84d62b2a424b18f5c5486ed410a7afbed3d7cbba7cd2309c012a7`\n\n- `/api-designer` — `assets/demo-skills/api-designer/SKILL.md` — Design RESTful APIs with best practices for consistency and usability\n- `/coding-assistant` — `assets/demo-skills/coding-assistant/SKILL.md` — Provides coding assistance with best practices and code review\n- `/debug-helper` — `assets/demo-skills/debug-helper/SKILL.md` — Systematic debugging approach for identifying and fixing issues\n- `/git-workflow` — `assets/demo-skills/git-workflow/SKILL.md` — Git best practices for version control and collaboration\n- `/test-writer` — `assets/demo-skills/test-writer/SKILL.md` — Write thorough tests following TDD and BDD principles\n- `/html-portal-generator` — `skills/html-portal-generator/SKILL.md` — Convert a codebase into a self-contained HTML portal app for ingestion into AI application systems. Produces a single deployable HTML file with embedded CSS, JS, and data.\n",
+      "evidence": [
+        "assets/demo-skills/api-designer/SKILL.md",
+        "assets/demo-skills/coding-assistant/SKILL.md",
+        "assets/demo-skills/debug-helper/SKILL.md",
+        "assets/demo-skills/git-workflow/SKILL.md",
+        "assets/demo-skills/test-writer/SKILL.md",
+        "skills/html-portal-generator/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/distribution-manifest.json",
+      "kind": "manifest",
+      "content": "{\n  \"schemaVersion\": \"1.0\",\n  \"mode\": \"skills-sh-editable\",\n  \"skills\": [\n    \"api-designer\",\n    \"coding-assistant\",\n    \"debug-helper\",\n    \"git-workflow\",\n    \"html-portal-generator\",\n    \"production-orchestrator\",\n    \"test-writer\"\n  ],\n  \"scope\": \"project-local\",\n  \"approvalRequired\": true,\n  \"status\": \"PROPOSED\"\n}\n",
+      "evidence": [
+        "assets/demo-skills/api-designer/SKILL.md",
+        "assets/demo-skills/coding-assistant/SKILL.md",
+        "assets/demo-skills/debug-helper/SKILL.md",
+        "assets/demo-skills/git-workflow/SKILL.md",
+        "assets/demo-skills/test-writer/SKILL.md",
+        "skills/html-portal-generator/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/production-orchestrator/SKILL.md",
+      "kind": "coordinator",
+      "content": "---\nname: production-orchestrator\ndescription: Route repository work using the observed skills and workflows after review.\ndisable-model-invocation: true\n---\n\n# Proposed repository coordinator\n\nThis coordinator was generated from the files currently present in the repository. It is a reviewable proposal and has not been installed.\n\n## How to use it\n\n1. Read `INDEX.md` and `skills/INDEX.md` before selecting a component.\n2. Choose the smallest skill whose observed description matches the user's request.\n3. Follow that skill's own instructions and use the observed scripts and workflows only when they are relevant.\n4. Pass the skill's output to the next step only when the output is present and validated.\n5. Stop and ask for review when a needed file, dependency, permission, or expected output is missing.\n\n## Observed skills\n\n- /api-designer — Design RESTful APIs with best practices for consistency and usability (unknown-invoked)\n- /coding-assistant — Provides coding assistance with best practices and code review (unknown-invoked)\n- /debug-helper — Systematic debugging approach for identifying and fixing issues (unknown-invoked)\n- /git-workflow — Git best practices for version control and collaboration (unknown-invoked)\n- /test-writer — Write thorough tests following TDD and BDD principles (unknown-invoked)\n- /html-portal-generator — Convert a codebase into a self-contained HTML portal app for ingestion into AI application systems. Produces a single deployable HTML file with embedded CSS, JS, and data. (unknown-invoked)\n\n## Observed plugins\n\n- .claude-plugin/marketplace.json\n- plugins/skrills/.claude-plugin/plugin.json\n- plugins/skrills/commands/analyze-skills.md\n- plugins/skrills/commands/create-skill.md\n- plugins/skrills/commands/search-skills.md\n- plugins/skrills/commands/skill-diff.md\n- plugins/skrills/commands/skill-metrics.md\n- plugins/skrills/commands/skill-trace-disable.md\n- plugins/skrills/commands/skill-trace-enable.md\n- plugins/skrills/commands/skill-trace-status.md\n- plugins/skrills/commands/suggest-skills.md\n- plugins/skrills/commands/sync-all.md\n- plugins/skrills/commands/sync-from-claude.md\n- plugins/skrills/commands/sync-from-copilot.md\n- plugins/skrills/commands/sync-from-cursor.md\n- plugins/skrills/commands/sync-status.md\n- plugins/skrills/commands/sync-to-copilot.md\n- plugins/skrills/commands/sync-to-cursor.md\n- plugins/skrills/commands/validate-skills.md\n\n## Observed workflows\n\n- .github/actions/validate-skills/action.yml\n- .github/actions/validate-skills/entrypoint.sh\n- .github/workflows/audit.yml\n- .github/workflows/book-pages.yml\n- .github/workflows/ci.yml\n- .github/workflows/coverage.yml\n- .github/workflows/dependency-monitor.yml\n- .github/workflows/integration-tests.yml\n- .github/workflows/publish-dry-run.yml\n- .github/workflows/release.yml\n- .github/workflows/validate-skills-example.yml\n\n## Safety and limits\n\n- Do not claim an inferred purpose is confirmed behavior.\n- Do not run an observed script merely because it exists; confirm that it is needed and safe first.\n- Do not install plugins, change global settings, or modify source files without explicit approval.\n- Record missing metadata and unresolved connections as review items.\n\nEvidence digest: `efbf480a59b84d62b2a424b18f5c5486ed410a7afbed3d7cbba7cd2309c012a7`\n",
+      "evidence": [
+        "AGENTS.md",
+        "skills/INDEX.md"
+      ]
+    },
+    {
+      "path": "skills/production-orchestrator/agents/openai.yaml",
+      "kind": "metadata",
+      "content": "interface:\n  display_name: Proposed Repository Coordinator\n  short_description: Route repository work using reviewed local skills and workflows.\npolicy:\n  allow_implicit_invocation: false\n",
+      "evidence": [
+        "skills/production-orchestrator/SKILL.md"
+      ]
+    },
+    {
+      "path": "skills/html-portal-generator/INDEX.md",
+      "kind": "index",
+      "content": "# Proposed skills index\n\nGenerated from observed SKILL.md files. Review names and descriptions before applying.\n\nSource digest: `efbf480a59b84d62b2a424b18f5c5486ed410a7afbed3d7cbba7cd2309c012a7`\n\n- `/html-portal-generator` — `skills/html-portal-generator/SKILL.md` — Convert a codebase into a self-contained HTML portal app for ingestion into AI application systems. Produces a single deployable HTML file with embedded CSS, JS, and data.\n",
+      "evidence": [
+        "skills/html-portal-generator/SKILL.md"
+      ]
+    }
+  ],
+  "limitations": [
+    "Generated from observed paths and readable frontmatter; inferred purposes require human review.",
+    "Existing skill metadata, dependencies, and instructions were not rewritten by this proposal.",
+    "The proposal is stored under .orchestrator/proposals and has not been copied into the repository.",
+    "The standardization plan is BLOCKED by 1 skill candidate(s) or dependency findings."
+  ],
+  "digest": "20509101d25334d350927c30a20976f7a5d657d97f2528e3051f08622d2b5aec"
+}

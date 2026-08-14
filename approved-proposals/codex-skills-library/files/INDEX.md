@@ -1,0 +1,81 @@
+# Proposed file index
+
+This index was generated from observed repository contents. It is a proposal, not an applied change.
+
+Source digest: `bbd69f94de1ca6dc88751e29a9a8c0532302826641f5ecbf58e2bf1bab77bbd5`
+
+## Skills
+
+- `.codex/skills/prompt-optimization/SKILL.md` — Improve and rewrite user prompts to reduce ambiguity and improve LLM output quality. Use when a user asks to optimize, refine, clarify, or rewrite a prompt for better results, or when the request is about prompt optimization or prompt rewriting. [high confidence]
+- `.codex/skills/writing-assistant/SKILL.md` — Edits, rewrites, or improves text for clarity, tone, grammar, or style. [high confidence]
+- `skills/api/api-contract-checker/SKILL.md` — Validate API changes against an expected contract. Use when a mid-level developer needs to detect breaking changes. [high confidence]
+- `skills/api/api-error-taxonomy/SKILL.md` — Define consistent API error codes and responses. Use when a mid-level developer needs error standardization. [high confidence]
+- `skills/api/api-request-builder/SKILL.md` — Build a basic HTTP request (curl or fetch) for an API. Use when a junior developer needs a quick request example. [high confidence]
+- `skills/api/buffer-api/SKILL.md` — Manage Buffer content via the GraphQL API. Use when creating, scheduling, editing, or deleting posts, saving ideas, reading scheduled queues, or pulling post analytics. Not for general API debugging. [high confidence]
+- `skills/api/graphql-query-optimizer/SKILL.md` — Optimize GraphQL queries and resolvers for performance. Use when a mid-level developer needs to reduce N+1 or payload size. [high confidence]
+- `skills/architecture/architecture-review/SKILL.md` — Review a system architecture for scalability, reliability, and maintainability. Use when a senior developer needs to critique a design. [high confidence]
+- `skills/architecture/domain-modeling/SKILL.md` — Model domains and bounded contexts for complex systems. Use when a senior developer needs domain-driven design guidance. [high confidence]
+- `skills/backend/caching-strategy-helper/SKILL.md` — Recommend caching strategies and invalidation patterns. Use when a mid-level developer needs performance guidance. [high confidence]
+- `skills/backend/feature-flag-playbook/SKILL.md` — Plan feature flag rollout and cleanup. Use when a mid-level developer needs controlled release guidance. [high confidence]
+- `skills/backend/queue-processing-patterns/SKILL.md` — Design safe queue consumers and retries. Use when a mid-level developer needs reliable background processing. [high confidence]
+- `skills/backend/system-design-draft/SKILL.md` — Draft a practical system design for a feature. Use when a mid-level developer needs a starting architecture. [high confidence]
+- `skills/data/data-governance-check/SKILL.md` — Review data handling for privacy and retention. Use when a senior developer needs governance validation. [high confidence]
+- `skills/data/db-migration-reviewer/SKILL.md` — Review database migrations for safety and rollback. Use when a mid-level developer needs validation of schema changes. [high confidence]
+- `skills/data/sql-query-starter/SKILL.md` — Draft a basic SQL query from a simple requirement. Use when a junior developer needs help forming SELECT queries. [high confidence]
+- `skills/docs/function-docstrings/SKILL.md` — Write concise docstrings for functions. Use when a junior developer needs help describing inputs, outputs, and errors. [high confidence]
+- `skills/docs/readme-polish/SKILL.md` — Improve a README for clarity and completeness. Use when a junior developer needs guidance on documenting setup and usage. [high confidence]
+- `skills/docs/release-notes-drafter/SKILL.md` — Draft release notes from changes and PRs. Use when a mid-level developer needs a structured changelog. [high confidence]
+- `skills/docs/team-onboarding-guide/SKILL.md` — Create an onboarding guide for new engineers. Use when a senior developer needs structured onboarding materials. [high confidence]
+- `skills/foundation/codebase-orientation/SKILL.md` — Guide quick orientation of an unfamiliar codebase with module mapping, entry points, and local run steps. Use when a junior developer needs to get situated fast. [high confidence]
+- `skills/foundation/config-file-explainer/SKILL.md` — Explain a configuration file and its key options. Use when a junior developer is confused by a config file. [high confidence]
+- `skills/foundation/data-structure-chooser/SKILL.md` — Recommend basic data structures for a task. Use when a junior developer needs help choosing lists, maps, or sets. [high confidence]
+- `skills/foundation/debugging-checklist/SKILL.md` — Provide a systematic debugging checklist. Use when a junior developer is stuck and needs a structured approach. [high confidence]
+- `skills/foundation/dependency-install-helper/SKILL.md` — Guide installation of project dependencies and toolchains. Use when a junior developer is stuck setting up the environment. [high confidence]
+- `skills/foundation/error-message-explainer/SKILL.md` — Explain compiler/runtime errors in plain language. Use when a junior developer needs help understanding an error message. [high confidence]
+- `skills/foundation/git-basic-helper/SKILL.md` — Provide safe git commands for common tasks. Use when a junior developer needs help with branching, commits, or resolving simple conflicts. [high confidence]
+- `skills/foundation/linter-fix-guide/SKILL.md` — Explain lint errors and propose fixes. Use when a junior developer needs help resolving common lint or format warnings. [high confidence]
+- `skills/foundation/log-summarizer/SKILL.md` — Summarize noisy logs into likely causes and next steps. Use when a junior developer needs help interpreting logs. [high confidence]
+- `skills/foundation/small-script-generator/SKILL.md` — Generate a small helper script for repetitive tasks. Use when a junior developer needs a quick automation snippet. [high confidence]
+- `skills/foundation/ticket-breakdown/SKILL.md` — Break a task or ticket into small steps. Use when a junior developer needs guidance on how to start. [high confidence]
+- `skills/frontend/accessibility-basic-check/SKILL.md` — Run a basic accessibility checklist for UI changes. Use when a junior developer needs quick a11y guidance. [high confidence]
+- `skills/frontend/cli-ux-improver/SKILL.md` — Improve CLI help, errors, and output. Use when a mid-level developer needs to make a CLI friendlier. [high confidence]
+- `skills/frontend/css-layout-helper/SKILL.md` — Explain CSS layout issues and propose fixes. Use when a junior developer is struggling with alignment or spacing. [high confidence]
+- `skills/infra/ci-failure-triage/SKILL.md` — Diagnose CI failures and stabilize pipelines. Use when a mid-level developer needs to resolve flaky or failing builds. [high confidence]
+- `skills/infra/cross-service-debugger/SKILL.md` — Coordinate debugging across multiple services. Use when a senior developer needs to trace a distributed issue. [high confidence]
+- `skills/infra/iac-reviewer/SKILL.md` — Review infrastructure-as-code changes for safety and correctness. Use when a mid-level developer needs a second look on IaC. [high confidence]
+- `skills/infra/multi-region-strategy/SKILL.md` — Design a multi-region architecture strategy. Use when a senior developer needs geo-redundant planning. [high confidence]
+- `skills/infra/observability-setup/SKILL.md` — Set up metrics, logs, and traces for a service. Use when a mid-level developer needs basic observability coverage. [high confidence]
+- `skills/infra/platform-migration-plan/SKILL.md` — Create a plan to migrate platforms or runtimes. Use when a senior developer needs a phased migration approach. [high confidence]
+- `skills/infra/zero-downtime-migration/SKILL.md` — Plan a zero-downtime migration for data or infrastructure. Use when a senior developer needs a safe migration strategy. [high confidence]
+- `skills/performance/cost-optimization-review/SKILL.md` — Review system costs and propose reductions. Use when a senior developer needs cost-saving recommendations. [high confidence]
+- `skills/performance/performance-budgeting/SKILL.md` — Define performance budgets and guardrails. Use when a senior developer needs performance targets and enforcement. [high confidence]
+- `skills/performance/performance-trace-guide/SKILL.md` — Guide collection and analysis of performance traces. Use when a mid-level developer needs to diagnose slowness. [high confidence]
+- `skills/performance/scalability-assessment/SKILL.md` — Assess a system for growth bottlenecks. Use when a senior developer needs to evaluate scaling limits. [high confidence]
+- `skills/planning/dependency-upgrade-plan/SKILL.md` — Plan safe dependency upgrades with risk notes. Use when a mid-level developer is tasked with upgrading libraries. [high confidence]
+- `skills/planning/org-standardization/SKILL.md` — Define engineering standards across teams. Use when a senior developer needs to align practices. [high confidence]
+- `skills/planning/pr-reviewer/SKILL.md` — Review a pull request for correctness, regressions, and missing tests. Use when a mid-level developer needs structured review guidance. [high confidence]
+- `skills/planning/refactor-roadmap/SKILL.md` — Create a staged refactor plan for a module. Use when a mid-level developer needs a safe refactor path. [high confidence]
+- `skills/planning/roadmap-prioritization/SKILL.md` — Prioritize roadmap initiatives with tradeoffs. Use when a senior developer needs help ranking projects. [high confidence]
+- `skills/planning/simple-refactor/SKILL.md` — Suggest small refactors that improve readability without changing behavior. Use when a junior developer asks to clean up code. [high confidence]
+- `skills/planning/tech-debt-portfolio/SKILL.md` — Assess and prioritize tech debt items. Use when a senior developer needs an investment plan for debt reduction. [high confidence]
+- `skills/planning/vendor-evaluation/SKILL.md` — Evaluate third-party vendors for engineering fit. Use when a senior developer needs a structured vendor assessment. [high confidence]
+- `skills/reliability/incident-postmortem/SKILL.md` — Draft an incident postmortem with timeline, RCA, and action items. Use when a senior developer needs a structured post-incident report. [high confidence]
+- `skills/reliability/reliability-slo-sla/SKILL.md` — Define or review SLOs and SLAs for a service. Use when a senior developer needs reliability targets. [high confidence]
+- `skills/security/compliance-readiness/SKILL.md` — Assess readiness for compliance audits. Use when a senior developer needs a gap analysis for standards. [high confidence]
+- `skills/security/config-hardening/SKILL.md` — Harden configuration and defaults for safer deployment. Use when a mid-level developer needs to reduce misconfig risks. [high confidence]
+- `skills/security/dependency-risk-audit/SKILL.md` — Audit dependencies for licensing, security, and maintenance risk. Use when a senior developer needs risk assessment. [high confidence]
+- `skills/security/security-quick-scan/SKILL.md` — Scan code or configuration for common security issues. Use when a mid-level developer needs a quick security pass. [high confidence]
+- `skills/security/threat-modeling/SKILL.md` — Perform threat modeling for a system or feature. Use when a senior developer needs security risk assessment. [high confidence]
+- `skills/testing/bug-repro-plan/SKILL.md` — Create a minimal, repeatable reproduction plan for a bug. Use when a junior developer needs clear steps to reproduce and capture evidence. [high confidence]
+- `skills/testing/integration-test-planner/SKILL.md` — Plan integration tests across modules or services. Use when a mid-level developer needs to verify system interactions. [high confidence]
+- `skills/testing/unit-test-starter/SKILL.md` — Generate starter unit tests for a small function or module. Use when a junior developer needs test scaffolding and edge cases. [high confidence]
+
+## Documentations
+
+- `docs/CHANGELOG.md` — Repository documentation [medium confidence]
+- `README.md` — Repository documentation [medium confidence]
+
+## Others
+
+- `.gitignore` — Observed repository asset [low confidence]
+

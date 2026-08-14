@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "mode": "skills-sh-editable",
+  "skills": [
+    "api-designer",
+    "coding-assistant",
+    "debug-helper",
+    "git-workflow",
+    "html-portal-generator",
+    "production-orchestrator",
+    "test-writer"
+  ],
+  "scope": "project-local",
+  "approvalRequired": true,
+  "status": "PROPOSED"
+}

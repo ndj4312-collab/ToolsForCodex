@@ -1,0 +1,235 @@
+# Proposed skills index
+
+Generated from observed SKILL.md files. Review names and descriptions before applying.
+
+Source digest: `fccd8a3ce69072f7ed5e7d960aa19b817b3dac45d13f48ad9cd7332ab6ec43bd`
+
+- `/accessibility` — `docs/ja-JP/skills/accessibility/SKILL.md` — WCAG 2.2 レベル AA 標準を用いてインクルーシブなデジタルプロダクトを設計・実装・監査します。Web 用のセマンティック ARIA および Web・ネイティブプラットフォーム（iOS/Android）のアクセシビリティトレイトを生成するために使用します。
+- `/agent-architecture-audit` — `docs/ja-JP/skills/agent-architecture-audit/SKILL.md` — エージェントおよび LLM アプリケーション向けのフルスタック診断。12 層のエージェントスタックにおけるラッパーリグレッション、メモリ汚染、ツール規律の失敗、隠れた修復ループ、レンダリング破損を監査します。重要度順の発見事項とコードファーストの修正を生成します。エージェントアプリケーション、自律ループ、または LLM を活用した機能を構築する開発者に必須です。
+- `/agent-eval` — `docs/ja-JP/skills/agent-eval/SKILL.md` — カスタムタスクでコーディングエージェント（Claude Code、Aider、Codex など）をヘッドツーヘッドで比較し、合格率、コスト、時間、一貫性のメトリクスを測定します
+- `/agent-harness-construction` — `docs/ja-JP/skills/agent-harness-construction/SKILL.md` — AI エージェントのアクション空間、ツール定義、観測フォーマットを設計・最適化して完了率を向上させます。
+- `/agent-introspection-debugging` — `docs/ja-JP/skills/agent-introspection-debugging/SKILL.md` — キャプチャ、診断、封じ込め回復、内省レポートを使用した AI エージェント障害のための構造化された自己デバッグワークフロー。
+- `/agent-payment-x402` — `docs/ja-JP/skills/agent-payment-x402/SKILL.md` — タスクごとのバジェット、支出コントロール、ノンカストディアルウォレットを備えた x402 決済実行を AI エージェントに追加します。agentwallet-sdk を通じて Base をサポートし、OKX Payments / OKX エージェント決済プロトコルを通じて X Layer をサポートします。
+- `/agent-sort` — `docs/ja-JP/skills/agent-sort/SKILL.md` — 並行リポジトリ対応のレビューパスを使用して、スキル、コマンド、ルール、フック、エクストラを DAILY と LIBRARY のバケットに分類することで、特定のリポジトリ向けのエビデンスに基づいた ECC インストール計画を構築します。プロジェクトが完全なバンドルをロードする代わりに実際に必要なものに ECC をトリミングする必要がある場合に使用します。
+- `/agentic-engineering` — `docs/ja-JP/skills/agentic-engineering/SKILL.md` — 評価ファースト実行、分解、コスト対応モデルルーティングを使用してエージェニックエンジニアとして動作します。
+- `/agentic-os` — `docs/ja-JP/skills/agentic-os/SKILL.md` — Claude Code 上に永続的なマルチエージェントオペレーティングシステムを構築します。カーネルアーキテクチャ、スペシャリストエージェント、スラッシュコマンド、ファイルベースのメモリ、スケジュールされた自動化、外部データベースなしの状態管理をカバーします。
+- `/ai-first-engineering` — `docs/ja-JP/skills/ai-first-engineering/SKILL.md` — AI エージェントが大量の実装出力を生成するチームのためのエンジニアリング運用モデル。
+- `/ai-regression-testing` — `docs/ja-JP/skills/ai-regression-testing/SKILL.md` — AI 支援開発のためのリグレッションテスト戦略。データベース依存なしのサンドボックスモード API テスト、自動化されたバグチェックワークフロー、同じモデルがコードを書いてレビューする AI のブラインドスポットを捕捉するパターン。
+- `/android-clean-architecture` — `docs/ja-JP/skills/android-clean-architecture/SKILL.md` — Android と Kotlin Multiplatform プロジェクトのクリーンアーキテクチャパターン — モジュール構造、依存関係ルール、UseCase、Repository、データ層パターン。
+- `/angular-developer` — `docs/ja-JP/skills/angular-developer/SKILL.md` — Angular コードを生成し、アーキテクチャ ガイダンスを提供します。プロジェクトの作成、コンポーネント、またはサービスを作成するとき、または反応性（シグナル、linkedSignal、リソース）、フォーム、依存性注入、ルーティング、SSR、アクセシビリティ（ARIA）、アニメーション、スタイリング（コンポーネント スタイル、Tailwind CSS）、テスト、または CLI ツール作成のベスト プラクティスについてトリガーされます。
+- `/api-connector-builder` — `docs/ja-JP/skills/api-connector-builder/SKILL.md` — ターゲット リポジトリの既存統合パターンに正確に一致する新しい API コネクターまたはプロバイダーを構築します。2 番目のアーキテクチャを発明せずに、1 つ以上の統合を追加するときに使用します。
+- `/api-design` — `docs/ja-JP/skills/api-design/SKILL.md` — リソース命名、ステータス コード、ページネーション、フィルタリング、エラー応答、バージョン管理、およびレート制限を含む REST API デザイン パターン。
+- `/architecture-decision-records` — `docs/ja-JP/skills/architecture-decision-records/SKILL.md` — コーディングセッション中にアーキテクチャ決定を構造化ADRとして記録し、自動的に決定の瞬間を検出し、コンテキスト、検討された代替案、根拠を記録します。今後の開発者がコードベースの形成理由を理解するためのADRログを維持します。
+- `/article-writing` — `docs/ja-JP/skills/article-writing/SKILL.md` — 記事、ガイド、ブログ投稿、チュートリアル、ニュースレター号、その他の長文コンテンツを、提供された例またはブランドガイダンスから派生した独特の声で作成します。ユーザーが段落より長いポーランド済みの書き込みコンテンツを望む場合、特に声の一貫性、構造、および信頼性が重要な場合に使用します。
+- `/automation-audit-ops` — `docs/ja-JP/skills/automation-audit-ops/SKILL.md` — ECC用の証拠ベースの自動化インベントリとオーバーラップ監査ワークフロー。ユーザーがどのジョブ、フック、コネクタ、MCPサーバー、またはラッパーがライブか、壊れているか、冗長であるか、修正前に不足しているかを知りたい場合に使用します。
+- `/autonomous-agent-harness` — `docs/ja-JP/skills/autonomous-agent-harness/SKILL.md` — Claude Codeを永続的なメモリ、スケジュール済み操作、コンピュータ使用、タスクキューイングを備えた完全自動エージェントシステムに変換します。スタンドアロンエージェントフレームワーク（Hermes、AutoGPT）を、Claude Codeのネイティブcrons、dispatch、MCPツール、メモリを活用して置き換えます。ユーザーが継続的な自動操作、スケジュール済みタスク、または自己指令エージェントループを望む場合に使用します。
+- `/autonomous-loops` — `docs/ja-JP/skills/autonomous-loops/SKILL.md` — 自動Claude Codeループのパターンとアーキテクチャ — シンプルな順序パイプラインからRFC駆動マルチエージェントDAGシステムまで。
+- `/backend-patterns` — `docs/ja-JP/skills/backend-patterns/SKILL.md` — Backend architecture patterns, API design, database optimization, and server-side best practices for Node.js, Express, and Next.js API routes.
+- `/benchmark` — `docs/ja-JP/skills/benchmark/SKILL.md` — このスキルを使用して、パフォーマンスベースラインを測定し、PR前後の回帰を検出し、スタック代替案を比較します。
+- `/blueprint` — `docs/ja-JP/skills/blueprint/SKILL.md` — >-
+- `/brand-voice` — `docs/ja-JP/skills/brand-voice/SKILL.md` — 実際のポスト、エッセイ、ローンチノート、ドキュメント、またはサイトコピーからソース派生の執筆スタイルプロファイルを構築し、コンテンツ、アウトリーチ、ソーシャルワークフロー全体でそのプロファイルを再利用します。ユーザーが一般的なAI執筆トロープなしで声の一貫性を望む場合に使用します。
+- `/browser-qa` — `docs/ja-JP/skills/browser-qa/SKILL.md` — このスキルを使用して、機能をデプロイ後にブラウザ自動化を使用した自動ビジュアルテストとUI相互作用検証を自動化します。
+- `/bun-runtime` — `docs/ja-JP/skills/bun-runtime/SKILL.md` — ランタイムとしてのBun、パッケージマネージャー、バンドラー、テストランナー。Bun対Nodeを選択する場合、移行メモ、Vercelサポート。
+- `/canary-watch` — `docs/ja-JP/skills/canary-watch/SKILL.md` — このスキルを使用して、デプロイメント、マージ、または依存関係アップグレード後にデプロイされたURLの回帰を監視します。
+- `/carrier-relationship-management` — `docs/ja-JP/skills/carrier-relationship-management/SKILL.md` — >
+- `/cisco-ios-patterns` — `docs/ja-JP/skills/cisco-ios-patterns/SKILL.md` — showコマンド、コンフィグ階層、ワイルドカードマスク、ACL配置、インターフェースハイジーン、安全な変更ウィンドウ検証のためのCisco IOSおよびIOS-XEレビューパターン。
+- `/ck` — `docs/ja-JP/skills/ck/SKILL.md` — Claude Codeの永続的なプロジェクト単位のメモリ。セッション開始時にプロジェクトコンテキストを自動読み込み、gitアクティビティでセッションを追跡し、ネイティブメモリに書き込みます。コマンドは決定的なNode.jsスクリプトを実行します — 動作はモデルバージョン間で一貫しています。
+- `/claude-devfleet` — `docs/ja-JP/skills/claude-devfleet/SKILL.md` — Claude DevFleet経由でマルチエージェントコーディングタスクをオーケストレーション — プロジェクトを計画し、分離された作業ツリー内で平行エージェントを派遣し、進捗を監視し、構造化レポートを読む。
+- `/click-path-audit` — `docs/ja-JP/skills/click-path-audit/SKILL.md` — ユーザー向けボタン/タッチポイントを完全な状態変更シーケンスを通して追跡し、機能が個別に機能するが互いにキャンセルされたり、間違った最終状態を生成したり、UIを矛盾した状態にしたままにするバグを見つけます。次の場合に使用します：体系的なデバッグがバグを見つけたが、ユーザーは壊れたボタンを報告する場合、または共有状態ストアに触れる主要なリファクター後。
+- `/clickhouse-io` — `docs/ja-JP/skills/clickhouse-io/SKILL.md` — ClickHouse database patterns, query optimization, analytics, and data engineering best practices for high-performance analytical workloads.
+- `/code-tour` — `docs/ja-JP/skills/code-tour/SKILL.md` — CodeTour `.tour`ファイルを作成 — ペルソナターゲット、ステップバイステップウォークスルー（実際のファイルとラインアンカー付き）。オンボーディングツアー、アーキテクチャウォークスルー、PRツアー、RCAツアー、構造化「これがどのように機能するかを説明」リクエストに使用。
+- `/codebase-onboarding` — `docs/ja-JP/skills/codebase-onboarding/SKILL.md` — 不慣れなコードベースを分析し、アーキテクチャマップ、主要なエントリポイント、規約、スターターCLAUDE.mdを含む構造化オンボーディングガイドを生成します。新しいプロジェクトに参加するか、リポでClaude Codeを初めてセットアップする場合に使用します。
+- `/coding-standards` — `docs/ja-JP/skills/coding-standards/SKILL.md` — TypeScript、JavaScript、React、Node.js開発のための汎用コーディング標準、ベストプラクティス、パターン。
+- `/compose-multiplatform-patterns` — `docs/ja-JP/skills/compose-multiplatform-patterns/SKILL.md` — KMPプロジェクト向けのCompose MultiplatformおよびJetpack Composeパターン — 状態管理、ナビゲーション、テーマ設定、パフォーマンス、プラットフォーム固有のUI。
+- `/configure-ecc` — `docs/ja-JP/skills/configure-ecc/SKILL.md` — Claude Code、Codex、Kimi 内で ECC のインストール、更新、再設定を案内し、各ハーネスが実際に備えるプラグイン、スコープ、フック機能を守ります。
+- `/connections-optimizer` — `docs/ja-JP/skills/connections-optimizer/SKILL.md` — レビュー優先の整理、フォロー/追加の推薦、ユーザーの実際の声で書かれたチャネル別ウォームアウトリーチのドラフトを通じて、ユーザーのXとLinkedInネットワークを再編成します。フォローリストを整理したい、現在の優先事項に向けて成長したい、または高品質な関係を中心にソーシャルグラフのバランスを取り直したい場合に使用します。
+- `/content-engine` — `docs/ja-JP/skills/content-engine/SKILL.md` — X、LinkedIn、TikTok、YouTube、ニュースレター、マルチプラットフォームキャンペーンのプラットフォームネイティブなコンテンツシステムを作成します。ソーシャル投稿、スレッド、スクリプト、コンテンツカレンダー、または1つのソースアセットを複数プラットフォームにきれいに適応したい場合に使用します。
+- `/content-hash-cache-pattern` — `docs/ja-JP/skills/content-hash-cache-pattern/SKILL.md` — SHA-256コンテンツハッシュを使用して、高コストなファイル処理結果をキャッシュします — パス非依存、自動無効化、サービスレイヤーの分離。
+- `/context-budget` — `docs/ja-JP/skills/context-budget/SKILL.md` — エージェント、スキル、MCPサーバー、ルールにわたってClaude Codeのコンテキストウィンドウ消費を監査します。肥大化、冗長なコンポーネントを特定し、優先順位付けされたトークン節約の推奨事項を生成します。
+- `/continuous-agent-loop` — `docs/ja-JP/skills/continuous-agent-loop/SKILL.md` — 品質ゲート、評価、リカバリーコントロールを備えた継続的な自律エージェントループのパターン。
+- `/continuous-learning-v2` — `docs/ja-JP/skills/continuous-learning-v2/SKILL.md` — フックを介してセッションを観察し、信頼度スコアリング付きのアトミックなインスティンクトを作成し、スキル/コマンド/エージェントに進化させるインスティンクトベースの学習システム。
+- `/continuous-learning` — `docs/ja-JP/skills/continuous-learning/SKILL.md` — Claude Codeセッションから再利用可能なパターンを自動的に抽出し、将来の使用のために学習済みスキルとして保存します。
+- `/cost-aware-llm-pipeline` — `docs/ja-JP/skills/cost-aware-llm-pipeline/SKILL.md` — LLM APIの使用量のコスト最適化パターン — タスクの複雑さによるモデルルーティング、予算追跡、リトライロジック、プロンプトキャッシング。
+- `/cost-tracking` — `docs/ja-JP/skills/cost-tracking/SKILL.md` — ローカルのコスト追跡データベースからClaude Codeのトークン使用量、支出、予算を追跡・レポートします。コスト、支出、使用量、トークン、予算、またはプロジェクト、ツール、セッション、日付によるコスト内訳について質問する場合に使用します。
+- `/council` — `docs/ja-JP/skills/council/SKILL.md` — 曖昧な決定、トレードオフ、ゴー/ノーゴーの判断のために4つの声のカウンシルを召集します。複数の有効なパスが存在し、選択前に構造化された異議が必要な場合に使用します。
+- `/cpp-coding-standards` — `docs/ja-JP/skills/cpp-coding-standards/SKILL.md` — C++コアガイドラインに基づくC++コーディング標準（isocpp.github.io）。現代的で安全で慣用的なプラクティスを強制するためにC++コードを書き、レビュー、またはリファクタリングする場合に使用します。
+- `/cpp-testing` — `docs/ja-JP/skills/cpp-testing/SKILL.md` — C++ テストの作成/更新/修正、GoogleTest/CTest の設定、失敗またはフレーキーなテストの診断、カバレッジ/サニタイザーの追加時にのみ使用します。
+- `/crosspost` — `docs/ja-JP/skills/crosspost/SKILL.md` — X、LinkedIn、Threads、Bluesky間のマルチプラットフォームコンテンツ配布。content-engineパターンを使用してプラットフォームごとにコンテンツを適応します。同一コンテンツをクロスプラットフォームで投稿することはありません。コンテンツをソーシャルプラットフォーム間で配布したい場合に使用します。
+- `/csharp-testing` — `docs/ja-JP/skills/csharp-testing/SKILL.md` — xUnit、FluentAssertions、モッキング、統合テスト、テスト組織のベストプラクティスを使用したC#と.NETのテストパターン。
+- `/customer-billing-ops` — `docs/ja-JP/skills/customer-billing-ops/SKILL.md` — Stripeなどの接続された請求ツールを使用して、サブスクリプション、返金、チャーントリアージ、請求ポータルの回復、プラン分析などの顧客請求ワークフローを操作します。顧客を助けたい、サブスクリプション状態を検査したい、または収益に影響する請求操作を管理したい場合に使用します。
+- `/customs-trade-compliance` — `docs/ja-JP/skills/customs-trade-compliance/SKILL.md` — >
+- `/dart-flutter-patterns` — `docs/ja-JP/skills/dart-flutter-patterns/SKILL.md` — 本番環境対応のDartおよびFlutterパターンは、null安全性、不変状態、非同期構成、ウィジェットアーキテクチャ、人気のある状態管理フレームワーク（BLoC、Riverpod、Provider）、GoRouterナビゲーション、Dioネットワーキング、Freezedコード生成、クリーンアーキテクチャをカバー。
+- `/dashboard-builder` — `docs/ja-JP/skills/dashboard-builder/SKILL.md` — Grafana、SigNoz、および同様のプラットフォーム用の実際のオペレータ質問に答える監視ダッシュボードを構築します。メトリクスを虚栄ボードではなく機能するダッシュボードに変える場合に使用します。
+- `/data-scraper-agent` — `docs/ja-JP/skills/data-scraper-agent/SKILL.md` — 任意のパブリックソース（ジョブボード、価格、ニュース、GitHub、スポーツなど）用の完全自動化されたAI搭載データ収集エージェントを構築します。スケジュールでスクレイプし、無料LLM（Gemini Flash）でデータを豊かにし、Notion/Sheets/Supabaseに結果を保存し、ユーザーフィードバックから学習します。GitHub Actions上で100％無料で実行。ユーザーがパブリックデータを自動的に監視、収集、または追跡したい場合に使用します。
+- `/database-migrations` — `docs/ja-JP/skills/database-migrations/SKILL.md` — PostgreSQL、MySQL、一般的なORM（Prisma、Drizzle、Kysely、Django、TypeORM、golang-migrate）全体のスキーマ変更、データマイグレーション、ロールバック、ゼロダウンタイムデプロイメントのためのデータベースマイグレーションベストプラクティス。
+- `/deep-research` — `docs/ja-JP/skills/deep-research/SKILL.md` — コンテキスト深い研究を実施し、複雑なテーマについての権威ある答えを生成します。複数のソースをキュレート、相互参照、合成してコンテキスト内の完全な画像を構築します。
+- `/defi-amm-security` — `docs/ja-JP/skills/defi-amm-security/SKILL.md` — DeFi自動マーケットメーカー（AMM）スマートコントラクトセキュリティ監査パターン。フラッシュローン、スリッページ、サンドイッチング攻撃、価格操作、再入攻撃、不正確な整数演算をカバー。
+- `/deployment-patterns` — `docs/ja-JP/skills/deployment-patterns/SKILL.md` — Kubernetes、Docker、Vercel、クラウドプロバイダーにおけるデプロイメントパターンと戦略。ブルーグリーン、カナリア、ローリングデプロイメント、ゼロダウンタイムアップグレード。
+- `/design-system` — `docs/ja-JP/skills/design-system/SKILL.md` — アクセシビリティ、レスポンシブネス、テーマ設定、コンポーネント群、トークンを備えた本番環境対応デザインシステムの構築。Figma、Storybook、コンポーネントライブラリ統合。
+- `/django-celery` — `docs/ja-JP/skills/django-celery/SKILL.md` — DjangoおよびCeleryを使用した非同期タスク処理。タスクキューイング、ワーカー管理、エラー処理、スケジューリング。Redis/RabbitMQ ブローカー統合。
+- `/django-patterns` — `docs/ja-JP/skills/django-patterns/SKILL.md` — Django architecture patterns, REST API design with DRF, ORM best practices, caching, signals, middleware, and production-grade Django apps.
+- `/django-security` — `docs/ja-JP/skills/django-security/SKILL.md` — Django security best practices, authentication, authorization, CSRF protection, SQL injection prevention, XSS prevention, and secure deployment configurations.
+- `/django-tdd` — `docs/ja-JP/skills/django-tdd/SKILL.md` — Django testing strategies with pytest-django, TDD methodology, factory_boy, mocking, coverage, and testing Django REST Framework APIs.
+- `/django-verification` — `docs/ja-JP/skills/django-verification/SKILL.md` — Verification loop for Django projects: migrations, linting, tests with coverage, security scans, and deployment readiness checks before release or PR.
+- `/dmux-workflows` — `docs/ja-JP/skills/dmux-workflows/SKILL.md` — 複数のAIエージェントとタスク集約ワークフローを調整します。複数のワーカーで作業を分配し、エラーを処理し、結果をマージ。
+- `/docker-patterns` — `docs/ja-JP/skills/docker-patterns/SKILL.md` — Docker イメージの構築、最適化、マルチステージビルド、ネットワーク、ボリューム管理。本番環境デプロイメント用のベストプラクティス。
+- `/documentation-lookup` — `docs/ja-JP/skills/documentation-lookup/SKILL.md` — 訓練データの代わりにContext7 MCP経由で最新のライブラリとフレームワークドキュメント使用。セットアップの質問、APIリファレンス、コード例、またはユーザーがフレームワーク（例：React、Next.js、Prisma）に名前を付けるときにアクティベーション。
+- `/dotnet-patterns` — `docs/ja-JP/skills/dotnet-patterns/SKILL.md` — C#と.NET言語固有のパターン、規約、依存性注入、async/await、およびロバストで保守可能な.NETアプリケーション構築のためのベストプラクティス。
+- `/e2e-testing` — `docs/ja-JP/skills/e2e-testing/SKILL.md` — Playwright E2Eテストパターン、Page Object Model、設定、CI/CD統合、アーティファクト管理、および不安定なテスト戦略。
+- `/ecc-guide` — `docs/ja-JP/skills/ecc-guide/SKILL.md` — ECC の現在のエージェント、スキル、コマンド、フック、ルール、インストールプロファイル、およびプロジェクトオンボーディングをガイドしています。ライブリポジトリサーフェスを読んでから回答するようユーザーをガイドします。
+- `/ecc-tools-cost-audit` — `docs/ja-JP/skills/ecc-tools-cost-audit/SKILL.md` — ECC ツール、エージェント、スキル、および実装のコスト監査を実施します。プロンプト入力トークンを分析して、計算効率を定量化します。
+- `/email-ops` — `docs/ja-JP/skills/email-ops/SKILL.md` — ECC用の証拠ベースのメールボックストリアージ、ドラフト作成、送信検証、および送信済みメールセーフフォローアップワークフロー。ユーザーがメールを整理したり、実際のメールサーフェスを通じてドラフトまたは送信したい、または送信済みメールに何が到着したかを証明したい場合に使用します。
+- `/energy-procurement` — `docs/ja-JP/skills/energy-procurement/SKILL.md` — 電気とガス調達、料金最適化、需要料金管理、再生可能エネルギーPPA評価、およびマルチファシリティーエネルギー戦略のための符号化された専門知識。
+- `/enterprise-agent-ops` — `docs/ja-JP/skills/enterprise-agent-ops/SKILL.md` — オブザーバビリティ、セキュリティ境界、およびライフサイクル管理を備えた長寿命エージェントワークロードを運用します。
+- `/error-handling` — `docs/ja-JP/skills/error-handling/SKILL.md` — TypeScript、Python、Goにわたる堅牢なエラー処理のパターン。型付きエラー、エラー境界、リトライ、サーキットブレーカー、ユーザー向けエラーメッセージをカバーします。
+- `/eval-harness` — `docs/ja-JP/skills/eval-harness/SKILL.md` — Claude Codeセッションの正式な評価フレームワークで、評価駆動開発（EDD）の原則を実装します
+- `/evm-token-decimals` — `docs/ja-JP/skills/evm-token-decimals/SKILL.md` — EVMチェーン全体でサイレントな小数点不一致バグを防ぐ。ランタイムでの小数点照会、チェーン対応キャッシング、ブリッジドトークンの精度ドリフト、ボット・ダッシュボード・DeFiツール向けの安全な正規化をカバーします。
+- `/exa-search` — `docs/ja-JP/skills/exa-search/SKILL.md` — Exa MCPによるウェブ、コード、企業調査のためのニューラル検索。ユーザーがウェブ検索、コード例、企業情報、人物検索、またはExaのニューラル検索エンジンを使ったAI駆動の詳細調査を必要とする場合に使用します。
+- `/fal-ai-media` — `docs/ja-JP/skills/fal-ai-media/SKILL.md` — fal.ai MCPによる統合メディア生成（画像、動画、音声）。テキストから画像（Nano Banana）、テキスト/画像から動画（Seedance、Kling、Veo 3）、テキストから音声（CSM-1B）、動画から音声（ThinkSound）をカバーします。ユーザーがAIで画像、動画、音声を生成したい場合に使用します。
+- `/fastapi-patterns` — `docs/ja-JP/skills/fastapi-patterns/SKILL.md` — 非同期API、依存性注入、Pydanticのリクエスト・レスポンスモデル、OpenAPIドキュメント、テスト、セキュリティ、本番対応のためのFastAPIパターン。
+- `/finance-billing-ops` — `docs/ja-JP/skills/finance-billing-ops/SKILL.md` — ECCの証拠優先の収益、価格設定、返金、チーム請求、請求モデルの実態確認ワークフロー。ユーザーが販売スナップショット、価格比較、重複請求の診断、または汎用的な支払いアドバイスではなくコードに裏付けられた請求の実態を必要とする場合に使用します。
+- `/flox-environments` — `docs/ja-JP/skills/flox-environments/SKILL.md` — Floxで再現可能なクロスプラットフォーム開発環境を作成します — Nixに基づく宣言的な環境マネージャー。次の場合は必ずこのスキルを使用してください: システムレベルの依存関係（コンパイラー、データベース、openssl・libvips・BLAS・LAPACKなどのネイティブライブラリー）を持つプロジェクトを設定する場合; Python、Node.js、Rust、Go、C/C++、Java、Ruby、Elixir、PHP、その他の言語の再現可能なツールチェーンを設定する場合; macOSとLinux間で同一に動作する環境を管理する場合; チームのために正確なパッケージバージョンを固定する場合; ローカルサービス（PostgreSQL、Redis、Kafka）を開発ツールと並行して実行する場合; 単一コマンドで新しい開発者をオンボードする場合; または「自分のマシンでは動く」問題を解決する場合。AI支援やバイブコーディングに特に価値があります — Floxはエージェントがsudoなし、システム汚染なし、サンドボックス制限なしにプロジェクトスコープの環境にツールをインストールでき、結果の環境はリポジトリにコミットされるため、誰でも即座に再現できます。ユーザーがFloxに言及しない場合でも、再現可能、宣言的、クロスプラットフォームな開発環境とシステムパッケージが必要と説明した場合はこのスキルを使用してください。また、ユーザーが.flox/、manifest.toml、flox activate、またはFloxHubに言及した場合も使用してください。
+- `/flutter-dart-code-review` — `docs/ja-JP/skills/flutter-dart-code-review/SKILL.md` — ウィジェットのベストプラクティス、状態管理パターン（BLoC、Riverpod、Provider、GetX、MobX、Signals）、Dartのイディオム、パフォーマンス、アクセシビリティ、セキュリティ、クリーンアーキテクチャをカバーするライブラリに依存しないFlutter/Dartのコードレビューチェックリスト。
+- `/foundation-models-on-device` — `docs/ja-JP/skills/foundation-models-on-device/SKILL.md` — デバイス上基盤モデルの実装パターン、量子化、最適化、およびプライバシーを考慮した推論。
+- `/frontend-design-direction` — `docs/ja-JP/skills/frontend-design-direction/SKILL.md` — フロントエンド設計の方向性、美的原則、および一貫した設計言語実装。
+- `/frontend-patterns` — `docs/ja-JP/skills/frontend-patterns/SKILL.md` — React、Next.js、状態管理、パフォーマンス最適化、UIベストプラクティスのためのフロントエンド開発パターン。
+- `/frontend-slides` — `docs/ja-JP/skills/frontend-slides/SKILL.md` — フロントエンドプレゼンテーション、デモンストレーション、およびスライド構成のためのパターンとベストプラクティス。
+- `/fsharp-testing` — `docs/ja-JP/skills/fsharp-testing/SKILL.md` — F#テストフレームワーク、プロパティベーステスト、および関数型アプローチ。
+- `/gan-style-harness` — `docs/ja-JP/skills/gan-style-harness/SKILL.md` — GAN（生成的敵対ネットワーク）スタイルの評価ハーネス、画像生成パターン、および品質メトリクス。
+- `/gateguard` — `docs/ja-JP/skills/gateguard/SKILL.md` — API、エージェント、およびLLMエンドポイントのアクセス制御と認可パターン。
+- `/git-workflow` — `docs/ja-JP/skills/git-workflow/SKILL.md` — Gitワークフロー、ブランチ戦略、コミットメッセージ規約、およびプルリクエストプロセス。
+- `/github-ops` — `docs/ja-JP/skills/github-ops/SKILL.md` — GitHub操作、自動化、APIインテグレーション、およびCI/CDワークフロー。
+- `/golang-patterns` — `docs/ja-JP/skills/golang-patterns/SKILL.md` — 堅牢で効率的かつ保守可能なGoアプリケーションを構築するための慣用的なGoパターン、ベストプラクティス、規約。
+- `/golang-testing` — `docs/ja-JP/skills/golang-testing/SKILL.md` — テスト駆動開発とGoコードの高品質を保証するための包括的なテスト戦略。
+- `/google-workspace-ops` — `docs/ja-JP/skills/google-workspace-ops/SKILL.md` — Google Workspace API操作、Sheets自動化、Gmail統合、およびドキュメント管理。
+- `/healthcare-cdss-patterns` — `docs/ja-JP/skills/healthcare-cdss-patterns/SKILL.md` — 臨床意思決定支援システム（CDSS）パターン、医学的推論、およびエビデンスベースの実装。
+- `/healthcare-emr-patterns` — `docs/ja-JP/skills/healthcare-emr-patterns/SKILL.md` — 電子医療記録（EMR）パターン、相互運用性、およびHL7/FHIR統合。
+- `/healthcare-eval-harness` — `docs/ja-JP/skills/healthcare-eval-harness/SKILL.md` — ヘルスケアAIモデル評価ハーネス、臨床メトリクス、およびレギュレーション遵守の検証。
+- `/healthcare-phi-compliance` — `docs/ja-JP/skills/healthcare-phi-compliance/SKILL.md` — 保護医療情報（PHI）コンプライアンス、HIPAA準拠、およびデータセキュリティ。
+- `/hermes-imports` — `docs/ja-JP/skills/hermes-imports/SKILL.md` — Hermesデータインポート、マッピング、変換、およびデータインテグリティ検証。
+- `/hexagonal-architecture` — `docs/ja-JP/skills/hexagonal-architecture/SKILL.md` — ヘキサゴナルアーキテクチャ（ポート・アダプタパターン）、境界の分離、および外部依存関係の管理。
+- `/hipaa-compliance` — `docs/ja-JP/skills/hipaa-compliance/SKILL.md` — HIPAA準拠実装、セキュリティ対策、監査ログ、およびデータ保護戦略。
+- `/homelab-network-readiness` — `docs/ja-JP/skills/homelab-network-readiness/SKILL.md` — ホームラボネットワーク準備、セキュリティ評価、パフォーマンステスト、および展開準備。
+- `/homelab-network-setup` — `docs/ja-JP/skills/homelab-network-setup/SKILL.md` — ホームラボネットワーク基盤設定、デバイス設定、接続性、およびネットワークセグメンテーション。
+- `/homelab-pihole-dns` — `docs/ja-JP/skills/homelab-pihole-dns/SKILL.md` — ホームラボ用Pi-hole DNS設定、広告ブロック、プライバシー、およびカスタムドメイン解決。
+- `/homelab-vlan-segmentation` — `docs/ja-JP/skills/homelab-vlan-segmentation/SKILL.md` — ホームラボVLANセグメンテーション、ネットワーク分離、アクセス制御、およびトラフィック管理。
+- `/homelab-wireguard-vpn` — `docs/ja-JP/skills/homelab-wireguard-vpn/SKILL.md` — ホームラボWireGuard VPN設定、リモートアクセス、キー管理、およびエンドツーエンド暗号化。
+- `/hookify-rules` — `docs/ja-JP/skills/hookify-rules/SKILL.md` — 自動フック実装、イベントドリブン実行、およびルール駆動ワークフロー。
+- `/inventory-demand-planning` — `docs/ja-JP/skills/inventory-demand-planning/SKILL.md` — 在庫管理、需要予測、補充戦略、およびサプライチェーン最適化。
+- `/investor-materials` — `docs/ja-JP/skills/investor-materials/SKILL.md` — 投資家向けマテリアル、ピッチデック、財務プレゼンテーション、およびビジネス概要。
+- `/investor-outreach` — `docs/ja-JP/skills/investor-outreach/SKILL.md` — 投資家へのアウトリーチ、関係構築、ファンドレイジング戦略、およびパイプラインマネジメント。
+- `/ios-icon-gen` — `docs/ja-JP/skills/ios-icon-gen/SKILL.md` — SF Symbols（Apple ネイティブ 5,000 件以上）または Iconify API（200 以上のコレクションから 275,000 件以上のオープンソースアイコン）から Xcode アセットカタログ用の PNG イメージセットとして iOS アプリアイコンを生成します。アイコンの生成、アイコンアセットの作成、アセットカタログへのアイコン追加、または iOS プロジェクト向けアイコンの検索を行う際に使用します。
+- `/iterative-retrieval` — `docs/ja-JP/skills/iterative-retrieval/SKILL.md` — サブエージェントのコンテキスト問題を解決するために、コンテキスト取得を段階的に洗練するパターン
+- `/java-coding-standards` — `docs/ja-JP/skills/java-coding-standards/SKILL.md` — Spring Bootサービス向けのJavaコーディング標準：命名、不変性、Optional使用、ストリーム、例外、ジェネリクス、プロジェクトレイアウト。
+- `/jira-integration` — `docs/ja-JP/skills/jira-integration/SKILL.md` — Jira チケットの取得、要件分析、チケットステータスの更新、コメントの追加、またはイシューのトランジションを行う際に使用します。MCP または直接 REST 呼び出しによる Jira API パターンを提供します。
+- `/jpa-patterns` — `docs/ja-JP/skills/jpa-patterns/SKILL.md` — JPA/Hibernate patterns for entity design, relationships, query optimization, transactions, auditing, indexing, pagination, and pooling in Spring Boot.
+- `/knowledge-ops` — `docs/ja-JP/skills/knowledge-ops/SKILL.md` — 複数のストレージレイヤー（ローカルファイル、MCP メモリ、ベクターストア、Git リポジトリ）にわたるナレッジベースの管理、取り込み、同期、検索。ユーザーが知識システム全体で保存・整理・同期・重複排除・検索を行いたい場合に使用します。
+- `/kotlin-coroutines-flows` — `docs/ja-JP/skills/kotlin-coroutines-flows/SKILL.md` — Android および KMP 向けの Kotlin コルーチンと Flow パターン — 構造化並行性、Flow オペレーター、StateFlow、エラーハンドリング、テスト。
+- `/kotlin-exposed-patterns` — `docs/ja-JP/skills/kotlin-exposed-patterns/SKILL.md` — JetBrains Exposed ORM パターン（DSL クエリ、DAO パターン、トランザクション、HikariCP 接続プーリング、Flyway マイグレーション、リポジトリパターンを含む）。
+- `/kotlin-ktor-patterns` — `docs/ja-JP/skills/kotlin-ktor-patterns/SKILL.md` — Ktor サーバーパターン（ルーティング DSL、プラグイン、認証、Koin DI、kotlinx.serialization、WebSocket、testApplication テストを含む）。
+- `/kotlin-patterns` — `docs/ja-JP/skills/kotlin-patterns/SKILL.md` — コルーチン、null 安全性、DSL ビルダーを使用して堅牢・効率的・保守性の高い Kotlin アプリケーションを構築するための慣用的な Kotlin パターン、ベストプラクティス、規約。
+- `/kotlin-testing` — `docs/ja-JP/skills/kotlin-testing/SKILL.md` — Kotlinテストフレームワーク、アサーション、モック、およびコルーチンテスト。
+- `/laravel-patterns` — `docs/ja-JP/skills/laravel-patterns/SKILL.md` — Laravel言語固有のパターン、Eloquent ORM、ミドルウェア、およびサービスコンテナ。
+- `/laravel-plugin-discovery` — `docs/ja-JP/skills/laravel-plugin-discovery/SKILL.md` — Laravel プラグイン検出、パッケージ管理、依存関係解決、およびサービスプロバイダ統合。
+- `/laravel-security` — `docs/ja-JP/skills/laravel-security/SKILL.md` — Laravel セキュリティベストプラクティス：認証・認可、バリデーション、CSRF、一括割当、ファイルアップロード、シークレット管理、レート制限、安全なデプロイメント
+- `/laravel-tdd` — `docs/ja-JP/skills/laravel-tdd/SKILL.md` — Laravel での TDD：PHPUnit と Pest、ファクトリー、データベーステスト、フェイク、カバレッジターゲット
+- `/laravel-verification` — `docs/ja-JP/skills/laravel-verification/SKILL.md` — 日本語翻訳：このファイルは laravel-verification 用の日本語翻訳が必要です
+- `/lead-intelligence` — `docs/ja-JP/skills/lead-intelligence/SKILL.md` — 日本語翻訳：このファイルは lead-intelligence 用の日本語翻訳が必要です
+- `/liquid-glass-design` — `docs/ja-JP/skills/liquid-glass-design/SKILL.md` — 日本語翻訳：このファイルは liquid-glass-design 用の日本語翻訳が必要です
+- `/llm-trading-agent-security` — `docs/ja-JP/skills/llm-trading-agent-security/SKILL.md` — 日本語翻訳：このファイルは llm-trading-agent-security 用の日本語翻訳が必要です
+- `/logistics-exception-management` — `docs/ja-JP/skills/logistics-exception-management/SKILL.md` — 日本語翻訳：このファイルは logistics-exception-management 用の日本語翻訳が必要です
+- `/make-interfaces-feel-better` — `docs/ja-JP/skills/make-interfaces-feel-better/SKILL.md` — 日本語翻訳：このファイルは make-interfaces-feel-better 用の日本語翻訳が必要です
+- `/manim-video` — `docs/ja-JP/skills/manim-video/SKILL.md` — 日本語翻訳：このファイルは manim-video 用の日本語翻訳が必要です
+- `/market-research` — `docs/ja-JP/skills/market-research/SKILL.md` — 日本語翻訳：このファイルは market-research 用の日本語翻訳が必要です
+- `/mcp-server-patterns` — `docs/ja-JP/skills/mcp-server-patterns/SKILL.md` — 日本語翻訳：このファイルは mcp-server-patterns 用の日本語翻訳が必要です
+- `/messages-ops` — `docs/ja-JP/skills/messages-ops/SKILL.md` — 日本語翻訳：このファイルは messages-ops 用の日本語翻訳が必要です
+- `/mle-workflow` — `docs/ja-JP/skills/mle-workflow/SKILL.md` — 日本語翻訳：このファイルは mle-workflow 用の日本語翻訳が必要です
+- `/motion-advanced` — `docs/ja-JP/skills/motion-advanced/SKILL.md` — 日本語翻訳：このファイルは motion-advanced 用の日本語翻訳が必要です
+- `/motion-foundations` — `docs/ja-JP/skills/motion-foundations/SKILL.md` — 日本語翻訳：このファイルは motion-foundations 用の日本語翻訳が必要です
+- `/motion-patterns` — `docs/ja-JP/skills/motion-patterns/SKILL.md` — 日本語翻訳：このファイルは motion-patterns 用の日本語翻訳が必要です
+- `/motion-ui` — `docs/ja-JP/skills/motion-ui/SKILL.md` — 日本語翻訳：このファイルは motion-ui 用の日本語翻訳が必要です
+- `/mysql-patterns` — `docs/ja-JP/skills/mysql-patterns/SKILL.md` — 日本語翻訳：このファイルは mysql-patterns 用の日本語翻訳が必要です
+- `/nanoclaw-repl` — `docs/ja-JP/skills/nanoclaw-repl/SKILL.md` — 日本語翻訳：このファイルは nanoclaw-repl 用の日本語翻訳が必要です
+- `/nestjs-patterns` — `docs/ja-JP/skills/nestjs-patterns/SKILL.md` — 日本語翻訳：このファイルは nestjs-patterns 用の日本語翻訳が必要です
+- `/netmiko-ssh-automation` — `docs/ja-JP/skills/netmiko-ssh-automation/SKILL.md` — 日本語翻訳：このファイルは netmiko-ssh-automation 用の日本語翻訳が必要です
+- `/network-bgp-diagnostics` — `docs/ja-JP/skills/network-bgp-diagnostics/SKILL.md` — 日本語翻訳：このファイルは network-bgp-diagnostics 用の日本語翻訳が必要です
+- `/network-config-validation` — `docs/ja-JP/skills/network-config-validation/SKILL.md` — 日本語翻訳：このファイルは network-config-validation 用の日本語翻訳が必要です
+- `/network-interface-health` — `docs/ja-JP/skills/network-interface-health/SKILL.md` — ルーター、スイッチ、Linuxホスト上のインターフェースエラー、ドロップ、CRC、デュプレックス不一致、フラッピング、速度ネゴシエーション問題、カウンタートレンドを診断する。
+- `/nextjs-turbopack` — `docs/ja-JP/skills/nextjs-turbopack/SKILL.md` — Next.js 16+とTurbopack — インクリメンタルバンドリング、FSキャッシング、開発速度、Turbopackとwebpackをいつどちらかどうかを選ぶか。
+- `/nodejs-keccak256` — `docs/ja-JP/skills/nodejs-keccak256/SKILL.md` — JavaScriptとTypeScriptにおけるEthereumハッシュバグを防ぐ。NodeのSHA3-256はNIST SHA3であり、Ethereum Keccak-256ではなく、セレクター、署名、ストレージスロット、アドレス導出を静かに破壊する。
+- `/nutrient-document-processing` — `docs/ja-JP/skills/nutrient-document-processing/SKILL.md` — Nutrient DWS API を使用してドキュメントの処理、変換、OCR、抽出、編集、署名、フォーム入力を行います。PDF、DOCX、XLSX、PPTX、HTML、画像に対応しています。
+- `/nuxt4-patterns` — `docs/ja-JP/skills/nuxt4-patterns/SKILL.md` — ハイドレーション安全性、パフォーマンス、ルートルール、遅延ロード、useFetchとuseAsyncDataを使ったSSR安全なデータフェッチングのためのNuxt 4アプリパターン。
+- `/openclaw-persona-forge` — `docs/ja-JP/skills/openclaw-persona-forge/SKILL.md` — 为 OpenClaw AI Agent 锻造完整的龙虾灵魂方案。根据用户偏好或随机抽卡， 输出身份定位、灵魂描述(SOUL.md)、角色化底线规则、名字和头像生图提示词。 如当前环境提供已审核的生图 skill，可自动生成统一风格头像图片。 当用户需要创建、设计或定制 OpenClaw 龙虾灵魂时使用。 不适用于：微调已有 SOUL.md、非 OpenClaw 平台的角色设计、纯工具型无性格 Agent。 触发词：龙虾灵魂、虾魂、OpenClaw 灵魂、养虾灵魂、龙虾角色、龙虾定位、 龙虾剧本杀角色、龙虾游戏角色、龙虾 NPC、龙虾性格、龙虾背景故事、 lobster soul、lobster character、抽卡、随机龙虾、龙虾 SOUL、gacha。
+- `/opensource-pipeline` — `docs/ja-JP/skills/opensource-pipeline/SKILL.md` — オープンソースパイプライン: プライベートプロジェクトをフォーク、サニタイズし、安全な公開リリースのためにパッケージ化する。3つのエージェント（フォーカー、サニタイザー、パッケージャー）を連鎖させる。トリガー: '/opensource'、'open source this'、'make this public'、'prepare for open source'。
+- `/perl-patterns` — `docs/ja-JP/skills/perl-patterns/SKILL.md` — 堅牢でメンテナブルなPerlアプリケーションを構築するためのModern Perl 5.36+のイディオム、ベストプラクティス、規約。
+- `/perl-security` — `docs/ja-JP/skills/perl-security/SKILL.md` — テイントモード、入力バリデーション、安全なプロセス実行、DBIパラメータ化クエリ、Webセキュリティ（XSS/SQLi/CSRF）、perlcriticセキュリティポリシーを網羅する包括的なPerlセキュリティ。
+- `/perl-testing` — `docs/ja-JP/skills/perl-testing/SKILL.md` — 日本語翻訳：このファイルは perl-testing 用の日本語翻訳が必要です
+- `/plan-orchestrate` — `docs/ja-JP/skills/plan-orchestrate/SKILL.md` — 日本語翻訳：このファイルは plan-orchestrate 用の日本語翻訳が必要です
+- `/plankton-code-quality` — `docs/ja-JP/skills/plankton-code-quality/SKILL.md` — 日本語翻訳：このファイルは plankton-code-quality 用の日本語翻訳が必要です
+- `/postgres-patterns` — `docs/ja-JP/skills/postgres-patterns/SKILL.md` — PostgreSQL database patterns for query optimization, schema design, indexing, and security. Based on Supabase best practices.
+- `/product-capability` — `docs/ja-JP/skills/product-capability/SKILL.md` — 日本語翻訳：このファイルは product-capability 用の日本語翻訳が必要です
+- `/product-lens` — `docs/ja-JP/skills/product-lens/SKILL.md` — 日本語翻訳：このファイルは product-lens 用の日本語翻訳が必要です
+- `/production-audit` — `docs/ja-JP/skills/production-audit/SKILL.md` — 日本語翻訳：このファイルは production-audit 用の日本語翻訳が必要です
+- `/production-scheduling` — `docs/ja-JP/skills/production-scheduling/SKILL.md` — 日本語翻訳：このファイルは production-scheduling 用の日本語翻訳が必要です
+- `/project-flow-ops` — `docs/ja-JP/skills/project-flow-ops/SKILL.md` — 日本語翻訳：このファイルは project-flow-ops 用の日本語翻訳が必要です
+- `/project-guidelines-example` — `docs/ja-JP/skills/project-guidelines-example/SKILL.md` — Project-specific skill template covering architecture, patterns, testing, and deployment guidance.
+- `/prompt-optimizer` — `docs/ja-JP/skills/prompt-optimizer/SKILL.md` — 日本語翻訳：このファイルは prompt-optimizer 用の日本語翻訳が必要です
+- `/python-patterns` — `docs/ja-JP/skills/python-patterns/SKILL.md` — Pythonic イディオム、PEP 8標準、型ヒント、堅牢で効率的かつ保守可能なPythonアプリケーションを構築するためのベストプラクティス。
+- `/python-testing` — `docs/ja-JP/skills/python-testing/SKILL.md` — pytest、TDD手法、フィクスチャ、モック、パラメータ化、カバレッジ要件を使用したPythonテスト戦略。
+- `/pytorch-patterns` — `docs/ja-JP/skills/pytorch-patterns/SKILL.md` — 日本語翻訳：このファイルは pytorch-patterns 用の日本語翻訳が必要です
+- `/quality-nonconformance` — `docs/ja-JP/skills/quality-nonconformance/SKILL.md` — 日本語翻訳：このファイルは quality-nonconformance 用の日本語翻訳が必要です
+- `/quarkus-patterns` — `docs/ja-JP/skills/quarkus-patterns/SKILL.md` — 日本語翻訳：このファイルは quarkus-patterns 用の日本語翻訳が必要です
+- `/quarkus-security` — `docs/ja-JP/skills/quarkus-security/SKILL.md` — Quarkus認証、認可、JWT/OIDC、RBAC、入力検証、CSRF、シークレット管理、依存関係セキュリティのセキュリティベストプラクティス。
+- `/quarkus-tdd` — `docs/ja-JP/skills/quarkus-tdd/SKILL.md` — JUnit 5、Mockito、REST Assured、Camelテスト、JaCoCoを使用したQuarkus 3.xのテスト駆動開発。機能追加、バグ修正、またはイベント駆動サービスのリファクタリング時に使用。
+- `/quarkus-verification` — `docs/ja-JP/skills/quarkus-verification/SKILL.md` — Quarkusプロジェクト検証ループ：ビルド、静的分析、カバレッジ付きテスト、セキュリティスキャン、ネイティブコンパイル、本番環境またはPR前の差分レビュー。
+- `/ralphinho-rfc-pipeline` — `docs/ja-JP/skills/ralphinho-rfc-pipeline/SKILL.md` — RFC駆動の複数エージェントDAG実行パターン、品質ゲート、マージキュー、ワークユニットオーケストレーション。
+- `/redis-patterns` — `docs/ja-JP/skills/redis-patterns/SKILL.md` — Redisデータ構造パターン、キャッシング戦略、分散ロック、レート制限、Pub/Sub、本番アプリケーション用コネクション管理。
+- `/regex-vs-llm-structured-text` — `docs/ja-JP/skills/regex-vs-llm-structured-text/SKILL.md` — 構造化テキストの解析に正規表現と大規模言語モデルのどちらを使うかを選択するための意思決定フレームワーク——まず正規表達式から始め、信頼度の低いエッジケースにのみ大規模言語モデルを追加する。
+- `/remotion-video-creation` — `docs/ja-JP/skills/remotion-video-creation/SKILL.md` — Remotion のベストプラクティス - React で動画を作成する。3D、アニメーション、音声、字幕、チャート、トランジションなどをカバーするドメイン固有の29のルール。
+- `/repo-scan` — `docs/ja-JP/skills/repo-scan/SKILL.md` — 固定されレビュー可能なコミットから外部の repo-scan スキルをインストールするブートストラップ用ポインター。クロススタックのソースコード資産監査を実行する前に repo-scan のインストールが必要な場合に使用する。この ECC ポインター自体は監査を実行しない。
+- `/research-ops` — `docs/ja-JP/skills/research-ops/SKILL.md` — 証拠優先のECC現状調査ワークフロー。ユーザーが現在の公開証拠と提供されたローカルコンテキストに基づいて最新の事実、比較、情報の充実、または推奨事項を求める場合に使用する。
+- `/returns-reverse-logistics` — `docs/ja-JP/skills/returns-reverse-logistics/SKILL.md` — 返品承認、受取・検品、処分決定、返金処理、不正検出、保証クレーム管理のための標準化された専門知識。15年以上の経験を持つ返品オペレーションマネージャーの知見に基づく。段階的フレームワーク、処分経済性、不正パターン認識、ベンダー回収プロセスを含む。製品返品、逆物流、返金決定、返品不正検出、保証クレームを扱う場合に使用。
+- `/rules-distill` — `docs/ja-JP/skills/rules-distill/SKILL.md` — スキルをスキャンしてドメイン横断的な原則を抽出し、ルールに蒸留する——既存のルールファイルへの追記、修正、または新規作成
+- `/rust-patterns` — `docs/ja-JP/skills/rust-patterns/SKILL.md` — 慣用的なRustパターン、所有権、エラー処理、トレイト、並行処理、および安全で高性能なアプリケーションを構築するためのベストプラクティス。
+- `/rust-testing` — `docs/ja-JP/skills/rust-testing/SKILL.md` — 単体テスト、統合テスト、非同期テスト、プロパティベーステスト、モック、カバレッジを含むRustテストパターン。TDD方法論に従う。
+- `/safety-guard` — `docs/ja-JP/skills/safety-guard/SKILL.md` — 本番システムでの作業時や、エージェントを自律的に実行する際に破壊的な操作を防ぐためにこのスキルを使用してください。
+- `/santa-method` — `docs/ja-JP/skills/santa-method/SKILL.md` — 収束ループを持つマルチエージェント敵対的検証。2つの独立したレビューエージェントが両方合格して初めて出力を出荷できます。
+- `/pubmed-database` — `docs/ja-JP/skills/scientific-db-pubmed-database/SKILL.md` — 生物医学文献、MeSH クエリ、PMID 検索、引用取得、および API を利用した文献モニタリングのための PubMed および NCBI E-utilities の直接検索ワークフロー。
+- `/uspto-database` — `docs/ja-JP/skills/scientific-db-uspto-database/SKILL.md` — 公式記録の検索、PatentSearch クエリ、TSDR チェック、譲渡データ、および再現可能な IP 調査ログのための USPTO 特許・商標データワークフロー。
+- `/gget` — `docs/ja-JP/skills/scientific-pkg-gget/SKILL.md` — ゲノムデータベースへのクイック検索、配列検索、BLAST スタイルの検索、エンリッチメントチェック、および再現可能なバイオインフォマティクス証拠ログのための gget CLI および Python ワークフロー。
+- `/literature-review` — `docs/ja-JP/skills/scientific-thinking-literature-review/SKILL.md` — 学術、生物医学、技術、科学的なトピックに対するシステマティックな文献レビューワークフロー。検索計画、ソースのスクリーニング、統合、引用確認、証拠ログを含む。
+- `/scholar-evaluation` — `docs/ja-JP/skills/scientific-thinking-scholar-evaluation/SKILL.md` — 論文、提案書、文献レビュー、方法論セクション、証拠の質、引用サポート、研究論文フィードバックのための構造化された学術的作業評価。
+- `/search-first` — `docs/ja-JP/skills/search-first/SKILL.md` — コーディング前の調査ワークフロー。カスタムコードを書く前に既存のツール、ライブラリ、パターンを検索します。researcher エージェントを呼び出します。
+- `/security-bounty-hunter` — `docs/ja-JP/skills/security-bounty-hunter/SKILL.md` — リポジトリ内の悪用可能なバウンティ対象のセキュリティ問題を発見します。ノイズの多いローカルのみの発見ではなく、実際のレポートに適格なリモートから到達可能な脆弱性に焦点を当てます。
+- `/security-review` — `docs/ja-JP/skills/security-review/SKILL.md` — 認証の追加、ユーザー入力の処理、シークレットの操作、APIエンドポイントの作成、支払い/機密機能の実装時にこのスキルを使用します。包括的なセキュリティチェックリストとパターンを提供します。
+- `/security-scan` — `docs/ja-JP/skills/security-scan/SKILL.md` — AgentShield を使用して、Claude Code の設定（.claude/ ディレクトリ）のセキュリティ脆弱性、設定ミス、インジェクションリスクをスキャンします。CLAUDE.md、settings.json、MCP サーバー、フック、エージェント定義をチェックします。
+- `/seo` — `docs/ja-JP/skills/seo/SKILL.md` — テクニカル SEO、オンページ最適化、構造化データ、Core Web Vitals、およびコンテンツ戦略にわたる SEO 改善の監査、計画、実施。ユーザーが検索可視性の向上、SEO 修正、スキーママークアップ、サイトマップ/robots の作業、またはキーワードマッピングを希望する場合に使用します。
+- `/skill-comply` — `docs/ja-JP/skills/skill-comply/SKILL.md` — スキル、ルール、エージェント定義が実際に遵守されているかを可視化する——3種類のプロンプト厳格度レベルのシナリオを自動生成し、エージェントを実行し、動作シーケンスを分類し、完全なツール呼び出しタイムラインの遵守率をレポートする
+- `/skill-scout` — `docs/ja-JP/skills/skill-scout/SKILL.md` — 新しいスキルを作成する前に、ローカル・マーケットプレイス・GitHub・Webの既存スキルを検索する。スキルの作成・ビルド・フォーク・検索を行う際に使用。
+- `/skill-stocktake` — `docs/ja-JP/skills/skill-stocktake/SKILL.md` — Claudeのスキルとコマンドの品質を監査するためのツール。変更されたスキルのみを対象とした高速スキャンと、順次サブエージェントバッチ評価を使用した完全棚卸しモードをサポートする。
+- `/social-graph-ranker` — `docs/ja-JP/skills/social-graph-ranker/SKILL.md` — XとLinkedInでのウォームイントロ発見、ブリッジスコアリング、ネットワークギャップ分析のための重み付きソーシャルグラフランキング。ユーザーがランキングエンジン自体を必要としている場合（より広いプロモーションやネットワーク維持ワークフローではなく）に使用する。
+- `/springboot-patterns` — `docs/ja-JP/skills/springboot-patterns/SKILL.md` — Spring Boot architecture patterns, REST API design, layered services, data access, caching, async processing, and logging. Use for Java Spring Boot backend work.
+- `/springboot-security` — `docs/ja-JP/skills/springboot-security/SKILL.md` — Spring Security best practices for authn/authz, validation, CSRF, secrets, headers, rate limiting, and dependency security in Java Spring Boot services.
+- `/springboot-tdd` — `docs/ja-JP/skills/springboot-tdd/SKILL.md` — Test-driven development for Spring Boot using JUnit 5, Mockito, MockMvc, Testcontainers, and JaCoCo. Use when adding features, fixing bugs, or refactoring.
+- `/springboot-verification` — `docs/ja-JP/skills/springboot-verification/SKILL.md` — Verification loop for Spring Boot projects: build, static analysis, tests with coverage, security scans, and diff review before release or PR.
+- `/strategic-compact` — `docs/ja-JP/skills/strategic-compact/SKILL.md` — 任意の自動コンパクションではなく、タスクフェーズを通じてコンテキストを保持するための論理的な間隔での手動コンパクションを提案します。
+- `/swift-actor-persistence` — `docs/ja-JP/skills/swift-actor-persistence/SKILL.md` — Swiftでactorを使用してスレッドセーフなデータ永続化を実装する——メモリキャッシュとファイルバックドストレージを組み合わせ、設計によってデータ競合を排除する。
+- `/swift-concurrency-6-2` — `docs/ja-JP/skills/swift-concurrency-6-2/SKILL.md` — Swift 6.2のアクセシブルな並行処理——デフォルトはシングルスレッド、@concurrentは明示的なバックグラウンドオフロードに使用し、分離の一貫性はMainActor型に使用する。
+- `/swift-protocol-di-testing` — `docs/ja-JP/skills/swift-protocol-di-testing/SKILL.md` — テスト可能なSwiftコードのためのプロトコルベースの依存性注入——焦点を絞ったプロトコルとSwift Testingを使用してファイルシステム、ネットワーク、外部APIをモックする。
+- `/swiftui-patterns` — `docs/ja-JP/skills/swiftui-patterns/SKILL.md` — @Observableを使用した状態管理、ビュー合成、ナビゲーション、パフォーマンス最適化、モダンなiOS/macOS UIのベストプラクティスを備えたSwiftUIアーキテクチャパターン。
+- `/tdd-workflow` — `docs/ja-JP/skills/tdd-workflow/SKILL.md` — 新機能の作成、バグ修正、コードのリファクタリング時にこのスキルを使用します。ユニット、統合、E2Eテストを含む80%以上のカバレッジでテスト駆動開発を強制します。
+- `/team-builder` — `docs/ja-JP/skills/team-builder/SKILL.md` — 並列チームを構成して派遣するためのインタラクティブなエージェント選択ツール
+- `/terminal-ops` — `docs/ja-JP/skills/terminal-ops/SKILL.md` — ECCのための証拠優先のリポジトリ実行ワークフロー。ユーザーがコマンドの実行、リポジトリの確認、CIの失敗のデバッグ、正確な実行と検証の証明を伴う狭い修正のプッシュを必要とする場合に使用する。
+- `/tinystruct-patterns` — `docs/ja-JP/skills/tinystruct-patterns/SKILL.md` — tinystructフレームワークでアプリケーションモジュールまたはマイクロサービスを開発する際に使用。ルーティング、コンテキスト管理、BuilderによるJSON処理、CLI/HTTPデュアルモードのパターンをカバー。
+- `/token-budget-advisor` — `docs/ja-JP/skills/token-budget-advisor/SKILL.md` — 回答する前に、どれだけの回答深度を消費するかについてユーザーに情報に基づいた選択を提供する。ユーザーが回答の長さ、深さ、またはトークンバジェットを明示的に制御したい場合にこのスキルを使用する。トリガー条件："token budget", "token count", "token usage", "token limit", "response length", "answer depth", "short version", "brief answer", "detailed answer", "exhaustive answer", "respuesta corta vs larga", "cuántos tokens", "ahorrar tokens", "responde al 50%", "dame la versión corta", "quiero controlar cuánto usas"、またはユーザーが回答のサイズや深さの制御を明示的に求めるその他の明確なバリエーション。トリガーしない条件：ユーザーが現在のセッションでレベルを指定済み（そのレベルを維持）、リクエストが明らかに一言の回答、または「token」が認証/セッション/支払いトークンを指している。
+- `/ui-demo` — `docs/ja-JP/skills/ui-demo/SKILL.md` — Playwrightを使用して美しいUIデモ動画を録画する。ユーザーがWebアプリのデモ、ウォークスルー、スクリーン録画、またはチュートリアル動画の作成を求める場合に使用する。可視カーソル、自然なリズム、プロフェッショナルな仕上がりのWebM動画を生成する。
+- `/ui-to-vue` — `docs/ja-JP/skills/ui-to-vue/SKILL.md` — UIスクリーンショットやデザインエクスポートをVue 3コンポーネントに一括変換する際に使用。Vant、Element Plus、Ant Design Vueに対応。
+- `/unified-notifications-ops` — `docs/ja-JP/skills/unified-notifications-ops/SKILL.md` — GitHub、Linear、デスクトップアラート、フック、接続された通信インターフェースを網羅する、統合されたECCネイティブワークフローとして通知を運用する。真の問題がアラートルーティング、重複排除、エスカレーション、またはインボックス崩壊である場合に使用する。
+- `/verification-loop` — `docs/ja-JP/skills/verification-loop/SKILL.md` — A comprehensive verification system for Claude Code sessions.
+- `/video-editing` — `docs/ja-JP/skills/video-editing/SKILL.md` — 実写素材のカット、構築、強化のためのAI支援ビデオ編集ワークフロー。生の撮影素材からFFmpeg、Remotion、ElevenLabs、fal.aiを経て、DescriptまたはCapCutで最終仕上げを行う完全なパイプラインをカバーする。ユーザーがビデオの編集、素材のカット、vlogの作成、またはビデオコンテンツの構築を望む場合に使用する。
+- `/videodb` — `docs/ja-JP/skills/videodb/SKILL.md` — ビデオとオーディオの表示、理解、アクション。表示：ローカルファイル、URL、RTSP/ライブストリーム、またはリアルタイムのデスクトップ録画からコンテンツを取得し、リアルタイムコンテキストと再生可能なストリームリンクを返す。理解：フレームを抽出し、ビジュアル/セマンティック/時間的インデックスを構築し、タイムスタンプと自動クリップでモーメントを検索する。アクション：トランスコードと正規化（コーデック、フレームレート、解像度、アスペクト比）、タイムライン編集（字幕、テキスト/画像オーバーレイ、ブランディング、オーディオオーバーレイ、吹き替え、翻訳）、メディアアセットの生成（画像、オーディオ、ビデオ）、ライブストリームまたはデスクトップキャプチャされたイベントのリアルタイムアラートを実行する。
+- `/visa-doc-translate` — `docs/ja-JP/skills/visa-doc-translate/SKILL.md` — ビザ申請書類（画像）を英語に翻訳し、原文と翻訳を含むバイリンガルPDFを作成する
+- `/vite-patterns` — `docs/ja-JP/skills/vite-patterns/SKILL.md` — Vite build tool patterns including config, plugins, HMR, env variables, proxy setup, SSR, library mode, dependency pre-bundling, and build optimization. Activate when working with vite.config.ts, Vite plugins, or Vite-based projects.
+- `/windows-desktop-e2e` — `docs/ja-JP/skills/windows-desktop-e2e/SKILL.md` — E2E testing for Windows native desktop apps (WPF, WinForms, Win32/MFC, Qt) using pywinauto and Windows UI Automation.
+- `/workspace-surface-audit` — `docs/ja-JP/skills/workspace-surface-audit/SKILL.md` — アクティブなリポジトリ、MCPサーバー、プラグイン、コネクター、環境サーフェス、ツールのセットアップを監査し、最も価値の高いECCネイティブスキル、フック、エージェント、オペレーターワークフローを推奨する。ユーザーがClaude Codeのセットアップを支援してほしい場合や、環境で実際に何が使えるかを理解したい場合に使用する。
+- `/x-api` — `docs/ja-JP/skills/x-api/SKILL.md` — ツイートの投稿、スレッド、タイムラインの読み取り、検索、分析のためのX/Twitter API統合。OAuth認証パターン、レートリミット、プラットフォームネイティブなコンテンツ投稿をカバーする。ユーザーがプログラムでXと対話したい場合に使用する。
