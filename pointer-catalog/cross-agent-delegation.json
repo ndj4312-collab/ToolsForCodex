@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0",
+  "category": "cross-agent-delegation",
+  "skills": [
+    {
+      "id": "external-tools",
+      "description": "Delegate implementation and review tasks to external AI CLI tools (Codex, Gemini) with cross-model adversarial review.",
+      "multiFile": true,
+      "source": {
+        "repo": "dsifry/metaswarm",
+        "path": "skills/external-tools/",
+        "ref": "33d39f776f7fe29098dcf048955756a237e8cb40",
+        "pinnedAt": "2026-08-14"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "category": "config-maintenance",
+  "skills": [
+    {
+      "id": "config-gc",
+      "description": "Garbage collection for your Claude Code configuration. Periodically scans ~/.claude (skills, memory, hooks, permissions, MCP servers, caches) for redundant, stale, orphaned, or low-value items, then walks the user through a confirm-each-deletion cleanup.",
+      "source": {
+        "repo": "affaan-m/everything-claude-code",
+        "path": "skills/config-gc/SKILL.md",
+        "ref": "c9de8f5b2b3a225bca9befa2b7700aa5e3a4d1b8",
+        "pinnedAt": "2026-08-14"
+      }
+    }
+  ]
+}
