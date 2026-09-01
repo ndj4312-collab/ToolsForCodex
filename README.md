@@ -50,6 +50,18 @@ Or to Claude Desktop (`claude_desktop_config.json`):
 
 Every tool call takes a `configPath` (and `transaction`/`approval` where the underlying CLI command requires one) pointing at an `orchestrator.config.example.json`-shaped file for the target project.
 
+### Remote (hosted) MCP server — for claude.ai / mobile
+
+`src/mcp/server.ts` above only works for local clients that can spawn a subprocess (Claude Code, Claude Desktop's local config). claude.ai, Cowork, and the mobile apps connect to Custom Connectors instead, which must be a remote HTTPS server — there's no local disk of "your project" to point at from Anthropic's cloud infrastructure.
+
+`src/mcp/remote/server.ts` solves that with a clone-per-session model, fit for sporadic, single-session use: call `set_target` once with a git URL to shallow-clone it into a temp directory for that session, then every other tool call runs against that clone until the session ends (idle timeout or client disconnect), at which point the clone is deleted. Nothing persists between sessions.
+
+Deploy free on Render (`render.yaml` is included as a Blueprint):
+1. render.com → **New → Blueprint** → connect this repo → Apply
+2. Once live, add it in Claude: **Settings → Connectors → Add custom connector**, paste `https://<your-service>.onrender.com/mcp`
+
+Free-tier notes: cold start after ~15 min idle (fine for sporadic use, adds a few seconds to the first call of a session); `set_target` requires `git` to be present in the runtime image, which Render's default Node image includes.
+
 ## Canonical ownership
 
 - `src/` owns executable orchestration behavior.

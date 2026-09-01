@@ -6,7 +6,8 @@
   "type": "commonjs",
   "bin": {
     "orchestrator": "dist/cli.js",
-    "toolsforcodex-mcp": "dist/mcp/server.js"
+    "toolsforcodex-mcp": "dist/mcp/server.js",
+    "toolsforcodex-mcp-remote": "dist/mcp/remote/server.js"
   },
   "scripts": {
     "prepare": "npm run build",
@@ -14,6 +15,7 @@
     "lint": "eslint . --max-warnings=0",
     "test": "jest",
     "mcp": "tsx src/mcp/server.ts",
+    "mcp:remote": "tsx src/mcp/remote/server.ts",
     "preflight": "tsx src/cli.ts preflight",
     "audit": "tsx src/cli.ts audit",
     "catalog": "tsx src/cli.ts catalog",

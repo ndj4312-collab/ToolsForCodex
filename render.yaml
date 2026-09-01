@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: toolsforcodex-mcp-remote
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: node dist/mcp/remote/server.js
