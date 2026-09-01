@@ -25,6 +25,31 @@ npm.cmd run doctor -- --config orchestrator.config.example.json
 
 `audit` and `catalog` are read-only with generated output isolated below `.orchestrator/`. `plan` preserves source files and emits reviewable candidates. `propose` creates review-only coordinator, index, metadata, and manifest candidates under `.orchestrator/proposals/`, even when the plan is blocked; it never copies them into the target. `bootstrap` requires a non-blocked plan and exactly one distribution route. A target write requires `stage`, `verify`, a matching human approval file, and then `apply`; `rollback` is hash-guarded.
 
+## MCP server
+
+The orchestrator is also available as an MCP server, exposing every CLI command (`preflight`, `audit`, `catalog`, `plan`, `propose`, `bootstrap`, `verify-adapters`, `doctor`, `stage`, `verify`, `approve`, `apply`, `rollback`) as an MCP tool with the same safety gates as the CLI. It is a protocol adapter, not a new code path — `src/mcp/server.ts` calls the identical functions `src/cli.ts` does.
+
+Add it to Claude Code:
+
+```
+claude mcp add toolsforcodex -- npx -y --package=github:ndj4312-collab/toolsforcodex toolsforcodex-mcp
+```
+
+Or to Claude Desktop (`claude_desktop_config.json`):
+
+```json
+{
+  "mcpServers": {
+    "toolsforcodex": {
+      "command": "npx",
+      "args": ["-y", "--package=github:ndj4312-collab/toolsforcodex", "toolsforcodex-mcp"]
+    }
+  }
+}
+```
+
+Every tool call takes a `configPath` (and `transaction`/`approval` where the underlying CLI command requires one) pointing at an `orchestrator.config.example.json`-shaped file for the target project.
+
 ## Canonical ownership
 
 - `src/` owns executable orchestration behavior.
