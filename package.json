@@ -5,12 +5,15 @@
   "description": "Deterministic, read-only-first repository orchestration tooling.",
   "type": "commonjs",
   "bin": {
-    "orchestrator": "dist/cli.js"
+    "orchestrator": "dist/cli.js",
+    "toolsforcodex-mcp": "dist/mcp/server.js"
   },
   "scripts": {
+    "prepare": "npm run build",
     "build": "tsc -p tsconfig.json",
     "lint": "eslint . --max-warnings=0",
     "test": "jest",
+    "mcp": "tsx src/mcp/server.ts",
     "preflight": "tsx src/cli.ts preflight",
     "audit": "tsx src/cli.ts audit",
     "catalog": "tsx src/cli.ts catalog",
@@ -31,8 +34,10 @@
     "node": ">=22"
   },
   "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
     "ajv": "^8.17.1",
-    "ajv-formats": "^3.0.1"
+    "ajv-formats": "^3.0.1",
+    "zod": "^4.5.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.34.0",
