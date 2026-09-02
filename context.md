@@ -193,3 +193,39 @@ Next exact work:
 2. Generate duplicate baseline from `skills-lock.json`, `skills/`, `approved-proposals/`, and `pointer-catalog/`.
 3. Extract import/adaptation mechanisms first for `github/awesome-copilot`, `tt-a1i/archify`, `VoltAgent/awesome-agent-skills`, and `TencentCloud/TencentDB-Agent-Memory`.
 4. Patch only the smallest ToolsForCodex integration that survives license/security/duplicate review.
+
+## 12. Direct-Overlap License and Design Update
+
+Observed at: 2026-09-02T10:00:35Z.
+
+User request: license-read the 14 direct-overlap candidates, build the duplicate baseline, then start concrete import/adaptation design with `github/awesome-copilot`, `tt-a1i/archify`, `VoltAgent/awesome-agent-skills`, and `TencentCloud/TencentDB-Agent-Memory`.
+
+Batch results:
+
+- Re-cloned `ndj4312-collab/ToolsForCodex` from `main` at `7519dbd` into this session and scrubbed the credential-bearing clone URL back to a plain GitHub remote.
+- Rehydrated the ignored quarantine set at `quarantine/starred-2026-09-02/` with the same 14 direct-overlap candidates listed in `docs/starred-repo-intake.md`.
+- License-read all 14 root license surfaces and recorded states in `docs/direct-overlap-import-design.md`.
+- Built the duplicate baseline from `skills-lock.json`, `skills/`, `approved-proposals/`, and `pointer-catalog/`: 84 installed skill records, 412 raw approved-proposal skill-like surfaces, 3 pointer-catalog skills, and 488 unique normalized baseline IDs.
+- Found exact `github/awesome-copilot` collisions with already-harvested proposal skills: `code-tour`, `prompt-optimizer`, `setup`, and `security-review`.
+- Started concrete import/adaptation design for the four priority repositories and recorded smallest safe boundaries.
+- Target repo execution performed: none. No target install, build, test, package script, hook, notebook, binary, container, or service was run.
+- Independent audit was attempted with a context-minimized sidecar reviewer, but the reviewer did not return within the useful window and was closed while still running. This remains a residual review gap before promotion beyond documentation/design.
+
+Files changed this batch:
+
+- `docs/direct-overlap-import-design.md`: license triage for the 14 candidates, duplicate baseline, and priority import/adaptation design.
+- `context.md`: this section.
+
+Queue decision snapshot:
+
+- `github/awesome-copilot`: `IMPORT_CANDIDATE` for a static registry/validator adapter; defer individual resource imports until item-level duplicate/security review.
+- `tt-a1i/archify`: `IMPORT_CANDIDATE` as proposal/pointer candidate for deterministic diagram artifacts; do not claim runtime verification until authorized target command execution occurs.
+- `VoltAgent/awesome-agent-skills`: `NEEDS_MODIFICATION` as source-registry input; parse metadata/provenance, not bodies.
+- `TencentCloud/TencentDB-Agent-Memory`: `NEEDS_MODIFICATION` as opt-in memory-provider adapter design; requires separate privacy/security design before implementation.
+
+Next exact work:
+
+1. Add fixture-backed ToolsForCodex contract/design for the `github/awesome-copilot` static registry adapter.
+2. Validate that the adapter emits candidate records with kind, source path, license state, duplicate state, and no target code execution.
+3. Run or obtain independent audit before any implementation/promotion beyond design documentation.
+4. Commit, push, remote-read back, and update the ledger.
