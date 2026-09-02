@@ -229,3 +229,54 @@ Next exact work:
 2. Validate that the adapter emits candidate records with kind, source path, license state, duplicate state, and no target code execution.
 3. Run or obtain independent audit before any implementation/promotion beyond design documentation.
 4. Commit, push, remote-read back, and update the ledger.
+
+## 13. Starred Source Availability Registry Update
+
+Observed at: 2026-09-02T18:05:00Z.
+
+User request: review the GitHub starred list again and make sure the repository contents are available to ToolsForCodex, or at least that availability/import work has begun.
+
+Batch results:
+
+- Re-read the live authenticated GitHub starred list: 62 unique starred repositories.
+- Re-ran the ToolsForCodex starred classifier against the live list: 62 classified records and the same 14 `DIRECT_TOOLSFORCODEX_OVERLAP` candidates.
+- Compared live stars against the recorded intake/design docs. No live starred repository is missing from the recorded inventory. The apparent 76 recorded names were the 62 full inventory rows plus the repeated 14 direct-overlap design rows, not drift.
+- Added `scripts/starred-availability.mjs`, a deterministic generator that converts classified GitHub-star metadata into a tracked source-locator availability registry.
+- Generated `docs/starred-source-registry.json` and `docs/starred-source-registry.md` for all 62 live starred repositories.
+- Availability is intentionally precise: the registry begins source-locator availability for ToolsForCodex, but it does not yet plug those records into the main source-record/catalog loader, vendor repository contents, run target code, or approve import.
+- The registry carries the direct-overlap decisions from the license/design pass:
+  - `github/awesome-copilot`: `IMPORT_CANDIDATE`, `ADAPTER_NEXT`.
+  - `tt-a1i/archify`: `IMPORT_CANDIDATE`, `PROPOSAL_NEXT`.
+  - `VoltAgent/awesome-agent-skills`: `NEEDS_MODIFICATION`, `SOURCE_REGISTRY_INPUT`.
+  - `TencentCloud/TencentDB-Agent-Memory`: `NEEDS_MODIFICATION`, `DESIGNED_ADAPTER`.
+- Added a unit test covering direct-overlap mapping, default source-locator mapping, markdown non-vendoring language, and the no-exec intake policy wording.
+- Independent sidecar audit completed and found three issues: source-record overclaim, generated/input timestamp inconsistency, and hardcoded no-exec verification wording. All three were patched before commit.
+
+Files changed this batch:
+
+- `scripts/starred-availability.mjs`: source-locator availability registry generator.
+- `test/unit/starred-availability.test.ts`: fixture-backed generator test.
+- `docs/starred-source-registry.json`: machine-readable availability registry for all 62 live stars.
+- `docs/starred-source-registry.md`: human-readable availability table for all 62 live stars.
+- `package.json`: adds `starred:availability`.
+- `docs/direct-overlap-import-design.md`: tightens credential-scan wording to avoid literal credential markers in tracked docs.
+- `context.md`: this section.
+
+Verification completed:
+
+- `node --check scripts/starred-availability.mjs` passed.
+- `node scripts/starred-availability.mjs --from-file .work/starred-intake/starred-classified-live.json --out docs/starred-source-registry.json --markdown docs/starred-source-registry.md --generated-at 2026-09-02T18:05:00.000Z` passed.
+- Registry summary: 62 total, 14 direct overlap, 2 import candidates, 6 needs modification, 23 license-constrained.
+- Registry shape assertion passed with `github/awesome-copilot` present as an `IMPORT_CANDIDATE`.
+- Credential-marker scan over tracked files found no GitHub token prefixes, authenticated clone-url marker, or literal bearer-header marker entries.
+- `git diff --check` passed.
+- `npm run build` passed.
+- `npm test -- --runInBand` passed: 6 suites, 15 tests.
+- `npm run lint` passed.
+
+Next exact work:
+
+1. Add the first real loader/consumer for `docs/starred-source-registry.json` so source locators become first-class catalog records instead of documentation-only availability.
+2. Start the `github/awesome-copilot` static registry/validator adapter against fixtures, with duplicate-state emission before any item import.
+3. Add `tt-a1i/archify` proposal/pointer fixture design for deterministic diagram artifacts.
+4. Keep `VoltAgent/awesome-agent-skills` and `TencentCloud/TencentDB-Agent-Memory` in modification-gated design until provenance/privacy constraints are encoded.

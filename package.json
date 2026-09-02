@@ -30,6 +30,7 @@
     "apply": "tsx src/cli.ts apply",
     "rollback": "tsx src/cli.ts rollback",
     "starred:intake": "node scripts/starred-repo-intake.mjs",
+    "starred:availability": "node scripts/starred-availability.mjs",
     "validate-release": "node scripts/validate-release.mjs",
     "normalize-approved": "node scripts/normalize-approved-bundles.mjs"
   },

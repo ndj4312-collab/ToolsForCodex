@@ -106,7 +106,7 @@ Proceed with design-only integration records for the four priority repos. The ne
 ## Verification
 
 - `git diff --check` passed.
-- Credential-marker scan over tracked files found no `ghp_`, `github_pat_`, `x-access-token`, or literal `Authorization: Bearer` entries.
+- Credential-marker scan over tracked files found no GitHub token prefixes, authenticated clone-url marker, or literal bearer-header marker entries.
 - Quarantine clone count verified at 14.
 - `npm ci --ignore-scripts` completed successfully.
 - `npm run build` passed.
