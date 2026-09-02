@@ -7,3 +7,4 @@ This repository owns only the standalone production orchestration package. Treat
 - Record unavailable facts as `UNKNOWN` and the evidence needed to resolve them.
 - `src/` is executable canon; `contracts/` owns interchange schemas; `skills/` owns portable skill instructions; generated output is ignored.
 - Do not install globally, contact a service, synchronize user directories, publish, push, or execute target-project code without explicit user authorization.
+- When present, read `context.md` for batch-scoped planning/orientation. It is non-canonical and replaceable; durable project state belongs in the Brainzzzz ledger, and mutable repo/MCP/CI facts still require current verification.
