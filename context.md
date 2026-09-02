@@ -131,3 +131,65 @@ Read-only dry-run record:
 - files likely to change: `context.md`, possible intake registry under `docs/` or generated output path, ledger.
 - tests or invocations to run: read-only GitHub API pagination, no-exec static metadata inspection, duplicate analysis once inventory exists.
 - user decision needed: if private starred repositories appear, decide whether they may be cataloged and what metadata can be persisted.
+
+## 11. Starred Repo Batch Update
+
+Observed at: 2026-09-02 current session.
+
+User correction: Do not down-rank starred repos as `REFERENCE_ONLY` during the access/useability batch. The required classification is where and how each repo can be used: cloud session, local session, remote MCP/static session, needs modification, or blocked. Import/adaptation value is decided only after static evidence, license review, duplicate analysis, and explicit integration design.
+
+Batch results:
+
+- Authenticated `/user/starred` access succeeded using the provided scratch token file without printing or committing token material.
+- Starred repository count: 62.
+- Current GitHub connector can read public repository metadata/static files but does not expose authenticated `/user/starred`; added `scripts/starred-repo-intake.mjs` so local/cloud sessions can reproduce star inventory with `GITHUB_TOKEN` or `GH_TOKEN`.
+- Direct ToolsForCodex overlap candidates identified: 14.
+- Quarantine shallow clones completed for the 14 direct-overlap candidates under ignored `quarantine/starred-2026-09-02/`.
+- Target repo execution performed: none.
+
+Direct-overlap quarantine set:
+
+- `TencentCloud/TencentDB-Agent-Memory`
+- `VoltAgent/awesome-agent-skills`
+- `VoltAgent/awesome-claude-code-subagents`
+- `VoltAgent/awesome-design-md`
+- `ai-boost/awesome-prompts`
+- `alibaba/page-agent`
+- `e2b-dev/awesome-ai-agents`
+- `enescingoz/awesome-n8n-templates`
+- `github/awesome-copilot`
+- `hanishrao/collective-ai-tools`
+- `tashfeenahmed/freellmapi`
+- `travisvn/awesome-claude-skills`
+- `tt-a1i/archify`
+- `zhaoxuya520/reverse-skill`
+
+Files changed this batch:
+
+- `.gitignore`: ignore `.work/` and `quarantine/`.
+- `eslint.config.mjs`: ignore `.work/**` and `quarantine/**` so local quarantine pulls are not linted as ToolsForCodex source.
+- `scripts/starred-repo-intake.mjs`: token-safe GitHub starred repo inventory/classifier with `--from-file` verification mode.
+- `package.json`: adds `starred:intake`.
+- `docs/starred-repo-intake.md`: records full 62-repo inventory and next direct-overlap integration actions without `REFERENCE_ONLY` queue decisions.
+
+Verification completed:
+
+- `git clone` of `ndj4312-collab/ToolsForCodex` succeeded; worktree started clean.
+- Authenticated curl pagination produced 62 starred repo metadata records.
+- `git clone --depth 1` succeeded for all 14 direct-overlap candidates.
+- `node --check scripts/starred-repo-intake.mjs` passed.
+- `node scripts/starred-repo-intake.mjs --from-file .work/starred-intake/starred-repos.json --format json` passed and reproduced 62 classified records.
+- `npm run build` passed.
+- `npm test -- --runInBand` passed: 5 suites, 14 tests.
+- `npm run lint` passed after excluding ignored quarantine/scratch evidence directories from ESLint.
+
+Verification caveat:
+
+- Live Node HTTPS mode for `scripts/starred-repo-intake.mjs` was not verified inside this Work sandbox because the environment blocked Node outbound network. Equivalent GitHub API access was verified with curl, and the script's file-input parser/classifier was verified locally.
+
+Next exact work:
+
+1. Run license file reads for the 14 direct-overlap candidates.
+2. Generate duplicate baseline from `skills-lock.json`, `skills/`, `approved-proposals/`, and `pointer-catalog/`.
+3. Extract import/adaptation mechanisms first for `github/awesome-copilot`, `tt-a1i/archify`, `VoltAgent/awesome-agent-skills`, and `TencentCloud/TencentDB-Agent-Memory`.
+4. Patch only the smallest ToolsForCodex integration that survives license/security/duplicate review.
