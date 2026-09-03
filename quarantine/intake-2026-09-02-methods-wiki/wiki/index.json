@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "derived": true,
+  "canon_rule": "This map is a routing projection. Canonical files always win.",
+  "concepts": [
+    {
+      "id": "repo-write-governance",
+      "queries": [
+        "write repo",
+        "external repo intake",
+        "quarantine",
+        "transaction"
+      ],
+      "canonical_sources": [
+        "AGENTS.md",
+        "docs/adding-repo-protocol.md"
+      ],
+      "authority": "policy",
+      "freshness": "reverify before mutation"
+    },
+    {
+      "id": "mcp-skill-routing",
+      "queries": [
+        "find skill",
+        "load skill",
+        "MCP skill discovery"
+      ],
+      "canonical_sources": [
+        "src/mcp/server.ts",
+        "skills/"
+      ],
+      "authority": "runtime",
+      "freshness": "current main SHA"
+    },
+    {
+      "id": "project-state",
+      "queries": [
+        "project state",
+        "handoff",
+        "ledger",
+        "batch context"
+      ],
+      "canonical_sources": [
+        "Notion SECOND_BRAIN_AGENT_ENVIRONMENT_LEDGER",
+        "context.md"
+      ],
+      "authority": "Notion ledger for durable state; context.md for replaceable repo batch context",
+      "freshness": "session start"
+    },
+    {
+      "id": "release-validation",
+      "queries": [
+        "release validation",
+        "package validation",
+        "runtime health"
+      ],
+      "canonical_sources": [
+        "package.json",
+        "scripts/validate-release.mjs",
+        ".github/workflows/ci.yml"
+      ],
+      "authority": "runtime/scripts",
+      "freshness": "current main SHA"
+    },
+    {
+      "id": "method-routing",
+      "queries": [
+        "planning depth",
+        "prove completion",
+        "entrepreneur opportunity"
+      ],
+      "canonical_sources": [
+        "Notion BMAD_EXPANDED_METHODOLOGY.md",
+        "Notion FABLE_CROSS_AGENT_METHODOLOGY.md",
+        "Notion ONE_PERSON_ENTREPRENEUR_OS.md"
+      ],
+      "authority": "methodology; never runtime canon",
+      "freshness": "monthly/upstream-change review"
+    }
+  ]
+}

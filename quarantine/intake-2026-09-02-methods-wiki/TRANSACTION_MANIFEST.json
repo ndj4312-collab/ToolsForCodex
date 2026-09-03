@@ -1,0 +1,25 @@
+{
+  "transaction_id": "INTAKE-2026-09-02-BMAD-FABLE-OPC-WIKI",
+  "state": "EXTERNALLY_BLOCKED_GITHUB_403",
+  "base_main_sha": "a8775c8eeeaa225457abad1ce9cec2c55a9fa17d",
+  "scope": "quarantine-only method and wiki intake; no executable promotion",
+  "sources": [
+    {
+      "repo": "bmad-code-org/BMAD-METHOD",
+      "ref": "891c0abbc1128f318e098a566f925155022aef12",
+      "license": "MIT"
+    },
+    {
+      "repo": "Sahir619/fable-method",
+      "ref": "88b5cf36b10ee3679e08ee0f0181b9774d481508",
+      "license": "MIT"
+    },
+    {
+      "repo": "easychen/opc-methodology",
+      "ref": "b3d0503a52298a2fbe4751231f3119d6a015eab5",
+      "license": "CC-BY-NC-SA"
+    }
+  ],
+  "promotion_gate": "duplicate analysis + verification + non-participating audit + repo tests",
+  "failure": "GitHub contents write returned 403 Resource not accessible by integration"
+}
