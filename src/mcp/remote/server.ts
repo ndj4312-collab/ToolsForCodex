@@ -36,6 +36,37 @@ import { cleanupSession, resolveConfigPath, setTarget } from "./session-store";
  * src/mcp/remote/session-store.ts for the clone/cleanup lifecycle.
  */
 
+const REMOTE_TOOL_NAMES = [
+  "set_target",
+  "preflight",
+  "audit",
+  "catalog",
+  "plan",
+  "propose",
+  "bootstrap",
+  "verify_adapters",
+  "doctor",
+  "find_skills",
+  "load_skill",
+  "stage",
+  "verify",
+  "approve",
+  "apply",
+  "rollback",
+] as const;
+
+function healthPayload() {
+  return {
+    status: "ok",
+    server: "toolsforcodex-remote",
+    version: "0.2.0",
+    commit: process.env.RENDER_GIT_COMMIT ?? process.env.GIT_COMMIT ?? "UNKNOWN",
+    branch: process.env.RENDER_GIT_BRANCH ?? process.env.GIT_BRANCH ?? "UNKNOWN",
+    service: process.env.RENDER_SERVICE_NAME ?? "UNKNOWN",
+    tools: REMOTE_TOOL_NAMES,
+  };
+}
+
 function loadTarget(configPath: string): { config: OrchestratorConfig; targetRoot: string } {
   const result = preflight(configPath);
   const config = JSON.parse(readFileSync(resolve(configPath), "utf8")) as OrchestratorConfig;
@@ -291,6 +322,11 @@ async function handleMcpRequest(req: IncomingMessage, res: ServerResponse): Prom
 const port = Number(process.env.PORT ?? 8787);
 
 const httpServer = createServer((req, res) => {
+  if (req.url === "/health" || req.url === "/healthz") {
+    res.writeHead(200, { "Content-Type": "application/json" });
+    res.end(JSON.stringify(healthPayload()));
+    return;
+  }
   if (req.url === "/mcp" || req.url === "/") {
     handleMcpRequest(req, res).catch((error) => {
       process.stderr.write(`${error instanceof Error ? error.stack ?? error.message : String(error)}\n`);
