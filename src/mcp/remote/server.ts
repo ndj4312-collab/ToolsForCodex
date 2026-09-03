@@ -22,6 +22,7 @@ import {
 } from "../../transactions/engine";
 import { validateProject } from "../../validation/project";
 import { writeProposalOutputs } from "../../proposals/generate";
+import { findProjectSkills, loadProjectSkill } from "../skill-registry";
 import { cleanupSession, resolveConfigPath, setTarget } from "./session-store";
 
 /**
@@ -164,6 +165,39 @@ function buildOrchestratorServer(sessionIdRef: { current: string | undefined }):
           missingEnvironment,
         };
       }),
+  );
+
+  server.registerTool(
+    "find_skills",
+    {
+      title: "Find skills",
+      description: "List project-local skills from the session target without executing target code.",
+      inputSchema: {
+        configPath: optionalConfigPath,
+        query: z.string().optional().describe("Optional search text matched against skill names, descriptions, and paths"),
+        limit: z.number().int().min(1).max(50).optional().describe("Maximum number of matches to return"),
+      },
+    },
+    async ({ configPath, query, limit }) => guarded(() => {
+      const { targetRoot } = loadTarget(cfg(configPath));
+      return findProjectSkills(targetRoot, query, limit);
+    }),
+  );
+
+  server.registerTool(
+    "load_skill",
+    {
+      title: "Load skill",
+      description: "Load a project-local SKILL.md by name or project path without executing target code.",
+      inputSchema: {
+        configPath: optionalConfigPath,
+        name: z.string().describe("Skill name or SKILL.md project path"),
+      },
+    },
+    async ({ configPath, name }) => guarded(() => {
+      const { targetRoot } = loadTarget(cfg(configPath));
+      return loadProjectSkill(targetRoot, name);
+    }),
   );
 
   const withTransaction = { configPath: optionalConfigPath, transaction: z.string().describe("Transaction id") };

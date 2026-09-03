@@ -1,0 +1,5 @@
+interface:
+  display_name: Headroom Token Minimizer
+  short_description: Shrink prompts, tool output, and handoff context while preserving audit evidence.
+policy:
+  allow_implicit_invocation: true

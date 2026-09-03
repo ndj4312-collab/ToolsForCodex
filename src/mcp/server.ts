@@ -18,6 +18,7 @@ import {
 } from "../transactions/engine";
 import { validateProject } from "../validation/project";
 import { writeProposalOutputs } from "../proposals/generate";
+import { findProjectSkills, loadProjectSkill } from "./skill-registry";
 
 /**
  * MCP wrapper for the production-orchestration-kit CLI.
@@ -56,6 +57,15 @@ async function guarded(fn: () => unknown | Promise<unknown>): Promise<ToolResult
 
 const configPathSchema = { configPath: z.string().describe("Path to the orchestrator config JSON file") };
 const transactionSchema = { ...configPathSchema, transaction: z.string().describe("Transaction id") };
+const findSkillsSchema = {
+  ...configPathSchema,
+  query: z.string().optional().describe("Optional search text matched against skill names, descriptions, and paths"),
+  limit: z.number().int().min(1).max(50).optional().describe("Maximum number of matches to return"),
+};
+const loadSkillSchema = {
+  ...configPathSchema,
+  name: z.string().describe("Skill name or SKILL.md project path"),
+};
 
 const server = new McpServer({ name: "toolsforcodex", version: "0.2.0" });
 
@@ -140,6 +150,24 @@ server.registerTool(
         missingEnvironment,
       };
     }),
+);
+
+server.registerTool(
+  "find_skills",
+  { title: "Find skills", description: "List project-local skills from the target tree without executing target code.", inputSchema: findSkillsSchema },
+  async ({ configPath, query, limit }) => guarded(() => {
+    const { targetRoot } = loadTarget(configPath);
+    return findProjectSkills(targetRoot, query, limit);
+  }),
+);
+
+server.registerTool(
+  "load_skill",
+  { title: "Load skill", description: "Load a project-local SKILL.md by name or project path without executing target code.", inputSchema: loadSkillSchema },
+  async ({ configPath, name }) => guarded(() => {
+    const { targetRoot } = loadTarget(configPath);
+    return loadProjectSkill(targetRoot, name);
+  }),
 );
 
 server.registerTool(
