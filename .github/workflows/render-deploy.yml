@@ -1,0 +1,31 @@
+name: render-deploy
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "render.yaml"
+      - "package.json"
+      - "package-lock.json"
+      - "src/mcp/remote/**"
+      - "src/mcp/skill-registry.ts"
+      - ".github/workflows/render-deploy.yml"
+
+concurrency:
+  group: render-deploy-main
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      RENDER_DEPLOY_HOOK_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+    steps:
+      - name: Check deploy hook configuration
+        if: ${{ env.RENDER_DEPLOY_HOOK_URL == '' }}
+        run: echo "::notice title=Render deploy skipped::Set RENDER_DEPLOY_HOOK_URL to trigger Render deploys from GitHub Actions."
+
+      - name: Trigger Render deploy
+        if: ${{ env.RENDER_DEPLOY_HOOK_URL != '' }}
+        run: curl --fail --silent --show-error --retry 3 --retry-delay 10 --request POST "$RENDER_DEPLOY_HOOK_URL"
