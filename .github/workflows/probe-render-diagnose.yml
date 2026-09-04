@@ -1,0 +1,33 @@
+name: probe-render-diagnose
+
+on:
+  push:
+    branches:
+      - probe/render-diagnose-2026-09-04
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - name: DNS and HTTP diagnostics
+        shell: bash
+        run: |
+          set -euxo pipefail
+          host toolsforcodex-mcp-remote.onrender.com || true
+          getent hosts toolsforcodex-mcp-remote.onrender.com || true
+          for path in / /mcp /health /healthz; do
+            echo "=== GET ${path} ==="
+            curl -sS -D - -o /tmp/body --max-time 90 "https://toolsforcodex-mcp-remote.onrender.com${path}" || true
+            echo "--- body ---"
+            cat /tmp/body || true
+            echo
+          done
+          echo "=== POST /mcp initialize ==="
+          curl -sS -D - --max-time 90 \
+            -H 'content-type: application/json' \
+            -H 'accept: application/json, text/event-stream' \
+            --data '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-03-26","capabilities":{},"clientInfo":{"name":"diagnostic","version":"1.0"}}}' \
+            https://toolsforcodex-mcp-remote.onrender.com/mcp || true
