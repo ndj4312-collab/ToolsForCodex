@@ -19,6 +19,7 @@ import {
 import { validateProject } from "../validation/project";
 import { writeProposalOutputs } from "../proposals/generate";
 import { findProjectSkills, loadProjectSkill } from "./skill-registry";
+import { findProjectKnowledge, loadProjectKnowledge } from "../knowledge/router";
 
 /**
  * MCP wrapper for the production-orchestration-kit CLI.
@@ -65,6 +66,15 @@ const findSkillsSchema = {
 const loadSkillSchema = {
   ...configPathSchema,
   name: z.string().describe("Skill name or SKILL.md project path"),
+};
+const findKnowledgeSchema = {
+  ...configPathSchema,
+  query: z.string().describe("Search text used to route to canonical source locators"),
+  limit: z.number().int().min(1).max(50).optional().describe("Maximum number of knowledge routes to return"),
+};
+const loadKnowledgeSchema = {
+  ...configPathSchema,
+  id: z.string().describe("Knowledge route id returned by find_knowledge"),
 };
 
 const server = new McpServer({ name: "toolsforcodex", version: "0.2.0" });
@@ -167,6 +177,24 @@ server.registerTool(
   async ({ configPath, name }) => guarded(() => {
     const { targetRoot } = loadTarget(configPath);
     return loadProjectSkill(targetRoot, name);
+  }),
+);
+
+server.registerTool(
+  "find_knowledge",
+  { title: "Find knowledge", description: "Route a query to compact derived knowledge entries and their canonical source locators. Read-only; canonical sources always win.", inputSchema: findKnowledgeSchema },
+  async ({ configPath, query, limit }) => guarded(() => {
+    const { targetRoot } = loadTarget(configPath);
+    return findProjectKnowledge(targetRoot, query, limit);
+  }),
+);
+
+server.registerTool(
+  "load_knowledge",
+  { title: "Load knowledge", description: "Load a derived knowledge route by id with canonical-source precedence, freshness, and conflict metadata. Unknown ids fail closed.", inputSchema: loadKnowledgeSchema },
+  async ({ configPath, id }) => guarded(() => {
+    const { targetRoot } = loadTarget(configPath);
+    return loadProjectKnowledge(targetRoot, id);
   }),
 );
 
