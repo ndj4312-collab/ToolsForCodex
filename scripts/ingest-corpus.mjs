@@ -1,5 +1,5 @@
 import { readdirSync, readFileSync, statSync, writeFileSync, mkdirSync } from 'node:fs';
-import { join, relative, extname } from 'node:path';
+import { join, relative, extname, basename, dirname } from 'node:path';
 import { createHash } from 'node:crypto';
 
 const root = process.cwd();
@@ -39,22 +39,53 @@ function classify(path, text) {
   if (text && /methodolog|workflow|procedure|protocol/i.test(text.slice(0,4000))) return 'methodology';
   return 'reference';
 }
+function humanizeSlug(value) {
+  return value.replace(/\.[^.]+$/, '').replace(/[-_]+/g, ' ').replace(/\s+/g, ' ').trim();
+}
+function semanticNameFromPath(path) {
+  const file = basename(path).toLowerCase();
+  const parent = basename(dirname(path));
+  if (file === 'index.md' || file === 'skill.md') return humanizeSlug(parent);
+  if (file === 'distribution-manifest.json') return `${humanizeSlug(basename(dirname(dirname(path))))} distribution manifest`;
+  if (file === 'proposal.json') return `${humanizeSlug(basename(dirname(path)))} proposal metadata`;
+  if (file === 'proposal-report.md') return `${humanizeSlug(basename(dirname(path)))} proposal report`;
+  return humanizeSlug(basename(path));
+}
+function isStorageHeading(value) {
+  return /^(skills? index|index|files?|references?|resources?|docs?|documentation|manifest|proposal)$/i.test(String(value || '').trim());
+}
 function titleFrom(text, path) {
-  if (!text) return path.split('/').pop();
-  const fm = text.match(/^---\s*\n([\s\S]*?)\n---/);
-  if (fm) {
-    const m = fm[1].match(/^name:\s*["']?([^\n"']+)/m);
-    if (m) return m[1].trim();
+  let candidate = '';
+  if (text) {
+    const fm = text.match(/^---\s*\n([\s\S]*?)\n---/);
+    if (fm) {
+      const m = fm[1].match(/^name:\s*["']?([^\n"']+)/m);
+      if (m) candidate = m[1].trim();
+    }
+    if (!candidate) {
+      const h = text.match(/^#\s+(.+)$/m);
+      if (h) candidate = h[1].trim();
+    }
   }
-  const h = text.match(/^#\s+(.+)$/m);
-  return h ? h[1].trim() : path.split('/').pop();
+  if (!candidate || isStorageHeading(candidate)) return semanticNameFromPath(path);
+  return candidate;
+}
+function validSignal(value) {
+  if (typeof value !== 'string') return false;
+  const v = value.trim();
+  if (!v || /^(true|false|null|undefined|yes|no|on|off|\d+(?:\.\d+)?)$/i.test(v)) return false;
+  if (isStorageHeading(v)) return false;
+  return /[a-z]/i.test(v) && v.length >= 8;
+}
+function extractMatches(head, pattern) {
+  return [...head.matchAll(pattern)].map(m => m[1]?.trim()).filter(validSignal).slice(0,8);
 }
 function extractSignals(text) {
   if (!text) return {};
   const head = text.slice(0, 12000);
-  const triggers = [...head.matchAll(/(?:trigger|when to use|use when|invoke|invocation)[:\s]+([^\n]{1,220})/gi)].slice(0,8).map(m=>m[1].trim());
-  const outputs = [...head.matchAll(/(?:output|produces?|returns?|deliverables?)[:\s]+([^\n]{1,220})/gi)].slice(0,8).map(m=>m[1].trim());
-  const failures = [...head.matchAll(/(?:fail(?:ure)?|error|abort|stop when)[:\s]+([^\n]{1,220})/gi)].slice(0,8).map(m=>m[1].trim());
+  const triggers = extractMatches(head, /(?:trigger|when to use|use when|invoke|invocation)[:\s]+([^\n]{1,220})/gi);
+  const outputs = extractMatches(head, /(?:output|produces?|returns?|deliverables?)[:\s]+([^\n]{1,220})/gi);
+  const failures = extractMatches(head, /(?:fail(?:ure)?|error|abort|stop when)[:\s]+([^\n]{1,220})/gi);
   return { triggers, outputs, failures };
 }
 
