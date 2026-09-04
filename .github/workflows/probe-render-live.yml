@@ -12,53 +12,90 @@ jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-      - run: npm ci
-      - name: Probe health and actual MCP session
+      - name: Probe health and actual MCP Streamable HTTP session
         env:
           MCP_BASE: https://toolsforcodex-mcp-remote.onrender.com
+          EXPECTED_MAIN: ac78f2cb6227df4db4dc6d40b93fef36746a96d4
         shell: bash
         run: |
           node --input-type=module <<'NODE'
-          import { Client } from '@modelcontextprotocol/sdk/client/index.js';
-          import { StreamableHTTPClientTransport } from '@modelcontextprotocol/sdk/client/streamableHttp.js';
-
           const base = process.env.MCP_BASE;
-          const healthResponse = await fetch(`${base}/health`);
-          const healthText = await healthResponse.text();
-          console.log('HEALTH_STATUS', healthResponse.status);
-          console.log('HEALTH_BODY', healthText);
-          if (!healthResponse.ok) process.exit(2);
-          const health = JSON.parse(healthText);
-          if (health.status !== 'ok' || health.server !== 'toolsforcodex-remote') process.exit(3);
+          const expectedMain = process.env.EXPECTED_MAIN;
 
-          const client = new Client({ name: 'toolsforcodex-live-probe', version: '1.0.0' });
-          const transport = new StreamableHTTPClientTransport(new URL(`${base}/mcp`));
-          await client.connect(transport);
-          const listed = await client.listTools();
-          const names = listed.tools.map(t => t.name).sort();
+          function decodeBody(text, contentType) {
+            if (!text.trim()) return null;
+            if ((contentType || '').includes('text/event-stream')) {
+              const events = text.split(/\n\n+/);
+              for (const event of events) {
+                const data = event.split(/\n/).filter(line => line.startsWith('data:')).map(line => line.slice(5).trimStart()).join('\n');
+                if (!data) continue;
+                const parsed = JSON.parse(data);
+                if (parsed && (Object.hasOwn(parsed, 'id') || parsed.result || parsed.error)) return parsed;
+              }
+              throw new Error(`No JSON-RPC payload in SSE body: ${text.slice(0, 500)}`);
+            }
+            return JSON.parse(text);
+          }
+
+          async function post(body, sessionId) {
+            const headers = {
+              'content-type': 'application/json',
+              'accept': 'application/json, text/event-stream',
+            };
+            if (sessionId) headers['mcp-session-id'] = sessionId;
+            const res = await fetch(`${base}/mcp`, { method: 'POST', headers, body: JSON.stringify(body) });
+            const text = await res.text();
+            console.log('RPC_STATUS', body.method, res.status, 'SESSION', res.headers.get('mcp-session-id') || sessionId || 'NONE');
+            if (text) console.log('RPC_BODY', body.method, text.slice(0, 4000));
+            if (!res.ok) throw new Error(`${body.method} HTTP ${res.status}`);
+            return {
+              message: decodeBody(text, res.headers.get('content-type')),
+              sessionId: res.headers.get('mcp-session-id') || sessionId,
+            };
+          }
+
+          const healthRes = await fetch(`${base}/health`);
+          const healthText = await healthRes.text();
+          console.log('HEALTH_STATUS', healthRes.status);
+          console.log('HEALTH_BODY', healthText);
+          if (!healthRes.ok) throw new Error(`health HTTP ${healthRes.status}`);
+          const health = JSON.parse(healthText);
+          if (health.status !== 'ok' || health.server !== 'toolsforcodex-remote') throw new Error('unexpected health payload');
+          if (health.branch !== 'main') throw new Error(`deployed branch is ${health.branch}, expected main`);
+          if (health.commit !== expectedMain) throw new Error(`deployed commit ${health.commit}, expected ${expectedMain}`);
+
+          let r = await post({
+            jsonrpc: '2.0', id: 1, method: 'initialize',
+            params: { protocolVersion: '2025-03-26', capabilities: {}, clientInfo: { name: 'toolsforcodex-raw-live-probe', version: '1.0.0' } }
+          });
+          const sessionId = r.sessionId;
+          if (!sessionId) throw new Error('initialize returned no mcp-session-id');
+          if (r.message?.error) throw new Error(`initialize error ${JSON.stringify(r.message.error)}`);
+          console.log('INITIALIZE_RESULT', JSON.stringify(r.message?.result));
+
+          await post({ jsonrpc: '2.0', method: 'notifications/initialized', params: {} }, sessionId);
+
+          r = await post({ jsonrpc: '2.0', id: 2, method: 'tools/list', params: {} }, sessionId);
+          if (r.message?.error) throw new Error(`tools/list error ${JSON.stringify(r.message.error)}`);
+          const names = (r.message?.result?.tools || []).map(t => t.name).sort();
           console.log('TOOLS', JSON.stringify(names));
           for (const required of ['set_target','find_skills','load_skill']) {
             if (!names.includes(required)) throw new Error(`missing live tool ${required}`);
           }
 
-          const target = await client.callTool({ name: 'set_target', arguments: { repoUrl: 'https://github.com/ndj4312-collab/ToolsForCodex.git', ref: 'main' } });
-          console.log('SET_TARGET', JSON.stringify(target));
-          if (target.isError) throw new Error('set_target failed');
+          r = await post({ jsonrpc: '2.0', id: 3, method: 'tools/call', params: { name: 'set_target', arguments: { repoUrl: 'https://github.com/ndj4312-collab/ToolsForCodex.git', ref: 'main' } } }, sessionId);
+          if (r.message?.error || r.message?.result?.isError) throw new Error(`set_target failed ${JSON.stringify(r.message)}`);
+          console.log('SET_TARGET_RESULT', JSON.stringify(r.message?.result));
 
-          const found = await client.callTool({ name: 'find_skills', arguments: { query: 'headroom', limit: 10 } });
-          console.log('FIND_SKILLS', JSON.stringify(found));
-          if (found.isError) throw new Error('find_skills failed');
-          const foundText = JSON.stringify(found);
+          r = await post({ jsonrpc: '2.0', id: 4, method: 'tools/call', params: { name: 'find_skills', arguments: { query: 'headroom', limit: 10 } } }, sessionId);
+          if (r.message?.error || r.message?.result?.isError) throw new Error(`find_skills failed ${JSON.stringify(r.message)}`);
+          const foundText = JSON.stringify(r.message?.result);
+          console.log('FIND_SKILLS_RESULT', foundText);
           if (!foundText.includes('headroom-token-minimizer')) throw new Error('headroom-token-minimizer not found live');
 
-          const loaded = await client.callTool({ name: 'load_skill', arguments: { name: 'headroom-token-minimizer' } });
-          console.log('LOAD_SKILL', JSON.stringify(loaded));
-          if (loaded.isError || !JSON.stringify(loaded).includes('headroom-token-minimizer')) throw new Error('headroom-token-minimizer did not load live');
-
-          await client.close();
+          r = await post({ jsonrpc: '2.0', id: 5, method: 'tools/call', params: { name: 'load_skill', arguments: { name: 'headroom-token-minimizer' } } }, sessionId);
+          if (r.message?.error || r.message?.result?.isError) throw new Error(`load_skill failed ${JSON.stringify(r.message)}`);
+          const loadedText = JSON.stringify(r.message?.result);
+          console.log('LOAD_SKILL_RESULT', loadedText.slice(0, 8000));
+          if (!loadedText.includes('headroom-token-minimizer')) throw new Error('headroom-token-minimizer did not load live');
           NODE
