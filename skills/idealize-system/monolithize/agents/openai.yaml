@@ -1,0 +1,5 @@
+interface:
+  display_name: Monolithize
+  short_description: Synthesize a coherent perfected-system model.
+policy:
+  allow_implicit_invocation: true

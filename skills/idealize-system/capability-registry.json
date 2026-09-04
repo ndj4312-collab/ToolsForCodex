@@ -1,0 +1,59 @@
+{
+  "$schema": "../../contracts/idealize-capability-registry.schema.json",
+  "version": "1.0.0",
+  "canonical_owner": "skills/idealize-system",
+  "precedence": [
+    "verified-runtime",
+    "canonical-repository",
+    "canonical-notion-ledger",
+    "verified-primary-source",
+    "derived-research",
+    "derived-planning"
+  ],
+  "capabilities": [
+    {
+      "id": "idealize.about",
+      "primitive": "minimum-sufficient context acquisition",
+      "implementation": "skills/idealize-system/about/SKILL.md",
+      "adaptation": "SPECIALIZE",
+      "stages": ["about"],
+      "inputs": ["idea", "canonical source locators"],
+      "outputs": ["context.md"],
+      "fallback": "focused research then ASK_USER only if material",
+      "verification": "load_skill + contract fixture"
+    },
+    {
+      "id": "idealize.investigate",
+      "primitive": "recursive gap and capability research",
+      "implementation": "skills/idealize-system/investigate/SKILL.md",
+      "adaptation": "SPECIALIZE_COMPOSE",
+      "stages": ["investigate"],
+      "inputs": ["context.md"],
+      "outputs": ["research/data graph", "adaptation decisions"],
+      "fallback": "capability/workaround ladder",
+      "verification": "load_skill + contract fixture"
+    },
+    {
+      "id": "idealize.monolithize",
+      "primitive": "coherent perfected-system synthesis",
+      "implementation": "skills/idealize-system/monolithize/SKILL.md",
+      "adaptation": "SPECIALIZE",
+      "stages": ["monolithize"],
+      "inputs": ["validated context", "investigation graph"],
+      "outputs": ["perfected-system artifact family"],
+      "fallback": "return unresolved nodes to investigate",
+      "verification": "load_skill + contract fixture"
+    },
+    {
+      "id": "idealize.plan",
+      "primitive": "backward chaining and dependency-safe plan compilation",
+      "implementation": "skills/idealize-system/idealize/SKILL.md",
+      "adaptation": "SPECIALIZE_COMPOSE",
+      "stages": ["idealize"],
+      "inputs": ["perfected-system model"],
+      "outputs": ["the-ideal-project-plan.md"],
+      "fallback": "block affected branch only; research workaround",
+      "verification": "load_skill + end-to-end fixture"
+    }
+  ]
+}

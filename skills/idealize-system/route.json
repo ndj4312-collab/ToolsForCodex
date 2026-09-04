@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "entrypoint": "/idealize <idea>",
+  "stages": [
+    {"id":"about","skill":"about","requires":[],"success":"context artifact exists; material unknowns explicit; source precedence recorded","retry":"re-read canonical sources or focused research","fallback":"ask user only for material unresolved authority/context","abort":"authority conflict cannot be safely resolved"},
+    {"id":"investigate","skill":"investigate","requires":["about"],"success":"material gaps mapped to evidence/primitives/capabilities/dependencies/tests","retry":"branch focused search","fallback":"record unresolved gap and block only dependents","abort":"required provenance/license unavailable for proposed adaptation"},
+    {"id":"monolithize","skill":"monolithize","requires":["investigate"],"success":"coherent perfected-system representation passes completeness challenge","retry":"return missing/contradictory nodes to investigate","fallback":"retain UNKNOWN and prevent dependent claims","abort":"high-severity contradiction"},
+    {"id":"idealize","skill":"idealize","requires":["monolithize"],"success":"phase/wave/atomic DAG with objective gates and canonical destinations","retry":"red-team and recompile impacted branches","fallback":"emit executable verified subset plus blocked branches","abort":"no safe authorized route for a mandatory dependency"}
+  ],
+  "workaround_order":["correct-invocation","dependency-config-repair","alternate-existing-capability","alternate-authorized-surface-runtime","wrapper-adapter","capability-composition","equivalent-open-source-mechanism","bounded-modification","smallest-new-implementation","privileged-user-escalation"],
+  "adaptation_order":["USE","WRAP","SPECIALIZE","COMPOSE","MODIFY","EXTRACT_PATTERN","BUILD"],
+  "fail_closed":["canonical-source-conflict","stale-evidence","missing-provenance","unknown-license-for-adaptation","unclosed-transitive-dependency","unsafe-authority","unverified-completion-claim"],
+  "regression_rule":"Every material discovered implementation failure becomes a regression fixture before repair."
+}
