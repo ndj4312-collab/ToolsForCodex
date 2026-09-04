@@ -1,0 +1,28 @@
+name: probe-fast-uri-fix
+
+on:
+  push:
+    branches:
+      - probe/fast-uri-audit-fix-2026-09-04
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Generate package-lock-only audit fix
+        shell: bash
+        run: |
+          npm audit fix --package-lock-only
+          echo '--- PACKAGE LOCK DIFF START ---'
+          git diff -- package-lock.json
+          echo '--- PACKAGE LOCK DIFF END ---'
+          npm audit --audit-level=high
