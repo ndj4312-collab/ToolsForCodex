@@ -1,6 +1,8 @@
 import { allowRetry, classifyTerminal, freezePlan, verifyEnvelope, type OrchestratorInput } from "../src/orchestration/engine";
+import { generateKeyPairSync, sign } from "node:crypto";
 import {
   normalizeIntent,
+  evidenceReceiptPayloadHash,
   validateContextInfluence,
   validateEnvironmentParity,
   validateIntentMonotonicity,
@@ -87,16 +89,28 @@ const input: OrchestratorInput = {
   availableTools: ["GitHub"],
   retryBudget: 2,
   provenance: ["governing command"],
+  influences: [{ contextId: "canon", effect: "CONSTRAIN", target: "mutation", reason: "repository policy" }],
 };
 
-const passReceipt = (requirementId: string, sourceKind: EvidenceReceipt["sourceKind"] = "CI"): EvidenceReceipt => ({
-  requirementId,
-  sourceKind,
-  sourceLocator: `evidence://${requirementId}`,
-  provenance: "test fixture",
-  status: "PASS",
-  observedAt: "2026-09-04T00:00:00Z",
-});
+const issuer = generateKeyPairSync("ed25519");
+const reviewer = generateKeyPairSync("ed25519");
+const publicPem = (key: typeof issuer.publicKey) => key.export({ type: "spki", format: "pem" }).toString();
+const trustRoots = { ci: publicPem(issuer.publicKey), "external-reviewer": publicPem(reviewer.publicKey) };
+const passReceipt = (requirementId: string, sourceKind: EvidenceReceipt["sourceKind"] = "CI", receiptIssuer = "ci"): EvidenceReceipt => {
+  const unsigned: EvidenceReceipt = {
+    id: `receipt-${requirementId}-${sourceKind}`,
+    requirementId,
+    sourceKind,
+    sourceLocator: `evidence://${requirementId}`,
+    provenance: "test fixture",
+    status: "PASS",
+    observedAt: "2026-09-04T00:00:00Z",
+    issuer: receiptIssuer,
+    signature: "",
+  };
+  const key = receiptIssuer === "external-reviewer" ? reviewer.privateKey : issuer.privateKey;
+  return { ...unsigned, signature: sign(null, Buffer.from(evidenceReceiptPayloadHash(unsigned), "hex"), key).toString("base64") };
+};
 
 describe("deterministic completion orchestrator", () => {
   test("equivalent frozen input is deterministic", () => {
@@ -168,21 +182,45 @@ describe("deterministic completion orchestrator", () => {
   });
 
   test("terminal VERIFIED requires auditable passing evidence rather than a boolean", () => {
-    expect(classifyTerminal({ requiredEvidence: ["unit", "runtime"], evidence: [passReceipt("unit"), passReceipt("runtime", "RUNTIME")] }).state).toBe("VERIFIED");
-    expect(classifyTerminal({ requiredEvidence: ["unit", "runtime"], evidence: [passReceipt("unit")] })).toEqual(expect.objectContaining({ state: "FAILED", reason: expect.stringMatching(/Missing passing/) }));
-    expect(classifyTerminal({ requiredEvidence: [], evidence: [] }).state).toBe("FAILED");
+    const evidence = [passReceipt("unit"), passReceipt("runtime", "RUNTIME")];
+    expect(classifyTerminal({ requiredEvidence: ["unit", "runtime"], evidence, trustedIssuerPublicKeys: trustRoots }).state).toBe("VERIFIED");
+    const partial = [passReceipt("unit")];
+    expect(classifyTerminal({ requiredEvidence: ["unit", "runtime"], evidence: partial, trustedIssuerPublicKeys: trustRoots })).toEqual(expect.objectContaining({ state: "FAILED", reason: expect.stringMatching(/Missing passing/) }));
+    expect(classifyTerminal({ requiredEvidence: [], evidence: [], trustedIssuerPublicKeys: {} }).state).toBe("FAILED");
   });
 
   test("terminal classifier separates blocker decision and failure", () => {
-    expect(classifyTerminal({ requiredEvidence: ["x"], evidence: [], externalDependencyUnavailable: "critic unavailable" }).state).toBe("EXTERNALLY_BLOCKED");
-    expect(classifyTerminal({ requiredEvidence: ["x"], evidence: [], userDecision: "publish?" }).state).toBe("USER_DECISION_REQUIRED");
-    expect(classifyTerminal({ requiredEvidence: ["x"], evidence: [], unrepairedFailure: "test failed" }).state).toBe("FAILED");
+    expect(classifyTerminal({ requiredEvidence: ["x"], evidence: [], trustedIssuerPublicKeys: {}, externalDependencyUnavailable: "critic unavailable" }).state).toBe("EXTERNALLY_BLOCKED");
+    expect(classifyTerminal({ requiredEvidence: ["x"], evidence: [], trustedIssuerPublicKeys: {}, userDecision: "publish?" }).state).toBe("USER_DECISION_REQUIRED");
+    expect(classifyTerminal({ requiredEvidence: ["x"], evidence: [], trustedIssuerPublicKeys: {}, unrepairedFailure: "test failed" }).state).toBe("FAILED");
   });
 
   test("independent review cannot be self-certified by ordinary CI evidence", () => {
     const requiredEvidence = ["unit"];
-    expect(classifyTerminal({ requiredEvidence, evidence: [passReceipt("unit")], independentReviewRequired: true }).state).toBe("FAILED");
-    expect(classifyTerminal({ requiredEvidence, evidence: [passReceipt("unit"), passReceipt("independent", "INDEPENDENT_REVIEW")], independentReviewRequired: true }).state).toBe("VERIFIED");
+    const ci = [passReceipt("unit")];
+    expect(classifyTerminal({ requiredEvidence, evidence: ci, trustedIssuerPublicKeys: trustRoots, independentReviewRequired: true }).state).toBe("FAILED");
+    const reviewed = [passReceipt("unit"), passReceipt("independent", "INDEPENDENT_REVIEW", "external-reviewer")];
+    expect(classifyTerminal({ requiredEvidence, evidence: reviewed, trustedIssuerPublicKeys: trustRoots, independentReviewRequired: true, independentReviewerIssuers: ["external-reviewer"] }).state).toBe("VERIFIED");
+    expect(classifyTerminal({ requiredEvidence, evidence: reviewed, trustedIssuerPublicKeys: trustRoots, independentReviewRequired: true, independentReviewerIssuers: [] }).state).toBe("FAILED");
+  });
+
+  test("untrusted or fabricated evidence cannot produce VERIFIED", () => {
+    const evidence = [passReceipt("unit")];
+    expect(classifyTerminal({ requiredEvidence: ["unit"], evidence, trustedIssuerPublicKeys: {} })).toEqual(expect.objectContaining({ state: "FAILED", reason: expect.stringMatching(/Untrusted/) }));
+  });
+
+  test("decision-critical context must mechanically influence the plan", () => {
+    expect(() => freezePlan({ ...input, influences: [] })).toThrow(/mechanically inert/);
+  });
+
+  test("node intent cannot exceed the governing intent contract", () => {
+    const bad = { ...input, nodes: [{ ...input.nodes[0]!, intent: ["PROMOTE" as const] }] };
+    expect(() => freezePlan(bad)).toThrow(/injects intent/);
+  });
+
+  test("read-only authority cannot authorize mutation", () => {
+    const bad = { ...input, nodes: [{ ...input.nodes[0]!, authorityGate: "READ_ONLY" as const }] };
+    expect(() => freezePlan(bad)).toThrow(/read-only authority/);
   });
 
   test("freeze requires explicit recompile after envelope drift", () => {

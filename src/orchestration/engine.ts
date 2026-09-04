@@ -1,13 +1,16 @@
 import {
   authorityGates,
   canonicalHash,
+  verifyEvidenceReceipt,
   intentClasses,
   validateCriticalContextReadiness,
+  validateContextInfluence,
   validateIntentMonotonicity,
   type ContextContract,
   type EvidenceReceipt,
   type GoalContract,
   type IntentContract,
+  type Influence,
   type PlanNode,
 } from "../domain/orchestration-contracts";
 
@@ -31,6 +34,7 @@ export interface OrchestratorInput {
   readonly availableTools: readonly string[];
   readonly retryBudget: number;
   readonly provenance: readonly string[];
+  readonly influences: readonly Influence[];
 }
 
 export interface MicroTask {
@@ -103,6 +107,8 @@ function assertInput(input: OrchestratorInput): void {
 
   const contextErrors = validateCriticalContextReadiness(input.context);
   if (contextErrors.length > 0) throw new Error(contextErrors.join("; "));
+  const influenceErrors = validateContextInfluence(input.context, input.influences);
+  if (influenceErrors.length > 0) throw new Error(influenceErrors.join("; "));
 
   for (const intentClass of input.intent.classes as readonly string[]) {
     if (!validIntent.has(intentClass)) throw new Error(`Unknown intent class in IntentContract: ${intentClass}`);
@@ -114,10 +120,14 @@ function assertInput(input: OrchestratorInput): void {
     }
     for (const intentClass of node.intent as readonly string[]) {
       if (!validIntent.has(intentClass)) throw new Error(`Unknown intent class ${intentClass} for ${node.id}`);
+      if (!input.intent.classes.includes(intentClass as never)) throw new Error(`PlanNode ${node.id} injects intent outside IntentContract: ${intentClass}`);
     }
     if (!validAuthorityGate.has(node.authorityGate)) throw new Error(`Unknown authority gate ${String(node.authorityGate)} for ${node.id}`);
     if (node.authorityGate === "USER_DECISION_REQUIRED" || node.authorityGate === "EXTERNAL_APPROVAL_REQUIRED") {
       throw new Error(`PlanNode ${node.id} requires an explicit authority boundary before deterministic execution`);
+    }
+    if (node.authorityGate === "READ_ONLY" && node.mutationPolicy !== "READ_ONLY") {
+      throw new Error(`PlanNode ${node.id} has read-only authority but requests mutation`);
     }
     for (const item of node.scope) if (!goalScope.has(item)) throw new Error(`PlanNode ${node.id} expands scope outside GoalContract: ${item}`);
     for (const contextId of node.requiredContext) if (!contextIds.has(contextId)) throw new Error(`Unknown required context ${contextId} for ${node.id}`);
@@ -156,6 +166,8 @@ export function classifyTerminal(input: {
   externalDependencyUnavailable?: string;
   userDecision?: string;
   unrepairedFailure?: string;
+  trustedIssuerPublicKeys: Readonly<Record<string, string>>;
+  independentReviewerIssuers?: readonly string[];
 }): { state: TerminalState; reason: string } {
   if (input.externalDependencyUnavailable) return { state: "EXTERNALLY_BLOCKED", reason: input.externalDependencyUnavailable };
   if (input.userDecision) return { state: "USER_DECISION_REQUIRED", reason: input.userDecision };
@@ -164,9 +176,12 @@ export function classifyTerminal(input: {
 
   const receiptsByRequirement = new Map<string, EvidenceReceipt[]>();
   for (const receipt of input.evidence) {
-    if (!receipt.requirementId.trim() || !receipt.sourceLocator.trim() || !receipt.provenance.trim() || !receipt.observedAt.trim()) {
+    if (!receipt.id.trim() || !receipt.requirementId.trim() || !receipt.sourceLocator.trim() || !receipt.provenance.trim() || !receipt.observedAt.trim()) {
       return { state: "FAILED", reason: "Evidence receipt is missing auditable provenance or locator metadata" };
     }
+    const publicKey = input.trustedIssuerPublicKeys[receipt.issuer];
+    if (!publicKey || !verifyEvidenceReceipt(receipt, publicKey)) return { state: "FAILED", reason: `Untrusted or invalidly signed evidence receipt: ${receipt.id}` };
+    if (Number.isNaN(Date.parse(receipt.observedAt))) return { state: "FAILED", reason: `Evidence receipt has invalid timestamp: ${receipt.id}` };
     const receipts = receiptsByRequirement.get(receipt.requirementId) ?? [];
     receipts.push(receipt);
     receiptsByRequirement.set(receipt.requirementId, receipts);
@@ -179,7 +194,8 @@ export function classifyTerminal(input: {
   }
 
   if (input.independentReviewRequired) {
-    const independent = input.evidence.some((receipt) => receipt.sourceKind === "INDEPENDENT_REVIEW" && receipt.status === "PASS");
+    const allowedReviewers = new Set(input.independentReviewerIssuers ?? []);
+    const independent = input.evidence.some((receipt) => receipt.sourceKind === "INDEPENDENT_REVIEW" && receipt.status === "PASS" && allowedReviewers.has(receipt.issuer));
     if (!independent) return { state: "FAILED", reason: "Independent review evidence is required but absent" };
   }
 

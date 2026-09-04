@@ -1,4 +1,4 @@
-import { createHash } from "node:crypto";
+import { createHash, verify as verifySignature } from "node:crypto";
 
 export const intentClasses = [
   "ORIENT", "DISCOVER", "COMPARE", "DISCRIMINATE", "DESIGN", "PLAN", "ADAPT", "EXECUTE", "VERIFY", "REDTEAM", "DECIDE", "PROMOTE", "DOCUMENT",
@@ -83,12 +83,28 @@ export interface PlanNode {
 }
 
 export interface EvidenceReceipt {
+  readonly id: string;
   readonly requirementId: string;
   readonly sourceKind: EvidenceSourceKind;
   readonly sourceLocator: string;
   readonly provenance: string;
   readonly status: "PASS" | "FAIL";
   readonly observedAt: string;
+  readonly issuer: string;
+  readonly signature: string;
+}
+
+export function evidenceReceiptPayloadHash(receipt: EvidenceReceipt): string {
+  const payload = Object.fromEntries(Object.entries(receipt).filter(([key]) => key !== "signature"));
+  return canonicalHash(payload);
+}
+
+export function verifyEvidenceReceipt(receipt: EvidenceReceipt, publicKeyPem: string): boolean {
+  try {
+    return verifySignature(null, Buffer.from(evidenceReceiptPayloadHash(receipt), "hex"), publicKeyPem, Buffer.from(receipt.signature, "base64"));
+  } catch {
+    return false;
+  }
 }
 
 export interface EvaluationContract {
