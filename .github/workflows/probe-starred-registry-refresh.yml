@@ -1,0 +1,96 @@
+name: probe-starred-registry-refresh
+
+on:
+  push:
+    branches:
+      - probe/starred-registry-refresh-2026-09-04
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Verify current GitHub stars and refresh canonical registry
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          curl -fsSL \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github.star+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/users/ndj4312-collab/starred?per_page=100" > /tmp/stars.json
+          node <<'NODE'
+          const fs = require('fs');
+          const path = 'docs/starred-source-registry.json';
+          const stars = JSON.parse(fs.readFileSync('/tmp/stars.json', 'utf8'));
+          if (stars.length !== 63) throw new Error(`expected 63 current stars, got ${stars.length}`);
+          const currentNames = new Set(stars.map(item => (item.repo ?? item).full_name));
+          if (!currentNames.has('mattnowdev/thinking-partner')) throw new Error('thinking-partner missing from current starred inventory');
+
+          const registry = JSON.parse(fs.readFileSync(path, 'utf8'));
+          const oldNames = new Set(registry.repositories.map(repo => repo.fullName));
+          const missingOld = [...oldNames].filter(name => !currentNames.has(name));
+          if (missingOld.length) throw new Error(`existing registry entries no longer starred: ${missingOld.join(', ')}`);
+
+          const entry = {
+            fullName: 'mattnowdev/thinking-partner',
+            owner: 'mattnowdev',
+            name: 'thinking-partner',
+            source: 'authenticated-github-stars',
+            relevanceBand: 'DIRECT_TOOLSFORCODEX_OVERLAP',
+            description: 'Thinking partner skill for AI agents — 150+ mental models, orientation detection, cognitive operations. Works with Claude Code, Cursor, Windsurf, Cline, GitHub Copilot.',
+            language: 'UNKNOWN',
+            licenseSpdx: 'MIT',
+            licenseState: 'LICENSE_OK_FOR_ADAPTATION',
+            queueState: 'NEEDS_MODIFICATION',
+            availabilityStage: 'LICENSED_STATIC_SOURCE',
+            integrationForm: 'adapt the deterministic challenge/model-selection mechanism as a routable/searchable capability; do not wholesale-load the 150+ model catalog or persist inferred user thinking-state labels',
+            defaultBranch: 'main',
+            pushedAt: '2026-03-31T17:19:54Z',
+            archived: false,
+            fork: false,
+            accessStates: ['METADATA_READABLE','STATIC_FILES_READABLE','CLONEABLE_CLOUD','CLONEABLE_LOCAL','REMOTE_MCP_READABLE'],
+            sessionUse: ['cloud:cloneable','local:cloneable','remote-mcp:public-static-readable'],
+            locators: {
+              html: 'https://github.com/mattnowdev/thinking-partner',
+              git: 'https://github.com/mattnowdev/thinking-partner.git',
+              contentsApi: 'https://api.github.com/repos/mattnowdev/thinking-partner/contents?ref=main',
+              archive: 'https://github.com/mattnowdev/thinking-partner/archive/main.zip',
+              quarantinePath: null
+            },
+            noExecStatus: 'INTAKE_POLICY_NO_TARGET_CODE_EXECUTION',
+            evidence: ['docs/starred-repo-intake.md','docs/direct-overlap-import-design.md','mattnowdev/thinking-partner:LICENSE','mattnowdev/thinking-partner:skills/thinking-partner/SKILL.md']
+          };
+
+          if (!oldNames.has(entry.fullName)) registry.repositories.push(entry);
+          registry.repositories.sort((a,b) => a.fullName.localeCompare(b.fullName));
+          const observedAt = new Date().toISOString();
+          registry.generatedAt = observedAt;
+          registry.source.intakeCount = stars.length;
+          registry.source.intakeGeneratedAt = observedAt;
+          registry.summary.total = stars.length;
+          registry.summary.directOverlap = 15;
+          registry.summary.importCandidates = 2;
+          registry.summary.needsModification = 7;
+          registry.summary.licenseConstrained = 23;
+          if (registry.repositories.length !== 63) throw new Error(`registry length ${registry.repositories.length} != 63`);
+          fs.writeFileSync(path, JSON.stringify(registry, null, 2) + '\n');
+          NODE
+          test "$(git diff --name-only)" = 'docs/starred-source-registry.json'
+          git diff --check
+          node -e "const r=require('./docs/starred-source-registry.json'); console.log(JSON.stringify({source:r.source,summary:r.summary,newEntry:r.repositories.find(x=>x.fullName==='mattnowdev/thinking-partner')}, null, 2))"
+      - name: Create clean registry branch
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git checkout -b registry/starred-refresh-2026-09-04
+          git add docs/starred-source-registry.json
+          git commit -m 'Refresh starred source registry to 63 repositories'
+          git push --force-with-lease origin HEAD:registry/starred-refresh-2026-09-04
