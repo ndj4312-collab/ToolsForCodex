@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "derived": true,
+  "canon_rule": "This map is a read-only routing projection. Canonical repo/Notion sources always outrank derived summaries or wiki material; conflicts must be surfaced, never silently resolved in favor of the map.",
+  "concepts": [
+    {
+      "id": "repo-write-governance",
+      "queries": ["write repository", "mutation governance", "transaction approval", "repo write guardrails"],
+      "summary": "Rules that govern repository mutation and transaction safety.",
+      "canonical_sources": ["AGENTS.md", "src/transactions/engine.ts"],
+      "derived_sources": ["knowledge/knowledge-map.json"],
+      "authority": "canonical repo policy and runtime transaction engine",
+      "freshness": "reverify on current main before mutation",
+      "conflicts": []
+    },
+    {
+      "id": "repo-intake",
+      "queries": ["external repository intake", "quarantine", "adding repo protocol", "starred repo adaptation", "license review"],
+      "summary": "Quarantine-first intake and adaptation protocol for external repositories.",
+      "canonical_sources": ["docs/adding-repo-protocol.md", "AGENTS.md"],
+      "derived_sources": ["knowledge/knowledge-map.json"],
+      "authority": "canonical repo protocol",
+      "freshness": "reverify protocol and upstream license/ref before intake",
+      "conflicts": []
+    },
+    {
+      "id": "mcp-skill-routing",
+      "queries": ["MCP skill discovery", "find skill", "load skill", "capability discovery"],
+      "summary": "Project-local skill discovery and load behavior exposed by the MCP servers.",
+      "canonical_sources": ["src/mcp/server.ts", "src/mcp/remote/server.ts", "src/mcp/skill-registry.ts", "skills/"],
+      "derived_sources": ["knowledge/knowledge-map.json"],
+      "authority": "current runtime source and registered interface",
+      "freshness": "current verified main/deployed SHA",
+      "conflicts": []
+    },
+    {
+      "id": "project-state",
+      "queries": ["project state", "canonical ledger", "handoff", "current task", "where state lives"],
+      "summary": "Durable project state is recovered from the canonical Notion ledger; repo context is replaceable execution context, not a higher authority.",
+      "canonical_sources": ["Notion SECOND_BRAIN_AGENT_ENVIRONMENT_LEDGER", "handoff.md"],
+      "derived_sources": ["knowledge/knowledge-map.json", "derived wiki pages"],
+      "authority": "Notion ledger for durable state; handoff for exact active resumption",
+      "freshness": "session start and after material state change",
+      "conflicts": ["If a derived wiki, stale backlog, or prior chat conflicts with the current canonical ledger/runtime evidence, surface the conflict and use the canonical ledger/runtime evidence."]
+    },
+    {
+      "id": "release-validation",
+      "queries": ["release validation", "npm pack", "CI", "build", "runtime health", "deployment SHA"],
+      "summary": "Release acceptance requires tests/build/CI plus runtime/deployment evidence where applicable.",
+      "canonical_sources": ["package.json", "scripts/validate-release.mjs", ".github/workflows/ci.yml", "src/mcp/remote/server.ts"],
+      "derived_sources": ["knowledge/knowledge-map.json"],
+      "authority": "runtime scripts, CI configuration, and observed deployment state",
+      "freshness": "current commit and deployment",
+      "conflicts": []
+    },
+    {
+      "id": "method-routing",
+      "queries": ["planning depth", "BMAD", "FABLE", "entrepreneur opportunity", "prove completion", "methodology routing"],
+      "summary": "Methodology selection is advisory execution guidance and never outranks repo/runtime policy or canonical project state.",
+      "canonical_sources": ["Notion BMAD_EXPANDED_METHODOLOGY.md", "Notion FABLE_CROSS_AGENT_METHODOLOGY.md", "Notion ONE_PERSON_ENTREPRENEUR_OS.md"],
+      "derived_sources": ["knowledge/knowledge-map.json", "wiki method summaries"],
+      "authority": "methodology guidance only",
+      "freshness": "reverify upstream/method canon when consequential",
+      "conflicts": ["Method guidance cannot weaken transaction, security, evidence, or canonical-source requirements."]
+    }
+  ]
+}
