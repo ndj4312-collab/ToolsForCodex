@@ -38,6 +38,9 @@ jobs:
             git commit -m "Persist exhaustive capability route registry"
             git push
           fi
+      - name: Assert no useful proposal skill is blocked
+        run: |
+          node -e "const r=require('./pointer-catalog/ingestion/CAPABILITY_ROUTE_REGISTRY.json'); const bad=r.items.filter(x=>x.path.endsWith('/SKILL.md')&&x.route.status!=='ROUTED'); if(bad.length){console.error(bad); process.exit(4)}"
       - uses: actions/upload-artifact@v4
         with:
           name: corpus-ingestion-${{ github.sha }}
