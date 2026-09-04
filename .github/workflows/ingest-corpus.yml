@@ -5,11 +5,12 @@ on:
     branches: [main]
     paths:
       - 'scripts/ingest-corpus.mjs'
+      - 'scripts/compile-ingestion-routes.mjs'
       - '.github/workflows/ingest-corpus.yml'
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   manifest:
@@ -24,9 +25,24 @@ jobs:
       - name: Verify denominator accounting
         run: |
           node -e "const r=require('./artifacts/ingestion/coverage-report.json'); if(r.counters.manifestDiscovered!==r.counters.sourceItemsAccounted) process.exit(2); if(r.counters.sourceItemsUnread!==0) process.exit(3);"
+      - name: Compile routes and terminal dispositions
+        run: node scripts/compile-ingestion-routes.mjs
+      - name: Persist canonical pointer registry
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pointer-catalog/ingestion/CAPABILITY_ROUTE_REGISTRY.json pointer-catalog/ingestion/INGESTION_RECEIPT.md
+          if git diff --cached --quiet; then
+            echo "Registry already current"
+          else
+            git commit -m "Persist exhaustive capability route registry"
+            git push
+          fi
       - uses: actions/upload-artifact@v4
         with:
           name: corpus-ingestion-${{ github.sha }}
-          path: artifacts/ingestion/
+          path: |
+            artifacts/ingestion/
+            pointer-catalog/ingestion/
           if-no-files-found: error
           retention-days: 30
