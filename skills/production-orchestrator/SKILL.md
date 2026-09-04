@@ -11,12 +11,13 @@ Use this user-invoked skill to run the complete repository orchestration workflo
 ## Routing and execution order
 
 1. Invoke `/matt-skill-contract-audit` while validating each discovered skill's metadata, ownership, dependencies, and runtime policy.
-2. Invoke `/standardize-skills-to-matt-pocock` only when a human has requested a normalization patch; it may call the validator but never another user-invoked skill.
-3. Run discovery and catalog generation before standardization; do not execute target-project code.
-4. Run standardization and dependency-graph checks before bootstrap or adapters.
-5. Compile bootstrap and one adapter per enabled runtime only after the plan is not blocked and exactly one distribution route is selected.
-6. Stage target writes, verify current and staged hashes, require a matching approval file, apply atomically, and retain rollback evidence.
-7. Run doctor, contract validation, lint, tests, and smoke checks before declaring the workflow complete.
+2. Invoke `/headroom-token-minimizer` when a batch needs compact handoff context, smaller tool outputs, or claim-preserving evidence packs.
+3. Invoke `/standardize-skills-to-matt-pocock` only when a human has requested a normalization patch; it may call the validator but never another user-invoked skill.
+4. Run discovery and catalog generation before standardization; do not execute target-project code.
+5. Run standardization and dependency-graph checks before bootstrap or adapters.
+6. Compile bootstrap and one adapter per enabled runtime only after the plan is not blocked and exactly one distribution route is selected.
+7. Stage target writes, verify current and staged hashes, require a matching approval file, apply atomically, and retain rollback evidence.
+8. Run doctor, contract validation, lint, tests, and smoke checks before declaring the workflow complete.
 
 ## Inputs and outputs
 

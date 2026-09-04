@@ -1,0 +1,5 @@
+interface:
+  display_name: About
+  short_description: Build minimum-sufficient context for idealization.
+policy:
+  allow_implicit_invocation: true

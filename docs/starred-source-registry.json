@@ -1,0 +1,2688 @@
+{
+  "schemaVersion": "1.0",
+  "id": "github-starred-source-availability",
+  "generatedAt": "2026-09-02T18:05:00.000Z",
+  "source": {
+    "kind": "authenticated-github-stars",
+    "input": ".work/starred-intake/starred-classified-live.json",
+    "intakeCount": 62,
+    "intakeGeneratedAt": "2026-09-02T17:58:35.669Z"
+  },
+  "summary": {
+    "total": 62,
+    "directOverlap": 14,
+    "importCandidates": 2,
+    "needsModification": 6,
+    "licenseConstrained": 23
+  },
+  "repositories": [
+    {
+      "fullName": "aalhour/awesome-compilers",
+      "owner": "aalhour",
+      "name": "awesome-compilers",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DOMAIN_OR_LEARNING_OVERLAP",
+      "description": ":sunglasses: Curated list of awesome resources on Compilers, Interpreters and Runtimes",
+      "language": "UNKNOWN",
+      "licenseSpdx": "NOASSERTION",
+      "licenseState": "LICENSE_NEEDS_REVIEW_BEFORE_COPY_OR_ADAPT",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "master",
+      "pushedAt": "2024-05-26T14:07:19Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/aalhour/awesome-compilers",
+        "git": "https://github.com/aalhour/awesome-compilers.git",
+        "contentsApi": "https://api.github.com/repos/aalhour/awesome-compilers/contents?ref=master",
+        "archive": "https://github.com/aalhour/awesome-compilers/archive/master.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "ai-boost/awesome-prompts",
+      "owner": "ai-boost",
+      "name": "awesome-prompts",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DIRECT_TOOLSFORCODEX_OVERLAP",
+      "description": "Curated list of chatgpt prompts from the top-rated GPTs in the GPTs Store. Prompt Engineering, prompt attack & prompt protect. Advanced Prompt Engineering papers.",
+      "language": "UNKNOWN",
+      "licenseSpdx": "GPL-3.0",
+      "licenseState": "LICENSE_NEEDS_REVIEW",
+      "queueState": "DEFER",
+      "availabilityStage": "REFERENCE_LOCATORS_ONLY",
+      "integrationForm": "mechanism-only notes or external locators; do not copy/adapt prompt text",
+      "defaultBranch": "main",
+      "pushedAt": "2026-09-02T04:11:38Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/ai-boost/awesome-prompts",
+        "git": "https://github.com/ai-boost/awesome-prompts.git",
+        "contentsApi": "https://api.github.com/repos/ai-boost/awesome-prompts/contents?ref=main",
+        "archive": "https://github.com/ai-boost/awesome-prompts/archive/main.zip",
+        "quarantinePath": "quarantine/starred-2026-09-02/ai-boost__awesome-prompts"
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "ai-collection/ai-collection",
+      "owner": "ai-collection",
+      "name": "ai-collection",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DOMAIN_OR_LEARNING_OVERLAP",
+      "description": "The Generative AI Landscape - A Collection of Awesome Generative AI Applications",
+      "language": "UNKNOWN",
+      "licenseSpdx": "MIT",
+      "licenseState": "LICENSE_METADATA_PERMISSIVE",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "main",
+      "pushedAt": "2026-09-02T13:12:02Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/ai-collection/ai-collection",
+        "git": "https://github.com/ai-collection/ai-collection.git",
+        "contentsApi": "https://api.github.com/repos/ai-collection/ai-collection/contents?ref=main",
+        "archive": "https://github.com/ai-collection/ai-collection/archive/main.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "aishwaryanr/awesome-generative-ai-guide",
+      "owner": "aishwaryanr",
+      "name": "awesome-generative-ai-guide",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DOMAIN_OR_LEARNING_OVERLAP",
+      "description": "A one stop repository for generative AI research updates, interview resources, notebooks and much more!",
+      "language": "HTML",
+      "licenseSpdx": "MIT",
+      "licenseState": "LICENSE_METADATA_PERMISSIVE",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "main",
+      "pushedAt": "2026-09-02T16:36:03Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/aishwaryanr/awesome-generative-ai-guide",
+        "git": "https://github.com/aishwaryanr/awesome-generative-ai-guide.git",
+        "contentsApi": "https://api.github.com/repos/aishwaryanr/awesome-generative-ai-guide/contents?ref=main",
+        "archive": "https://github.com/aishwaryanr/awesome-generative-ai-guide/archive/main.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "alibaba/page-agent",
+      "owner": "alibaba",
+      "name": "page-agent",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DIRECT_TOOLSFORCODEX_OVERLAP",
+      "description": "JavaScript in-page GUI agent. Control web interfaces with natural language.",
+      "language": "TypeScript",
+      "licenseSpdx": "MIT",
+      "licenseState": "LICENSE_OK_FOR_ADAPTATION",
+      "queueState": "NEEDS_MODIFICATION",
+      "availabilityStage": "LICENSED_STATIC_SOURCE",
+      "integrationForm": "static screen agent/browser boundary before any runtime use",
+      "defaultBranch": "main",
+      "pushedAt": "2026-08-31T19:05:06Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/alibaba/page-agent",
+        "git": "https://github.com/alibaba/page-agent.git",
+        "contentsApi": "https://api.github.com/repos/alibaba/page-agent/contents?ref=main",
+        "archive": "https://github.com/alibaba/page-agent/archive/main.zip",
+        "quarantinePath": "quarantine/starred-2026-09-02/alibaba__page-agent"
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "ashishps1/awesome-system-design-resources",
+      "owner": "ashishps1",
+      "name": "awesome-system-design-resources",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "SECONDARY_UTILITY_OVERLAP",
+      "description": "Learn System Design concepts and prepare for interviews using free resources.",
+      "language": "Java",
+      "licenseSpdx": "GPL-3.0",
+      "licenseState": "LICENSE_NEEDS_REVIEW_BEFORE_COPY_OR_ADAPT",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "main",
+      "pushedAt": "2026-02-16T18:32:29Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/ashishps1/awesome-system-design-resources",
+        "git": "https://github.com/ashishps1/awesome-system-design-resources.git",
+        "contentsApi": "https://api.github.com/repos/ashishps1/awesome-system-design-resources/contents?ref=main",
+        "archive": "https://github.com/ashishps1/awesome-system-design-resources/archive/main.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "awesome-foss/awesome-sysadmin",
+      "owner": "awesome-foss",
+      "name": "awesome-sysadmin",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DOMAIN_OR_LEARNING_OVERLAP",
+      "description": "A curated list of amazingly awesome open-source sysadmin resources.",
+      "language": "UNKNOWN",
+      "licenseSpdx": "NOASSERTION",
+      "licenseState": "LICENSE_NEEDS_REVIEW_BEFORE_COPY_OR_ADAPT",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "master",
+      "pushedAt": "2026-09-02T07:55:08Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/awesome-foss/awesome-sysadmin",
+        "git": "https://github.com/awesome-foss/awesome-sysadmin.git",
+        "contentsApi": "https://api.github.com/repos/awesome-foss/awesome-sysadmin/contents?ref=master",
+        "archive": "https://github.com/awesome-foss/awesome-sysadmin/archive/master.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "awesome-selfhosted/awesome-selfhosted",
+      "owner": "awesome-selfhosted",
+      "name": "awesome-selfhosted",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "SECONDARY_UTILITY_OVERLAP",
+      "description": "A list of Free Software network services and web applications which can be hosted on your own servers",
+      "language": "UNKNOWN",
+      "licenseSpdx": "NOASSERTION",
+      "licenseState": "LICENSE_NEEDS_REVIEW_BEFORE_COPY_OR_ADAPT",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "master",
+      "pushedAt": "2026-09-02T11:41:59Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/awesome-selfhosted/awesome-selfhosted",
+        "git": "https://github.com/awesome-selfhosted/awesome-selfhosted.git",
+        "contentsApi": "https://api.github.com/repos/awesome-selfhosted/awesome-selfhosted/contents?ref=master",
+        "archive": "https://github.com/awesome-selfhosted/awesome-selfhosted/archive/master.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "brillout/awesome-react-components",
+      "owner": "brillout",
+      "name": "awesome-react-components",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DOMAIN_OR_LEARNING_OVERLAP",
+      "description": "Curated List of React Components & Libraries.",
+      "language": "UNKNOWN",
+      "licenseSpdx": "CC0-1.0",
+      "licenseState": "LICENSE_METADATA_PERMISSIVE",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "master",
+      "pushedAt": "2026-01-26T16:36:45Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/brillout/awesome-react-components",
+        "git": "https://github.com/brillout/awesome-react-components.git",
+        "contentsApi": "https://api.github.com/repos/brillout/awesome-react-components/contents?ref=master",
+        "archive": "https://github.com/brillout/awesome-react-components/archive/master.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "ChristosChristofidis/awesome-deep-learning",
+      "owner": "ChristosChristofidis",
+      "name": "awesome-deep-learning",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DOMAIN_OR_LEARNING_OVERLAP",
+      "description": "A curated list of awesome Deep Learning tutorials, projects and communities.",
+      "language": "UNKNOWN",
+      "licenseSpdx": "NOASSERTION",
+      "licenseState": "LICENSE_NEEDS_REVIEW_BEFORE_COPY_OR_ADAPT",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "master",
+      "pushedAt": "2025-05-26T12:28:00Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/ChristosChristofidis/awesome-deep-learning",
+        "git": "https://github.com/ChristosChristofidis/awesome-deep-learning.git",
+        "contentsApi": "https://api.github.com/repos/ChristosChristofidis/awesome-deep-learning/contents?ref=master",
+        "archive": "https://github.com/ChristosChristofidis/awesome-deep-learning/archive/master.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "dastergon/awesome-sre",
+      "owner": "dastergon",
+      "name": "awesome-sre",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "SECONDARY_UTILITY_OVERLAP",
+      "description": "A curated list of Site Reliability and Production Engineering resources.",
+      "language": "UNKNOWN",
+      "licenseSpdx": "CC0-1.0",
+      "licenseState": "LICENSE_METADATA_PERMISSIVE",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "master",
+      "pushedAt": "2025-08-28T14:43:14Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/dastergon/awesome-sre",
+        "git": "https://github.com/dastergon/awesome-sre.git",
+        "contentsApi": "https://api.github.com/repos/dastergon/awesome-sre/contents?ref=master",
+        "archive": "https://github.com/dastergon/awesome-sre/archive/master.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "DataExpert-io/data-engineer-handbook",
+      "owner": "DataExpert-io",
+      "name": "data-engineer-handbook",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "SECONDARY_UTILITY_OVERLAP",
+      "description": "This is a repo with links to everything you'd ever want to learn about data engineering",
+      "language": "Jupyter Notebook",
+      "licenseSpdx": "NOASSERTION",
+      "licenseState": "LICENSE_NEEDS_REVIEW_BEFORE_COPY_OR_ADAPT",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "main",
+      "pushedAt": "2026-08-03T20:29:57Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/DataExpert-io/data-engineer-handbook",
+        "git": "https://github.com/DataExpert-io/data-engineer-handbook.git",
+        "contentsApi": "https://api.github.com/repos/DataExpert-io/data-engineer-handbook/contents?ref=main",
+        "archive": "https://github.com/DataExpert-io/data-engineer-handbook/archive/main.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "dipakkr/A-to-Z-Resources-for-Students",
+      "owner": "dipakkr",
+      "name": "A-to-Z-Resources-for-Students",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DOMAIN_OR_LEARNING_OVERLAP",
+      "description": "✅  Curated list of resources for developers ",
+      "language": "UNKNOWN",
+      "licenseSpdx": "MIT",
+      "licenseState": "LICENSE_METADATA_PERMISSIVE",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "master",
+      "pushedAt": "2026-06-17T14:00:26Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/dipakkr/A-to-Z-Resources-for-Students",
+        "git": "https://github.com/dipakkr/A-to-Z-Resources-for-Students.git",
+        "contentsApi": "https://api.github.com/repos/dipakkr/A-to-Z-Resources-for-Students/contents?ref=master",
+        "archive": "https://github.com/dipakkr/A-to-Z-Resources-for-Students/archive/master.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "DovAmir/awesome-design-patterns",
+      "owner": "DovAmir",
+      "name": "awesome-design-patterns",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "SECONDARY_UTILITY_OVERLAP",
+      "description": "A curated list of software and architecture related design patterns.",
+      "language": "UNKNOWN",
+      "licenseSpdx": "NOASSERTION",
+      "licenseState": "LICENSE_NEEDS_REVIEW_BEFORE_COPY_OR_ADAPT",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "master",
+      "pushedAt": "2024-10-25T19:57:00Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/DovAmir/awesome-design-patterns",
+        "git": "https://github.com/DovAmir/awesome-design-patterns.git",
+        "contentsApi": "https://api.github.com/repos/DovAmir/awesome-design-patterns/contents?ref=master",
+        "archive": "https://github.com/DovAmir/awesome-design-patterns/archive/master.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "dypsilon/frontend-dev-bookmarks",
+      "owner": "dypsilon",
+      "name": "frontend-dev-bookmarks",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DOMAIN_OR_LEARNING_OVERLAP",
+      "description": "Manually curated collection of resources for frontend web developers.",
+      "language": "UNKNOWN",
+      "licenseSpdx": "NOASSERTION",
+      "licenseState": "LICENSE_NEEDS_REVIEW_BEFORE_COPY_OR_ADAPT",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "master",
+      "pushedAt": "2024-05-21T10:56:58Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/dypsilon/frontend-dev-bookmarks",
+        "git": "https://github.com/dypsilon/frontend-dev-bookmarks.git",
+        "contentsApi": "https://api.github.com/repos/dypsilon/frontend-dev-bookmarks/contents?ref=master",
+        "archive": "https://github.com/dypsilon/frontend-dev-bookmarks/archive/master.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "e2b-dev/awesome-ai-agents",
+      "owner": "e2b-dev",
+      "name": "awesome-ai-agents",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DIRECT_TOOLSFORCODEX_OVERLAP",
+      "description": "A list of AI autonomous agents",
+      "language": "UNKNOWN",
+      "licenseSpdx": "NOASSERTION",
+      "licenseState": "LICENSE_BLOCKED_FOR_IMPORT",
+      "queueState": "REFERENCE_ONLY",
+      "availabilityStage": "REFERENCE_LOCATORS_ONLY",
+      "integrationForm": "source discovery only unless legal review clears noncommercial share-alike terms",
+      "defaultBranch": "main",
+      "pushedAt": "2026-08-21T18:52:45Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/e2b-dev/awesome-ai-agents",
+        "git": "https://github.com/e2b-dev/awesome-ai-agents.git",
+        "contentsApi": "https://api.github.com/repos/e2b-dev/awesome-ai-agents/contents?ref=main",
+        "archive": "https://github.com/e2b-dev/awesome-ai-agents/archive/main.zip",
+        "quarantinePath": "quarantine/starred-2026-09-02/e2b-dev__awesome-ai-agents"
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "EmbraceAGI/awesome-chatgpt-zh",
+      "owner": "EmbraceAGI",
+      "name": "awesome-chatgpt-zh",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DOMAIN_OR_LEARNING_OVERLAP",
+      "description": "ChatGPT 中文指南🔥，ChatGPT 中文调教指南，指令指南，应用开发指南，精选资源清单，更好的使用 chatGPT 让你的生产力 up up up! 🚀",
+      "language": "Python",
+      "licenseSpdx": "MIT",
+      "licenseState": "LICENSE_METADATA_PERMISSIVE",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "main",
+      "pushedAt": "2026-08-30T01:24:18Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/EmbraceAGI/awesome-chatgpt-zh",
+        "git": "https://github.com/EmbraceAGI/awesome-chatgpt-zh.git",
+        "contentsApi": "https://api.github.com/repos/EmbraceAGI/awesome-chatgpt-zh/contents?ref=main",
+        "archive": "https://github.com/EmbraceAGI/awesome-chatgpt-zh/archive/main.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "enaqx/awesome-react",
+      "owner": "enaqx",
+      "name": "awesome-react",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "SECONDARY_UTILITY_OVERLAP",
+      "description": "A collection of awesome things regarding React ecosystem",
+      "language": "UNKNOWN",
+      "licenseSpdx": "NOASSERTION",
+      "licenseState": "LICENSE_NEEDS_REVIEW_BEFORE_COPY_OR_ADAPT",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "master",
+      "pushedAt": "2026-08-20T07:58:12Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/enaqx/awesome-react",
+        "git": "https://github.com/enaqx/awesome-react.git",
+        "contentsApi": "https://api.github.com/repos/enaqx/awesome-react/contents?ref=master",
+        "archive": "https://github.com/enaqx/awesome-react/archive/master.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "enescingoz/awesome-n8n-templates",
+      "owner": "enescingoz",
+      "name": "awesome-n8n-templates",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DIRECT_TOOLSFORCODEX_OVERLAP",
+      "description": "280+ free n8n automation templates — ready-to-use workflows for Gmail, Telegram, Slack, Discord, WhatsApp, Google Drive, Notion, OpenAI, and more. AI agents, RAG   chatbots, email automation, social media, DevOps, and document processing. The largest open-source n8n template collection.",
+      "language": "UNKNOWN",
+      "licenseSpdx": "NOASSERTION",
+      "licenseState": "LICENSE_OK_FOR_REFERENCE;LICENSE_NEEDS_ATTRIBUTION_FOR_ADAPTATION",
+      "queueState": "NEEDS_MODIFICATION",
+      "availabilityStage": "REFERENCE_WITH_ATTRIBUTION_REQUIRED",
+      "integrationForm": "extract trigger/failure patterns with attribution; do not bulk-copy workflows",
+      "defaultBranch": "main",
+      "pushedAt": "2026-08-25T08:37:03Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/enescingoz/awesome-n8n-templates",
+        "git": "https://github.com/enescingoz/awesome-n8n-templates.git",
+        "contentsApi": "https://api.github.com/repos/enescingoz/awesome-n8n-templates/contents?ref=main",
+        "archive": "https://github.com/enescingoz/awesome-n8n-templates/archive/main.zip",
+        "quarantinePath": "quarantine/starred-2026-09-02/enescingoz__awesome-n8n-templates"
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "EthicalML/awesome-production-machine-learning",
+      "owner": "EthicalML",
+      "name": "awesome-production-machine-learning",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DOMAIN_OR_LEARNING_OVERLAP",
+      "description": "A curated list of awesome open source libraries to deploy, monitor, version and scale your machine learning",
+      "language": "UNKNOWN",
+      "licenseSpdx": "MIT",
+      "licenseState": "LICENSE_METADATA_PERMISSIVE",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "master",
+      "pushedAt": "2026-09-01T04:22:37Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/EthicalML/awesome-production-machine-learning",
+        "git": "https://github.com/EthicalML/awesome-production-machine-learning.git",
+        "contentsApi": "https://api.github.com/repos/EthicalML/awesome-production-machine-learning/contents?ref=master",
+        "archive": "https://github.com/EthicalML/awesome-production-machine-learning/archive/master.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "fffaraz/awesome-cpp",
+      "owner": "fffaraz",
+      "name": "awesome-cpp",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DOMAIN_OR_LEARNING_OVERLAP",
+      "description": "A curated list of awesome C++ (or C) frameworks, libraries, resources, and shiny things. Inspired by awesome-... stuff.",
+      "language": "UNKNOWN",
+      "licenseSpdx": "MIT",
+      "licenseState": "LICENSE_METADATA_PERMISSIVE",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "master",
+      "pushedAt": "2026-09-01T06:18:33Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/fffaraz/awesome-cpp",
+        "git": "https://github.com/fffaraz/awesome-cpp.git",
+        "contentsApi": "https://api.github.com/repos/fffaraz/awesome-cpp/contents?ref=master",
+        "archive": "https://github.com/fffaraz/awesome-cpp/archive/master.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "github/awesome-copilot",
+      "owner": "github",
+      "name": "awesome-copilot",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DIRECT_TOOLSFORCODEX_OVERLAP",
+      "description": "Community-contributed instructions, agents, skills, and configurations to help you make the most of GitHub Copilot.",
+      "language": "JavaScript",
+      "licenseSpdx": "MIT",
+      "licenseState": "LICENSE_OK_FOR_ADAPTATION",
+      "queueState": "IMPORT_CANDIDATE",
+      "availabilityStage": "ADAPTER_NEXT",
+      "integrationForm": "static registry/validator adapter over agents/instructions/skills/hooks/workflows/plugins",
+      "defaultBranch": "main",
+      "pushedAt": "2026-09-02T02:11:55Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/github/awesome-copilot",
+        "git": "https://github.com/github/awesome-copilot.git",
+        "contentsApi": "https://api.github.com/repos/github/awesome-copilot/contents?ref=main",
+        "archive": "https://github.com/github/awesome-copilot/archive/main.zip",
+        "quarantinePath": "quarantine/starred-2026-09-02/github__awesome-copilot"
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "goabstract/Awesome-Design-Tools",
+      "owner": "goabstract",
+      "name": "Awesome-Design-Tools",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "SECONDARY_UTILITY_OVERLAP",
+      "description": "The best design tools and plugins for everything 👉",
+      "language": "JavaScript",
+      "licenseSpdx": "MIT",
+      "licenseState": "LICENSE_METADATA_PERMISSIVE",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "master",
+      "pushedAt": "2024-07-28T19:57:31Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/goabstract/Awesome-Design-Tools",
+        "git": "https://github.com/goabstract/Awesome-Design-Tools.git",
+        "contentsApi": "https://api.github.com/repos/goabstract/Awesome-Design-Tools/contents?ref=master",
+        "archive": "https://github.com/goabstract/Awesome-Design-Tools/archive/master.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "hanishrao/collective-ai-tools",
+      "owner": "hanishrao",
+      "name": "collective-ai-tools",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DIRECT_TOOLSFORCODEX_OVERLAP",
+      "description": "Search across curated tools, MCP servers, prompts, skills, and trending repos, one query, every corner of the ecosystem.",
+      "language": "TypeScript",
+      "licenseSpdx": "MIT",
+      "licenseState": "LICENSE_OK_FOR_ADAPTATION",
+      "queueState": "DEFER",
+      "availabilityStage": "LICENSED_STATIC_SOURCE",
+      "integrationForm": "inspect manifest/search primitive later",
+      "defaultBranch": "main",
+      "pushedAt": "2026-09-01T20:34:53Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/hanishrao/collective-ai-tools",
+        "git": "https://github.com/hanishrao/collective-ai-tools.git",
+        "contentsApi": "https://api.github.com/repos/hanishrao/collective-ai-tools/contents?ref=main",
+        "archive": "https://github.com/hanishrao/collective-ai-tools/archive/main.zip",
+        "quarantinePath": "quarantine/starred-2026-09-02/hanishrao__collective-ai-tools"
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "igorbarinov/awesome-data-engineering",
+      "owner": "igorbarinov",
+      "name": "awesome-data-engineering",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "SECONDARY_UTILITY_OVERLAP",
+      "description": "A curated list of data engineering tools for software developers",
+      "language": "UNKNOWN",
+      "licenseSpdx": "CC0-1.0",
+      "licenseState": "LICENSE_METADATA_PERMISSIVE",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "master",
+      "pushedAt": "2026-07-18T15:19:21Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/igorbarinov/awesome-data-engineering",
+        "git": "https://github.com/igorbarinov/awesome-data-engineering.git",
+        "contentsApi": "https://api.github.com/repos/igorbarinov/awesome-data-engineering/contents?ref=master",
+        "archive": "https://github.com/igorbarinov/awesome-data-engineering/archive/master.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "Kristories/awesome-guidelines",
+      "owner": "Kristories",
+      "name": "awesome-guidelines",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DOMAIN_OR_LEARNING_OVERLAP",
+      "description": "Programming style, best practices, and coding conventions.",
+      "language": "JavaScript",
+      "licenseSpdx": "CC0-1.0",
+      "licenseState": "LICENSE_METADATA_PERMISSIVE",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "main",
+      "pushedAt": "2026-05-28T02:14:37Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/Kristories/awesome-guidelines",
+        "git": "https://github.com/Kristories/awesome-guidelines.git",
+        "contentsApi": "https://api.github.com/repos/Kristories/awesome-guidelines/contents?ref=main",
+        "archive": "https://github.com/Kristories/awesome-guidelines/archive/main.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "kuchin/awesome-cto",
+      "owner": "kuchin",
+      "name": "awesome-cto",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DOMAIN_OR_LEARNING_OVERLAP",
+      "description": "A curated and opinionated list of resources for Chief Technology Officers, with the emphasis on startups",
+      "language": "UNKNOWN",
+      "licenseSpdx": "CC0-1.0",
+      "licenseState": "LICENSE_METADATA_PERMISSIVE",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "main",
+      "pushedAt": "2026-03-02T12:50:21Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/kuchin/awesome-cto",
+        "git": "https://github.com/kuchin/awesome-cto.git",
+        "contentsApi": "https://api.github.com/repos/kuchin/awesome-cto/contents?ref=main",
+        "archive": "https://github.com/kuchin/awesome-cto/archive/main.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "lnishan/awesome-competitive-programming",
+      "owner": "lnishan",
+      "name": "awesome-competitive-programming",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "SECONDARY_UTILITY_OVERLAP",
+      "description": ":gem: A curated list of awesome Competitive Programming, Algorithm and Data Structure resources",
+      "language": "UNKNOWN",
+      "licenseSpdx": "CC-BY-4.0",
+      "licenseState": "LICENSE_NEEDS_REVIEW_BEFORE_COPY_OR_ADAPT",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "master",
+      "pushedAt": "2024-12-08T09:40:58Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/lnishan/awesome-competitive-programming",
+        "git": "https://github.com/lnishan/awesome-competitive-programming.git",
+        "contentsApi": "https://api.github.com/repos/lnishan/awesome-competitive-programming/contents?ref=master",
+        "archive": "https://github.com/lnishan/awesome-competitive-programming/archive/master.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "matiassingers/awesome-readme",
+      "owner": "matiassingers",
+      "name": "awesome-readme",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DOMAIN_OR_LEARNING_OVERLAP",
+      "description": "A curated list of awesome READMEs",
+      "language": "UNKNOWN",
+      "licenseSpdx": "NOASSERTION",
+      "licenseState": "LICENSE_NEEDS_REVIEW_BEFORE_COPY_OR_ADAPT",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "master",
+      "pushedAt": "2026-08-20T19:50:09Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/matiassingers/awesome-readme",
+        "git": "https://github.com/matiassingers/awesome-readme.git",
+        "contentsApi": "https://api.github.com/repos/matiassingers/awesome-readme/contents?ref=master",
+        "archive": "https://github.com/matiassingers/awesome-readme/archive/master.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "matteocrippa/awesome-swift",
+      "owner": "matteocrippa",
+      "name": "awesome-swift",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DOMAIN_OR_LEARNING_OVERLAP",
+      "description": "A collaborative list of awesome Swift libraries and resources. Feel free to contribute!",
+      "language": "Ruby",
+      "licenseSpdx": "CC0-1.0",
+      "licenseState": "LICENSE_METADATA_PERMISSIVE",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "master",
+      "pushedAt": "2026-09-01T05:37:47Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/matteocrippa/awesome-swift",
+        "git": "https://github.com/matteocrippa/awesome-swift.git",
+        "contentsApi": "https://api.github.com/repos/matteocrippa/awesome-swift/contents?ref=master",
+        "archive": "https://github.com/matteocrippa/awesome-swift/archive/master.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "mezod/awesome-indie",
+      "owner": "mezod",
+      "name": "awesome-indie",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DOMAIN_OR_LEARNING_OVERLAP",
+      "description": "Resources for independent developers to make money",
+      "language": "UNKNOWN",
+      "licenseSpdx": "NOASSERTION",
+      "licenseState": "LICENSE_NEEDS_REVIEW_BEFORE_COPY_OR_ADAPT",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "master",
+      "pushedAt": "2024-06-12T21:23:53Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/mezod/awesome-indie",
+        "git": "https://github.com/mezod/awesome-indie.git",
+        "contentsApi": "https://api.github.com/repos/mezod/awesome-indie/contents?ref=master",
+        "archive": "https://github.com/mezod/awesome-indie/archive/master.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "OffcierCia/DeFi-Developer-Road-Map",
+      "owner": "OffcierCia",
+      "name": "DeFi-Developer-Road-Map",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DOMAIN_OR_LEARNING_OVERLAP",
+      "description": "DeFi Developer roadmap is a curated Developer handbook which includes a list of the best tools for DApps development, resources and references! ",
+      "language": "JavaScript",
+      "licenseSpdx": "NOASSERTION",
+      "licenseState": "LICENSE_NEEDS_REVIEW_BEFORE_COPY_OR_ADAPT",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "main",
+      "pushedAt": "2026-08-16T23:17:39Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/OffcierCia/DeFi-Developer-Road-Map",
+        "git": "https://github.com/OffcierCia/DeFi-Developer-Road-Map.git",
+        "contentsApi": "https://api.github.com/repos/OffcierCia/DeFi-Developer-Road-Map/contents?ref=main",
+        "archive": "https://github.com/OffcierCia/DeFi-Developer-Road-Map/archive/main.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "OpenCut-app/OpenCut",
+      "owner": "OpenCut-app",
+      "name": "OpenCut",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DOMAIN_OR_LEARNING_OVERLAP",
+      "description": "The open-source CapCut alternative",
+      "language": "TypeScript",
+      "licenseSpdx": "MIT",
+      "licenseState": "LICENSE_METADATA_PERMISSIVE",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "main",
+      "pushedAt": "2026-08-10T16:38:36Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/OpenCut-app/OpenCut",
+        "git": "https://github.com/OpenCut-app/OpenCut.git",
+        "contentsApi": "https://api.github.com/repos/OpenCut-app/OpenCut/contents?ref=main",
+        "archive": "https://github.com/OpenCut-app/OpenCut/archive/main.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "piotrkulpinski/open-source-alternatives",
+      "owner": "piotrkulpinski",
+      "name": "open-source-alternatives",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DOMAIN_OR_LEARNING_OVERLAP",
+      "description": "Curated list of open source alternatives to proprietary software.",
+      "language": "UNKNOWN",
+      "licenseSpdx": "CC0-1.0",
+      "licenseState": "LICENSE_METADATA_PERMISSIVE",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "main",
+      "pushedAt": "2026-09-02T04:00:05Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/piotrkulpinski/open-source-alternatives",
+        "git": "https://github.com/piotrkulpinski/open-source-alternatives.git",
+        "contentsApi": "https://api.github.com/repos/piotrkulpinski/open-source-alternatives/contents?ref=main",
+        "archive": "https://github.com/piotrkulpinski/open-source-alternatives/archive/main.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "prakhar1989/awesome-courses",
+      "owner": "prakhar1989",
+      "name": "awesome-courses",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DOMAIN_OR_LEARNING_OVERLAP",
+      "description": ":books: List of awesome university courses for learning Computer Science!",
+      "language": "UNKNOWN",
+      "licenseSpdx": "NOASSERTION",
+      "licenseState": "LICENSE_NEEDS_REVIEW_BEFORE_COPY_OR_ADAPT",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "master",
+      "pushedAt": "2023-05-04T12:49:34Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/prakhar1989/awesome-courses",
+        "git": "https://github.com/prakhar1989/awesome-courses.git",
+        "contentsApi": "https://api.github.com/repos/prakhar1989/awesome-courses/contents?ref=master",
+        "archive": "https://github.com/prakhar1989/awesome-courses/archive/master.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "public-api-lists/public-api-lists",
+      "owner": "public-api-lists",
+      "name": "public-api-lists",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "SECONDARY_UTILITY_OVERLAP",
+      "description": "A curated list of free public APIs — searchable, community-maintained, with a free JSON API.",
+      "language": "UNKNOWN",
+      "licenseSpdx": "MIT",
+      "licenseState": "LICENSE_METADATA_PERMISSIVE",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "master",
+      "pushedAt": "2026-08-01T11:25:46Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/public-api-lists/public-api-lists",
+        "git": "https://github.com/public-api-lists/public-api-lists.git",
+        "contentsApi": "https://api.github.com/repos/public-api-lists/public-api-lists/contents?ref=master",
+        "archive": "https://github.com/public-api-lists/public-api-lists/archive/master.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "public-apis/public-apis",
+      "owner": "public-apis",
+      "name": "public-apis",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "SECONDARY_UTILITY_OVERLAP",
+      "description": "A collective list of free APIs",
+      "language": "Python",
+      "licenseSpdx": "MIT",
+      "licenseState": "LICENSE_METADATA_PERMISSIVE",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "master",
+      "pushedAt": "2026-09-02T02:23:53Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/public-apis/public-apis",
+        "git": "https://github.com/public-apis/public-apis.git",
+        "contentsApi": "https://api.github.com/repos/public-apis/public-apis/contents?ref=master",
+        "archive": "https://github.com/public-apis/public-apis/archive/master.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "rehooks/awesome-react-hooks",
+      "owner": "rehooks",
+      "name": "awesome-react-hooks",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DOMAIN_OR_LEARNING_OVERLAP",
+      "description": "Awesome React Hooks",
+      "language": "UNKNOWN",
+      "licenseSpdx": "CC0-1.0",
+      "licenseState": "LICENSE_METADATA_PERMISSIVE",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "master",
+      "pushedAt": "2023-07-27T06:40:08Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/rehooks/awesome-react-hooks",
+        "git": "https://github.com/rehooks/awesome-react-hooks.git",
+        "contentsApi": "https://api.github.com/repos/rehooks/awesome-react-hooks/contents?ref=master",
+        "archive": "https://github.com/rehooks/awesome-react-hooks/archive/master.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "RunaCapital/awesome-oss-alternatives",
+      "owner": "RunaCapital",
+      "name": "awesome-oss-alternatives",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "SECONDARY_UTILITY_OVERLAP",
+      "description": "Awesome list of open-source startup alternatives to well-known SaaS products 🚀",
+      "language": "Python",
+      "licenseSpdx": "MIT",
+      "licenseState": "LICENSE_METADATA_PERMISSIVE",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "main",
+      "pushedAt": "2025-09-03T17:43:01Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/RunaCapital/awesome-oss-alternatives",
+        "git": "https://github.com/RunaCapital/awesome-oss-alternatives.git",
+        "contentsApi": "https://api.github.com/repos/RunaCapital/awesome-oss-alternatives/contents?ref=main",
+        "archive": "https://github.com/RunaCapital/awesome-oss-alternatives/archive/main.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "rushowr/Netryx-OpenSource-Next-Gen-Street-Level-Geolocation",
+      "owner": "rushowr",
+      "name": "Netryx-OpenSource-Next-Gen-Street-Level-Geolocation",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DOMAIN_OR_LEARNING_OVERLAP",
+      "description": "Netryx is a powerful, locally-hosted geolocation tool that uses state-of-the-art computer vision to identify the exact coordinates of a street-level image. It replicates the core pipeline of high-end geolocation SaaS platforms but runs entirely on your local hardware.",
+      "language": "Python",
+      "licenseSpdx": "MIT",
+      "licenseState": "LICENSE_METADATA_PERMISSIVE",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "main",
+      "pushedAt": "2026-03-17T10:30:14Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/rushowr/Netryx-OpenSource-Next-Gen-Street-Level-Geolocation",
+        "git": "https://github.com/rushowr/Netryx-OpenSource-Next-Gen-Street-Level-Geolocation.git",
+        "contentsApi": "https://api.github.com/repos/rushowr/Netryx-OpenSource-Next-Gen-Street-Level-Geolocation/contents?ref=main",
+        "archive": "https://github.com/rushowr/Netryx-OpenSource-Next-Gen-Street-Level-Geolocation/archive/main.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "sdras/awesome-actions",
+      "owner": "sdras",
+      "name": "awesome-actions",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DOMAIN_OR_LEARNING_OVERLAP",
+      "description": "A curated list of awesome actions to use on GitHub",
+      "language": "UNKNOWN",
+      "licenseSpdx": "CC0-1.0",
+      "licenseState": "LICENSE_METADATA_PERMISSIVE",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "main",
+      "pushedAt": "2024-09-01T20:32:39Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/sdras/awesome-actions",
+        "git": "https://github.com/sdras/awesome-actions.git",
+        "contentsApi": "https://api.github.com/repos/sdras/awesome-actions/contents?ref=main",
+        "archive": "https://github.com/sdras/awesome-actions/archive/main.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "sindresorhus/awesome-nodejs",
+      "owner": "sindresorhus",
+      "name": "awesome-nodejs",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DOMAIN_OR_LEARNING_OVERLAP",
+      "description": ":zap: Delightful Node.js packages and resources [BECAUSE OF TOO MUCH SPAM AND LOW-QUALITY SUBMISSIONS, SUBMISSIONS ARE PAUSED UNTIL JULY]",
+      "language": "UNKNOWN",
+      "licenseSpdx": "CC0-1.0",
+      "licenseState": "LICENSE_METADATA_PERMISSIVE",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "main",
+      "pushedAt": "2026-09-02T02:11:34Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/sindresorhus/awesome-nodejs",
+        "git": "https://github.com/sindresorhus/awesome-nodejs.git",
+        "contentsApi": "https://api.github.com/repos/sindresorhus/awesome-nodejs/contents?ref=main",
+        "archive": "https://github.com/sindresorhus/awesome-nodejs/archive/main.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "Solido/awesome-flutter",
+      "owner": "Solido",
+      "name": "awesome-flutter",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DOMAIN_OR_LEARNING_OVERLAP",
+      "description": "An awesome list that curates the best Flutter libraries, tools, tutorials, articles and more.",
+      "language": "Dart",
+      "licenseSpdx": "NOASSERTION",
+      "licenseState": "LICENSE_NEEDS_REVIEW_BEFORE_COPY_OR_ADAPT",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "master",
+      "pushedAt": "2026-04-21T19:06:09Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/Solido/awesome-flutter",
+        "git": "https://github.com/Solido/awesome-flutter.git",
+        "contentsApi": "https://api.github.com/repos/Solido/awesome-flutter/contents?ref=master",
+        "archive": "https://github.com/Solido/awesome-flutter/archive/master.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "tashfeenahmed/freellmapi",
+      "owner": "tashfeenahmed",
+      "name": "freellmapi",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DIRECT_TOOLSFORCODEX_OVERLAP",
+      "description": "7.4 billion tokens per month. 34 free LLM providers. 635 free model endpoints. All behind one /v1 endpoint, plus any custom OpenAI-compatible endpoint. Smart routing, automatic failover, encrypted keys. Personal experimentation only.",
+      "language": "TypeScript",
+      "licenseSpdx": "MIT",
+      "licenseState": "LICENSE_OK_FOR_ADAPTATION",
+      "queueState": "NEEDS_MODIFICATION",
+      "availabilityStage": "LICENSED_RUNTIME_RISK",
+      "integrationForm": "model endpoint adapter only after credential/abuse/cost guardrails",
+      "defaultBranch": "main",
+      "pushedAt": "2026-09-02T13:42:29Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/tashfeenahmed/freellmapi",
+        "git": "https://github.com/tashfeenahmed/freellmapi.git",
+        "contentsApi": "https://api.github.com/repos/tashfeenahmed/freellmapi/contents?ref=main",
+        "archive": "https://github.com/tashfeenahmed/freellmapi/archive/main.zip",
+        "quarantinePath": "quarantine/starred-2026-09-02/tashfeenahmed__freellmapi"
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "TencentCloud/TencentDB-Agent-Memory",
+      "owner": "TencentCloud",
+      "name": "TencentDB-Agent-Memory",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DIRECT_TOOLSFORCODEX_OVERLAP",
+      "description": "TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.",
+      "language": "TypeScript",
+      "licenseSpdx": "NOASSERTION",
+      "licenseState": "LICENSE_OK_FOR_ADAPTATION",
+      "queueState": "NEEDS_MODIFICATION",
+      "availabilityStage": "DESIGNED_ADAPTER",
+      "integrationForm": "opt-in memory-provider adapter design; no default capture",
+      "defaultBranch": "feat/server_team",
+      "pushedAt": "2026-08-31T07:35:24Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+        "git": "https://github.com/TencentCloud/TencentDB-Agent-Memory.git",
+        "contentsApi": "https://api.github.com/repos/TencentCloud/TencentDB-Agent-Memory/contents?ref=feat%2Fserver_team",
+        "archive": "https://github.com/TencentCloud/TencentDB-Agent-Memory/archive/feat%2Fserver_team.zip",
+        "quarantinePath": "quarantine/starred-2026-09-02/TencentCloud__TencentDB-Agent-Memory"
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "terkelg/awesome-creative-coding",
+      "owner": "terkelg",
+      "name": "awesome-creative-coding",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "SECONDARY_UTILITY_OVERLAP",
+      "description": "Creative Coding: Generative Art, Data visualization, Interaction Design, Resources.",
+      "language": "HTML",
+      "licenseSpdx": "NOASSERTION",
+      "licenseState": "LICENSE_NEEDS_REVIEW_BEFORE_COPY_OR_ADAPT",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "main",
+      "pushedAt": "2026-07-21T15:01:30Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/terkelg/awesome-creative-coding",
+        "git": "https://github.com/terkelg/awesome-creative-coding.git",
+        "contentsApi": "https://api.github.com/repos/terkelg/awesome-creative-coding/contents?ref=main",
+        "archive": "https://github.com/terkelg/awesome-creative-coding/archive/main.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "thangchung/awesome-dotnet-core",
+      "owner": "thangchung",
+      "name": "awesome-dotnet-core",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DOMAIN_OR_LEARNING_OVERLAP",
+      "description": ":honeybee: A collection of awesome .NET core libraries, tools, frameworks and software",
+      "language": "C#",
+      "licenseSpdx": "NOASSERTION",
+      "licenseState": "LICENSE_NEEDS_REVIEW_BEFORE_COPY_OR_ADAPT",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "master",
+      "pushedAt": "2026-02-27T03:26:22Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/thangchung/awesome-dotnet-core",
+        "git": "https://github.com/thangchung/awesome-dotnet-core.git",
+        "contentsApi": "https://api.github.com/repos/thangchung/awesome-dotnet-core/contents?ref=master",
+        "archive": "https://github.com/thangchung/awesome-dotnet-core/archive/master.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "thibmaek/awesome-raspberry-pi",
+      "owner": "thibmaek",
+      "name": "awesome-raspberry-pi",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DOMAIN_OR_LEARNING_OVERLAP",
+      "description": "📝 A curated list of awesome Raspberry Pi tools, projects, images and resources",
+      "language": "Shell",
+      "licenseSpdx": "NOASSERTION",
+      "licenseState": "LICENSE_NEEDS_REVIEW_BEFORE_COPY_OR_ADAPT",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "main",
+      "pushedAt": "2026-07-27T10:19:55Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/thibmaek/awesome-raspberry-pi",
+        "git": "https://github.com/thibmaek/awesome-raspberry-pi.git",
+        "contentsApi": "https://api.github.com/repos/thibmaek/awesome-raspberry-pi/contents?ref=main",
+        "archive": "https://github.com/thibmaek/awesome-raspberry-pi/archive/main.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "tiimgreen/github-cheat-sheet",
+      "owner": "tiimgreen",
+      "name": "github-cheat-sheet",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DOMAIN_OR_LEARNING_OVERLAP",
+      "description": "A list of cool features of Git and GitHub.",
+      "language": "UNKNOWN",
+      "licenseSpdx": "MIT",
+      "licenseState": "LICENSE_METADATA_PERMISSIVE",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "master",
+      "pushedAt": "2024-04-15T20:15:56Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/tiimgreen/github-cheat-sheet",
+        "git": "https://github.com/tiimgreen/github-cheat-sheet.git",
+        "contentsApi": "https://api.github.com/repos/tiimgreen/github-cheat-sheet/contents?ref=master",
+        "archive": "https://github.com/tiimgreen/github-cheat-sheet/archive/master.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "TonnyL/Awesome_APIs",
+      "owner": "TonnyL",
+      "name": "Awesome_APIs",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "SECONDARY_UTILITY_OVERLAP",
+      "description": ":octocat: A collection of APIs",
+      "language": "UNKNOWN",
+      "licenseSpdx": "CC-BY-SA-4.0",
+      "licenseState": "LICENSE_NEEDS_REVIEW_BEFORE_COPY_OR_ADAPT",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "master",
+      "pushedAt": "2020-02-29T16:51:31Z",
+      "archived": true,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable",
+        "archived:static-only-until-reviewed"
+      ],
+      "locators": {
+        "html": "https://github.com/TonnyL/Awesome_APIs",
+        "git": "https://github.com/TonnyL/Awesome_APIs.git",
+        "contentsApi": "https://api.github.com/repos/TonnyL/Awesome_APIs/contents?ref=master",
+        "archive": "https://github.com/TonnyL/Awesome_APIs/archive/master.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "travisvn/awesome-claude-skills",
+      "owner": "travisvn",
+      "name": "awesome-claude-skills",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DIRECT_TOOLSFORCODEX_OVERLAP",
+      "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows — particularly Claude Code",
+      "language": "UNKNOWN",
+      "licenseSpdx": "NOASSERTION",
+      "licenseState": "LICENSE_UNKNOWN",
+      "queueState": "DEFER",
+      "availabilityStage": "REFERENCE_LOCATORS_ONLY",
+      "integrationForm": "block copy/adaptation until license is resolved",
+      "defaultBranch": "main",
+      "pushedAt": "2026-04-28T19:30:24Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/travisvn/awesome-claude-skills",
+        "git": "https://github.com/travisvn/awesome-claude-skills.git",
+        "contentsApi": "https://api.github.com/repos/travisvn/awesome-claude-skills/contents?ref=main",
+        "archive": "https://github.com/travisvn/awesome-claude-skills/archive/main.zip",
+        "quarantinePath": "quarantine/starred-2026-09-02/travisvn__awesome-claude-skills"
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "trimstray/the-book-of-secret-knowledge",
+      "owner": "trimstray",
+      "name": "the-book-of-secret-knowledge",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DOMAIN_OR_LEARNING_OVERLAP",
+      "description": "A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, cli/web tools and more.",
+      "language": "UNKNOWN",
+      "licenseSpdx": "MIT",
+      "licenseState": "LICENSE_METADATA_PERMISSIVE",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "master",
+      "pushedAt": "2024-11-19T14:00:38Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/trimstray/the-book-of-secret-knowledge",
+        "git": "https://github.com/trimstray/the-book-of-secret-knowledge.git",
+        "contentsApi": "https://api.github.com/repos/trimstray/the-book-of-secret-knowledge/contents?ref=master",
+        "archive": "https://github.com/trimstray/the-book-of-secret-knowledge/archive/master.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "tt-a1i/archify",
+      "owner": "tt-a1i",
+      "name": "archify",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DIRECT_TOOLSFORCODEX_OVERLAP",
+      "description": "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
+      "language": "JavaScript",
+      "licenseSpdx": "MIT",
+      "licenseState": "LICENSE_OK_FOR_ADAPTATION",
+      "queueState": "IMPORT_CANDIDATE",
+      "availabilityStage": "PROPOSAL_NEXT",
+      "integrationForm": "proposal/pointer candidate for deterministic diagram artifacts",
+      "defaultBranch": "main",
+      "pushedAt": "2026-09-02T01:24:50Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/tt-a1i/archify",
+        "git": "https://github.com/tt-a1i/archify.git",
+        "contentsApi": "https://api.github.com/repos/tt-a1i/archify/contents?ref=main",
+        "archive": "https://github.com/tt-a1i/archify/archive/main.zip",
+        "quarantinePath": "quarantine/starred-2026-09-02/tt-a1i__archify"
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "unixorn/awesome-zsh-plugins",
+      "owner": "unixorn",
+      "name": "awesome-zsh-plugins",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DOMAIN_OR_LEARNING_OVERLAP",
+      "description": "A collection of ZSH frameworks, plugins, themes and tutorials.",
+      "language": "Shell",
+      "licenseSpdx": "BSD-3-Clause",
+      "licenseState": "LICENSE_METADATA_PERMISSIVE",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "main",
+      "pushedAt": "2026-08-29T21:43:42Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/unixorn/awesome-zsh-plugins",
+        "git": "https://github.com/unixorn/awesome-zsh-plugins.git",
+        "contentsApi": "https://api.github.com/repos/unixorn/awesome-zsh-plugins/contents?ref=main",
+        "archive": "https://github.com/unixorn/awesome-zsh-plugins/archive/main.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "viatsko/awesome-vscode",
+      "owner": "viatsko",
+      "name": "awesome-vscode",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DOMAIN_OR_LEARNING_OVERLAP",
+      "description": "🎨 A curated list of delightful VS Code packages and resources.",
+      "language": "JavaScript",
+      "licenseSpdx": "CC0-1.0",
+      "licenseState": "LICENSE_METADATA_PERMISSIVE",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "master",
+      "pushedAt": "2026-06-21T09:36:55Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/viatsko/awesome-vscode",
+        "git": "https://github.com/viatsko/awesome-vscode.git",
+        "contentsApi": "https://api.github.com/repos/viatsko/awesome-vscode/contents?ref=master",
+        "archive": "https://github.com/viatsko/awesome-vscode/archive/master.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "VoltAgent/awesome-agent-skills",
+      "owner": "VoltAgent",
+      "name": "awesome-agent-skills",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DIRECT_TOOLSFORCODEX_OVERLAP",
+      "description": "A curated collection of 1000+ agent skills from official dev teams and the community, compatible with Claude Code, Codex, Gemini CLI, Cursor, and more.",
+      "language": "UNKNOWN",
+      "licenseSpdx": "MIT",
+      "licenseState": "LICENSE_OK_FOR_ADAPTATION",
+      "queueState": "NEEDS_MODIFICATION",
+      "availabilityStage": "SOURCE_REGISTRY_INPUT",
+      "integrationForm": "metadata/provenance source registry; do not copy skill bodies",
+      "defaultBranch": "main",
+      "pushedAt": "2026-09-02T11:55:39Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/VoltAgent/awesome-agent-skills",
+        "git": "https://github.com/VoltAgent/awesome-agent-skills.git",
+        "contentsApi": "https://api.github.com/repos/VoltAgent/awesome-agent-skills/contents?ref=main",
+        "archive": "https://github.com/VoltAgent/awesome-agent-skills/archive/main.zip",
+        "quarantinePath": "quarantine/starred-2026-09-02/VoltAgent__awesome-agent-skills"
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "VoltAgent/awesome-claude-code-subagents",
+      "owner": "VoltAgent",
+      "name": "awesome-claude-code-subagents",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DIRECT_TOOLSFORCODEX_OVERLAP",
+      "description": "A collection of 100+ specialized Claude Code subagents covering a wide range of development use cases",
+      "language": "Shell",
+      "licenseSpdx": "MIT",
+      "licenseState": "LICENSE_OK_FOR_ADAPTATION",
+      "queueState": "DEFER",
+      "availabilityStage": "LICENSED_STATIC_SOURCE",
+      "integrationForm": "study manifest/category structure; installer remains no-exec",
+      "defaultBranch": "main",
+      "pushedAt": "2026-09-02T11:55:41Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+        "git": "https://github.com/VoltAgent/awesome-claude-code-subagents.git",
+        "contentsApi": "https://api.github.com/repos/VoltAgent/awesome-claude-code-subagents/contents?ref=main",
+        "archive": "https://github.com/VoltAgent/awesome-claude-code-subagents/archive/main.zip",
+        "quarantinePath": "quarantine/starred-2026-09-02/VoltAgent__awesome-claude-code-subagents"
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "VoltAgent/awesome-design-md",
+      "owner": "VoltAgent",
+      "name": "awesome-design-md",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DIRECT_TOOLSFORCODEX_OVERLAP",
+      "description": "A collection of DESIGN.md files analysis by popular brand design systems. Drop one into your project and let coding agents generate a matching UI.",
+      "language": "UNKNOWN",
+      "licenseSpdx": "MIT",
+      "licenseState": "LICENSE_OK_FOR_ADAPTATION",
+      "queueState": "DEFER",
+      "availabilityStage": "LICENSED_STATIC_SOURCE",
+      "integrationForm": "extract design-doc patterns after duplicate/style review",
+      "defaultBranch": "main",
+      "pushedAt": "2026-07-31T12:32:42Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/VoltAgent/awesome-design-md",
+        "git": "https://github.com/VoltAgent/awesome-design-md.git",
+        "contentsApi": "https://api.github.com/repos/VoltAgent/awesome-design-md/contents?ref=main",
+        "archive": "https://github.com/VoltAgent/awesome-design-md/archive/main.zip",
+        "quarantinePath": "quarantine/starred-2026-09-02/VoltAgent__awesome-design-md"
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "vsouza/awesome-ios",
+      "owner": "vsouza",
+      "name": "awesome-ios",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "SECONDARY_UTILITY_OVERLAP",
+      "description": "A curated list of awesome iOS ecosystem, including Objective-C and Swift Projects ",
+      "language": "Swift",
+      "licenseSpdx": "MIT",
+      "licenseState": "LICENSE_METADATA_PERMISSIVE",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "master",
+      "pushedAt": "2026-08-27T19:34:29Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/vsouza/awesome-ios",
+        "git": "https://github.com/vsouza/awesome-ios.git",
+        "contentsApi": "https://api.github.com/repos/vsouza/awesome-ios/contents?ref=master",
+        "archive": "https://github.com/vsouza/awesome-ios/archive/master.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "wasabeef/awesome-android-ui",
+      "owner": "wasabeef",
+      "name": "awesome-android-ui",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DOMAIN_OR_LEARNING_OVERLAP",
+      "description": "A curated list of awesome Android UI/UX libraries",
+      "language": "UNKNOWN",
+      "licenseSpdx": "MIT",
+      "licenseState": "LICENSE_METADATA_PERMISSIVE",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "master",
+      "pushedAt": "2026-06-05T05:39:52Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/wasabeef/awesome-android-ui",
+        "git": "https://github.com/wasabeef/awesome-android-ui.git",
+        "contentsApi": "https://api.github.com/repos/wasabeef/awesome-android-ui/contents?ref=master",
+        "archive": "https://github.com/wasabeef/awesome-android-ui/archive/master.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "yusiqo/telegram-osint",
+      "owner": "yusiqo",
+      "name": "telegram-osint",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DOMAIN_OR_LEARNING_OVERLAP",
+      "description": "Opensource Telegram (Osint) Tool",
+      "language": "Python",
+      "licenseSpdx": "AGPL-3.0",
+      "licenseState": "LICENSE_NEEDS_REVIEW_BEFORE_COPY_OR_ADAPT",
+      "queueState": "NOT_EVALUATED",
+      "availabilityStage": "SOURCE_LOCATORS_AVAILABLE",
+      "integrationForm": "metadata/static source locator; no import decision yet",
+      "defaultBranch": "main",
+      "pushedAt": "2025-01-03T17:24:58Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/yusiqo/telegram-osint",
+        "git": "https://github.com/yusiqo/telegram-osint.git",
+        "contentsApi": "https://api.github.com/repos/yusiqo/telegram-osint/contents?ref=main",
+        "archive": "https://github.com/yusiqo/telegram-osint/archive/main.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "zhaoxuya520/reverse-skill",
+      "owner": "zhaoxuya520",
+      "name": "reverse-skill",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DIRECT_TOOLSFORCODEX_OVERLAP",
+      "description": "Reverse Engineering / Authorized Penetration Testing / Security Research Skill Router Pack AI-powered routing + On-demand toolchain bootstrapping + Self-evolving knowledge base  Supports Claude Code, Kiro, Cursor, Cline, and other AI coding clients 逆向/渗透/安全技能路由包 - AI 自动路由 + 按需自举工具链 + 自动进化经验库 | 支持 Claude Code / Kiro / Cursor / Cline 等代码 AI 客户端",
+      "language": "PowerShell",
+      "licenseSpdx": "MIT",
+      "licenseState": "LICENSE_OK_FOR_ADAPTATION",
+      "queueState": "NEEDS_MODIFICATION",
+      "availabilityStage": "SAFETY_GATED_STATIC_SOURCE",
+      "integrationForm": "authorized-security/sandbox-gated router structure only",
+      "defaultBranch": "main",
+      "pushedAt": "2026-08-31T07:23:08Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/zhaoxuya520/reverse-skill",
+        "git": "https://github.com/zhaoxuya520/reverse-skill.git",
+        "contentsApi": "https://api.github.com/repos/zhaoxuya520/reverse-skill/contents?ref=main",
+        "archive": "https://github.com/zhaoxuya520/reverse-skill/archive/main.zip",
+        "quarantinePath": "quarantine/starred-2026-09-02/zhaoxuya520__reverse-skill"
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "scripts/starred-repo-intake.mjs"
+      ]
+    }
+  ],
+  "digest": "ef2327b5a9701441e55b9306182a6d1740ea7866cb4f019711d425b8c04da547"
+}

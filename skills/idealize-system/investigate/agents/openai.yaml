@@ -1,0 +1,5 @@
+interface:
+  display_name: Investigate
+  short_description: Recursively research gaps, primitives, and dependencies.
+policy:
+  allow_implicit_invocation: true
