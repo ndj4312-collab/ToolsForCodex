@@ -1,18 +1,18 @@
 {
   "schemaVersion": "1.0",
   "id": "github-starred-source-availability",
-  "generatedAt": "2026-09-02T18:05:00.000Z",
+  "generatedAt": "2026-09-04T03:30:48.317Z",
   "source": {
     "kind": "authenticated-github-stars",
     "input": ".work/starred-intake/starred-classified-live.json",
-    "intakeCount": 62,
-    "intakeGeneratedAt": "2026-09-02T17:58:35.669Z"
+    "intakeCount": 63,
+    "intakeGeneratedAt": "2026-09-04T03:30:48.317Z"
   },
   "summary": {
-    "total": 62,
-    "directOverlap": 14,
+    "total": 63,
+    "directOverlap": 15,
     "importCandidates": 2,
-    "needsModification": 6,
+    "needsModification": 7,
     "licenseConstrained": 23
   },
   "repositories": [
@@ -1304,6 +1304,50 @@
         "docs/starred-repo-intake.md",
         "docs/direct-overlap-import-design.md",
         "scripts/starred-repo-intake.mjs"
+      ]
+    },
+    {
+      "fullName": "mattnowdev/thinking-partner",
+      "owner": "mattnowdev",
+      "name": "thinking-partner",
+      "source": "authenticated-github-stars",
+      "relevanceBand": "DIRECT_TOOLSFORCODEX_OVERLAP",
+      "description": "Thinking partner skill for AI agents — 150+ mental models, orientation detection, cognitive operations. Works with Claude Code, Cursor, Windsurf, Cline, GitHub Copilot.",
+      "language": "UNKNOWN",
+      "licenseSpdx": "MIT",
+      "licenseState": "LICENSE_OK_FOR_ADAPTATION",
+      "queueState": "NEEDS_MODIFICATION",
+      "availabilityStage": "LICENSED_STATIC_SOURCE",
+      "integrationForm": "adapt the deterministic challenge/model-selection mechanism as a routable/searchable capability; do not wholesale-load the 150+ model catalog or persist inferred user thinking-state labels",
+      "defaultBranch": "main",
+      "pushedAt": "2026-03-31T17:19:54Z",
+      "archived": false,
+      "fork": false,
+      "accessStates": [
+        "METADATA_READABLE",
+        "STATIC_FILES_READABLE",
+        "CLONEABLE_CLOUD",
+        "CLONEABLE_LOCAL",
+        "REMOTE_MCP_READABLE"
+      ],
+      "sessionUse": [
+        "cloud:cloneable",
+        "local:cloneable",
+        "remote-mcp:public-static-readable"
+      ],
+      "locators": {
+        "html": "https://github.com/mattnowdev/thinking-partner",
+        "git": "https://github.com/mattnowdev/thinking-partner.git",
+        "contentsApi": "https://api.github.com/repos/mattnowdev/thinking-partner/contents?ref=main",
+        "archive": "https://github.com/mattnowdev/thinking-partner/archive/main.zip",
+        "quarantinePath": null
+      },
+      "noExecStatus": "INTAKE_POLICY_NO_TARGET_CODE_EXECUTION",
+      "evidence": [
+        "docs/starred-repo-intake.md",
+        "docs/direct-overlap-import-design.md",
+        "mattnowdev/thinking-partner:LICENSE",
+        "mattnowdev/thinking-partner:skills/thinking-partner/SKILL.md"
       ]
     },
     {
