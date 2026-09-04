@@ -1,10 +1,16 @@
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js";
 
-function textPayload(result: { content?: Array<{ type: string; text?: string }> }): string {
-  const text = result.content?.find((item) => item.type === "text")?.text;
-  if (!text) throw new Error("MCP tool result did not contain text content");
-  return text;
+function textPayload(result: unknown): string {
+  if (!result || typeof result !== "object" || !("content" in result) || !Array.isArray(result.content)) {
+    throw new Error("MCP tool result did not contain a content array");
+  }
+  for (const item of result.content) {
+    if (item && typeof item === "object" && "type" in item && item.type === "text" && "text" in item && typeof item.text === "string") {
+      return item.text;
+    }
+  }
+  throw new Error("MCP tool result did not contain text content");
 }
 
 describe("registered MCP skill runtime", () => {
@@ -34,7 +40,7 @@ describe("registered MCP skill runtime", () => {
           limit: 10,
         },
       });
-      expect(found.isError).not.toBe(true);
+      expect("isError" in found ? found.isError : false).not.toBe(true);
       const matches = JSON.parse(textPayload(found)) as Array<{ name: string; path: string }>;
       expect(matches.some((match) => match.name === "idealize" && match.path === "skills/idealize-system/idealize/SKILL.md")).toBe(true);
 
@@ -45,7 +51,7 @@ describe("registered MCP skill runtime", () => {
           name: "idealize",
         },
       });
-      expect(loaded.isError).not.toBe(true);
+      expect("isError" in loaded ? loaded.isError : false).not.toBe(true);
       const skill = JSON.parse(textPayload(loaded)) as { name: string; path: string; content: string };
       expect(skill.name).toBe("idealize");
       expect(skill.path).toBe("skills/idealize-system/idealize/SKILL.md");
