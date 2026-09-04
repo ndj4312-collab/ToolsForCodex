@@ -1,5 +1,14 @@
 import { allowRetry, classifyTerminal, freezePlan, verifyEnvelope, type OrchestratorInput } from "../src/orchestration/engine";
-import { normalizeIntent, validateContextInfluence, validateIntentMonotonicity, type GoalContract, type IntentContract } from "../src/domain/orchestration-contracts";
+import {
+  normalizeIntent,
+  validateContextInfluence,
+  validateEnvironmentParity,
+  validateIntentMonotonicity,
+  type CompiledCapability,
+  type EvidenceReceipt,
+  type GoalContract,
+  type IntentContract,
+} from "../src/domain/orchestration-contracts";
 
 const goal: GoalContract = {
   version: "1",
@@ -49,11 +58,13 @@ const input: OrchestratorInput = {
       objective: "implement",
       intent: ["EXECUTE"],
       executionPolicy: "bounded",
+      scope: ["repository"],
       requiredContext: ["canon"],
       evidenceGate: ["unit test"],
       mutationPolicy: "QUARANTINE_ONLY",
       dependencies: [],
       acceptance: ["unit test passes"],
+      authorityGate: "PREAUTHORIZED",
       riskAuthorityBoundary: "pre-authorized quarantine mutation",
     },
     {
@@ -61,11 +72,13 @@ const input: OrchestratorInput = {
       objective: "verify",
       intent: ["VERIFY"],
       executionPolicy: "bounded",
+      scope: ["repository"],
       requiredContext: ["canon"],
       evidenceGate: ["runtime test"],
       mutationPolicy: "READ_ONLY",
       dependencies: ["A"],
       acceptance: ["runtime test passes"],
+      authorityGate: "READ_ONLY",
       riskAuthorityBoundary: "read-only verification",
     },
   ],
@@ -75,6 +88,15 @@ const input: OrchestratorInput = {
   retryBudget: 2,
   provenance: ["governing command"],
 };
+
+const passReceipt = (requirementId: string, sourceKind: EvidenceReceipt["sourceKind"] = "CI"): EvidenceReceipt => ({
+  requirementId,
+  sourceKind,
+  sourceLocator: `evidence://${requirementId}`,
+  provenance: "test fixture",
+  status: "PASS",
+  observedAt: "2026-09-04T00:00:00Z",
+});
 
 describe("deterministic completion orchestrator", () => {
   test("equivalent frozen input is deterministic", () => {
@@ -92,9 +114,48 @@ describe("deterministic completion orchestrator", () => {
     expect(() => freezePlan(bad)).toThrow(/Unknown dependency/);
   });
 
-  test("consequential authority forks are not silently templated", () => {
-    const bad = { ...input, nodes: [{ ...input.nodes[0]!, riskAuthorityBoundary: "user preference required" }] };
-    expect(() => freezePlan(bad)).toThrow(/explicit authority boundary/);
+  test("dependency cycles fail closed", () => {
+    const bad = {
+      ...input,
+      nodes: [
+        { ...input.nodes[0]!, dependencies: ["B"] },
+        { ...input.nodes[1]!, dependencies: ["A"] },
+      ],
+    };
+    expect(() => freezePlan(bad)).toThrow(/Dependency cycle detected/);
+  });
+
+  test("unknown runtime intent classes cannot inject task kinds", () => {
+    const bad = { ...input, nodes: [{ ...input.nodes[0]!, intent: ["ARBITRARY_EXECUTION" as never] }] };
+    expect(() => freezePlan(bad)).toThrow(/Unknown intent class/);
+  });
+
+  test("goal scope cannot silently expand", () => {
+    const bad = { ...input, nodes: [{ ...input.nodes[0]!, scope: ["repository", "production-account"] }] };
+    expect(() => freezePlan(bad)).toThrow(/expands scope/);
+  });
+
+  test("unknown required context fails closed", () => {
+    const bad = { ...input, nodes: [{ ...input.nodes[0]!, requiredContext: ["missing-context"] }] };
+    expect(() => freezePlan(bad)).toThrow(/Unknown required context/);
+  });
+
+  test("decision-critical conflicted context cannot enter a frozen plan", () => {
+    const bad = {
+      ...input,
+      context: {
+        ...input.context,
+        primitives: input.context.primitives.map((primitive) => ({ ...primitive, evidenceStatus: "CONFLICTED" as const })),
+      },
+    };
+    expect(() => freezePlan(bad)).toThrow(/Decision-critical context is not KNOWN/);
+  });
+
+  test("consequential user and security authority forks are not silently templated", () => {
+    const userGate = { ...input, nodes: [{ ...input.nodes[0]!, authorityGate: "USER_DECISION_REQUIRED" as const }] };
+    const securityGate = { ...input, nodes: [{ ...input.nodes[0]!, authorityGate: "EXTERNAL_APPROVAL_REQUIRED" as const, riskAuthorityBoundary: "security approval" }] };
+    expect(() => freezePlan(userGate)).toThrow(/explicit authority boundary/);
+    expect(() => freezePlan(securityGate)).toThrow(/explicit authority boundary/);
   });
 
   test("retries require changed intervention and are bounded", () => {
@@ -103,13 +164,25 @@ describe("deterministic completion orchestrator", () => {
     expect(() => allowRetry([one], 2, { failureFingerprint: "same", changedVariable: "patch-a" })).toThrow(/Retry loop detected/);
     const two = allowRetry([one], 2, { failureFingerprint: "same", changedVariable: "patch-b" });
     expect(() => allowRetry([one, two], 2, { failureFingerprint: "new", changedVariable: "patch-c" })).toThrow(/budget exhausted/);
+    expect(() => allowRetry([], 2, { failureFingerprint: "", changedVariable: "patch" })).toThrow(/fingerprint/);
   });
 
-  test("terminal classifier separates verified/blocker/decision/failure", () => {
-    expect(classifyTerminal({ acceptancePassed: true }).state).toBe("VERIFIED");
-    expect(classifyTerminal({ acceptancePassed: false, externalDependencyUnavailable: "independent critic unavailable" }).state).toBe("EXTERNALLY_BLOCKED");
-    expect(classifyTerminal({ acceptancePassed: false, userDecision: "publish?" }).state).toBe("USER_DECISION_REQUIRED");
-    expect(classifyTerminal({ acceptancePassed: false, unrepairedFailure: "test failed" }).state).toBe("FAILED");
+  test("terminal VERIFIED requires auditable passing evidence rather than a boolean", () => {
+    expect(classifyTerminal({ requiredEvidence: ["unit", "runtime"], evidence: [passReceipt("unit"), passReceipt("runtime", "RUNTIME")] }).state).toBe("VERIFIED");
+    expect(classifyTerminal({ requiredEvidence: ["unit", "runtime"], evidence: [passReceipt("unit")] })).toEqual(expect.objectContaining({ state: "FAILED", reason: expect.stringMatching(/Missing passing/) }));
+    expect(classifyTerminal({ requiredEvidence: [], evidence: [] }).state).toBe("FAILED");
+  });
+
+  test("terminal classifier separates blocker decision and failure", () => {
+    expect(classifyTerminal({ requiredEvidence: ["x"], evidence: [], externalDependencyUnavailable: "critic unavailable" }).state).toBe("EXTERNALLY_BLOCKED");
+    expect(classifyTerminal({ requiredEvidence: ["x"], evidence: [], userDecision: "publish?" }).state).toBe("USER_DECISION_REQUIRED");
+    expect(classifyTerminal({ requiredEvidence: ["x"], evidence: [], unrepairedFailure: "test failed" }).state).toBe("FAILED");
+  });
+
+  test("independent review cannot be self-certified by ordinary CI evidence", () => {
+    const requiredEvidence = ["unit"];
+    expect(classifyTerminal({ requiredEvidence, evidence: [passReceipt("unit")], independentReviewRequired: true }).state).toBe("FAILED");
+    expect(classifyTerminal({ requiredEvidence, evidence: [passReceipt("unit"), passReceipt("independent", "INDEPENDENT_REVIEW")], independentReviewRequired: true }).state).toBe("VERIFIED");
   });
 
   test("freeze requires explicit recompile after envelope drift", () => {
@@ -134,5 +207,28 @@ describe("representation/compiler invariants", () => {
   test("mechanically inert P0/P1 context fails", () => {
     expect(validateContextInfluence(input.context, [])).toEqual(["Decision-critical context is mechanically inert: canon"]);
     expect(validateContextInfluence(input.context, [{ contextId: "canon", effect: "CONSTRAIN", target: "mutation", reason: "policy" }])).toEqual([]);
+  });
+
+  test("environment adapter parity drift is explicit", () => {
+    const capability: CompiledCapability = {
+      id: "cap",
+      version: "1",
+      lifecycle: "PROVISIONAL",
+      contractHash: "a",
+      influenceHash: "b",
+      compilerVersion: "1",
+      taxonomyVersion: "1",
+      sourceComponents: ["source"],
+      executionGraph: ["A"],
+      invariants: ["same behavior"],
+      allowedBranches: ["main"],
+      forbiddenActions: [],
+      inputSchemaId: "in",
+      outputSchemaId: "out",
+      evaluation: { version: "1", acceptanceTests: ["parity"], adversarialTests: [], independentReviewRequired: false },
+      environmentAdapters: ["local", "remote"],
+    };
+    expect(validateEnvironmentParity(capability, ["local"])).toEqual(["Declared environment adapter not observed: remote"]);
+    expect(validateEnvironmentParity(capability, ["local", "remote"])).toEqual([]);
   });
 });
