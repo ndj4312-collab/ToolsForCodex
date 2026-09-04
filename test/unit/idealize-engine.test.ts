@@ -34,4 +34,24 @@ describe("idealize executable plan control plane", () => {
     plan.tasks[2]!.writeSet = ["candidate inheritance manifest"];
     expect(validateIdealProjectPlan(plan).findings.map((finding) => finding.code)).toContain("PARALLEL_WRITE_COLLISION");
   });
+
+  it("fails closed when a declared prerequisite has no matching dependency edge and still blocks execution", () => {
+    const plan = fixture();
+    const task = plan.tasks.find((candidate) => candidate.id === "IDEAL-002")!;
+    plan.edges = plan.edges.filter((edge) => !(edge.relation === "REQUIRES" && edge.from === "IDEAL-002" && edge.to === "IDEAL-001"));
+    const result = validateIdealProjectPlan(plan);
+    expect(result.status).toBe("BLOCKED");
+    expect(result.findings.map((finding) => finding.code)).toContain("PREREQUISITE_EDGE_DRIFT");
+    expect(task.prerequisites).toContain("IDEAL-001");
+    expect(eligibleTasks(plan, new Set()).map((candidate) => candidate.id)).not.toContain("IDEAL-002");
+  });
+
+  it("fails closed when a prerequisite names a task that does not exist", () => {
+    const plan = fixture();
+    plan.tasks[1]!.prerequisites.push("IDEAL-MISSING");
+    const result = validateIdealProjectPlan(plan);
+    expect(result.status).toBe("BLOCKED");
+    expect(result.findings.map((finding) => finding.code)).toContain("UNKNOWN_PREREQUISITE");
+    expect(eligibleTasks(plan, new Set(["IDEAL-001"])).map((candidate) => candidate.id)).not.toContain(plan.tasks[1]!.id);
+  });
 });
