@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": "2026-09-04T15:21:01.160Z",
-  "sourceRevision": "8d3be7344eeae04d2e5900ced7ef7680adcb33cc",
+  "generatedAt": "2026-09-04T15:30:35.020Z",
+  "sourceRevision": "8053ef2cf2bc83d83df844f853d8f777959215b5",
   "families": [
     {
       "root": ".agents/skills/ab-testing",
@@ -939,11 +939,11 @@
       "root": "skills/engineering",
       "skillEntry": "skills/engineering/SKILL.md",
       "members": [
-        "item-001117",
         "item-001118",
         "item-001119",
         "item-001120",
-        "item-001121"
+        "item-001121",
+        "item-001122"
       ],
       "memberCount": 5
     },
@@ -951,8 +951,8 @@
       "root": "skills/headroom-token-minimizer",
       "skillEntry": "skills/headroom-token-minimizer/SKILL.md",
       "members": [
-        "item-001122",
-        "item-001123"
+        "item-001123",
+        "item-001124"
       ],
       "memberCount": 2
     },
@@ -960,7 +960,6 @@
       "root": "skills/idealize-system",
       "skillEntry": "skills/idealize-system/SKILL.md",
       "members": [
-        "item-001124",
         "item-001125",
         "item-001126",
         "item-001127",
@@ -973,7 +972,8 @@
         "item-001134",
         "item-001135",
         "item-001136",
-        "item-001137"
+        "item-001137",
+        "item-001138"
       ],
       "memberCount": 14
     },
@@ -981,7 +981,7 @@
       "root": "skills/ingest-and-endure",
       "skillEntry": "skills/ingest-and-endure/SKILL.md",
       "members": [
-        "item-001138"
+        "item-001139"
       ],
       "memberCount": 1
     },
@@ -989,8 +989,8 @@
       "root": "skills/production-orchestrator",
       "skillEntry": "skills/production-orchestrator/SKILL.md",
       "members": [
-        "item-001139",
-        "item-001140"
+        "item-001140",
+        "item-001141"
       ],
       "memberCount": 2
     }
@@ -15230,6 +15230,18 @@
     },
     {
       "id": "item-001111",
+      "path": "scripts/promote-approved-proposals.mjs",
+      "disposition": "PRESERVE_NATIVE_MACHINERY",
+      "reason": "Repository-native implementation scripts/promote-approved-proposals.mjs; existing operational machinery, not a duplicate implementation target.",
+      "route": {
+        "type": "NATIVE_MACHINERY",
+        "target": "scripts/promote-approved-proposals.mjs",
+        "status": "ROUTED",
+        "evidence": "repository-native"
+      }
+    },
+    {
+      "id": "item-001112",
       "path": "scripts/starred-availability.mjs",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native implementation scripts/starred-availability.mjs; existing operational machinery, not a duplicate implementation target.",
@@ -15241,7 +15253,7 @@
       }
     },
     {
-      "id": "item-001112",
+      "id": "item-001113",
       "path": "scripts/starred-repo-intake.mjs",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native implementation scripts/starred-repo-intake.mjs; existing operational machinery, not a duplicate implementation target.",
@@ -15253,7 +15265,7 @@
       }
     },
     {
-      "id": "item-001113",
+      "id": "item-001114",
       "path": "scripts/validate-release.mjs",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native implementation scripts/validate-release.mjs; existing operational machinery, not a duplicate implementation target.",
@@ -15265,7 +15277,7 @@
       }
     },
     {
-      "id": "item-001114",
+      "id": "item-001115",
       "path": "skills-lock.json",
       "disposition": "PRESERVE_REFERENCE",
       "reason": "Repository reference/orientation asset skills-lock.json; preserve at native path and surface when relevant.",
@@ -15277,7 +15289,7 @@
       }
     },
     {
-      "id": "item-001115",
+      "id": "item-001116",
       "path": "skills/INDEX.md",
       "disposition": "PRESERVE_REFERENCE",
       "reason": "Repository reference/orientation asset skills/INDEX.md; preserve at native path and surface when relevant.",
@@ -15289,7 +15301,7 @@
       }
     },
     {
-      "id": "item-001116",
+      "id": "item-001117",
       "path": "skills/distribution-manifest.json",
       "disposition": "PRESERVE_REFERENCE",
       "reason": "Repository reference/orientation asset skills/distribution-manifest.json; preserve at native path and surface when relevant.",
@@ -15301,7 +15313,7 @@
       }
     },
     {
-      "id": "item-001117",
+      "id": "item-001118",
       "path": "skills/engineering/INDEX.md",
       "disposition": "ATTACH_SUPPORTING_ASSET",
       "reason": "Supporting reference skills/engineering/INDEX.md belongs to native capability family skills/engineering; route through parent skill.",
@@ -15313,7 +15325,7 @@
       }
     },
     {
-      "id": "item-001118",
+      "id": "item-001119",
       "path": "skills/engineering/matt-skill-contract-audit/SKILL.md",
       "disposition": "ACCEPT_NATIVE_SKILL",
       "reason": "Native skill entrypoint skills/engineering/matt-skill-contract-audit/SKILL.md; directly routable without duplicate implementation.",
@@ -15325,7 +15337,7 @@
       }
     },
     {
-      "id": "item-001119",
+      "id": "item-001120",
       "path": "skills/engineering/matt-skill-contract-audit/agents/openai.yaml",
       "disposition": "ATTACH_SUPPORTING_ASSET",
       "reason": "Supporting reference skills/engineering/matt-skill-contract-audit/agents/openai.yaml belongs to native capability family skills/engineering; route through parent skill.",
@@ -15337,7 +15349,7 @@
       }
     },
     {
-      "id": "item-001120",
+      "id": "item-001121",
       "path": "skills/engineering/standardize-skills-to-matt-pocock/SKILL.md",
       "disposition": "ACCEPT_NATIVE_SKILL",
       "reason": "Native skill entrypoint skills/engineering/standardize-skills-to-matt-pocock/SKILL.md; directly routable without duplicate implementation.",
@@ -15349,7 +15361,7 @@
       }
     },
     {
-      "id": "item-001121",
+      "id": "item-001122",
       "path": "skills/engineering/standardize-skills-to-matt-pocock/agents/openai.yaml",
       "disposition": "ATTACH_SUPPORTING_ASSET",
       "reason": "Supporting reference skills/engineering/standardize-skills-to-matt-pocock/agents/openai.yaml belongs to native capability family skills/engineering; route through parent skill.",
@@ -15361,7 +15373,7 @@
       }
     },
     {
-      "id": "item-001122",
+      "id": "item-001123",
       "path": "skills/headroom-token-minimizer/SKILL.md",
       "disposition": "ACCEPT_NATIVE_SKILL",
       "reason": "Native skill entrypoint skills/headroom-token-minimizer/SKILL.md; directly routable without duplicate implementation.",
@@ -15373,7 +15385,7 @@
       }
     },
     {
-      "id": "item-001123",
+      "id": "item-001124",
       "path": "skills/headroom-token-minimizer/agents/openai.yaml",
       "disposition": "ATTACH_SUPPORTING_ASSET",
       "reason": "Supporting reference skills/headroom-token-minimizer/agents/openai.yaml belongs to native capability family skills/headroom-token-minimizer; route through parent skill.",
@@ -15385,7 +15397,7 @@
       }
     },
     {
-      "id": "item-001124",
+      "id": "item-001125",
       "path": "skills/idealize-system/PROVENANCE.md",
       "disposition": "ATTACH_SUPPORTING_ASSET",
       "reason": "Supporting methodology skills/idealize-system/PROVENANCE.md belongs to native capability family skills/idealize-system; route through parent skill.",
@@ -15397,7 +15409,7 @@
       }
     },
     {
-      "id": "item-001125",
+      "id": "item-001126",
       "path": "skills/idealize-system/README.md",
       "disposition": "ATTACH_SUPPORTING_ASSET",
       "reason": "Supporting reference skills/idealize-system/README.md belongs to native capability family skills/idealize-system; route through parent skill.",
@@ -15409,7 +15421,7 @@
       }
     },
     {
-      "id": "item-001126",
+      "id": "item-001127",
       "path": "skills/idealize-system/about/SKILL.md",
       "disposition": "ACCEPT_NATIVE_SKILL",
       "reason": "Native skill entrypoint skills/idealize-system/about/SKILL.md; directly routable without duplicate implementation.",
@@ -15421,7 +15433,7 @@
       }
     },
     {
-      "id": "item-001127",
+      "id": "item-001128",
       "path": "skills/idealize-system/about/agents/openai.yaml",
       "disposition": "ATTACH_SUPPORTING_ASSET",
       "reason": "Supporting reference skills/idealize-system/about/agents/openai.yaml belongs to native capability family skills/idealize-system; route through parent skill.",
@@ -15433,7 +15445,7 @@
       }
     },
     {
-      "id": "item-001128",
+      "id": "item-001129",
       "path": "skills/idealize-system/capability-registry.json",
       "disposition": "ATTACH_SUPPORTING_ASSET",
       "reason": "Supporting methodology skills/idealize-system/capability-registry.json belongs to native capability family skills/idealize-system; route through parent skill.",
@@ -15445,7 +15457,7 @@
       }
     },
     {
-      "id": "item-001129",
+      "id": "item-001130",
       "path": "skills/idealize-system/control-plane.json",
       "disposition": "ATTACH_SUPPORTING_ASSET",
       "reason": "Supporting reference skills/idealize-system/control-plane.json belongs to native capability family skills/idealize-system; route through parent skill.",
@@ -15457,7 +15469,7 @@
       }
     },
     {
-      "id": "item-001130",
+      "id": "item-001131",
       "path": "skills/idealize-system/idealize/SKILL.md",
       "disposition": "ACCEPT_NATIVE_SKILL",
       "reason": "Native skill entrypoint skills/idealize-system/idealize/SKILL.md; directly routable without duplicate implementation.",
@@ -15469,7 +15481,7 @@
       }
     },
     {
-      "id": "item-001131",
+      "id": "item-001132",
       "path": "skills/idealize-system/idealize/agents/openai.yaml",
       "disposition": "ATTACH_SUPPORTING_ASSET",
       "reason": "Supporting reference skills/idealize-system/idealize/agents/openai.yaml belongs to native capability family skills/idealize-system; route through parent skill.",
@@ -15481,7 +15493,7 @@
       }
     },
     {
-      "id": "item-001132",
+      "id": "item-001133",
       "path": "skills/idealize-system/investigate/SKILL.md",
       "disposition": "ACCEPT_NATIVE_SKILL",
       "reason": "Native skill entrypoint skills/idealize-system/investigate/SKILL.md; directly routable without duplicate implementation.",
@@ -15493,7 +15505,7 @@
       }
     },
     {
-      "id": "item-001133",
+      "id": "item-001134",
       "path": "skills/idealize-system/investigate/agents/openai.yaml",
       "disposition": "ATTACH_SUPPORTING_ASSET",
       "reason": "Supporting reference skills/idealize-system/investigate/agents/openai.yaml belongs to native capability family skills/idealize-system; route through parent skill.",
@@ -15505,7 +15517,7 @@
       }
     },
     {
-      "id": "item-001134",
+      "id": "item-001135",
       "path": "skills/idealize-system/monolithize/SKILL.md",
       "disposition": "ACCEPT_NATIVE_SKILL",
       "reason": "Native skill entrypoint skills/idealize-system/monolithize/SKILL.md; directly routable without duplicate implementation.",
@@ -15517,7 +15529,7 @@
       }
     },
     {
-      "id": "item-001135",
+      "id": "item-001136",
       "path": "skills/idealize-system/monolithize/agents/openai.yaml",
       "disposition": "ATTACH_SUPPORTING_ASSET",
       "reason": "Supporting reference skills/idealize-system/monolithize/agents/openai.yaml belongs to native capability family skills/idealize-system; route through parent skill.",
@@ -15529,7 +15541,7 @@
       }
     },
     {
-      "id": "item-001136",
+      "id": "item-001137",
       "path": "skills/idealize-system/requirements-map.json",
       "disposition": "ATTACH_SUPPORTING_ASSET",
       "reason": "Supporting reference skills/idealize-system/requirements-map.json belongs to native capability family skills/idealize-system; route through parent skill.",
@@ -15541,7 +15553,7 @@
       }
     },
     {
-      "id": "item-001137",
+      "id": "item-001138",
       "path": "skills/idealize-system/route.json",
       "disposition": "ATTACH_SUPPORTING_ASSET",
       "reason": "Supporting reference skills/idealize-system/route.json belongs to native capability family skills/idealize-system; route through parent skill.",
@@ -15553,7 +15565,7 @@
       }
     },
     {
-      "id": "item-001138",
+      "id": "item-001139",
       "path": "skills/ingest-and-endure/SKILL.md",
       "disposition": "ACCEPT_NATIVE_SKILL",
       "reason": "Native skill entrypoint skills/ingest-and-endure/SKILL.md; directly routable without duplicate implementation.",
@@ -15565,7 +15577,7 @@
       }
     },
     {
-      "id": "item-001139",
+      "id": "item-001140",
       "path": "skills/production-orchestrator/SKILL.md",
       "disposition": "ACCEPT_NATIVE_SKILL",
       "reason": "Native skill entrypoint skills/production-orchestrator/SKILL.md; directly routable without duplicate implementation.",
@@ -15577,7 +15589,7 @@
       }
     },
     {
-      "id": "item-001140",
+      "id": "item-001141",
       "path": "skills/production-orchestrator/agents/openai.yaml",
       "disposition": "ATTACH_SUPPORTING_ASSET",
       "reason": "Supporting runtime skills/production-orchestrator/agents/openai.yaml belongs to native capability family skills/production-orchestrator; route through parent skill.",
@@ -15589,7 +15601,7 @@
       }
     },
     {
-      "id": "item-001141",
+      "id": "item-001142",
       "path": "src/adapters/runtime.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native runtime src/adapters/runtime.ts; existing operational machinery, not a duplicate implementation target.",
@@ -15601,7 +15613,7 @@
       }
     },
     {
-      "id": "item-001142",
+      "id": "item-001143",
       "path": "src/bootstrap/generate.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native implementation src/bootstrap/generate.ts; existing operational machinery, not a duplicate implementation target.",
@@ -15613,7 +15625,7 @@
       }
     },
     {
-      "id": "item-001143",
+      "id": "item-001144",
       "path": "src/classification/rules.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native implementation src/classification/rules.ts; existing operational machinery, not a duplicate implementation target.",
@@ -15625,7 +15637,7 @@
       }
     },
     {
-      "id": "item-001144",
+      "id": "item-001145",
       "path": "src/cli.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native implementation src/cli.ts; existing operational machinery, not a duplicate implementation target.",
@@ -15637,7 +15649,7 @@
       }
     },
     {
-      "id": "item-001145",
+      "id": "item-001146",
       "path": "src/cli/.gitkeep",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native implementation src/cli/.gitkeep; existing operational machinery, not a duplicate implementation target.",
@@ -15649,7 +15661,7 @@
       }
     },
     {
-      "id": "item-001146",
+      "id": "item-001147",
       "path": "src/config/load.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native implementation src/config/load.ts; existing operational machinery, not a duplicate implementation target.",
@@ -15661,7 +15673,7 @@
       }
     },
     {
-      "id": "item-001147",
+      "id": "item-001148",
       "path": "src/config/types.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native implementation src/config/types.ts; existing operational machinery, not a duplicate implementation target.",
@@ -15673,7 +15685,7 @@
       }
     },
     {
-      "id": "item-001148",
+      "id": "item-001149",
       "path": "src/discovery/catalog.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native implementation src/discovery/catalog.ts; existing operational machinery, not a duplicate implementation target.",
@@ -15685,7 +15697,7 @@
       }
     },
     {
-      "id": "item-001149",
+      "id": "item-001150",
       "path": "src/discovery/parsers.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native implementation src/discovery/parsers.ts; existing operational machinery, not a duplicate implementation target.",
@@ -15697,7 +15709,7 @@
       }
     },
     {
-      "id": "item-001150",
+      "id": "item-001151",
       "path": "src/discovery/walker.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native implementation src/discovery/walker.ts; existing operational machinery, not a duplicate implementation target.",
@@ -15709,7 +15721,7 @@
       }
     },
     {
-      "id": "item-001151",
+      "id": "item-001152",
       "path": "src/domain/records.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native implementation src/domain/records.ts; existing operational machinery, not a duplicate implementation target.",
@@ -15721,7 +15733,7 @@
       }
     },
     {
-      "id": "item-001152",
+      "id": "item-001153",
       "path": "src/domain/skill-ir.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native implementation src/domain/skill-ir.ts; existing operational machinery, not a duplicate implementation target.",
@@ -15733,7 +15745,7 @@
       }
     },
     {
-      "id": "item-001153",
+      "id": "item-001154",
       "path": "src/idealize/engine.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native implementation src/idealize/engine.ts; existing operational machinery, not a duplicate implementation target.",
@@ -15745,7 +15757,7 @@
       }
     },
     {
-      "id": "item-001154",
+      "id": "item-001155",
       "path": "src/ingestion/coverage.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native implementation src/ingestion/coverage.ts; existing operational machinery, not a duplicate implementation target.",
@@ -15757,7 +15769,7 @@
       }
     },
     {
-      "id": "item-001155",
+      "id": "item-001156",
       "path": "src/ingestion/types.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native implementation src/ingestion/types.ts; existing operational machinery, not a duplicate implementation target.",
@@ -15769,7 +15781,7 @@
       }
     },
     {
-      "id": "item-001156",
+      "id": "item-001157",
       "path": "src/mcp/remote/server.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native implementation src/mcp/remote/server.ts; existing operational machinery, not a duplicate implementation target.",
@@ -15781,7 +15793,7 @@
       }
     },
     {
-      "id": "item-001157",
+      "id": "item-001158",
       "path": "src/mcp/remote/session-store.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native implementation src/mcp/remote/session-store.ts; existing operational machinery, not a duplicate implementation target.",
@@ -15793,7 +15805,7 @@
       }
     },
     {
-      "id": "item-001158",
+      "id": "item-001159",
       "path": "src/mcp/server.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native implementation src/mcp/server.ts; existing operational machinery, not a duplicate implementation target.",
@@ -15805,7 +15817,7 @@
       }
     },
     {
-      "id": "item-001159",
+      "id": "item-001160",
       "path": "src/mcp/skill-registry.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native implementation src/mcp/skill-registry.ts; existing operational machinery, not a duplicate implementation target.",
@@ -15817,7 +15829,7 @@
       }
     },
     {
-      "id": "item-001160",
+      "id": "item-001161",
       "path": "src/normalization/dependency-graph.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native implementation src/normalization/dependency-graph.ts; existing operational machinery, not a duplicate implementation target.",
@@ -15829,7 +15841,7 @@
       }
     },
     {
-      "id": "item-001161",
+      "id": "item-001162",
       "path": "src/normalization/skill-normalizer.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native implementation src/normalization/skill-normalizer.ts; existing operational machinery, not a duplicate implementation target.",
@@ -15841,7 +15853,7 @@
       }
     },
     {
-      "id": "item-001162",
+      "id": "item-001163",
       "path": "src/normalization/style-contract.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native implementation src/normalization/style-contract.ts; existing operational machinery, not a duplicate implementation target.",
@@ -15853,7 +15865,7 @@
       }
     },
     {
-      "id": "item-001163",
+      "id": "item-001164",
       "path": "src/proposals/generate.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native implementation src/proposals/generate.ts; existing operational machinery, not a duplicate implementation target.",
@@ -15865,7 +15877,7 @@
       }
     },
     {
-      "id": "item-001164",
+      "id": "item-001165",
       "path": "src/transactions/engine.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native implementation src/transactions/engine.ts; existing operational machinery, not a duplicate implementation target.",
@@ -15877,7 +15889,7 @@
       }
     },
     {
-      "id": "item-001165",
+      "id": "item-001166",
       "path": "src/transactions/state.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native implementation src/transactions/state.ts; existing operational machinery, not a duplicate implementation target.",
@@ -15889,7 +15901,7 @@
       }
     },
     {
-      "id": "item-001166",
+      "id": "item-001167",
       "path": "src/utils/files.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native implementation src/utils/files.ts; existing operational machinery, not a duplicate implementation target.",
@@ -15901,7 +15913,7 @@
       }
     },
     {
-      "id": "item-001167",
+      "id": "item-001168",
       "path": "src/validation/project.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native implementation src/validation/project.ts; existing operational machinery, not a duplicate implementation target.",
@@ -15913,7 +15925,7 @@
       }
     },
     {
-      "id": "item-001168",
+      "id": "item-001169",
       "path": "src/validation/schema.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native standard src/validation/schema.ts; existing operational machinery, not a duplicate implementation target.",
@@ -15925,7 +15937,7 @@
       }
     },
     {
-      "id": "item-001169",
+      "id": "item-001170",
       "path": "src/validation/skill-metadata.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native implementation src/validation/skill-metadata.ts; existing operational machinery, not a duplicate implementation target.",
@@ -15937,7 +15949,7 @@
       }
     },
     {
-      "id": "item-001170",
+      "id": "item-001171",
       "path": "templates/.gitkeep",
       "disposition": "EXACT_DUPLICATE_ALIAS",
       "reason": "Exact SHA-256 duplicate of src/cli/.gitkeep; retain this path as provenance/compatibility alias.",
@@ -15949,7 +15961,7 @@
       }
     },
     {
-      "id": "item-001171",
+      "id": "item-001172",
       "path": "templates/AGENTS.md",
       "disposition": "PRESERVE_REFERENCE",
       "reason": "Repository reference/orientation asset templates/AGENTS.md; preserve at native path and surface when relevant.",
@@ -15961,7 +15973,7 @@
       }
     },
     {
-      "id": "item-001172",
+      "id": "item-001173",
       "path": "templates/CLAUDE.md.pointer",
       "disposition": "PRESERVE_REFERENCE",
       "reason": "Repository reference/orientation asset templates/CLAUDE.md.pointer; preserve at native path and surface when relevant.",
@@ -15973,7 +15985,7 @@
       }
     },
     {
-      "id": "item-001173",
+      "id": "item-001174",
       "path": "test/contract/contracts.test.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native harness test/contract/contracts.test.ts; existing operational machinery, not a duplicate implementation target.",
@@ -15985,7 +15997,7 @@
       }
     },
     {
-      "id": "item-001174",
+      "id": "item-001175",
       "path": "test/contract/idealize-system.test.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native harness test/contract/idealize-system.test.ts; existing operational machinery, not a duplicate implementation target.",
@@ -15997,7 +16009,7 @@
       }
     },
     {
-      "id": "item-001175",
+      "id": "item-001176",
       "path": "test/contract/mcp-skill-runtime.test.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native runtime test/contract/mcp-skill-runtime.test.ts; existing operational machinery, not a duplicate implementation target.",
@@ -16009,7 +16021,7 @@
       }
     },
     {
-      "id": "item-001176",
+      "id": "item-001177",
       "path": "test/contract/skill-metadata.test.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native harness test/contract/skill-metadata.test.ts; existing operational machinery, not a duplicate implementation target.",
@@ -16021,7 +16033,7 @@
       }
     },
     {
-      "id": "item-001177",
+      "id": "item-001178",
       "path": "test/fixtures/.gitkeep",
       "disposition": "EXACT_DUPLICATE_ALIAS",
       "reason": "Exact SHA-256 duplicate of src/cli/.gitkeep; retain this path as provenance/compatibility alias.",
@@ -16033,7 +16045,7 @@
       }
     },
     {
-      "id": "item-001178",
+      "id": "item-001179",
       "path": "test/fixtures/idealize/reference-plan.json",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native reference test/fixtures/idealize/reference-plan.json; existing operational machinery, not a duplicate implementation target.",
@@ -16045,7 +16057,7 @@
       }
     },
     {
-      "id": "item-001179",
+      "id": "item-001180",
       "path": "test/unit/config.test.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native harness test/unit/config.test.ts; existing operational machinery, not a duplicate implementation target.",
@@ -16057,7 +16069,7 @@
       }
     },
     {
-      "id": "item-001180",
+      "id": "item-001181",
       "path": "test/unit/discovery.test.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native harness test/unit/discovery.test.ts; existing operational machinery, not a duplicate implementation target.",
@@ -16069,7 +16081,7 @@
       }
     },
     {
-      "id": "item-001181",
+      "id": "item-001182",
       "path": "test/unit/idealize-engine.test.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native harness test/unit/idealize-engine.test.ts; existing operational machinery, not a duplicate implementation target.",
@@ -16081,7 +16093,7 @@
       }
     },
     {
-      "id": "item-001182",
+      "id": "item-001183",
       "path": "test/unit/ingestion-coverage.test.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native harness test/unit/ingestion-coverage.test.ts; existing operational machinery, not a duplicate implementation target.",
@@ -16093,7 +16105,7 @@
       }
     },
     {
-      "id": "item-001183",
+      "id": "item-001184",
       "path": "test/unit/orchestration.test.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native harness test/unit/orchestration.test.ts; existing operational machinery, not a duplicate implementation target.",
@@ -16105,7 +16117,7 @@
       }
     },
     {
-      "id": "item-001184",
+      "id": "item-001185",
       "path": "test/unit/skill-registry.test.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native harness test/unit/skill-registry.test.ts; existing operational machinery, not a duplicate implementation target.",
@@ -16117,7 +16129,7 @@
       }
     },
     {
-      "id": "item-001185",
+      "id": "item-001186",
       "path": "test/unit/starred-availability.test.ts",
       "disposition": "PRESERVE_NATIVE_MACHINERY",
       "reason": "Repository-native harness test/unit/starred-availability.test.ts; existing operational machinery, not a duplicate implementation target.",
@@ -16129,7 +16141,7 @@
       }
     },
     {
-      "id": "item-001186",
+      "id": "item-001187",
       "path": "tsconfig.json",
       "disposition": "PRESERVE_REFERENCE",
       "reason": "Repository reference/orientation asset tsconfig.json; preserve at native path and surface when relevant.",
@@ -16144,8 +16156,8 @@
   "coverage": {
     "complete": true,
     "counters": {
-      "manifestDiscovered": 1186,
-      "sourceItemsAccounted": 1186,
+      "manifestDiscovered": 1187,
+      "sourceItemsAccounted": 1187,
       "sourceItemsUnread": 0,
       "capabilityCandidatesUndispositioned": 0,
       "acceptedUsefulCapabilitiesWithoutRouteOrExplicitRouteBlocker": 0,
@@ -16156,7 +16168,7 @@
       "wikiIntegrityFailures": 0
     },
     "canonicalSkillFamilies": 89,
-    "routes": 1186,
+    "routes": 1187,
     "explicitRouteBlockers": 0,
     "proposalReferenceRoutes": 456,
     "exactDuplicateAliases": 258
