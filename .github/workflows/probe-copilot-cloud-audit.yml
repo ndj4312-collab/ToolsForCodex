@@ -1,0 +1,40 @@
+name: probe-copilot-cloud-audit
+
+on:
+  push:
+    branches:
+      - probe/copilot-cloud-audit-2026-09-04
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: read
+
+jobs:
+  assign:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Assign audit issue to Copilot cloud agent
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euxo pipefail
+          gh api \
+            --method POST \
+            -H 'Accept: application/vnd.github+json' \
+            -H 'X-GitHub-Api-Version: 2022-11-28' \
+            /repos/ndj4312-collab/ToolsForCodex/issues/11/assignees \
+            --input - <<'JSON'
+          {
+            "assignees": ["copilot-swe-agent[bot]"],
+            "agent_assignment": {
+              "target_repo": "ndj4312-collab/ToolsForCodex",
+              "base_branch": "audit/orch-000-clean-2026-09-04",
+              "custom_instructions": "AUDIT ONLY. Do not modify existing source or test files. Review PR #8 semantically against issue #11 acceptance criteria. If the coding-agent workflow requires a commit, add only one standalone AUDIT_ORCH_000.md report file with concrete findings, evidence locations, severity, and criterion verdicts. Do not merge anything and do not claim CI equals semantic correctness.",
+              "custom_agent": "",
+              "model": ""
+            }
+          }
+          JSON
+          gh issue view 11 --repo ndj4312-collab/ToolsForCodex --json assignees,state,url
