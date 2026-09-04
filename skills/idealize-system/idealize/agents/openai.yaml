@@ -1,0 +1,5 @@
+interface:
+  display_name: Idealize
+  short_description: Backward-chain a perfected system into executable tasks.
+policy:
+  allow_implicit_invocation: true

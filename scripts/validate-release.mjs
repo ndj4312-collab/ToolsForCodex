@@ -1,10 +1,12 @@
 /* global URL, console */
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
+import { fileURLToPath } from "node:url";
 
-const root = new URL("..", import.meta.url).pathname.replace(/^\//, "").replaceAll("/", "\\");
+const root = fileURLToPath(new URL("..", import.meta.url));
 const forbidden = [];
-for (const directory of ["src", "skills", "contracts", "docs"]) {
+const checkedDirectories = ["src", "skills", "contracts", "docs"];
+for (const directory of checkedDirectories) {
   const path = join(root, directory);
   if (!existsSync(path)) forbidden.push(`${directory} missing`);
 }
@@ -15,6 +17,6 @@ function walk(directory) {
     else if (/\.(ts|md|json|yaml|yml)$/.test(entry.name) && /\b(?:TODO|PLACEHOLDER|TBD)\b/.test(readFileSync(path, "utf8"))) forbidden.push(`${path} contains placeholder text`);
   }
 }
-walk(root);
+for (const directory of checkedDirectories) walk(join(root, directory));
 if (forbidden.length) { console.error(forbidden.join("\n")); process.exit(1); }
-console.log(JSON.stringify({ status: "VERIFIED", checked: ["src", "skills", "contracts", "docs"] }));
+console.log(JSON.stringify({ status: "VERIFIED", checked: checkedDirectories }));

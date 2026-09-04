@@ -1,0 +1,31 @@
+{
+  "version": "1.0.0",
+  "source": "EPHEMERAL TOTAL_IDEALIZE_COMMAND sections 0-23; durable mechanisms only",
+  "requirements": [
+    {"id":"IDEAL-MISSION","mechanism":"idealize entry skill + control plane","verification":"MCP discovery/load and reference plan"},
+    {"id":"IDEAL-00","mechanism":"source precedence + repository governance","verification":"conflict/unknown traps and transaction audit"},
+    {"id":"IDEAL-01","mechanism":"adaptation resolver","verification":"ordered decision fixture"},
+    {"id":"IDEAL-02","mechanism":"continuous research/workaround triggers","verification":"negative-claim and failure-route traps"},
+    {"id":"IDEAL-03","mechanism":"research saturation contract","verification":"stop/continue evidence review"},
+    {"id":"IDEAL-04","mechanism":"candidate dependency-closure record","verification":"missing delegation/runtime/license traps"},
+    {"id":"IDEAL-05","mechanism":"behavior-level specialization with provenance","verification":"provenance and duplicate audit"},
+    {"id":"IDEAL-06","mechanism":"four-stage route","verification":"route schema and skill registry"},
+    {"id":"IDEAL-07","mechanism":"context frontier","verification":"minimum-context and unnecessary-question fixtures"},
+    {"id":"IDEAL-08","mechanism":"recursive research brancher","verification":"evidence graph fixture"},
+    {"id":"IDEAL-09","mechanism":"system synthesis gate","verification":"reference ontology scenario"},
+    {"id":"IDEAL-10","mechanism":"plan compiler and validator","verification":"schema plus engine unit tests"},
+    {"id":"IDEAL-11","mechanism":"full ontology checklist in monolithize","verification":"reference stress coverage"},
+    {"id":"IDEAL-12","mechanism":"capability registry","verification":"registry schema and ownership test"},
+    {"id":"IDEAL-13","mechanism":"machine-readable control plane","verification":"pipeline-order contract test"},
+    {"id":"IDEAL-14","mechanism":"shared control-plane primitives","verification":"single-owner registry audit"},
+    {"id":"IDEAL-15","mechanism":"research-to-capability promotion route","verification":"adaptation/provenance audit"},
+    {"id":"IDEAL-16","mechanism":"requirement and dependency graphs","verification":"no orphan/dangling/cycle tests"},
+    {"id":"IDEAL-17","mechanism":"adversarial trigger/repair loop","verification":"mutation traps and rerun"},
+    {"id":"IDEAL-18","mechanism":"requirement-to-mechanism map","verification":"complete ID coverage test"},
+    {"id":"IDEAL-19","mechanism":"ideal project plan schema","verification":"atomic-field contract and validator"},
+    {"id":"IDEAL-20","mechanism":"reference agentic-business fixture","verification":"fixture schema and engine pass"},
+    {"id":"IDEAL-21","mechanism":"dependency-ordered build and acceptance gates","verification":"PR history, CI, runtime, canon evidence"},
+    {"id":"IDEAL-22","mechanism":"context-minimized adversarial audit","verification":"no unresolved critical/high finding"},
+    {"id":"IDEAL-23","mechanism":"terminal acceptance checklist","verification":"promoted SHA, MCP proof, durable canon, ephemeral deletion"}
+  ]
+}
