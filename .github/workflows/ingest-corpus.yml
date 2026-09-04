@@ -30,19 +30,19 @@ jobs:
           node -e "const r=require('./artifacts/ingestion/coverage-report.json'); if(r.counters.manifestDiscovered!==r.counters.sourceItemsAccounted) process.exit(2); if(r.counters.sourceItemsUnread!==0) process.exit(3);"
       - name: Compile routes and terminal dispositions
         run: node scripts/compile-ingestion-routes.mjs
-      - name: Spec ticket implement accept endure and wiki-activate approved proposals
+      - name: Prepare approved proposal lifecycle candidates
         run: node scripts/promote-approved-proposals.mjs
-      - name: Assert all 456 approved proposals passed every lifecycle gate
+      - name: Assert all 456 proposals are prepared but not falsely endured
         run: |
           node - <<'NODE'
           const r=require('./pointer-catalog/ingestion/APPROVED_PROPOSAL_LIFECYCLE_REGISTRY.json');
           const c=r.coverage;
-          const fields=['discovered','specified','ticketed','implemented','accepted','endured','wikiActivated'];
+          const fields=['discovered','specified','ticketed','implemented','accepted','pendingValidation'];
           for(const f of fields){if(c[f]!==456){console.error(`${f}=${c[f]} expected 456`);process.exit(5)}}
-          if(c.skippedStages!==0||!c.complete) process.exit(6);
+          if(c.endured!==0||c.wikiActivated!==0||!c.preparationComplete||c.complete) process.exit(6);
           for(const x of r.items){
-            if(x.spec.status!=='PASS'||x.ticket.status!=='PASS'||x.implementation.status!=='PASS'||x.acceptance.status!=='PASS'||x.endure.status!=='ACTIVE'||x.wiki.status!=='ACTIVE'){
-              console.error('Lifecycle gap',x.lifecycleId); process.exit(7);
+            if(x.spec.status!=='PASS'||x.ticket.status!=='PASS'||x.implementation.status!=='PASS'||x.acceptance.status!=='PASS'||x.endure.status!=='PENDING_VALIDATION'||x.wiki.status!=='REFERENCE_READY'){
+              console.error('Preparation/endurance state gap',x.lifecycleId); process.exit(7);
             }
           }
           NODE
