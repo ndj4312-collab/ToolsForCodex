@@ -7,6 +7,8 @@ on:
       - 'scripts/ingest-corpus.mjs'
       - 'scripts/compile-ingestion-routes.mjs'
       - 'scripts/promote-approved-proposals.mjs'
+      - 'scripts/validate-endurance-effects.mjs'
+      - 'pointer-catalog/ingestion/ENDURANCE_VALIDATION_RESULTS.json'
       - '.github/workflows/ingest-corpus.yml'
   workflow_dispatch:
 
@@ -44,6 +46,8 @@ jobs:
             }
           }
           NODE
+      - name: Validate endurance effects fail-closed
+        run: node scripts/validate-endurance-effects.mjs
       - name: Persist canonical pointer and lifecycle registries
         run: |
           git config user.name "github-actions[bot]"
@@ -53,7 +57,8 @@ jobs:
             pointer-catalog/ingestion/INGESTION_RECEIPT.md \
             pointer-catalog/ingestion/APPROVED_PROPOSAL_LIFECYCLE_REGISTRY.json \
             pointer-catalog/ingestion/APPROVED_PROPOSAL_ACTIVE_ROUTES.json \
-            pointer-catalog/ingestion/APPROVED_PROPOSAL_ENDURANCE_INDEX.md
+            pointer-catalog/ingestion/APPROVED_PROPOSAL_ENDURANCE_INDEX.md \
+            pointer-catalog/ingestion/ENDURANCE_VALIDATION_COVERAGE.json
           if git diff --cached --quiet; then
             echo "Registries already current"
           else
