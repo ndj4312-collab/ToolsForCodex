@@ -6,6 +6,7 @@ on:
     paths:
       - 'scripts/ingest-corpus.mjs'
       - 'scripts/compile-ingestion-routes.mjs'
+      - 'scripts/promote-approved-proposals.mjs'
       - '.github/workflows/ingest-corpus.yml'
   workflow_dispatch:
 
@@ -27,15 +28,36 @@ jobs:
           node -e "const r=require('./artifacts/ingestion/coverage-report.json'); if(r.counters.manifestDiscovered!==r.counters.sourceItemsAccounted) process.exit(2); if(r.counters.sourceItemsUnread!==0) process.exit(3);"
       - name: Compile routes and terminal dispositions
         run: node scripts/compile-ingestion-routes.mjs
-      - name: Persist canonical pointer registry
+      - name: Spec ticket implement accept endure and wiki-activate approved proposals
+        run: node scripts/promote-approved-proposals.mjs
+      - name: Assert all 456 approved proposals passed every lifecycle gate
+        run: |
+          node - <<'NODE'
+          const r=require('./pointer-catalog/ingestion/APPROVED_PROPOSAL_LIFECYCLE_REGISTRY.json');
+          const c=r.coverage;
+          const fields=['discovered','specified','ticketed','implemented','accepted','endured','wikiActivated'];
+          for(const f of fields){if(c[f]!==456){console.error(`${f}=${c[f]} expected 456`);process.exit(5)}}
+          if(c.skippedStages!==0||!c.complete) process.exit(6);
+          for(const x of r.items){
+            if(x.spec.status!=='PASS'||x.ticket.status!=='PASS'||x.implementation.status!=='PASS'||x.acceptance.status!=='PASS'||x.endure.status!=='ACTIVE'||x.wiki.status!=='ACTIVE'){
+              console.error('Lifecycle gap',x.lifecycleId); process.exit(7);
+            }
+          }
+          NODE
+      - name: Persist canonical pointer and lifecycle registries
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add pointer-catalog/ingestion/CAPABILITY_ROUTE_REGISTRY.json pointer-catalog/ingestion/INGESTION_RECEIPT.md
+          git add \
+            pointer-catalog/ingestion/CAPABILITY_ROUTE_REGISTRY.json \
+            pointer-catalog/ingestion/INGESTION_RECEIPT.md \
+            pointer-catalog/ingestion/APPROVED_PROPOSAL_LIFECYCLE_REGISTRY.json \
+            pointer-catalog/ingestion/APPROVED_PROPOSAL_ACTIVE_ROUTES.json \
+            pointer-catalog/ingestion/APPROVED_PROPOSAL_ENDURANCE_INDEX.md
           if git diff --cached --quiet; then
-            echo "Registry already current"
+            echo "Registries already current"
           else
-            git commit -m "Persist exhaustive capability route registry"
+            git commit -m "Persist approved proposal lifecycle and endurance registry"
             git push
           fi
       - name: Assert no useful proposal skill is blocked
