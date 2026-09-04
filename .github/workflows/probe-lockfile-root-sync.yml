@@ -1,0 +1,44 @@
+name: probe-lockfile-root-sync
+
+on:
+  push:
+    branches:
+      - probe/lockfile-root-sync-2026-09-04
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Repair exact lockfile root bin drift
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('package-lock.json')
+          s = p.read_text()
+          old = '''      "bin": {\n        "orchestrator": "dist/cli.js"\n      },'''
+          new = '''      "bin": {\n        "orchestrator": "dist/cli.js",\n        "toolsforcodex-mcp": "dist/mcp/server.js",\n        "toolsforcodex-mcp-remote": "dist/mcp/remote/server.js"\n      },'''
+          if s.count(old) != 1:
+              raise SystemExit(f'expected root bin block once, found {s.count(old)}')
+          p.write_text(s.replace(old, new))
+          PY
+          test "$(git diff --name-only)" = 'package-lock.json'
+          npm audit --package-lock-only --audit-level=high
+          npm ci
+          npm audit --audit-level=high
+          git diff --check
+      - name: Create clean lockfile integrity branch
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git checkout -b security/lockfile-root-sync-2026-09-04
+          git add package-lock.json
+          git commit -m 'Sync MCP bin metadata in package lock'
+          git push --force-with-lease origin HEAD:security/lockfile-root-sync-2026-09-04
