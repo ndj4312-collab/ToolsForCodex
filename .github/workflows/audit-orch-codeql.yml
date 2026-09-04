@@ -1,0 +1,31 @@
+name: audit-orch-codeql
+
+on:
+  push:
+    branches:
+      - audit/orch-codeql-2026-09-04
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: github/codeql-action/init@v3
+        with:
+          languages: javascript-typescript
+          queries: security-extended
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm audit --package-lock-only --audit-level=high
+      - run: npm test -- --runInBand
+      - run: npm run build
+      - uses: github/codeql-action/analyze@v3
+        with:
+          category: /language:javascript-typescript
