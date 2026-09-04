@@ -1,0 +1,23 @@
+name: probe-copilot-review
+
+on:
+  push:
+    branches:
+      - probe/copilot-review-availability-2026-09-04
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Request Copilot review on clean ORCH audit PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euxo pipefail
+          gh pr edit 8 --repo ndj4312-collab/ToolsForCodex --add-reviewer @copilot
+          gh pr view 8 --repo ndj4312-collab/ToolsForCodex --json reviewRequests,reviews,url
