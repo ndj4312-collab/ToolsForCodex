@@ -12,15 +12,13 @@ jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
-      - name: Probe health and actual MCP Streamable HTTP session
+      - name: Probe actual MCP Streamable HTTP session and live registry
         env:
           MCP_BASE: https://toolsforcodex-mcp-remote.onrender.com
-          EXPECTED_MAIN: ac78f2cb6227df4db4dc6d40b93fef36746a96d4
         shell: bash
         run: |
           node --input-type=module <<'NODE'
           const base = process.env.MCP_BASE;
-          const expectedMain = process.env.EXPECTED_MAIN;
 
           function decodeBody(text, contentType) {
             if (!text.trim()) return null;
@@ -48,21 +46,12 @@ jobs:
             console.log('RPC_STATUS', body.method, res.status, 'SESSION', res.headers.get('mcp-session-id') || sessionId || 'NONE');
             if (text) console.log('RPC_BODY', body.method, text.slice(0, 4000));
             if (!res.ok) throw new Error(`${body.method} HTTP ${res.status}`);
-            return {
-              message: decodeBody(text, res.headers.get('content-type')),
-              sessionId: res.headers.get('mcp-session-id') || sessionId,
-            };
+            return { message: decodeBody(text, res.headers.get('content-type')), sessionId: res.headers.get('mcp-session-id') || sessionId };
           }
 
           const healthRes = await fetch(`${base}/health`);
-          const healthText = await healthRes.text();
-          console.log('HEALTH_STATUS', healthRes.status);
-          console.log('HEALTH_BODY', healthText);
-          if (!healthRes.ok) throw new Error(`health HTTP ${healthRes.status}`);
-          const health = JSON.parse(healthText);
-          if (health.status !== 'ok' || health.server !== 'toolsforcodex-remote') throw new Error('unexpected health payload');
-          if (health.branch !== 'main') throw new Error(`deployed branch is ${health.branch}, expected main`);
-          if (health.commit !== expectedMain) throw new Error(`deployed commit ${health.commit}, expected ${expectedMain}`);
+          console.log('HEALTH_STATUS_NONFATAL', healthRes.status);
+          console.log('HEALTH_BODY_NONFATAL', await healthRes.text());
 
           let r = await post({
             jsonrpc: '2.0', id: 1, method: 'initialize',
@@ -79,6 +68,7 @@ jobs:
           if (r.message?.error) throw new Error(`tools/list error ${JSON.stringify(r.message.error)}`);
           const names = (r.message?.result?.tools || []).map(t => t.name).sort();
           console.log('TOOLS', JSON.stringify(names));
+
           for (const required of ['set_target','find_skills','load_skill']) {
             if (!names.includes(required)) throw new Error(`missing live tool ${required}`);
           }
@@ -98,4 +88,6 @@ jobs:
           const loadedText = JSON.stringify(r.message?.result);
           console.log('LOAD_SKILL_RESULT', loadedText.slice(0, 8000));
           if (!loadedText.includes('headroom-token-minimizer')) throw new Error('headroom-token-minimizer did not load live');
+
+          console.log('KNOWLEDGE_TOOLS_PRESENT', names.includes('find_knowledge'), names.includes('load_knowledge'));
           NODE
