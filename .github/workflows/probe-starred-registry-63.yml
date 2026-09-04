@@ -1,0 +1,81 @@
+name: probe-starred-registry-63
+
+on:
+  push:
+    branches:
+      - probe/starred-registry-63-2026-09-04
+
+permissions:
+  contents: write
+
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Create registry-only branch from current main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git checkout -B registry/starred-63-2026-09-04 origin/main
+          node --input-type=module <<'NODE'
+          import { readFile, writeFile } from 'node:fs/promises';
+          const path = 'docs/starred-source-registry.json';
+          const registry = JSON.parse(await readFile(path, 'utf8'));
+          const fullName = 'mattnowdev/thinking-partner';
+          registry.repositories = registry.repositories.filter((r) => r.fullName !== fullName);
+          registry.repositories.push({
+            fullName,
+            owner: 'mattnowdev',
+            name: 'thinking-partner',
+            source: 'authenticated-github-stars',
+            relevanceBand: 'DIRECT_TOOLSFORCODEX_OVERLAP',
+            description: 'Thinking partner skill for AI agents — 150+ mental models, orientation detection, cognitive operations. Works with Claude Code, Cursor, Windsurf, Cline, GitHub Copilot.',
+            language: 'UNKNOWN',
+            licenseSpdx: 'MIT',
+            licenseState: 'LICENSE_OK_FOR_REFERENCE',
+            queueState: 'REFERENCE_ONLY',
+            availabilityStage: 'SOURCE_LOCATORS_AVAILABLE',
+            integrationForm: 'reference/adapt deterministic adversarial and mental-model selection only; reject broad auto-trigger and hidden orientation profiling as default routing',
+            defaultBranch: 'main',
+            pushedAt: '2026-03-31T17:19:54Z',
+            archived: false,
+            fork: false,
+            accessStates: ['METADATA_READABLE','STATIC_FILES_READABLE','CLONEABLE_CLOUD','CLONEABLE_LOCAL','REMOTE_MCP_READABLE'],
+            sessionUse: ['cloud:cloneable','local:cloneable','remote-mcp:public-static-readable'],
+            locators: {
+              html: 'https://github.com/mattnowdev/thinking-partner',
+              git: 'https://github.com/mattnowdev/thinking-partner.git',
+              contentsApi: 'https://api.github.com/repos/mattnowdev/thinking-partner/contents?ref=main',
+              archive: 'https://github.com/mattnowdev/thinking-partner/archive/main.zip',
+              quarantinePath: null
+            },
+            noExecStatus: 'INTAKE_POLICY_NO_TARGET_CODE_EXECUTION',
+            evidence: ['docs/adding-repo-protocol.md','scripts/starred-repo-intake.mjs','https://github.com/mattnowdev/thinking-partner/blob/main/README.md','https://github.com/mattnowdev/thinking-partner/blob/main/skills/thinking-partner/SKILL.md']
+          });
+          registry.repositories.sort((a,b) => a.fullName.localeCompare(b.fullName));
+          registry.generatedAt = '2026-09-04T03:45:00.000Z';
+          registry.source.intakeCount = 63;
+          registry.source.intakeGeneratedAt = '2026-09-04T03:00:00.000Z';
+          registry.summary.total = 63;
+          registry.summary.directOverlap = 15;
+          await writeFile(path, JSON.stringify(registry, null, 2) + '\n');
+          NODE
+          test "$(git diff --name-only | wc -l | tr -d ' ')" = "1"
+          test "$(git diff --name-only)" = "docs/starred-source-registry.json"
+          node --input-type=module <<'NODE'
+          import { readFile } from 'node:fs/promises';
+          const r = JSON.parse(await readFile('docs/starred-source-registry.json','utf8'));
+          if (r.summary.total !== 63 || r.source.intakeCount !== 63) throw new Error('count mismatch');
+          const item = r.repositories.find(x => x.fullName === 'mattnowdev/thinking-partner');
+          if (!item || item.queueState !== 'REFERENCE_ONLY' || item.licenseSpdx !== 'MIT') throw new Error('new-star disposition mismatch');
+          if (r.repositories.length !== 63) throw new Error(`expected 63 records, got ${r.repositories.length}`);
+          NODE
+          git config user.name ndj4312-collab
+          git config user.email ndj4312@gmail.com
+          git add docs/starred-source-registry.json
+          git commit -m 'Reconcile current 63-star source registry'
+          git push origin HEAD:refs/heads/registry/starred-63-2026-09-04
