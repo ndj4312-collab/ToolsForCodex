@@ -23,6 +23,7 @@ import {
 import { validateProject } from "../../validation/project";
 import { writeProposalOutputs } from "../../proposals/generate";
 import { findProjectSkills, loadProjectSkill } from "../skill-registry";
+import { findProjectKnowledge, loadProjectKnowledge } from "../../knowledge/router";
 import { cleanupSession, resolveConfigPath, setTarget } from "./session-store";
 
 /**
@@ -48,6 +49,8 @@ const REMOTE_TOOL_NAMES = [
   "doctor",
   "find_skills",
   "load_skill",
+  "find_knowledge",
+  "load_knowledge",
   "stage",
   "verify",
   "approve",
@@ -228,6 +231,39 @@ function buildOrchestratorServer(sessionIdRef: { current: string | undefined }):
     async ({ configPath, name }) => guarded(() => {
       const { targetRoot } = loadTarget(cfg(configPath));
       return loadProjectSkill(targetRoot, name);
+    }),
+  );
+
+  server.registerTool(
+    "find_knowledge",
+    {
+      title: "Find knowledge",
+      description: "Route a query to compact derived knowledge entries and canonical source locators. Read-only; canonical sources always win.",
+      inputSchema: {
+        configPath: optionalConfigPath,
+        query: z.string().describe("Search text used to route to canonical source locators"),
+        limit: z.number().int().min(1).max(50).optional().describe("Maximum number of knowledge routes to return"),
+      },
+    },
+    async ({ configPath, query, limit }) => guarded(() => {
+      const { targetRoot } = loadTarget(cfg(configPath));
+      return findProjectKnowledge(targetRoot, query, limit);
+    }),
+  );
+
+  server.registerTool(
+    "load_knowledge",
+    {
+      title: "Load knowledge",
+      description: "Load a derived knowledge route by id with canonical-source precedence, freshness, and conflicts. Unknown ids fail closed.",
+      inputSchema: {
+        configPath: optionalConfigPath,
+        id: z.string().describe("Knowledge route id returned by find_knowledge"),
+      },
+    },
+    async ({ configPath, id }) => guarded(() => {
+      const { targetRoot } = loadTarget(cfg(configPath));
+      return loadProjectKnowledge(targetRoot, id);
     }),
   );
 
