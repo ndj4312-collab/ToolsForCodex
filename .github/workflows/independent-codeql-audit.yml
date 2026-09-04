@@ -1,0 +1,57 @@
+name: independent-codeql-audit
+
+on:
+  push:
+    branches:
+      - audit/knowledge-router-2026-09-04
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Dependency audit
+        run: npm audit --audit-level=high
+      - name: Build
+        run: npm run build
+      - name: Tests
+        run: npm test -- --runInBand
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: javascript-typescript
+      - name: Analyze with CodeQL
+        uses: github/codeql-action/analyze@v3
+        with:
+          output: sarif-results
+          upload: never
+      - name: Fail on CodeQL findings
+        shell: bash
+        run: |
+          python - <<'PY'
+          import glob, json, sys
+          files = glob.glob('sarif-results/**/*.sarif', recursive=True)
+          if not files:
+              print('No SARIF output found')
+              sys.exit(2)
+          findings = []
+          for path in files:
+              with open(path, encoding='utf-8') as fh:
+                  doc = json.load(fh)
+              for run in doc.get('runs', []):
+                  findings.extend(run.get('results', []))
+          print(f'CodeQL findings: {len(findings)}')
+          if findings:
+              for item in findings[:20]:
+                  print(item.get('ruleId'), item.get('level'), item.get('message', {}).get('text'))
+              sys.exit(1)
+          PY
