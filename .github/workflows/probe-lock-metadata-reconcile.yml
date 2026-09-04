@@ -1,0 +1,46 @@
+name: probe-lock-metadata-reconcile
+
+on:
+  push:
+    branches:
+      - probe/lock-metadata-reconcile-2026-09-04
+
+permissions:
+  contents: write
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Generate lock metadata from current package manifest
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git checkout -B security/lock-metadata-reconcile-2026-09-04 origin/main
+          npm install --package-lock-only --ignore-scripts
+          test "$(git diff --name-only | wc -l | tr -d ' ')" = "1"
+          test "$(git diff --name-only)" = "package-lock.json"
+          node --input-type=module <<'NODE'
+          import { readFile } from 'node:fs/promises';
+          const pkg = JSON.parse(await readFile('package.json','utf8'));
+          const lock = JSON.parse(await readFile('package-lock.json','utf8'));
+          const bins = lock.packages?.['']?.bin || {};
+          for (const [name, target] of Object.entries(pkg.bin || {})) {
+            if (bins[name] !== target) throw new Error(`lock bin mismatch ${name}`);
+          }
+          if (lock.packages?.['node_modules/fast-uri']?.version !== '3.1.7') throw new Error('fast-uri safe version drifted');
+          NODE
+          npm audit --package-lock-only --audit-level=high
+          git config user.name ndj4312-collab
+          git config user.email ndj4312@gmail.com
+          git add package-lock.json
+          git commit -m 'Reconcile package-lock root metadata'
+          git push origin HEAD:refs/heads/security/lock-metadata-reconcile-2026-09-04
