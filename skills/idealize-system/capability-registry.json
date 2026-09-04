@@ -1,59 +1,15 @@
 {
-  "$schema": "../../contracts/idealize-capability-registry.schema.json",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "canonical_owner": "skills/idealize-system",
-  "precedence": [
-    "verified-runtime",
-    "canonical-repository",
-    "canonical-notion-ledger",
-    "verified-primary-source",
-    "derived-research",
-    "derived-planning"
-  ],
+  "precedence": ["verified-runtime","canonical-repository","canonical-notion-ledger","verified-primary-source","derived-research","derived-planning"],
   "capabilities": [
-    {
-      "id": "idealize.about",
-      "primitive": "minimum-sufficient context acquisition",
-      "implementation": "skills/idealize-system/about/SKILL.md",
-      "adaptation": "SPECIALIZE",
-      "stages": ["about"],
-      "inputs": ["idea", "canonical source locators"],
-      "outputs": ["context.md"],
-      "fallback": "focused research then ASK_USER only if material",
-      "verification": "load_skill + contract fixture"
-    },
-    {
-      "id": "idealize.investigate",
-      "primitive": "recursive gap and capability research",
-      "implementation": "skills/idealize-system/investigate/SKILL.md",
-      "adaptation": "SPECIALIZE_COMPOSE",
-      "stages": ["investigate"],
-      "inputs": ["context.md"],
-      "outputs": ["research/data graph", "adaptation decisions"],
-      "fallback": "capability/workaround ladder",
-      "verification": "load_skill + contract fixture"
-    },
-    {
-      "id": "idealize.monolithize",
-      "primitive": "coherent perfected-system synthesis",
-      "implementation": "skills/idealize-system/monolithize/SKILL.md",
-      "adaptation": "SPECIALIZE",
-      "stages": ["monolithize"],
-      "inputs": ["validated context", "investigation graph"],
-      "outputs": ["perfected-system artifact family"],
-      "fallback": "return unresolved nodes to investigate",
-      "verification": "load_skill + contract fixture"
-    },
-    {
-      "id": "idealize.plan",
-      "primitive": "backward chaining and dependency-safe plan compilation",
-      "implementation": "skills/idealize-system/idealize/SKILL.md",
-      "adaptation": "SPECIALIZE_COMPOSE",
-      "stages": ["idealize"],
-      "inputs": ["perfected-system model"],
-      "outputs": ["the-ideal-project-plan.md"],
-      "fallback": "block affected branch only; research workaround",
-      "verification": "load_skill + end-to-end fixture"
-    }
+    {"id":"idealize.context-frontier","primitive":"minimum-sufficient context acquisition","source":"original composition informed by local grilling/domain-modeling patterns","license":"repository license; no vendored upstream body","implementation":"skills/idealize-system/about/SKILL.md","adaptation":"SPECIALIZE","harness":"control-plane.json#context-frontier","stages":["about"],"inputs":["idea","canonical locators"],"outputs":["context contract"],"context":["authority","constraints","current state"],"runtime":["skill runtime"],"permissions":["read","ask when material"],"dependencies":["idealize.source-resolver"],"routing":"missing material context","verification":"contract and adversarial fixtures","limitations":["cannot resolve human-only intent"],"fallback":"research then ASK_USER","version":"1.1.0","owner":"idealize-system"},
+    {"id":"idealize.research-brancher","primitive":"recursive evidence and workaround research","source":"original composition informed by local research and wayfinding patterns","license":"repository license; no vendored upstream body","implementation":"skills/idealize-system/investigate/SKILL.md","adaptation":"COMPOSE","harness":"control-plane.json#research-loop","stages":["investigate","repair"],"inputs":["context contract","gap"],"outputs":["evidence graph","candidate set"],"context":["requirement","runtime","failure"],"runtime":["skill runtime","authorized research surfaces"],"permissions":["read external sources"],"dependencies":["idealize.source-resolver"],"routing":"material primitive or blocker lacks evidence","verification":"saturation and negative-claim fixtures","limitations":["external access varies"],"fallback":"record branches and UNKNOWN evidence","version":"1.1.0","owner":"idealize-system"},
+    {"id":"idealize.adaptation-resolver","primitive":"reuse-before-build candidate classification","source":"ToolsForCodex adding-repo protocol plus original decision contract","license":"repository-native","implementation":"skills/idealize-system/control-plane.json","adaptation":"COMPOSE","harness":"control-plane.json#adaptation-loop","stages":["investigate","monolithize","idealize"],"inputs":["primitive","candidates"],"outputs":["adaptation decision"],"context":["license","dependencies","runtime fit"],"runtime":["skill runtime"],"permissions":["read"],"dependencies":["idealize.research-brancher"],"routing":"candidate comparison","verification":"ordered-ladder fixture","limitations":["BUILD requires negative evidence"],"fallback":"block affected branch","version":"1.1.0","owner":"idealize-system"},
+    {"id":"idealize.source-resolver","primitive":"canonical-source precedence and conflict handling","source":"ToolsForCodex governance","license":"repository-native","implementation":"skills/idealize-system/control-plane.json","adaptation":"USE","harness":"control-plane.json#source-precedence","stages":["about","investigate","monolithize","idealize"],"inputs":["claims","sources"],"outputs":["resolved or CONFLICTED claims"],"context":["timestamps","authority"],"runtime":["skill runtime"],"permissions":["read"],"dependencies":[],"routing":"every material claim","verification":"stale/conflict trap","limitations":["irreducible authority conflicts require owner"],"fallback":"CONFLICTED and fail closed","version":"1.1.0","owner":"idealize-system"},
+    {"id":"idealize.system-synthesis","primitive":"coherent perfected-system modeling","source":"original composition informed by domain-modeling and architecture patterns","license":"repository license; no vendored upstream body","implementation":"skills/idealize-system/monolithize/SKILL.md","adaptation":"SPECIALIZE","harness":"control-plane.json#synthesis-gate","stages":["monolithize"],"inputs":["context","evidence graph","capability decisions"],"outputs":["perfected system model"],"context":["full ontology","owners","lifecycles"],"runtime":["skill runtime"],"permissions":["read","write project artifacts"],"dependencies":["idealize.source-resolver","idealize.adaptation-resolver"],"routing":"validated investigation complete","verification":"reference scenario completeness fixture","limitations":["unknowns block dependent claims"],"fallback":"return nodes to investigate","version":"1.1.0","owner":"idealize-system"},
+    {"id":"idealize.plan-compiler","primitive":"backward chaining and dependency-safe task compilation","source":"original ToolsForCodex implementation","license":"repository-native","implementation":"src/idealize/engine.ts","adaptation":"BUILD","harness":"control-plane.json#plan-compile","stages":["idealize"],"inputs":["perfected system model"],"outputs":["the-ideal-project-plan.md","plan manifest"],"context":["requirements","owners","surfaces","evidence"],"runtime":["Node >=22","skill runtime"],"permissions":["read","write project artifacts"],"dependencies":["idealize.system-synthesis"],"routing":"perfected model passed synthesis gate","verification":"JSON Schema plus cycle/orphan/branch/evidence tests","limitations":["semantic task quality still requires adversarial review"],"fallback":"emit verified subset and blocked branches","version":"1.1.0","owner":"idealize-system"},
+    {"id":"idealize.workaround-router","primitive":"failure classification, retry, alternate capability and escalation","source":"original composition from project capability-search standard","license":"repository-native","implementation":"skills/idealize-system/control-plane.json","adaptation":"COMPOSE","harness":"control-plane.json#workaround-loop","stages":["all","repair"],"inputs":["failure evidence"],"outputs":["next safe route","workaround receipt"],"context":["failure fingerprint","authority","runtime"],"runtime":["skill runtime"],"permissions":["bounded by owning task"],"dependencies":["idealize.adaptation-resolver"],"routing":"blocker, failed test, missing dependency, proposed escalation","verification":"retry-storm and dead-end-blocker traps","limitations":["privileged actions remain gated"],"fallback":"block affected dependents only","version":"1.1.0","owner":"idealize-system"},
+    {"id":"idealize.adversarial-evaluator","primitive":"continuous completeness and requirement-to-mechanism attack","source":"original composition informed by local review/fable patterns","license":"repository-native","implementation":"skills/idealize-system/control-plane.json","adaptation":"COMPOSE","harness":"control-plane.json#adversarial-loop","stages":["all","acceptance"],"inputs":["current artifacts","requirements"],"outputs":["findings","regression fixtures","bounded residual risks"],"context":["original mission","current canon"],"runtime":["skill runtime","independent review surface when available"],"permissions":["read"],"dependencies":["idealize.source-resolver"],"routing":"after each major stage and before promotion","verification":"mutation traps and clean-pass rerun","limitations":["independence requires separate review context"],"fallback":"do not promote consequential claims","version":"1.1.0","owner":"idealize-system"}
   ]
 }

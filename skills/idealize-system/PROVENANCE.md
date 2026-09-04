@@ -11,5 +11,8 @@ Adaptation decisions:
 - Cross-stage route, source precedence, workaround and regression rules: **COMPOSE**.
 - New MCP registration subsystem: **REJECT** as duplicate; recursive discovery already satisfies registration.
 - Vendored upstream code: **REJECT**; no implementation dependency requires it.
+- Small plan validator: **BUILD**. Existing repository contracts validate shape but do not detect semantic orphans, dangling dependency edges, cycles, evidence-free work, or non-executable IF/THEN branches. The bounded original implementation in `src/idealize/engine.ts` closes only that gap.
+
+Runtime dependencies close locally: the four stage skills delegate only to repository-native control-plane and registry artifacts; the validator uses the Node runtime already required by the package and adds no dependency. External research surfaces are optional capabilities with fail-closed `UNKNOWN` behavior, not hidden install requirements.
 
 Any future direct upstream code import must go through `docs/adding-repo-protocol.md`, resolve exact license and transitive dependencies, and update this record.

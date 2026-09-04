@@ -1,0 +1,13 @@
+{
+  "version": "1.1.0",
+  "states": ["INPUT","CONTEXT","INVESTIGATION","SYNTHESIS","PLAN","ADVERSARIAL_REVIEW","REPAIR","FINAL_VALIDATION","CANONICALIZATION","VERIFIED","BLOCKED"],
+  "pipeline": ["normalize","inject-canonical-context","route-capability","execute","persist-evidence","validate","route-next","adversarial-evaluate","repair-or-workaround","final-validate","canonicalize"],
+  "source-precedence": {"order":["verified-runtime","canonical-repository","canonical-notion-ledger","verified-primary-source","derived-research","derived-planning"],"conflict":"mark CONFLICTED; retain both locators; block dependent claim"},
+  "context-frontier": {"routes":["CANONICAL_SOURCE","RESEARCHABLE","ASK_USER","DROP_NONMATERIAL"],"ask_gate":"materially changes perfected state, constraints, current state, architecture, investigation, or plan"},
+  "research-loop": {"branch":"system > subsystem > capability > primitive > dependency > implementation > operation > lifecycle > failure > verification","stop":"open material questions have an evidenced path, compared candidates, or explicit unresolved evidence branches; further search is duplicative"},
+  "adaptation-loop": ["USE","WRAP","SPECIALIZE","COMPOSE","MODIFY","EXTRACT_PATTERN","REJECT","BUILD"],
+  "workaround-loop": ["correct-invocation","dependency-config-repair","alternate-existing-capability","alternate-authorized-surface-runtime","wrapper-adapter","capability-composition","equivalent-open-source-mechanism","bounded-modification","smallest-new-implementation","privileged-user-escalation"],
+  "adversarial-loop": {"trigger":["after-decomposition","after-research","after-architecture","after-capability-selection","after-stage","after-wave","after-failed-test","before-promotion","after-stress-test"],"finding_route":["classify","research-workaround","compare","repair","add-regression-fixture","rerun-affected-tests","rerun-challenge"]},
+  "plan-compile": {"schema":"../../contracts/ideal-project-plan.schema.json","validator":"src/idealize/engine.ts","primary_output":"the-ideal-project-plan.md","machine_companion":"ideal-project-plan.json"},
+  "terminal_rules": {"VERIFIED":"all mandatory requirements trace to mechanism, task, evidence, owner, surface, and canonical destination; no critical/high finding","BLOCKED":"preserve evidence and continue independent branches; escalate only at the final safe-authority boundary"}
+}
