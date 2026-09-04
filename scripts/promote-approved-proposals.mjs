@@ -1,6 +1,6 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
-import { join } from 'node:path';
+import { join, basename, dirname } from 'node:path';
 
 const root = process.cwd();
 const manifest = JSON.parse(readFileSync(join(root, 'artifacts', 'ingestion', 'corpus-manifest.json'), 'utf8'));
@@ -14,10 +14,41 @@ function sha256File(path) {
   return createHash('sha256').update(readFileSync(path)).digest('hex');
 }
 function slug(n) { return String(n).padStart(4, '0'); }
+function humanize(value) { return value.replace(/\.[^.]+$/, '').replace(/[-_]+/g, ' ').replace(/\s+/g, ' ').trim(); }
+function semanticName(r) {
+  const file = basename(r.path).toLowerCase();
+  const parent = humanize(basename(dirname(r.path)));
+  if (file === 'index.md' || file === 'skill.md') return parent;
+  if (file === 'distribution-manifest.json') return `${humanize(basename(dirname(dirname(r.path))))} distribution manifest`;
+  if (file === 'proposal.json') return `${parent} proposal metadata`;
+  if (file === 'proposal-report.md') return `${parent} proposal report`;
+  const title = String(r.title || '').trim();
+  if (!title || /^(skills? index|index|files?|references?|resources?|docs?|documentation)$/i.test(title)) return humanize(basename(r.path));
+  return title;
+}
+function validTrigger(value) {
+  if (typeof value !== 'string') return false;
+  const v = value.trim();
+  if (!v || /^(true|false|null|undefined|yes|no|on|off|\d+(?:\.\d+)?)$/i.test(v)) return false;
+  if (/^(skills? index|index|files?|references?|resources?)$/i.test(v)) return false;
+  return v.length >= 8 && /[a-z]/i.test(v);
+}
+function referenceTrigger(r) {
+  const file = basename(r.path).toLowerCase();
+  const name = semanticName(r);
+  if (file === 'index.md') return `Locate the supporting assets for ${name} only when that capability needs indexed references; the index never substitutes for the child behavior.`;
+  if (file === 'distribution-manifest.json') return `Verify ${name} package membership, completeness, or integrity when distribution inventory is material; do not use the manifest as an execution capability.`;
+  if (file === 'proposal.json') return `Check ${name} machine-readable proposal metadata or provenance when a governance decision depends on it; do not use proposal metadata for operational execution.`;
+  if (file === 'proposal-report.md') return `Review ${name} rationale or approval evidence when historical proposal governance is material; current operational behavior remains owned by active capabilities.`;
+  if (file === 'agents.md') return `Apply ${name} repository-level coordination and routing rules when operating inside that package, while preserving more-specific child owners.`;
+  return null;
+}
 function inferredTrigger(r) {
-  const t = (r.triggers || []).filter(Boolean);
-  if (t.length) return t;
-  return [`When a task semantically matches ${r.title || r.path} or explicitly requests ${r.path}.`];
+  const explicit = (r.triggers || []).filter(validTrigger);
+  if (explicit.length) return { triggers: explicit, scopeStatus: 'SOURCE_EXPLICIT' };
+  const ref = referenceTrigger(r);
+  if (ref) return { triggers: [ref], scopeStatus: 'REFERENCE_ROLE_DERIVED' };
+  return { triggers: [], scopeStatus: 'NEEDS_SCOPE_CONTRACT' };
 }
 function parentSkill(path) {
   const m = path.match(/^(approved-proposals\/[^/]+\/files\/skills\/[^/]+)/);
@@ -43,20 +74,21 @@ for (let i = 0; i < proposals.length; i++) {
     : skillParent
       ? 'PARENT_SKILL_ASSET'
       : 'DIRECT_NATIVE_CAPABILITY';
-  const triggers = inferredTrigger(r);
+  const triggerInfo = inferredTrigger(r);
 
   lifecycle.push({
     lifecycleId: `APPROVED-PROPOSAL-${n}`,
     sourceItemId: r.id,
-    source: { path: r.path, sha256: r.sha256, revision: manifest.revision, kind: r.kind, title: r.title },
+    source: { path: r.path, sha256: r.sha256, revision: manifest.revision, kind: r.kind, title: semanticName(r) },
     spec: {
       id: `SPEC-APPROVED-PROPOSAL-${n}`,
       status: 'PASS',
-      objective: `Promote ${r.path} from non-active approved proposal reference to an operational routed capability without deleting or rewriting its source semantics.`,
-      triggerContract: triggers,
+      objective: `Prepare ${r.path} as a candidate routed capability without claiming endurance before behavioral validation.`,
+      triggerContract: triggerInfo.triggers,
+      scopeStatus: triggerInfo.scopeStatus,
       requiredOutputs: r.outputs || [],
       failureModes: r.failures || [],
-      constraints: ['preserve-source-provenance', 'no-silent-normalization', 'accept-before-active', 'additive-endurance', 'wiki-pointer-not-body-duplication']
+      constraints: ['preserve-source-provenance', 'no-silent-normalization', 'accept-before-validation', 'no-active-before-behavioral-proof', 'additive-endurance', 'wiki-pointer-not-body-duplication']
     },
     ticket: {
       id: `TICKET-APPROVED-PROPOSAL-${n}`,
@@ -66,8 +98,9 @@ for (let i = 0; i < proposals.length; i++) {
         'source SHA-256 matches manifest',
         'source readStatus is READ',
         'implementation target resolves',
-        'route activation occurs only after acceptance',
-        'endurance trigger preserves source trigger contract',
+        'behavioral scope is validated before ACTIVE status',
+        'all required fixture classes pass before promotion',
+        'execution evidence is verified before promotion',
         'wiki activation points to semantic owner rather than duplicating body'
       ]
     },
@@ -77,9 +110,9 @@ for (let i = 0; i < proposals.length; i++) {
       mode: implementationMode,
       target: implementationTarget,
       sourcePath: r.path,
-      routeType: 'ACTIVE_APPROVED_PROPOSAL',
-      activation: 'ACTIVE',
-      operation: skillParent && r.path !== skillParent ? 'route supporting asset through parent skill' : 'route directly to native source capability'
+      routeType: 'APPROVED_PROPOSAL_CANDIDATE',
+      activation: 'PENDING_VALIDATION',
+      operation: skillParent && r.path !== skillParent ? 'candidate supporting asset; child semantic role must be independently validated' : 'candidate native capability; behavioral activation must be independently validated'
     },
     acceptance: {
       id: `ACCEPT-APPROVED-PROPOSAL-${n}`,
@@ -94,33 +127,38 @@ for (let i = 0; i < proposals.length; i++) {
     },
     endure: {
       id: `ENDURE-APPROVED-PROPOSAL-${n}`,
-      status: 'ACTIVE',
+      status: 'PENDING_VALIDATION',
       semanticOwner: r.path,
-      triggers,
+      triggers: triggerInfo.triggers,
+      scopeStatus: triggerInfo.scopeStatus,
+      promotionRequires: ['P3','PP2','N3','A1','C1','E1','score=100','hardFailures=0','dependencyPointVerified','executionEvidenceVerified','routerRegressionFailures=0','crossCapabilityCollisionFailures=0'],
       enforcers: [
         'AGENTS.md approved-proposal lifecycle pointer',
         'pointer-catalog/ingestion/APPROVED_PROPOSAL_LIFECYCLE_REGISTRY.json',
-        'pointer-catalog/ingestion/APPROVED_PROPOSAL_ACTIVE_ROUTES.json',
-        'ingest-corpus CI lifecycle assertion',
+        'pointer-catalog/ingestion/ENDURANCE_VALIDATION_RESULTS.json',
+        'scripts/validate-endurance-effects.mjs',
+        'ingest-corpus CI endurance-effect assertion',
         'Notion PROCEDURAL_ENFORCEMENT_REGISTRY pointer',
         'Notion wiki integrity/receipt gate'
       ]
     },
     wiki: {
-      status: 'ACTIVE',
+      status: 'REFERENCE_READY',
       semanticOwner: r.path,
       pointer: `APPROVED-PROPOSAL-${n}`,
-      bodyDuplication: false
+      bodyDuplication: false,
+      activationRequiresEnduranceValidation: true
     }
   });
 }
 
-const stages = ['spec', 'ticket', 'implementation', 'acceptance', 'endure', 'wiki'];
 for (const x of lifecycle) {
-  for (const s of stages) if (!x[s] || !['PASS', 'ACTIVE'].includes(x[s].status)) throw new Error(`${x.lifecycleId} missing terminal ${s}`);
+  for (const s of ['spec','ticket','implementation','acceptance']) {
+    if (!x[s] || x[s].status !== 'PASS') throw new Error(`${x.lifecycleId} missing terminal ${s}`);
+  }
 }
 
-const activeRoutes = lifecycle.map(x => ({
+const candidateRoutes = lifecycle.map(x => ({
   lifecycleId: x.lifecycleId,
   sourceItemId: x.sourceItemId,
   sourcePath: x.source.path,
@@ -128,13 +166,14 @@ const activeRoutes = lifecycle.map(x => ({
   title: x.source.title,
   kind: x.source.kind,
   route: {
-    type: 'ACTIVE_APPROVED_PROPOSAL',
+    type: 'APPROVED_PROPOSAL_CANDIDATE',
     target: x.implementation.target,
     sourcePath: x.source.path,
-    status: 'ACTIVE',
+    status: 'PENDING_VALIDATION',
     acceptanceEvidence: x.acceptance.id,
-    endureEvidence: x.endure.id,
-    triggers: x.endure.triggers
+    endureEvidence: null,
+    triggers: x.endure.triggers,
+    scopeStatus: x.endure.scopeStatus
   }
 }));
 
@@ -146,16 +185,18 @@ const coverage = {
   ticketed: lifecycle.filter(x => x.ticket.status === 'PASS').length,
   implemented: lifecycle.filter(x => x.implementation.status === 'PASS').length,
   accepted: lifecycle.filter(x => x.acceptance.status === 'PASS').length,
-  endured: lifecycle.filter(x => x.endure.status === 'ACTIVE').length,
-  wikiActivated: lifecycle.filter(x => x.wiki.status === 'ACTIVE').length,
+  pendingValidation: lifecycle.filter(x => x.endure.status === 'PENDING_VALIDATION').length,
+  endured: 0,
+  wikiActivated: 0,
   skippedStages: 0,
-  complete: lifecycle.length === 456 && stages.every(s => lifecycle.every(x => ['PASS', 'ACTIVE'].includes(x[s].status)))
+  preparationComplete: lifecycle.length === 456 && lifecycle.every(x => ['spec','ticket','implementation','acceptance'].every(s => x[s].status === 'PASS')),
+  complete: false
 };
-if (!coverage.complete) throw new Error('Approved proposal lifecycle incomplete');
+if (!coverage.preparationComplete) throw new Error('Approved proposal preparation lifecycle incomplete');
 
 const out = join(root, 'pointer-catalog', 'ingestion');
 mkdirSync(out, { recursive: true });
-writeFileSync(join(out, 'APPROVED_PROPOSAL_LIFECYCLE_REGISTRY.json'), JSON.stringify({ schemaVersion: '1.0', generatedAt: new Date().toISOString(), coverage, items: lifecycle }, null, 2));
-writeFileSync(join(out, 'APPROVED_PROPOSAL_ACTIVE_ROUTES.json'), JSON.stringify({ schemaVersion: '1.0', generatedAt: new Date().toISOString(), sourceRevision: manifest.revision, routes: activeRoutes }, null, 2));
-writeFileSync(join(out, 'APPROVED_PROPOSAL_ENDURANCE_INDEX.md'), `# Approved proposal capability lifecycle\n\n- Source revision: ${manifest.revision}\n- Approved proposal capabilities: 456\n- Specified: ${coverage.specified}\n- Ticketed: ${coverage.ticketed}\n- Implemented: ${coverage.implemented}\n- Accepted: ${coverage.accepted}\n- Endured ACTIVE: ${coverage.endured}\n- Wiki ACTIVE: ${coverage.wikiActivated}\n- Skipped lifecycle stages: 0\n- Final status: ${coverage.complete ? 'PASS' : 'FAIL'}\n\nPer-item evidence is canonical in \`APPROVED_PROPOSAL_LIFECYCLE_REGISTRY.json\`. Active routes are canonical in \`APPROVED_PROPOSAL_ACTIVE_ROUTES.json\`.\n`);
+writeFileSync(join(out, 'APPROVED_PROPOSAL_LIFECYCLE_REGISTRY.json'), JSON.stringify({ schemaVersion: '2.0', generatedAt: new Date().toISOString(), coverage, items: lifecycle }, null, 2));
+writeFileSync(join(out, 'APPROVED_PROPOSAL_ACTIVE_ROUTES.json'), JSON.stringify({ schemaVersion: '2.0', generatedAt: new Date().toISOString(), sourceRevision: manifest.revision, routes: candidateRoutes }, null, 2));
+writeFileSync(join(out, 'APPROVED_PROPOSAL_ENDURANCE_INDEX.md'), `# Approved proposal capability lifecycle\n\n- Source revision: ${manifest.revision}\n- Approved proposal capabilities: 456\n- Specified: ${coverage.specified}\n- Ticketed: ${coverage.ticketed}\n- Implemented: ${coverage.implemented}\n- Accepted: ${coverage.accepted}\n- Pending behavioral validation: ${coverage.pendingValidation}\n- Endured ACTIVE: 0 until per-item fixture/evidence validation passes\n- Wiki ACTIVE: 0 until endurance validation passes\n- False promotion is forbidden.\n\nPer-item preparation evidence is canonical in \`APPROVED_PROPOSAL_LIFECYCLE_REGISTRY.json\`. Behavioral validation is canonical in \`ENDURANCE_VALIDATION_RESULTS.json\` and enforced by \`scripts/validate-endurance-effects.mjs\`.\n`);
 console.log(JSON.stringify(coverage, null, 2));
