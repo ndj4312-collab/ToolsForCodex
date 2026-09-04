@@ -1,0 +1,64 @@
+name: probe-render-live
+
+on:
+  push:
+    branches:
+      - probe/render-live-2026-09-04
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Probe health and actual MCP session
+        env:
+          MCP_BASE: https://toolsforcodex-mcp-remote.onrender.com
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE'
+          import { Client } from '@modelcontextprotocol/sdk/client/index.js';
+          import { StreamableHTTPClientTransport } from '@modelcontextprotocol/sdk/client/streamableHttp.js';
+
+          const base = process.env.MCP_BASE;
+          const healthResponse = await fetch(`${base}/health`);
+          const healthText = await healthResponse.text();
+          console.log('HEALTH_STATUS', healthResponse.status);
+          console.log('HEALTH_BODY', healthText);
+          if (!healthResponse.ok) process.exit(2);
+          const health = JSON.parse(healthText);
+          if (health.status !== 'ok' || health.server !== 'toolsforcodex-remote') process.exit(3);
+
+          const client = new Client({ name: 'toolsforcodex-live-probe', version: '1.0.0' });
+          const transport = new StreamableHTTPClientTransport(new URL(`${base}/mcp`));
+          await client.connect(transport);
+          const listed = await client.listTools();
+          const names = listed.tools.map(t => t.name).sort();
+          console.log('TOOLS', JSON.stringify(names));
+          for (const required of ['set_target','find_skills','load_skill']) {
+            if (!names.includes(required)) throw new Error(`missing live tool ${required}`);
+          }
+
+          const target = await client.callTool({ name: 'set_target', arguments: { repoUrl: 'https://github.com/ndj4312-collab/ToolsForCodex.git', ref: 'main' } });
+          console.log('SET_TARGET', JSON.stringify(target));
+          if (target.isError) throw new Error('set_target failed');
+
+          const found = await client.callTool({ name: 'find_skills', arguments: { query: 'headroom', limit: 10 } });
+          console.log('FIND_SKILLS', JSON.stringify(found));
+          if (found.isError) throw new Error('find_skills failed');
+          const foundText = JSON.stringify(found);
+          if (!foundText.includes('headroom-token-minimizer')) throw new Error('headroom-token-minimizer not found live');
+
+          const loaded = await client.callTool({ name: 'load_skill', arguments: { name: 'headroom-token-minimizer' } });
+          console.log('LOAD_SKILL', JSON.stringify(loaded));
+          if (loaded.isError || !JSON.stringify(loaded).includes('headroom-token-minimizer')) throw new Error('headroom-token-minimizer did not load live');
+
+          await client.close();
+          NODE
