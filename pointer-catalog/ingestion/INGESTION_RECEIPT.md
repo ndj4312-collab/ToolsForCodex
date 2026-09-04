@@ -1,6 +1,6 @@
 # ToolsForCodex exhaustive ingestion receipt
 
-- Source revision: 1111ce8da3d7ed10f394bbaefdc830d1eacf2a36
+- Source revision: 8d3be7344eeae04d2e5900ced7ef7680adcb33cc
 - Manifest discovered: 1186
 - Source items accounted: 1186
 - Canonical skill families: 89

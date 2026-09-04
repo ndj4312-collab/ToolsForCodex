@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
-  "generatedAt": "2026-09-04T15:20:31.013Z",
-  "sourceRevision": "1111ce8da3d7ed10f394bbaefdc830d1eacf2a36",
+  "generatedAt": "2026-09-04T15:21:01.160Z",
+  "sourceRevision": "8d3be7344eeae04d2e5900ced7ef7680adcb33cc",
   "families": [
     {
       "root": ".agents/skills/ab-testing",
