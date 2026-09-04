@@ -107,6 +107,17 @@ export function validateIdealProjectPlan(plan: IdealProjectPlan): { status: "VER
     if (!/^IF\b.+\bTHEN\b/is.test(task.branch)) findings.push({ code: "INVALID_BRANCH", message: "Task lacks executable IF/THEN behavior", taskId: task.id });
     if (task.parallel && task.writeSet.length > 0 && !task.rollback) findings.push({ code: "UNSAFE_PARALLEL_WRITE", message: "Parallel writer lacks rollback", taskId: task.id });
   }
+  for (const task of plan.tasks) {
+    for (const prerequisite of task.prerequisites) {
+      if (!taskIds.has(prerequisite)) {
+        findings.push({ code: "UNKNOWN_PREREQUISITE", message: `${task.id} references unknown prerequisite ${prerequisite}`, taskId: task.id });
+        continue;
+      }
+      if (!plan.edges.some((edge) => edge.relation === "REQUIRES" && edge.from === task.id && edge.to === prerequisite)) {
+        findings.push({ code: "PREREQUISITE_EDGE_DRIFT", message: `${task.id} prerequisite ${prerequisite} lacks matching REQUIRES edge`, taskId: task.id });
+      }
+    }
+  }
   for (const edge of plan.edges) {
     if (!taskIds.has(edge.from) || !taskIds.has(edge.to)) {
       findings.push({ code: "DANGLING_EDGE", message: `Edge ${edge.from} -> ${edge.to} is dangling` });
@@ -137,11 +148,7 @@ export function validateIdealProjectPlan(plan: IdealProjectPlan): { status: "VER
 }
 
 export function eligibleTasks(plan: IdealProjectPlan, completed: ReadonlySet<string>): IdealizeTask[] {
-  const requiredBy = new Map<string, string[]>();
-  for (const edge of plan.edges) {
-    if (edge.relation === "REQUIRES") requiredBy.set(edge.from, [...(requiredBy.get(edge.from) ?? []), edge.to]);
-  }
   return plan.tasks
-    .filter((task) => !completed.has(task.id) && (requiredBy.get(task.id) ?? []).every((id) => completed.has(id)))
+    .filter((task) => !completed.has(task.id) && task.prerequisites.every((id) => completed.has(id)))
     .sort((a, b) => a.phase - b.phase || a.wave - b.wave || a.id.localeCompare(b.id));
 }
