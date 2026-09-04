@@ -13,11 +13,11 @@ jobs:
   request:
     runs-on: ubuntu-latest
     steps:
-      - name: Request Copilot review on ORCH audit PR
+      - name: Request Copilot review on clean ORCH audit PR
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ndj4312-collab/ToolsForCodex
         shell: bash
         run: |
-          gh pr edit 4 --add-reviewer @copilot
-          gh pr view 4 --json reviewRequests,reviews,url
+          gh pr edit 7 --add-reviewer @copilot
+          gh pr view 7 --json reviewRequests,reviews,url
