@@ -24,6 +24,7 @@ import { validateProject } from "../../validation/project";
 import { writeProposalOutputs } from "../../proposals/generate";
 import { findProjectSkills, loadProjectSkill } from "../skill-registry";
 import { cleanupSession, resolveConfigPath, setTarget } from "./session-store";
+import { writeRuntimeIdentity, writeRuntimeProof } from "./runtime-identity";
 
 /**
  * Remote (Streamable HTTP) MCP server, for hosting somewhere with a public
@@ -322,7 +323,16 @@ async function handleMcpRequest(req: IncomingMessage, res: ServerResponse): Prom
 const port = Number(process.env.PORT ?? 8787);
 
 const httpServer = createServer((req, res) => {
-  if (req.url === "/health" || req.url === "/healthz") {
+  const path = req.url?.split("?")[0];
+  if (path === "/runtime/identity") {
+    writeRuntimeIdentity(res);
+    return;
+  }
+  if (path === "/runtime/proof") {
+    writeRuntimeProof(req, res);
+    return;
+  }
+  if (path === "/health" || path === "/healthz") {
     res.writeHead(200, { "Content-Type": "application/json" });
     res.end(JSON.stringify(healthPayload()));
     return;
