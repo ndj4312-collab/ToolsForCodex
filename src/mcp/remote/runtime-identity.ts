@@ -52,7 +52,7 @@ export function runtimeIdentityPayload() {
 function authorized(req: IncomingMessage): boolean {
   const expected = process.env.DEPLOYMENT_PROOF_TOKEN;
   const supplied = req.headers.authorization;
-  if (!expected || !supplied?.startsWith("Bearer ")) return false;
+  if (!expected || typeof supplied !== "string" || !supplied.startsWith("Bearer ")) return false;
   const actual = Buffer.from(supplied.slice("Bearer ".length));
   const target = Buffer.from(expected);
   return actual.length === target.length && timingSafeEqual(actual, target);
