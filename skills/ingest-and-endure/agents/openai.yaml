@@ -1,0 +1,5 @@
+interface:
+  display_name: Ingest and Endure
+  short_description: Deterministic exhaustive capability assimilation for repositories, skill libraries, playbooks, runtimes, methods, standards, evaluators, and mixed corpora.
+policy:
+  allow_implicit_invocation: false

@@ -1,6 +1,6 @@
 ---
 name: idealize
-description: Turn an idea into the closest realistically achievable perfected agentic system, then backward-chain it to a phase/wave/atomic executable implementation plan with objective evidence gates.
+description: Use when an idea needs backward-chaining into the closest realistically achievable perfected agentic system and a phase/wave/atomic executable implementation plan with objective evidence gates.
 disable-model-invocation: false
 ---
 

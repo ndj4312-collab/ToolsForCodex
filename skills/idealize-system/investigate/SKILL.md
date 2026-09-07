@@ -1,6 +1,6 @@
 ---
 name: investigate
-description: Recursively investigate the gap from current state to perfected state, mapping primitives, dependencies, implementations, failures, provenance, and verification.
+description: Use when the gap from current state to perfected state needs recursive investigation, mapping primitives, dependencies, implementations, failures, provenance, and verification.
 disable-model-invocation: false
 ---
 

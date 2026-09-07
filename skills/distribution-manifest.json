@@ -5,7 +5,12 @@
     "headroom-token-minimizer",
     "matt-skill-contract-audit",
     "standardize-skills-to-matt-pocock",
-    "production-orchestrator"
+    "production-orchestrator",
+    "about",
+    "idealize",
+    "investigate",
+    "monolithize",
+    "ingest-and-endure"
   ],
   "scope": "project-local",
   "approvalRequired": true

@@ -1,6 +1,6 @@
 ---
 name: about
-description: Build minimum-sufficient canonical context for an idea before investigation, asking only questions whose answers can materially change downstream decisions.
+description: Use when an idea lacks minimum-sufficient canonical context to investigate or model a perfected state; asks only questions whose answers can materially change downstream decisions.
 disable-model-invocation: false
 ---
 

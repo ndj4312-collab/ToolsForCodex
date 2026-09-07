@@ -1,6 +1,6 @@
 ---
 name: monolithize
-description: Synthesize validated context and investigation into one coherent perfected-system representation with architecture, governance, lifecycle, and executable ownership boundaries.
+description: Use when validated context and investigation need synthesis into one coherent perfected-system representation with architecture, governance, lifecycle, and executable ownership boundaries.
 disable-model-invocation: false
 ---
 

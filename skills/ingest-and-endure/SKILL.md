@@ -1,3 +1,9 @@
+---
+name: ingest-and-endure
+description: Deterministic exhaustive capability assimilation for repositories, skill libraries, playbooks, runtimes, methods, standards, evaluators, and mixed corpora.
+disable-model-invocation: true
+---
+
 # /ingest-and-endure
 
 Deterministic exhaustive capability assimilation for repositories, skill libraries, playbooks, runtimes, methods, standards, evaluators, and mixed corpora.
