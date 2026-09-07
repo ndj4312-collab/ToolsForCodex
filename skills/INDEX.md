@@ -9,3 +9,4 @@ This is the generated-facing index for the project-local orchestration package. 
 - `/matt-skill-contract-audit` — the model-invoked metadata and compatibility validator.
 - `skill-context-builder` — persistent current-canon context compiler for orchestration surfaces, dependencies, worker kernels, and execution-state reconciliation.
 - `/agentic-intel` — evidence-governed external intelligence research, primitive decomposition, convergence, and agentic-system application.
+- `/evidence-opinion-router` — mandatory pre-context-builder classifier for multi-type commands; triangulates scholarly and lived/practitioner evidence and recursively resolves evidence-backed opinions.
