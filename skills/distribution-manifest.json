@@ -12,7 +12,8 @@
     "monolithize",
     "ingest-and-endure",
     "skill-context-builder",
-    "agentic-intel"
+    "agentic-intel",
+    "evidence-opinion-router"
   ],
   "scope": "project-local",
   "approvalRequired": true
