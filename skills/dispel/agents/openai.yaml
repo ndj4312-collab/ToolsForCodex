@@ -1,0 +1,5 @@
+interface:
+  display_name: Dispel
+  short_description: Compile a frozen ideal target into a dependency-closed canonical ecosystem before specification or implementation.
+policy:
+  allow_implicit_invocation: true
