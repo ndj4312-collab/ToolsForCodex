@@ -7,7 +7,6 @@ on:
     paths:
       - .github/workflows/traverse-48-behavioral.yml
       - skills/traverse/evals/run-behavioral-analysis.mjs
-      - skills/traverse/evals/behavioral-analysis-manifest.json
 
 permissions:
   contents: write
@@ -26,6 +25,24 @@ jobs:
         with:
           node-version: 22
           cache: npm
+
+      - name: Freeze repaired behavior target in manifest
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path('skills/traverse/evals/behavioral-analysis-manifest.json')
+          data = json.loads(p.read_text())
+          data['target_commit'] = 'e3beac2be0944e357cdfc7d31e9890dda1d09d3e'
+          p.write_text(json.dumps(data, indent=2) + '\n')
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add skills/traverse/evals/behavioral-analysis-manifest.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Refreeze Traverse behavioral target after repair"
+            git push origin HEAD:${{ github.ref_name }}
+          fi
 
       - name: Install repository dependencies
         run: npm ci
