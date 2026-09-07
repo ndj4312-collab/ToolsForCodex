@@ -20,6 +20,7 @@ Use this user-invoked skill to run the complete repository orchestration workflo
 8. Run doctor, contract validation, lint, tests, and smoke checks before declaring the workflow complete.
 9. For perfected-system planning work rather than repository orchestration, route to `/about` (minimum-sufficient context) `→ /investigate` (recursive gap mapping) `→ /monolithize` (coherent synthesis) `→ /idealize` (backward-chained executable plan); route to `/ingest-and-endure` for deterministic exhaustive corpus assimilation.
 10. Invoke `skill-context-builder` whenever an orchestration, workflow, skill build, multi-agent task, or complex execution needs a canonical current-state context model, surface/dependency map, research-before-opinion routing, worker-kernel contracts, or persistent context reconciliation.
+11. Route to `/dispel` when the target is already frozen but the complete constituent/surface/dependency topology is not closed. `/dispel` may consume Agentic Intel evidence, but it plans/compiles only; unclear targets return to `/idealize`, and validated output proceeds through `/grill-with-docs` before `/to-spec` rather than directly to implementation.
 
 ## Inputs and outputs
 

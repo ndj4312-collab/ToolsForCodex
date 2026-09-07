@@ -1,0 +1,29 @@
+{
+  "skill_name": "dispel",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We already have a frozen IdealContract for a multi-agent release system. The ideal requires deterministic routing, rollback, capability discovery, and runtime parity, but the exact owners, surfaces, interfaces, and dependency order are not mapped. Run the appropriate skill and produce the architecture handoff without implementing it.",
+      "expected_output": "Invokes Dispel, preserves the frozen target, enumerates every obligation and affected surface, compiles constituents with unique semantic ownership, closes dependencies and test seams, defines migration/rollback, validates the DispelContract, and hands it to grill-with-docs rather than implementing.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I want a perfect agent memory system, but I have not decided whether it should be event-sourced, vector-first, or graph-first. Use Dispel to design it now.",
+      "expected_output": "Does not silently freeze a target or choose an architecture. It routes the unclear/changing target back to idealize and, where technical evidence is needed, to agentic-intel rather than pretending Dispel owns target definition.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "The topology is mostly mapped, but two components both claim the same semantic capability, one runtime surface has no owner, and a database dependency exists in prose but has no graph edge. Start implementation because we're close enough.",
+      "expected_output": "Refuses implementation handoff, identifies duplicate semantic ownership, missing surface ownership, and hidden dependency as hard failures, resolves the earliest causal architecture defects, and does not route to traverse until closure is validated.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "I have a frozen target and a complete reviewed architecture/build plan with owners, dependencies, tests, migration and rollback already closed. Run Dispel before I write the spec.",
+      "expected_output": "Recognizes that Dispel would add no material topology work and routes directly onward to the appropriate specification path rather than manufacturing duplicate constituents or re-planning a complete architecture.",
+      "files": []
+    }
+  ]
+}

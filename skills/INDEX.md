@@ -7,3 +7,4 @@ This is the generated-facing index for the project-local orchestration package. 
 - `/headroom-token-minimizer` — a model-invoked context and tool-output minimizer that preserves audit evidence.
 - `/standardize-skills-to-matt-pocock` — the user-invoked normalization controller.
 - `/matt-skill-contract-audit` — the model-invoked metadata and compatibility validator.
+- `/dispel` — compile a frozen ideal target into the smallest dependency-closed canonical ecosystem before specification or implementation.
