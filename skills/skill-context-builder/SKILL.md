@@ -1,7 +1,7 @@
 ---
 name: skill-context-builder
-description: Use whenever an orchestration, skill, workflow, agentic build, multi-agent task, or complex job needs to be fully contextualized before or during execution. Persistently fan out to discover affected surfaces, fan in to map dependencies/current-to-next mechanisms, route research-answerable uncertainty to agentic-intel instead of guessing, maintain a residue-free canonical <job-title>-context.md, and compile minimum worker context kernels for the orchestration runtime until desired state is reached or the same stage exceeds three failures. Also use as a context wrapper for non-orchestration tasks when another skill or agent needs an authoritative current-state context file.
-compatibility: Requires an orchestration runtime capable of invoking workers; agentic-intel when evidence/research routing is needed; filesystem or document access for canonical context maintenance.
+description: Use whenever an orchestration, skill, workflow, agentic build, multi-agent task, or complex job needs to be fully contextualized before or during execution. For multi-type, compound, or cross-surface commands, do not self-route first: evidence-opinion-router must classify the task and complete any required evidence-backed opinion loop before handing off here. Persistently fan out to discover affected surfaces, fan in to map dependencies/current-to-next mechanisms, route research-answerable uncertainty to agentic-intel instead of guessing, maintain a residue-free canonical <job-title>-context.md, and compile minimum worker context kernels for the orchestration runtime until desired state is reached or the same stage exceeds three failures. Also use as a context wrapper for non-orchestration tasks when another skill or agent needs an authoritative current-state context file.
+compatibility: Requires an orchestration runtime capable of invoking workers; evidence-opinion-router as the pre-router for multi-type/compound/cross-surface commands; agentic-intel when evidence/research routing is needed; filesystem or document access for canonical context maintenance.
 ---
 
 # Skill Context Builder
@@ -9,6 +9,12 @@ compatibility: Requires an orchestration runtime capable of invoking workers; ag
 Build and continuously maintain the authoritative context model that an orchestration runtime executes against.
 
 Do not own worker execution. Own the context that controls worker execution.
+
+## Pre-routing boundary
+
+For any multi-type, compound, or cross-surface command, accept a classified handoff from `evidence-opinion-router` rather than invoking first. Do not duplicate its evidence graph or opinion loop. Once handed off, this skill owns canonical execution context, dependency state, worker kernels, and reconciliation.
+
+Single-type work that directly needs an authoritative context model may still invoke this skill without the pre-router.
 
 ## Operating loop
 
