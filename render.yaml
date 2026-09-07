@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: toolsforcodex-mcp-remote
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: node dist/mcp/remote/server.js
+    envVars:
+      - key: DEPLOYMENT_PROOF_TOKEN
+        sync: false
+      - key: IDEAL_ENDURANCE_CONTRACT_DIGEST
+        sync: false
+      - key: IDEAL_ENDURANCE_RUNTIME_CONNECTED
+        sync: false

@@ -2,6 +2,8 @@ node_modules/
 dist/
 coverage/
 .orchestrator/
+.work/
+quarantine/
 *.tgz
 test-reports/
 *.log

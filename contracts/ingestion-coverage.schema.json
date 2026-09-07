@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://toolsforcodex.local/contracts/ingestion-coverage.schema.json",
+  "title": "IngestionCoverageReport",
+  "type": "object",
+  "required": ["complete", "failures", "counters"],
+  "properties": {
+    "complete": { "type": "boolean" },
+    "failures": { "type": "array", "items": { "type": "string" } },
+    "counters": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "manifestDiscovered",
+        "sourceItemsAccounted",
+        "sourceItemsUnread",
+        "capabilityCandidatesUndispositioned",
+        "acceptedUsefulCapabilitiesWithoutRouteOrExplicitRouteBlocker",
+        "activeRoutesWithoutAcceptanceEvidence",
+        "newMandatoryMachineryWithoutSpecTicketsImplementationAcceptance",
+        "orphanCapabilitiesWithoutSourceProvenance",
+        "bulkPreserveObserveRevisitWithoutItemSpecificReason",
+        "wikiIntegrityFailures"
+      ],
+      "properties": {
+        "manifestDiscovered": { "type": "integer", "minimum": 0 },
+        "sourceItemsAccounted": { "type": "integer", "minimum": 0 },
+        "sourceItemsUnread": { "type": "integer", "minimum": 0 },
+        "capabilityCandidatesUndispositioned": { "type": "integer", "minimum": 0 },
+        "acceptedUsefulCapabilitiesWithoutRouteOrExplicitRouteBlocker": { "type": "integer", "minimum": 0 },
+        "activeRoutesWithoutAcceptanceEvidence": { "type": "integer", "minimum": 0 },
+        "newMandatoryMachineryWithoutSpecTicketsImplementationAcceptance": { "type": "integer", "minimum": 0 },
+        "orphanCapabilitiesWithoutSourceProvenance": { "type": "integer", "minimum": 0 },
+        "bulkPreserveObserveRevisitWithoutItemSpecificReason": { "type": "integer", "minimum": 0 },
+        "wikiIntegrityFailures": { "type": "integer", "minimum": 0 }
+      }
+    }
+  },
+  "additionalProperties": false
+}
