@@ -1,0 +1,5 @@
+interface:
+  display_name: Agentic Intel
+  short_description: Evidence-governed external intelligence research, primitive decomposition, convergence, and agentic-system application.
+policy:
+  allow_implicit_invocation: true
