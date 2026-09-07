@@ -10,7 +10,8 @@
     "idealize",
     "investigate",
     "monolithize",
-    "ingest-and-endure"
+    "ingest-and-endure",
+    "skill-context-builder"
   ],
   "scope": "project-local",
   "approvalRequired": true
