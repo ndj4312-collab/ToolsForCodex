@@ -1,5 +1,5 @@
 interface:
   display_name: Traverse
-  short_description: Realize accepted plans through dependency-safe implementation, repair routing, regression, and independent convergence gates.
+  short_description: Persist accepted plans through bounded parallel frontiers, mandatory frontier regression, earliest-cause repair, cumulative recovery limits, durable holds, and exact frozen end-state convergence.
 policy:
   allow_implicit_invocation: true
