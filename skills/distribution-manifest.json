@@ -11,7 +11,8 @@
     "investigate",
     "monolithize",
     "ingest-and-endure",
-    "skill-context-builder"
+    "skill-context-builder",
+    "agentic-intel"
   ],
   "scope": "project-local",
   "approvalRequired": true
