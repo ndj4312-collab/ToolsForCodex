@@ -79,7 +79,7 @@ The desired end-state contract is immutable for the life of the Traverse transac
 ## Parallel execution and context budget
 
 - Orchestration is deterministic scripting/state-machine logic held/applied by an agent; it does not require a long-lived intelligence-bearing orchestrator identity.
-- Maximum: **6 total active agents**, including the agent currently holding/applying Traverse.
+- Active dispatch is adaptive: **2–4 total active agents**, including the agent currently holding/applying Traverse. Choose the smallest sufficient count—2, 3, or 4—based on dependency-safe runnable work and context budget.
 - Hard combined active-context ceiling: **140,000 tokens** across all active agents. This ceiling overrides maximum concurrency.
 - Execution-agent context should remain roughly **25–30k tokens maximum per agent**; this is an upper bound, not a guaranteed allocation.
 - Reduce concurrency or context size whenever necessary to remain below 140k combined.
@@ -156,7 +156,8 @@ frozen:
   rollback_point: "..."
   denominator_digest: "..."
 context_policy:
-  max_active_agents: 6
+  min_dispatch_agents: 2
+  max_active_agents: 4
   combined_active_context_ceiling: 140000
   per_agent_context_max: 30000
   prefer_clear_relaunch: true
@@ -217,7 +218,7 @@ At minimum test:
 8. third cumulative failed recovery cycle terminates `UNRESOLVED` with exact evidence/current canon/next legal action and no fourth retry;
 9. target change requires transaction termination/new transaction;
 10. manual authority gate enters same-transaction `HOLD` and does not consume a failure iteration;
-11. context scheduler rejects >6 active agents, >140k combined context, or per-agent max >30k; prefers clear/relaunch;
+11. context scheduler uses an adaptive 2–4 total active-agent dispatch and rejects >4 active agents, >140k combined context, or per-agent max >30k; prefers clear/relaunch;
 12. implementation self-certification is rejected;
 13. denominator shrinkage is rejected;
 14. accepted recurring rule routes to `/endure` only after Traverse success.
@@ -238,7 +239,7 @@ At minimum test:
 - blocked-ticket execution;
 - target or denominator mutation inside a transaction;
 - frontier closure without full regression PASS;
-- >6 active agents;
+- >4 active agents;
 - >140k combined active context;
 - per-agent context maximum above 30k;
 - worker self-report used as final proof;

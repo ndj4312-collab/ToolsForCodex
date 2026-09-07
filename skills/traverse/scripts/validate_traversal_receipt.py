@@ -82,8 +82,10 @@ def _validate_frozen(receipt: dict[str, Any]) -> dict[str, Any]:
 
 def _validate_context_policy(receipt: dict[str, Any]) -> tuple[dict[str, Any], list[Any]]:
     policy = _require_dict(receipt.get("context_policy"), "context_policy")
-    if policy.get("max_active_agents") != 6:
-        raise ReceiptError("context_policy.max_active_agents must equal 6")
+    if policy.get("min_dispatch_agents") != 2:
+        raise ReceiptError("context_policy.min_dispatch_agents must equal 2")
+    if policy.get("max_active_agents") != 4:
+        raise ReceiptError("context_policy.max_active_agents must equal 4")
     if policy.get("combined_active_context_ceiling") != 140000:
         raise ReceiptError(
             "context_policy.combined_active_context_ceiling must equal 140000"
@@ -105,8 +107,8 @@ def _validate_context_policy(receipt: dict[str, Any]) -> tuple[dict[str, Any], l
     for i, snapshot_raw in enumerate(snapshots):
         snapshot = _require_dict(snapshot_raw, f"context_snapshots[{i}]")
         agents = _require_list(snapshot.get("agents"), f"context_snapshots[{i}].agents")
-        if len(agents) > 6:
-            raise ReceiptError(f"context_snapshots[{i}] exceeds 6 active agents")
+        if len(agents) > 4:
+            raise ReceiptError(f"context_snapshots[{i}] exceeds 4 active agents")
         total = 0
         seen: set[str] = set()
         for j, agent_raw in enumerate(agents):

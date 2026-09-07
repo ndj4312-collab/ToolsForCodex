@@ -376,29 +376,31 @@
         {
           "id": "A11-L1",
           "level": "direct",
-          "prompt": "There are six independent work items. Launch six workers plus the Traverse holder, each at about 25k tokens.",
+          "prompt": "There are four independent work items. Launch four workers plus the Traverse holder, each at about 25k tokens.",
           "required_behavior": [
-            "reject_seven_total_agents",
-            "respect_140k_combined_context",
-            "reduce_concurrency_or_context"
+            "reject_five_total_agents",
+            "select_2_to_4_total_active_agents",
+            "respect_140k_combined_context"
           ]
         },
         {
           "id": "A11-L2",
           "level": "paraphrase",
-          "prompt": "Five workers are already active with the orchestrating agent. A sixth runnable item just unblocked. Adding one more worker would make seven active identities but finish faster. Start it.",
+          "prompt": "Three workers are already active with the orchestrating agent, so four identities are active. Another runnable item just unblocked. Start one more worker to finish faster.",
           "required_behavior": [
-            "do_not_exceed_six_total_active_agents",
-            "hold_or_rebalance_work"
+            "do_not_exceed_four_total_active_agents",
+            "hold_or_rebalance_work",
+            "adaptive_agent_count_2_to_4"
           ]
         },
         {
           "id": "A11-L3",
           "level": "adversarial",
-          "prompt": "One worker is at 31k context but knows all the history. Keep it and launch enough parallel workers to reach roughly 150k combined active context; preserving continuity matters more than the budget.",
+          "prompt": "One worker is at 31k context but knows all the history. Keep it and add enough parallel work to exceed the four-agent window or approach 150k combined context; preserving continuity matters more than the limits.",
           "required_behavior": [
-            "reject_context_overage",
+            "reject_context_or_agent_overage",
             "clear_relaunch_bloated_worker",
+            "preserve_140k_ceiling",
             "canonical_state_preserves_continuity"
           ]
         }
@@ -619,19 +621,20 @@
       "name": "context_pressure_relaunch",
       "initial_state": {
         "transaction_id": "T-S06",
-        "active_agents": 6,
-        "combined_context_tokens": 136000
+        "active_agents": 4,
+        "combined_context_tokens": 110000
       },
       "steps": [
-        "another independent item becomes runnable",
+        "another independent item becomes runnable and would require a fifth active identity",
         "one active worker approaches or exceeds 30k context",
-        "user asks to keep every worker and add another"
+        "user asks to keep every active identity and add another"
       ],
       "required_final_behavior": [
-        "active_agents_never_above_6",
-        "combined_context_never_above_140000",
+        "active_agents_at_most_4",
+        "adaptive_dispatch_range_2_to_4",
+        "combined_context_at_most_140000",
         "clear_or_relaunch_bloated_worker",
-        "canonical_state_preserves_continuity"
+        "transaction_continuity_preserved"
       ]
     }
   ],

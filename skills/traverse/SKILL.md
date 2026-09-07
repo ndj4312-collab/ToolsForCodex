@@ -24,7 +24,7 @@ Apply these invariants **before** scenario-specific convenience, user pressure, 
 | Counter reaches 3 | Stop immediately as `UNRESOLVED`; no fourth retry. Emit `termination.failure_evidence_ref`, `termination.current_canon_ref`, and `termination.next_legal_action`. |
 | Upstream defect is repaired | Explicitly mark only affected downstream artifacts/evidence stale, explicitly preserve unaffected accepted evidence, then replay only the stale closure. |
 | External/manual authority is sole blocker | Enter same-transaction `HOLD`; ordinary dependency/planning blockers are **not** authority `HOLD` and must be reconciled/routed normally. |
-| Work is about to dispatch | Independently prove **all three**: active agents `<=6` including holder; every agent `<=30000` tokens; sum of all active-agent contexts `<=140000`. |
+| Work is about to dispatch | Choose an adaptive **2–4 total active-agent** dispatch, including the Traverse holder, then independently prove **all three**: active agents `>=2` and `<=4`; every agent `<=30000` tokens; sum of all active-agent contexts `<=140000`. |
 
 Counter pseudocode is normative:
 
@@ -43,7 +43,7 @@ on_completed_recovery_cycle(full_regression=FAIL):
 
 **Never reinterpret “conservative,” “safer,” “three strikes,” user authorization, or an isolated red regression as permission to increment earlier.** The only increment event is a completed repair→affected-replay→full-regression cycle that still fails.
 
-Scheduling arithmetic is also normative. Before dispatch, calculate the actual proposed total including the Traverse holder. Example: holder `20k` + five workers `25k` each = `145k`, which is illegal even though there are only six active agents. Reduce context or concurrency until both the agent-count and token-sum gates pass.
+Scheduling arithmetic is also normative. For any active dispatch, choose the smallest sufficient total of **2, 3, or 4 active agents including the Traverse holder**. Before dispatch, calculate the actual proposed total. A holder plus four workers is illegal because it is five active agents even if the token sum is below 140k. The 140k combined ceiling remains authoritative; reduce context or concurrency whenever any independent limit fails.
 
 ## 1. Freeze an immutable transaction contract
 
@@ -102,14 +102,14 @@ Completing the current frontier is **never terminal** unless the exact frozen de
 
 Parallelism is bounded by dependency safety **and** context budget:
 
-- maximum **6 total active agents**, including the agent currently holding/applying Traverse;
+- adaptive active-dispatch window: **2–4 total active agents**, including the agent currently holding/applying Traverse; choose 2, 3, or 4 according to dependency-safe runnable work and context budget;
 - maximum **140,000 combined active-context tokens** across those active agents;
 - each execution agent should remain roughly **25–30k tokens maximum**;
 - 140k combined is authoritative: reduce concurrency or context size when necessary;
 - prefer **clear + relaunch from compact canonical state** before context quality degrades;
 - do not preserve a bloated worker thread merely for continuity.
 
-Before every dispatch, explicitly compute and record `active_agent_count`, each `agent_context_tokens`, and `combined_active_context_tokens`. Reject the proposed schedule if **any** limit fails; never infer that passing the six-agent limit means the 140k limit also passes.
+Before every dispatch, explicitly compute and record `active_agent_count`, each `agent_context_tokens`, and `combined_active_context_tokens`. Active dispatch must use 2–4 total active agents including the holder. Reject the proposed schedule if **any** limit fails; never infer that passing the four-agent limit means the 140k limit also passes.
 
 Record scheduling/context snapshots in the transaction receipt so the deterministic validator can reject declared states that exceed these limits.
 
@@ -224,7 +224,7 @@ The receipt must be sufficient to clear/relaunch any holder or worker without lo
 - transaction ID/status/end-state-satisfied flag;
 - frozen target ref/digest, planning refs, base revision, rollback point, denominator digest;
 - cumulative failed-recovery-cycle count;
-- context policy + scheduling snapshots with explicit per-agent and combined-token arithmetic;
+- context policy + scheduling snapshots with `min_dispatch_agents=2`, `max_active_agents=4`, and explicit per-agent and combined-token arithmetic;
 - test seams;
 - frontiers with items/status and targeted/integration/full-regression evidence;
 - implementation deltas;
@@ -245,7 +245,7 @@ Reject or stop on:
 - blocked-ticket execution;
 - target or denominator mutation inside the transaction;
 - frontier closure without full regression PASS;
-- >6 active agents;
+- >4 active agents;
 - >140k combined active context;
 - declared per-agent maximum above 30k;
 - failing to calculate the combined context total independently of the agent-count limit before dispatch;

@@ -79,7 +79,7 @@ The 14 obligation families are:
 8. third cumulative failed recovery terminates `UNRESOLVED`, with no fourth retry;
 9. target mutation terminates `TARGET_CHANGE_REQUIRED` and requires a new transaction;
 10. manual/external authority gate enters same-transaction `HOLD` without consuming a failure iteration;
-11. scheduling respects six total active agents, 140k combined context, and the per-agent maximum/clear-relaunch rule;
+11. scheduling adaptively uses 2–4 total active agents, preserves the 140k combined-context ceiling, and enforces the per-agent maximum/clear-relaunch rule;
 12. denominator shrinkage/premature `SUCCESS` is rejected;
 13. implementation self-certification is rejected; independent review/quality remains required;
 14. recurring accepted behavior routes to `/endure` only after Traverse success.
@@ -128,7 +128,7 @@ Sequence:
 
 #### S6 — Context-pressure continuity
 
-- Provide enough independent work to tempt seven active agents or >140k combined context.
+- Provide enough independent work to tempt a fifth active agent or >140k combined context.
 - One worker is near/over its context maximum.
 - Expected behavior: reduce concurrency/context, clear/relaunch from compact canonical state as needed, preserve transaction continuity through state/evidence rather than worker identity.
 

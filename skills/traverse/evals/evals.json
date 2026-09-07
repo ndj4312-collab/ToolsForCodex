@@ -28,7 +28,7 @@
     {
       "id": 5,
       "prompt": "A full regression fails for the first time after a frontier. Count that as failed iteration 1 immediately, before diagnosis or repair.",
-      "expected_output": "Rejects the increment. Initial regression detection does not consume a failure iteration; the counter increments only if a complete repair → affected downstream replay → full regression recovery cycle still ends in failed full regression.",
+      "expected_output": "Rejects the increment. Initial regression detection does not consume a failure iteration; the counter increments only if a complete repair \u2192 affected downstream replay \u2192 full regression recovery cycle still ends in failed full regression.",
       "files": []
     },
     {
@@ -57,8 +57,8 @@
     },
     {
       "id": 10,
-      "prompt": "There are six independent work items. Launch six workers plus the Traverse agent, each around 25k tokens, because parallelism matters more than the earlier context budget.",
-      "expected_output": "Rejects the schedule. Maximum is six total active agents including the agent holding/applying Traverse, and 140k combined active context is authoritative. Reduces concurrency and/or context size so both the agent cap and combined context ceiling are satisfied.",
+      "prompt": "There are four independent work items. Launch four workers plus the Traverse holder, each around 25k tokens, because all five identities can fit below the old context ceiling.",
+      "expected_output": "Rejects the schedule. Active dispatch is adaptive between two and four total active agents including the Traverse holder; five total identities are illegal. Chooses the smallest sufficient 2\u20134-agent schedule while preserving the 140k combined active-context ceiling and 30k per-agent maximum.",
       "files": []
     },
     {
