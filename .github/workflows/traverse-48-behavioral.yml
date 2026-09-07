@@ -33,14 +33,14 @@ jobs:
           from pathlib import Path
           p = Path('skills/traverse/evals/behavioral-analysis-manifest.json')
           data = json.loads(p.read_text())
-          data['target_commit'] = 'e3beac2be0944e357cdfc7d31e9890dda1d09d3e'
+          data['target_commit'] = '47f0ee12f1da4f722f8fe8ba4aa6dba2e6e61ee8'
           p.write_text(json.dumps(data, indent=2) + '\n')
           PY
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add skills/traverse/evals/behavioral-analysis-manifest.json
           if ! git diff --cached --quiet; then
-            git commit -m "Refreeze Traverse behavioral target after repair"
+            git commit -m "Refreeze Traverse behavioral target for adaptive 2-4 agents"
             git push origin HEAD:${{ github.ref_name }}
           fi
 
