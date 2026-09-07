@@ -1,0 +1,5 @@
+interface:
+  display_name: Project Planning Compiler
+  short_description: Select planning depth and compose exact Matt Pocock to-spec/to-tickets into dependency-safe executable project work.
+policy:
+  allow_implicit_invocation: true

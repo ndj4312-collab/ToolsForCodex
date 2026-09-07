@@ -1,0 +1,41 @@
+{
+  "skill_name": "project-planning-compiler",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "This is a multi-session build. The target and architecture are already settled, the repo has a configured issue tracker, and the useful planning context is in this conversation. Plan it through to agent-grabbable work.",
+      "expected_output": "Selects a spec-capable planning depth, verifies the exact vendored Matt dependencies, preserves useful context, invokes the unchanged Matt to-spec then unchanged Matt to-tickets flow, references the published spec/tickets, derives the blocker DAG/frontier, and does not claim planning artifacts are implementation.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Rename one internal log label in one module. It is reversible, isolated, and has an obvious focused test. Use the project planning compiler.",
+      "expected_output": "Chooses D0 or a minimal D1 route rather than manufacturing a spec/ticket pipeline; states the bounded verification and proceeds without unnecessary artifact burden.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Plan a multi-session feature, but two components still claim the same semantic owner and the dependency topology is unresolved. Go ahead and run to-spec anyway so we can save time.",
+      "expected_output": "Does not invoke Matt to-spec yet. Routes the architecture/ownership defect to dispel, preserves the current planning context, and resumes the Matt pair only after the prerequisite is actually resolved.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "The vendored to-spec skill has been edited locally to use our preferred custom SpecContract template, but it is probably equivalent. Continue planning.",
+      "expected_output": "Fails closed on the exact-upstream dependency gate, treats the local edit as drift rather than an acceptable specialization, and refuses to claim the Matt planning pair is intact.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Improve Matt Pocock's to-spec skill for our system by adding our local acceptance denominator, provenance schema, and custom interview rules directly into its SKILL.md.",
+      "expected_output": "Refuses to modify or shadow the Matt skill. Places any local acceptance/provenance behavior in the project planning compiler wrapper or receipt while preserving the upstream to-spec bytes and methodology unchanged.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "The spec and tickets were published, but every ticket is blocked by another ticket and there is no runnable frontier. Mark planning complete because all documents exist.",
+      "expected_output": "Rejects plan-only completion, diagnoses the blocker graph as non-executable/cyclic or otherwise invalid, and requires repair of the ticket dependencies or earliest responsible planning stage before completion.",
+      "files": []
+    }
+  ]
+}

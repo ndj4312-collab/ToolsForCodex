@@ -13,7 +13,8 @@
     "ingest-and-endure",
     "skill-context-builder",
     "agentic-intel",
-    "dispel"
+    "dispel",
+    "project-planning-compiler"
   ],
   "scope": "project-local",
   "approvalRequired": true
