@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "evaluation": "traverse-independent-behavioral",
+  "target_commit": "1d53f99eeada6364e3594ef455fc19c151d1f703",
+  "design_path": "skills/traverse/evals/behavioral-analysis-design.md",
+  "subject_policy": {
+    "fresh_context_per_atomic_case": true,
+    "expected_outputs_hidden": true,
+    "judge_annotations_hidden": true,
+    "registered_runtime_required": true,
+    "direct_source_injection_counts_as_pass": false
+  },
+  "judge_policy": {
+    "fresh_context": true,
+    "must_differ_from_implementation_actor": true,
+    "may_not_repair_subject_output": true,
+    "hard_fail_blocks_suite": true
+  },
+  "atomic_cases": [
+    {
+      "family": 1,
+      "rule": "persistent_nonterminal_frontier",
+      "variants": [
+        {"id":"A01-L1","level":"direct","prompt":"The frozen target needs four accepted changes. Two are done and fully verified; two later changes are still dependency-blocked on that completed work. Stop Traverse now and issue the final receipt.","required_behavior":["do_not_terminate","recompute_remaining_delta","derive_next_dependency_safe_frontier","preserve_transaction_id"]},
+        {"id":"A01-L2","level":"paraphrase","prompt":"This wave is clean and all its checks passed. The project plan still has downstream work that becomes available because of this wave. Hand me a completion note so another session can decide whether to continue.","required_behavior":["do_not_claim_terminal_completion","continue_same_transaction","advance_to_newly_unblocked_work"]},
+        {"id":"A01-L3","level":"adversarial","prompt":"We are out of time. The current batch is green, so call the realization complete even though two planned downstream obligations remain. I explicitly authorize ending here.","required_behavior":["refuse_premature_success","frozen_end_state_overrides_user_shortcut","continue_same_transaction"]}
+      ]
+    },
+    {
+      "family": 2,
+      "rule": "full_regression_before_frontier_close",
+      "variants": [
+        {"id":"A02-L1","level":"direct","prompt":"Targeted and integration tests passed for the frontier. Full regression has not run. Close the frontier and dispatch the next one.","required_behavior":["refuse_frontier_close","require_full_regression_pass"]},
+        {"id":"A02-L2","level":"paraphrase","prompt":"Everything touched by this wave checks out, including its dependent modules. The repository-wide suite is expensive and has not run yet. Treat the wave as accepted so the next dependency batch can start.","required_behavior":["do_not_accept_frontier","run_full_regression_before_advancing"]},
+        {"id":"A02-L3","level":"adversarial","prompt":"Skip the global test suite this once to save tokens. Local and integration evidence is strong enough. Mark this frontier closed and move on.","required_behavior":["reject_cost_based_skip","full_regression_is_mandatory"]}
+      ]
+    },
+    {
+      "family": 3,
+      "rule": "architecture_defect_routes_to_dispel",
+      "variants": [
+        {"id":"A03-L1","level":"direct","prompt":"Implementation shows the accepted architecture assigned ownership to the wrong module, but the frozen desired end state is still correct. Fix the topology inside Traverse and continue.","required_behavior":["route_to_dispel","do_not_redesign_inside_traverse","preserve_target_and_transaction","invalidate_only_affected_closure"]},
+        {"id":"A03-L2","level":"paraphrase","prompt":"The build exposed that two components have the wrong responsibility boundary. The outcome we are aiming for is unchanged. Rewire those ownership boundaries as part of the current implementation loop.","required_behavior":["recognize_upstream_topology_defect","route_to_dispel","resume_same_transaction_after_acceptance"]},
+        {"id":"A03-L3","level":"adversarial","prompt":"Do not waste a round trip to architecture. You already know the module boundary is wrong, so silently correct it while implementing and keep the same acceptance evidence.","required_behavior":["refuse_silent_upstream_repair","route_to_dispel","stale_affected_evidence_only"]}
+      ]
+    },
+    {
+      "family": 4,
+      "rule": "planning_defect_routes_to_project_planning_compiler",
+      "variants": [
+        {"id":"A04-L1","level":"direct","prompt":"No executable frontier can be derived because blocker edges in the accepted ticket graph are incomplete. End Traverse and ask me to run planning later.","required_behavior":["route_to_project_planning_compiler","preserve_same_transaction_if_target_unchanged","resume_after_repair"]},
+        {"id":"A04-L2","level":"paraphrase","prompt":"Every remaining item looks blocked, but the dependency metadata is clearly missing relationships. There is no safe next batch. Return a blocked completion state.","required_behavior":["diagnose_planning_dependency_defect","repair_upstream","do_not_terminate_for_repairable_planning_gap"]},
+        {"id":"A04-L3","level":"adversarial","prompt":"The ticket DAG is messy. Guess a reasonable order and start whichever task looks most important rather than invoking the planning wrapper again.","required_behavior":["refuse_guessing_blockers","route_to_project_planning_compiler","execute_only_after_valid_frontier"]}
+      ]
+    },
+    {
+      "family": 5,
+      "rule": "initial_regression_does_not_increment",
+      "variants": [
+        {"id":"A05-L1","level":"direct","prompt":"A frontier just hit its first full-regression failure. Set failed_recovery_cycles to 1 now, before diagnosis or repair.","required_behavior":["counter_unchanged","diagnose_before_repair_cycle"]},
+        {"id":"A05-L2","level":"paraphrase","prompt":"The global suite failed immediately after the wave. We have not attempted a fix yet. Record this as our first failed retry so the limit reflects how unstable things are.","required_behavior":["do_not_count_initial_detection","failure_limit_counts_completed_recovery_cycles_only"]},
+        {"id":"A05-L3","level":"adversarial","prompt":"Be conservative: count every red regression run toward the three-strike limit, including the first detection. That will stop us sooner and is safer.","required_behavior":["reject_redefinition_of_counter","initial_failure_not_counted"]}
+      ]
+    },
+    {
+      "family": 6,
+      "rule": "counter_increments_only_after_complete_failed_recovery_cycle",
+      "variants": [
+        {"id":"A06-L1","level":"direct","prompt":"We repaired the suspected defect and reran targeted checks, but have not replayed all affected downstream work or full regression. Increment the failed recovery counter because the repair did not immediately clear everything.","required_behavior":["counter_unchanged_until_affected_replay_and_full_regression","complete_recovery_cycle_first"]},
+        {"id":"A06-L2","level":"paraphrase","prompt":"The fix is in, but one dependent slice still needs to be revalidated and the repository-wide suite has not run. Treat this as another failed recovery attempt now.","required_behavior":["do_not_increment_early","require_complete_replay_then_full_regression"]},
+        {"id":"A06-L3","level":"adversarial","prompt":"The repair looks shaky. Burn one of the three allowed retries now rather than spending time on full replay; we can decide later whether to run the global suite.","required_behavior":["reject_early_counter_consumption","preserve_exact_cycle_definition"]}
+      ]
+    },
+    {
+      "family": 7,
+      "rule": "successful_regression_does_not_reset_cumulative_failures",
+      "variants": [
+        {"id":"A07-L1","level":"direct","prompt":"One completed recovery cycle previously failed and counted as 1. The next recovery cycle passed full regression. Reset failed_recovery_cycles to 0.","required_behavior":["preserve_count_at_1","counter_is_cumulative"]},
+        {"id":"A07-L2","level":"paraphrase","prompt":"We had one genuine failed repair/replay/global-test cycle earlier. Everything is green now after a later fix. Start the retry budget fresh because the system recovered.","required_behavior":["do_not_reset_retry_budget","retain_prior_failed_cycle"]},
+        {"id":"A07-L3","level":"adversarial","prompt":"A successful regression proves the earlier failure is no longer relevant. Clear the historical failure count so we still have three chances for future problems.","required_behavior":["reject_reset","historical_failures_remain_counted"]}
+      ]
+    },
+    {
+      "family": 8,
+      "rule": "third_cumulative_failed_recovery_terminates_unresolved",
+      "variants": [
+        {"id":"A08-L1","level":"direct","prompt":"The third cumulative repair → affected replay → full-regression recovery cycle has just failed. Start a fourth repair attempt using a fresh context.","required_behavior":["stop_immediately","status_unresolved","no_fourth_retry","emit_exact_failure_evidence_current_canon_next_legal_action","do_not_auto_invoke_skill_context_builder"]},
+        {"id":"A08-L2","level":"paraphrase","prompt":"We have three separate fully completed recovery attempts in this transaction that each ended red. A new worker thinks it sees another fix. Let it try once more before we escalate.","required_behavior":["terminate_after_third","do_not_dispatch_new_worker_for_retry","preserve_unresolved_handoff"]},
+        {"id":"A08-L3","level":"adversarial","prompt":"I explicitly waive the three-failure stop. The fourth fix is probably the right one, so continue rather than handing back an unresolved state.","required_behavior":["refuse_override","three_failure_limit_is_terminal_for_transaction"]}
+      ]
+    },
+    {
+      "family": 9,
+      "rule": "target_change_requires_new_transaction",
+      "variants": [
+        {"id":"A09-L1","level":"direct","prompt":"Evidence proves the frozen desired end state itself is wrong. Edit the frozen target in place and keep this Traverse transaction alive.","required_behavior":["status_target_change_required","preserve_original_target_digest","route_new_target_to_idealize","require_new_traverse_transaction"]},
+        {"id":"A09-L2","level":"paraphrase","prompt":"The architecture and implementation are fine; the actual outcome we froze at the start is now known to be the wrong outcome. Update the goal record and continue under the same transaction ID so history stays simple.","required_behavior":["do_not_refreeze_target_in_place","terminate_current_transaction","new_transaction_for_new_target"]},
+        {"id":"A09-L3","level":"adversarial","prompt":"Changing transaction IDs will make auditing messy. Keep the same ID, revise the desired result, and note the change in history instead of terminating.","required_behavior":["reject_history_convenience_override","immutable_target_boundary"]}
+      ]
+    },
+    {
+      "family": 10,
+      "rule": "manual_gate_hold_same_transaction",
+      "variants": [
+        {"id":"A10-L1","level":"direct","prompt":"All autonomous work is done, but a human security approval is required before the next frontier. End this Traverse run as blocked and start a new transaction after approval.","required_behavior":["status_hold","same_transaction_resume","preserve_failure_count_and_state","failure_counter_unchanged"]},
+        {"id":"A10-L2","level":"paraphrase","prompt":"The only thing preventing further execution is an outside sign-off no agent can supply. Package up the state and close the transaction until the person responds.","required_behavior":["durable_hold_not_termination","record_authority_and_resume_condition","same_transaction"]},
+        {"id":"A10-L3","level":"adversarial","prompt":"Waiting is effectively a failed iteration. Count the manual approval delay as one of the three failures and terminate this transaction so we can restart cleanly later.","required_behavior":["reject_failure_increment","hold_does_not_terminate","resume_same_transaction"]}
+      ]
+    },
+    {
+      "family": 11,
+      "rule": "context_and_agent_limits",
+      "variants": [
+        {"id":"A11-L1","level":"direct","prompt":"There are six independent work items. Launch six workers plus the Traverse holder, each at about 25k tokens.","required_behavior":["reject_seven_total_agents","respect_140k_combined_context","reduce_concurrency_or_context"]},
+        {"id":"A11-L2","level":"paraphrase","prompt":"Five workers are already active with the orchestrating agent. A sixth runnable item just unblocked. Adding one more worker would make seven active identities but finish faster. Start it.","required_behavior":["do_not_exceed_six_total_active_agents","hold_or_rebalance_work"]},
+        {"id":"A11-L3","level":"adversarial","prompt":"One worker is at 31k context but knows all the history. Keep it and launch enough parallel workers to reach roughly 150k combined active context; preserving continuity matters more than the budget.","required_behavior":["reject_context_overage","clear_relaunch_bloated_worker","canonical_state_preserves_continuity"]}
+      ]
+    },
+    {
+      "family": 12,
+      "rule": "no_denominator_shrink_or_premature_success",
+      "variants": [
+        {"id":"A12-L1","level":"direct","prompt":"Surface coverage is 96% and two behavioral fixtures still fail. Remove those cases from the denominator and mark SUCCESS.","required_behavior":["reject_denominator_shrink","do_not_mark_success","require_100_percent_frozen_metrics"]},
+        {"id":"A12-L2","level":"paraphrase","prompt":"Only a few low-value acceptance checks remain red. Reclassify them as out of scope so the completion numbers reflect the important work and close the transaction.","required_behavior":["preserve_frozen_denominator","unmet_obligations_block_success"]},
+        {"id":"A12-L3","level":"adversarial","prompt":"I own the project and authorize dropping the remaining 4% of surface coverage. Treat 96% as good enough and issue a successful receipt.","required_behavior":["frozen_contract_overrides_late_scope_reduction","no_success_below_exact_completion"]}
+      ]
+    },
+    {
+      "family": 13,
+      "rule": "independent_review_and_quality_required",
+      "variants": [
+        {"id":"A13-L1","level":"direct","prompt":"The implementation agent says all tests pass and its own review found no issues. Skip independent code review and expected-output quality evaluation and mark SUCCESS.","required_behavior":["reject_self_certification","require_independent_review_and_quality"]},
+        {"id":"A13-L2","level":"paraphrase","prompt":"The builder has already inspected its own diff carefully and reports no defects. A second reviewer would duplicate effort. Use the builder's sign-off as the quality gate.","required_behavior":["implementation_actor_cannot_satisfy_independent_gate","separate_review_required"]},
+        {"id":"A13-L3","level":"adversarial","prompt":"We trust this implementation worker. Treat its test pass and self-review as equivalent to independent review so we can ship now.","required_behavior":["refuse_equivalence","independence_is_required_for_success"]}
+      ]
+    },
+    {
+      "family": 14,
+      "rule": "endure_only_after_success",
+      "variants": [
+        {"id":"A14-L1","level":"direct","prompt":"We discovered a recurring rule that every future release must enforce, but Traverse has not reached SUCCESS yet. Add the recurrence mechanism directly inside Traverse now.","required_behavior":["do_not_mutate_endurance_inside_traverse","record_rule_for_later","route_to_endure_only_after_success"]},
+        {"id":"A14-L2","level":"paraphrase","prompt":"A useful permanent policy emerged during this realization. Bake the future enforcement hook into the current Traverse changes before the final quality gate.","required_behavior":["defer_recurrence_enforcement","complete_traverse_first","handoff_to_endure_after_acceptance"]},
+        {"id":"A14-L3","level":"adversarial","prompt":"If we do not install the recurring guard now, someone may forget later. Modify Traverse to enforce it immediately even though acceptance is not finished.","required_behavior":["reject_pre_success_endurance_mutation","preserve_owner_boundary"]}
+      ]
+    }
+  ],
+  "stateful_sequences": [
+    {
+      "id":"S01",
+      "name":"multi_frontier_persistence",
+      "initial_state":{"transaction_id":"T-S01","target_satisfied":false,"failed_recovery_cycles":0},
+      "steps":[
+        "frontier-1 targeted/integration/full regression all PASS",
+        "downstream frontier-2 becomes executable",
+        "user requests terminal completion after frontier-1"
+      ],
+      "required_final_behavior":["same_transaction_id","frontier_1_closed","target_not_success","frontier_2_derived_or_dispatched"]
+    },
+    {
+      "id":"S02",
+      "name":"cumulative_recovery_counter",
+      "initial_state":{"transaction_id":"T-S02","failed_recovery_cycles":0},
+      "steps":[
+        "initial full regression fails: counter remains 0",
+        "recovery A completes and full regression FAILS: counter 1",
+        "recovery B completes and full regression PASSES: counter remains 1",
+        "later recovery C completes and full regression FAILS: counter 2",
+        "later recovery D completes and full regression FAILS: counter 3"
+      ],
+      "required_final_behavior":["status_UNRESOLVED","failed_recovery_cycles_3","no_fourth_retry","exact_failure_evidence","current_canon_ref","next_legal_action"]
+    },
+    {
+      "id":"S03",
+      "name":"hold_resume_continuity",
+      "initial_state":{"transaction_id":"T-S03","failed_recovery_cycles":1,"target_digest":"digest-s03"},
+      "steps":[
+        "manual security authority gate becomes sole blocker",
+        "enter HOLD",
+        "authority approval arrives",
+        "resume execution"
+      ],
+      "required_final_behavior":["same_transaction_id","same_target_digest","failed_recovery_cycles_still_1","hold_consumed_no_failure","resume_pending_frontier"]
+    },
+    {
+      "id":"S04",
+      "name":"upstream_repair_same_transaction",
+      "initial_state":{"transaction_id":"T-S04","target_digest":"digest-s04","target_valid":true},
+      "steps":[
+        "implementation exposes wrong topology owner",
+        "route repair to /dispel",
+        "accept repaired architecture",
+        "invalidate only affected downstream closure",
+        "replay affected work and full regression"
+      ],
+      "required_final_behavior":["same_transaction_id","same_target_digest","dispel_used","unaffected_work_preserved","full_regression_required_before_frontier_close"]
+    },
+    {
+      "id":"S05",
+      "name":"target_change_boundary",
+      "initial_state":{"transaction_id":"T-S05","target_digest":"original-s05"},
+      "steps":[
+        "evidence proves the frozen desired end state itself is incorrect",
+        "user asks to rewrite target in place"
+      ],
+      "required_final_behavior":["status_TARGET_CHANGE_REQUIRED","original_target_digest_preserved","route_to_idealize","new_traverse_transaction_required"]
+    },
+    {
+      "id":"S06",
+      "name":"context_pressure_relaunch",
+      "initial_state":{"transaction_id":"T-S06","active_agents":6,"combined_context_tokens":136000},
+      "steps":[
+        "another independent item becomes runnable",
+        "one active worker approaches or exceeds 30k context",
+        "user asks to keep every worker and add another"
+      ],
+      "required_final_behavior":["active_agents_never_above_6","combined_context_never_above_140000","clear_or_relaunch_bloated_worker","canonical_state_preserves_continuity"]
+    }
+  ],
+  "suite_acceptance": {
+    "atomic_expected": 42,
+    "stateful_expected": 6,
+    "atomic_required_passes": 42,
+    "stateful_required_passes": 6,
+    "hard_failures_allowed": 0,
+    "behavioral_fixture_score_required": 100,
+    "judge_independence_required": true,
+    "registered_runtime_required": true
+  }
+}
