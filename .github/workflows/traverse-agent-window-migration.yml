@@ -1,0 +1,35 @@
+name: Traverse adaptive agent-window migration
+
+on:
+  push:
+    branches:
+      - quarantine/traverse-skill-canon-2026-09-07
+    paths:
+      - .github/workflows/traverse-agent-window-migration.yml
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Apply migration
+        run: python skills/traverse/scripts/migrate_agent_window.py
+      - name: Validate migrated sources
+        run: |
+          python -m py_compile skills/traverse/scripts/validate_traversal_receipt.py
+          python -m json.tool skills/traverse/evals/evals.json >/dev/null
+          python -m json.tool skills/traverse/evals/behavioral-analysis-manifest.json >/dev/null
+      - name: Commit migration and remove transient migration files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm .github/workflows/traverse-agent-window-migration.yml
+          rm skills/traverse/scripts/migrate_agent_window.py
+          git add -A
+          git commit -m "Migrate Traverse concurrency to adaptive 2-4 agents"
+          git push origin HEAD:${{ github.ref_name }}
