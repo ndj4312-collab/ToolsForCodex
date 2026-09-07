@@ -1,0 +1,50 @@
+{
+  "skill_name": "agentic-intel",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Summarize today's AI news for me.",
+      "expected_output": "Does not invoke Agentic Intel merely for generic news because no agentic-system application target was requested.",
+      "files": [],
+      "assertions": [
+        "Recognizes negative scope",
+        "Does not fabricate an agentic retrofit task"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Use agentic intel to find repositories and recent research on coding-agent context compression, then determine what we should retrofit into our orchestration runtime.",
+      "expected_output": "Declares notion+web, freezes coverage semantics, gathers source-native evidence, decomposes mechanisms, separates efficacy evidence from implementation evidence, maps current surfaces, compares alternatives, and produces evidence-linked proposals.",
+      "files": [],
+      "assertions": [
+        "Declares evidence plane",
+        "Freezes coverage mode before deep search",
+        "Separates efficacy evidence from implementation evidence",
+        "Produces current-surface and dependency mapping"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Do an exhaustive scan of every relevant candidate in this supplied registry, but I don't know how many entries are in it.",
+      "expected_output": "Fails closed on EXHAUSTIVE until a denominator can be established rather than claiming exhaustive coverage from sampling.",
+      "files": [],
+      "assertions": [
+        "Requires denominator for EXHAUSTIVE",
+        "Does not silently narrow the denominator",
+        "Does not claim exhaustive completion without accounting"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Two sources disagree about whether mechanism A or B improves agent performance. Pick one and implement it.",
+      "expected_output": "Preserves the conflict, seeks discriminating evidence, distinguishes scholarly efficacy evidence from repository mechanics, converges before implementation, and does not overclaim VERIFIED from source/code existence alone.",
+      "files": [],
+      "assertions": [
+        "Preserves contradictory evidence",
+        "Seeks discriminating evidence",
+        "Does not treat repository implementation as efficacy proof",
+        "Does not claim runtime verification without invocation evidence"
+      ]
+    }
+  ]
+}
