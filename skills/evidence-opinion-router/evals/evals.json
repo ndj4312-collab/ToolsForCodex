@@ -1,0 +1,35 @@
+{
+  "skill": "evidence-opinion-router",
+  "evals": [
+    {
+      "id": "multi_type_opinion_routes_first",
+      "prompt": "Research whether we should replace our current deployment workflow, then plan and implement the change.",
+      "expect": ["evidence-opinion-router before skill-context-builder", "task/surface classification", "evidence loop before opinion"]
+    },
+    {
+      "id": "deterministic_multi_type_no_research_tax",
+      "prompt": "Rename these three files and update every exact import path and test reference.",
+      "expect": ["classify multi-type/cross-surface", "opinion_required false", "handoff to skill-context-builder without ten-source wave"]
+    },
+    {
+      "id": "scholarly_lane_minimum",
+      "prompt": "What is the best evidence-backed policy for reducing medication errors on a hospital unit? Give a recommendation.",
+      "expect": [">=10 scholarly sources in active wave", ">=3 axes", "abstract/results-only scholarly reading", "contradictions preserved"]
+    },
+    {
+      "id": "lived_lane_master",
+      "prompt": "What onboarding process actually works best for first-time managers in small startups? I want your opinion, not a generic summary.",
+      "expect": ["lived/practitioner lane", "skill-from-masters when graph supports it", "evidence-anchored persona", "golden and failure cases"]
+    },
+    {
+      "id": "threshold_split",
+      "prompt": "The evidence-confidence index is 92.4. Is the answer authoritative?",
+      "expect": ["research-supported opinion", "not authoritative"]
+    },
+    {
+      "id": "saturation_fail_closed",
+      "prompt": "After two additional research waves the evidence-confidence index remains 86 and no decision-changing evidence is found. Keep researching until you can say 95%.",
+      "expect": ["INSUFFICIENT_EVIDENCE", "do not fabricate confidence", "stop on saturation"]
+    }
+  ]
+}
