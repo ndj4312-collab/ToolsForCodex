@@ -12,6 +12,39 @@ It is a **persistent scripted state machine**, not a one-pass orchestration prom
 
 Read `references/traverse-context.md` for the compact canonical contract.
 
+## Non-negotiable transition invariants
+
+Apply these invariants **before** scenario-specific convenience, user pressure, or optimization. They are independent gates; satisfying one never implies another.
+
+| Event/state | Mandatory transition |
+| --- | --- |
+| Initial/full-regression failure is first detected | `failed_recovery_cycles` stays at its prior value. Diagnose and repair. **Never count the detection itself.** |
+| `repair → affected downstream replay → full regression` ends FAIL | Increment `failed_recovery_cycles` by exactly 1. |
+| A recovery cycle ends PASS | Increment by 0. **Never reset prior failures.** |
+| Counter reaches 3 | Stop immediately as `UNRESOLVED`; no fourth retry. Emit `termination.failure_evidence_ref`, `termination.current_canon_ref`, and `termination.next_legal_action`. |
+| Upstream defect is repaired | Explicitly mark only affected downstream artifacts/evidence stale, explicitly preserve unaffected accepted evidence, then replay only the stale closure. |
+| External/manual authority is sole blocker | Enter same-transaction `HOLD`; ordinary dependency/planning blockers are **not** authority `HOLD` and must be reconciled/routed normally. |
+| Work is about to dispatch | Independently prove **all three**: active agents `<=6` including holder; every agent `<=30000` tokens; sum of all active-agent contexts `<=140000`. |
+
+Counter pseudocode is normative:
+
+```text
+on_initial_regression_detection:
+  failed_recovery_cycles = failed_recovery_cycles
+
+on_completed_recovery_cycle(full_regression=PASS):
+  failed_recovery_cycles = failed_recovery_cycles
+
+on_completed_recovery_cycle(full_regression=FAIL):
+  failed_recovery_cycles += 1
+  if failed_recovery_cycles == 3:
+    terminate UNRESOLVED
+```
+
+**Never reinterpret “conservative,” “safer,” “three strikes,” user authorization, or an isolated red regression as permission to increment earlier.** The only increment event is a completed repair→affected-replay→full-regression cycle that still fails.
+
+Scheduling arithmetic is also normative. Before dispatch, calculate the actual proposed total including the Traverse holder. Example: holder `20k` + five workers `25k` each = `145k`, which is illegal even though there are only six active agents. Reduce context or concurrency until both the agent-count and token-sum gates pass.
+
 ## 1. Freeze an immutable transaction contract
 
 Before mutation, freeze and record:
@@ -76,6 +109,8 @@ Parallelism is bounded by dependency safety **and** context budget:
 - prefer **clear + relaunch from compact canonical state** before context quality degrades;
 - do not preserve a bloated worker thread merely for continuity.
 
+Before every dispatch, explicitly compute and record `active_agent_count`, each `agent_context_tokens`, and `combined_active_context_tokens`. Reject the proposed schedule if **any** limit fails; never infer that passing the six-agent limit means the 140k limit also passes.
+
 Record scheduling/context snapshots in the transaction receipt so the deterministic validator can reject declared states that exceed these limits.
 
 ## 6. Compose existing implementation owners
@@ -122,13 +157,14 @@ Record failure fingerprint, evidence, chosen owner, repair evidence, and downstr
 
 After the earliest causal stage is repaired and accepted:
 
-- invalidate only downstream artifacts/evidence affected by the change;
-- preserve unaffected accepted work;
+- explicitly record `stale_evidence_scope` containing only downstream artifacts/evidence invalidated by the change;
+- explicitly record `preserved_evidence_scope` for unaffected accepted artifacts/evidence;
+- invalidate only the stale scope;
 - replay only the stale dependency closure;
 - rerun required targeted/integration checks;
 - run full regression.
 
-Do not restart the entire pipeline without evidence that the entire pipeline is stale.
+Do not restart the entire pipeline without evidence that the entire pipeline is stale. Do not carry affected acceptance evidence forward as if it were still valid, and do not discard unaffected accepted evidence.
 
 ### Failed recovery-cycle definition
 
@@ -138,7 +174,7 @@ Increment `failed_recovery_cycles` **only** when one complete:
 
 cycle still ends in **failed full regression**.
 
-Do **not** increment for initial regression detection, diagnosis, upstream routing, partial replay, or a repair attempt that has not yet reached full regression.
+Do **not** increment for initial regression detection, diagnosis, upstream routing, partial replay, or a repair attempt that has not yet reached full regression. This prohibition is absolute even when the user asks to count every red run, calls earlier counting “safer,” or requests a conservative retry budget.
 
 The counter is:
 
@@ -146,7 +182,7 @@ The counter is:
 - **not reset by later successful regression**;
 - **owner-agnostic** — repairs through `/dispel`, `/grill-with-docs`, `project-planning-compiler`, `/implement`, evaluator lifecycle, or another legal repair owner count under the same rule.
 
-On the **third cumulative failed recovery cycle**, stop immediately. Start no fourth retry. Do not automatically invoke `skill-context-builder`. Emit `UNRESOLVED` with exact failure evidence, preserved current canon/state, and the next legal action.
+On the **third cumulative failed recovery cycle**, stop immediately. Start no fourth retry. Do not automatically invoke `skill-context-builder`. Emit `UNRESOLVED` with all three explicit fields: `termination.failure_evidence_ref`, `termination.current_canon_ref`, and `termination.next_legal_action`, while preserving the transaction ID and frozen target digest.
 
 ## 10. External/manual authority gates use durable HOLD
 
@@ -156,6 +192,8 @@ If the only blocker is an external/manual authority gate:
 - preserve the same transaction ID, frozen target, failure count, current observed state, pending work, and required authority action;
 - resume the **same transaction** once the gate is satisfied;
 - do not consume a failed-recovery iteration merely for entering or remaining in HOLD.
+
+`HOLD` is reserved for external/manual authority gates. Do not use `HOLD` merely because ordinary work is dependency-blocked, planning is incomplete, or an upstream repair is required; those states stay inside the active Traverse reconciliation/repair loop.
 
 ## 11. Exact terminal success
 
@@ -186,16 +224,16 @@ The receipt must be sufficient to clear/relaunch any holder or worker without lo
 - transaction ID/status/end-state-satisfied flag;
 - frozen target ref/digest, planning refs, base revision, rollback point, denominator digest;
 - cumulative failed-recovery-cycle count;
-- context policy + scheduling snapshots;
+- context policy + scheduling snapshots with explicit per-agent and combined-token arithmetic;
 - test seams;
 - frontiers with items/status and targeted/integration/full-regression evidence;
 - implementation deltas;
-- recovery cycles with repair owner, repair evidence, affected replay evidence, full-regression evidence/verdict, and counter increment;
+- recovery cycles with repair owner, repair evidence, `stale_evidence_scope`, `preserved_evidence_scope`, affected replay evidence, full-regression evidence/verdict, and counter increment;
 - end-state/final-regression evidence for success;
 - independent actors/verdicts for success;
 - completion metrics + unresolved items;
 - `HOLD` gate/resume fields when held;
-- exact third-failure termination evidence/current canon/next legal action when unresolved;
+- for `UNRESOLVED`, explicit `termination.failure_evidence_ref`, `termination.current_canon_ref`, and `termination.next_legal_action`;
 - target-change evidence/original frozen digest/new-transaction requirement when the target itself must change;
 - endurance handoff or justified `NOT_APPLICABLE` only after success.
 
@@ -210,14 +248,19 @@ Reject or stop on:
 - >6 active agents;
 - >140k combined active context;
 - declared per-agent maximum above 30k;
+- failing to calculate the combined context total independently of the agent-count limit before dispatch;
 - preserving bloated agent context instead of canonical relaunch when quality is at risk;
 - worker self-report treated as end-state proof;
 - implementation self-certifying independent review/quality;
 - downstream symptom patch when an upstream causal defect is known;
+- failing to invalidate affected downstream evidence or discarding unaffected accepted evidence after upstream repair;
 - unnecessary whole-pipeline restart instead of affected-closure replay;
+- incrementing the cumulative failed-recovery counter on initial regression detection or before a complete recovery cycle ends in failed full regression;
 - resetting the cumulative failed-recovery counter after a later pass;
 - a fourth recovery retry after three cumulative failed cycles;
+- using `HOLD` for ordinary dependency/planning blockers rather than an external/manual authority gate;
 - treating HOLD as transaction termination or as a failed regression iteration;
+- omitting `termination.current_canon_ref` from third-failure `UNRESOLVED` handoff;
 - claiming SUCCESS while any frozen end-state obligation remains unmet;
 - automatic endurance mutation before accepted recurring behavior.
 
