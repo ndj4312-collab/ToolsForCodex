@@ -1,0 +1,23 @@
+{
+  "skill_name": "skill-context-builder",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Contextualize an orchestration to add a new dashboard to an existing app. I know I want the dashboard to show project health, but I have not decided what 'health' means. The repo has a frontend, backend API, design.md, CI, and a validator. Build the context for the orchestration.",
+      "expected_output": "The skill preserves the ambiguous meaning of 'health', asks a narrow user-owned clarification instead of inferring it, registers the frontend/backend/design/CI/validator surfaces, and begins dependency/current-to-next mapping.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "We have two conflicting implementation claims for agent memory. One says use a vector store and the other says use structured event memory. Fully contextualize the orchestration and decide the mechanism.",
+      "expected_output": "The skill does not ask the user for a technical opinion; it creates atomic Agentic Intel research targets for both claims, requires provenance and comparable evidence, and selects only after evidence comparison against the explicit orchestration goal.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "The current orchestration is at 83% expected state. UI and validation are complete, backend wiring is still missing, and three fresh workers have failed at the backend stage. Continue the context-builder lifecycle.",
+      "expected_output": "The skill accepts the prior iteration without calling it total failure, compacts completed residue, launches the three-failure reconciliation path, amends current state/lessons/routing, and presents at least retry-current, switch-to-secondary-Agentic-Intel-path, and move-on options. A fourth failure would terminate that stage.",
+      "files": []
+    }
+  ]
+}
