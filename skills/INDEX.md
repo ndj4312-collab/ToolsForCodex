@@ -11,3 +11,4 @@ This is the generated-facing index for the project-local orchestration package. 
 - `/agentic-intel` — evidence-governed external intelligence research, primitive decomposition, convergence, and agentic-system application.
 - `/dispel` — compile a frozen ideal target into the smallest dependency-closed canonical ecosystem before specification or implementation.
 - `project-planning-compiler` — select project-planning depth, resolve only missing prerequisites, and compose the exact vendored Matt Pocock `/to-spec` and `/to-tickets` skills into dependency-safe executable work without modifying either upstream skill.
+- `/traverse` — realize accepted architecture/spec/tickets through the executable frontier, existing implementation/TDD/review owners, earliest-cause repair routing, regression, independent quality gates, and frozen-denominator convergence before endurance handoff.

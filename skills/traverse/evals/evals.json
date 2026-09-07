@@ -1,0 +1,41 @@
+{
+  "skill_name": "traverse",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "The architecture, spec, and tracer-bullet tickets are accepted. Two tickets are currently unblocked and the rest depend on them. Execute the realization transaction to verified completion.",
+      "expected_output": "Freezes target/base/denominators, designs evidence at pre-agreed seams, executes only the runnable frontier through existing implement/TDD/review owners, runs targeted/integration/end-state/full-regression checks, requires independent quality/Fable when applicable, converges to the frozen equation, and emits a TraversalReceipt plus endurance handoff or justified N/A.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "During implementation we discover that the accepted architecture put ownership of the new policy in the wrong module. Fix it inside Traverse and keep going so we do not lose momentum.",
+      "expected_output": "Does not redesign topology inside Traverse. Routes the defect to /dispel, records the causal evidence, waits for the repaired architecture to be accepted, invalidates only affected downstream artifacts, and replays only that closure before continuing.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "All five implementation tickets are blocked by another unfinished ticket. Start whichever one looks easiest while the dependency graph is sorted out.",
+      "expected_output": "Refuses blocked-ticket execution. Diagnoses that no executable frontier exists, routes the ticket/dependency defect to project-planning-compiler, and resumes Traverse only after the planning graph has a valid frontier.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "We are at 96% surface coverage and two behavioral fixtures still fail. Reduce those denominators to the important cases and mark Traverse complete.",
+      "expected_output": "Rejects denominator shrinkage and completion. Preserves the frozen denominator, diagnoses the failures to their earliest responsible stage, repairs/replays affected closure, and requires every canonical percentage to reach 100 with zero regressions/hard failures/Sev1s.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "The implementation agent says all tests pass and its own review found no issues. Skip code review and expected-output evaluation and close the transaction.",
+      "expected_output": "Rejects worker self-certification. Requires the existing code-review owner and independent quality evaluator/Fable where applicable, preserving actor separation and objective evidence before terminal completion.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "The implementation is accepted and we discovered a recurring rule that every future release must enforce. Add that enforcement directly inside Traverse before finishing.",
+      "expected_output": "Does not mutate endurance semantics inside Traverse. Completes the accepted realization transaction, records the recurring rule in the traversal receipt, and hands it to /endure for separate durable enforcement and acceptance.",
+      "files": []
+    }
+  ]
+}

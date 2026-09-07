@@ -14,7 +14,8 @@
     "skill-context-builder",
     "agentic-intel",
     "dispel",
-    "project-planning-compiler"
+    "project-planning-compiler",
+    "traverse"
   ],
   "scope": "project-local",
   "approvalRequired": true

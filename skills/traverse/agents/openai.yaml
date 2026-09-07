@@ -1,0 +1,5 @@
+interface:
+  display_name: Traverse
+  short_description: Realize accepted plans through dependency-safe implementation, repair routing, regression, and independent convergence gates.
+policy:
+  allow_implicit_invocation: true
