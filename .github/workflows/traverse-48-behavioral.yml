@@ -1,0 +1,74 @@
+name: Traverse 48-case behavioral gate
+
+on:
+  push:
+    branches:
+      - quarantine/traverse-skill-canon-2026-09-07
+    paths:
+      - .github/workflows/traverse-48-behavioral.yml
+      - skills/traverse/evals/run-behavioral-analysis.mjs
+      - skills/traverse/evals/behavioral-analysis-manifest.json
+
+permissions:
+  contents: write
+  copilot-requests: write
+
+jobs:
+  behavioral:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install repository dependencies
+        run: npm ci
+
+      - name: Build and prove MCP contract
+        run: |
+          npm run build
+          npm test -- --runInBand test/contract/mcp-skill-runtime.test.ts
+
+      - name: Install current Copilot CLI
+        run: npm install -g @github/copilot
+
+      - name: Run 48-case independent behavioral suite
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_GITHUB_TOKEN }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
+          GITHUB_RUN_ATTEMPT: ${{ github.run_attempt }}
+          GITHUB_SHA: ${{ github.sha }}
+        run: node skills/traverse/evals/run-behavioral-analysis.mjs
+
+      - name: Commit behavioral evidence
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f skills/traverse/evals/results/
+          if ! git diff --cached --quiet; then
+            git commit -m "Record Traverse behavioral run ${{ github.run_id }} attempt ${{ github.run_attempt }}"
+            git push origin HEAD:${{ github.ref_name }}
+          fi
+
+      - name: Enforce behavioral gate
+        if: always()
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const p = 'skills/traverse/evals/results/latest.json';
+          if (!fs.existsSync(p)) {
+            console.error('No behavioral receipt was produced');
+            process.exit(1);
+          }
+          const r = JSON.parse(fs.readFileSync(p, 'utf8'));
+          console.log(JSON.stringify({verdict:r.verdict, atomic:r.atomic, stateful:r.stateful, hard_failures:r.hard_failures, score:r.behavioral_fixture_score}, null, 2));
+          if (r.verdict !== 'PASS') process.exit(1);
+          NODE
