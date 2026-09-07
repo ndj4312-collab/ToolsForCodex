@@ -1,0 +1,5 @@
+interface:
+  display_name: Skill Context Builder
+  short_description: Persistent context compiler for orchestration surfaces, dependencies, worker kernels, and execution-state reconciliation.
+policy:
+  allow_implicit_invocation: true
